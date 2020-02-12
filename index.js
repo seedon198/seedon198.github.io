@@ -98,7 +98,7 @@ function replaceUrls(text) {
 }
 
 Typer.speed=3;
-Typer.file="seedon198.txt";
+Typer.file="include.txt";
 Typer.init();
  
 var timer = setInterval("t();", 30);

@@ -4,12 +4,6 @@
 "<span id="k">If you can't explain it simply, you don't understand it well enough.</span>". <!-- sjkfhskjf -->
 <p>Hi There,</p> <!-- bitlagbitlagbitlagbitlagbitlagbitlag -->
 <p>Scroll through my github for code & resources</p> <!-- bitlagbitlagbitlagbitlagbitlagbitlag -->
-<p><a href="https://github.com/seedon198">Github</a>.</p><!-- delaydelaydelaydelaydelaydelaydelay -->
-<p><a href="https://instagram.com/seed0n">Instagram</a>.</p><!-- delaydelaydelaydelaydelaydelaydelay -->
-<p><a href="https://youtube.com/h4xk3r5">Youtube</a>.</p><!-- delaydelaydelaydelaydelaydelaydelay -->
-<p><a href="https://iseedon.com">Blog</a>.</p><!-- delaydelaydelaydelaydelaydelaydelay -->
+<p><a href="https://github.com/seedon198">Github</a>.</p><!-- delaydelaydelaydelaydelaydelaydelay --><a href="https://instagram.com/seed0n">Instagram</a>.<!-- delaydelaydelaydelaydelaydelaydelay --><a href="https://youtube.com/h4xk3r5">Youtube</a>.<!-- delaydelaydelaydelaydelaydelaydelay --><a href="https://iseedon.com">Blog</a>.<!-- delaydelaydelaydelaydelaydelaydelay -->
 <!-- slightdelayhere-->feel free to send me an email at<!-- longlonglongcomment --><a href="mailto:iseedon@icloud.com">iseedon@icloud.com</a>.
-
-
-
 <p>Cheers!</p>

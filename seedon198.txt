@@ -1,6 +1,6 @@
-<span id="a">your-first-name@your-last-name</span>:<span id="b">~</span><span id="c">$</span> cd CodeNerve/<!-- laglaglaglaglaglag -->About_Us
-<span id="a">your-first-name@your-last-name</span>:<span id="b">~</span><span id="c">$</span> cat <!-- laglaglaglaglaglaglaglaglag -->[your-name].txt<br/><br/>
-My favorite code quote, "<span id="k">Quote you like</span>". <!-- sjkfhskjf -->
+<span id="a">root@universe</span>:<span id="b">~</span><span id="c">$</span> source ./world/bin/activate<!-- laglaglaglaglaglag -->
+<span id="a">(world)$ root@universe</span>:<span id="b">~</span><span id="c">$</span> chmod +x  <!-- laglaglaglaglaglaglaglaglag -->backdoor.sh<br/><br/>
+"<span id="k">If you can't explain it simply, you don't understand it well enough.</span>". <!-- sjkfhskjf -->
 
 Hey There! This is the portflio website in the skin of a terminal.<!-- laglaglaglaglaglaglaglaglaglaglaglag --><p>You can see that, this is how your portfolio would look like.</p>
 <p>You can introduce yourself here.</p> <!-- bitlagbitlagbitlagbitlagbitlagbitlag -->

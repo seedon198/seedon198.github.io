@@ -4,7 +4,6 @@
 
 <!-- laglaglaglaglaglaglaglaglaglaglaglag --><p></p>
 <p>Hi There,</p> <!-- bitlagbitlagbitlagbitlagbitlagbitlag -->
-<br><br/>
 <p>Scroll through my github for code & resources</p> <!-- bitlagbitlagbitlagbitlagbitlagbitlag -->
 <p><a href="https://github.com/seedon198">Github</a>.</p><!-- delaydelaydelaydelaydelaydelaydelay -->
 <p><a href="https://instagram.com/seed0n">Instagram</a>.</p><!-- delaydelaydelaydelaydelaydelaydelay -->

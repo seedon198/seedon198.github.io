@@ -93,6 +93,12 @@ nav li {
   margin-left: 20px;
 }
 
+nav a {
+  color: #ffffff; /* Use white color for navigation links */
+}
+
+/* Mobile menu button */
+
 .mobile-menu-button {
   display: none;
   font-size: 24px;

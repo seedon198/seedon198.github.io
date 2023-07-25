@@ -1,8 +1,6 @@
 // Wait for the DOM to be fully loaded before executing the JavaScript
 document.addEventListener('DOMContentLoaded', function () {
 
-	// Your JavaScript code goes here
-  
 	// Example: Function to handle a button click event
 	function handleButtonClick() {
 	  alert('Button clicked!');
@@ -13,6 +11,20 @@ document.addEventListener('DOMContentLoaded', function () {
 	const buttonElement = document.querySelector('.button');
 	if (buttonElement) {
 	  buttonElement.addEventListener('click', handleButtonClick);
+	}
+  
+	// Your other JavaScript functions and event listeners can be added here
+  
+	// Example: Function to toggle a mobile navigation menu
+	function toggleMobileMenu() {
+	  const nav = document.querySelector('nav');
+	  nav.classList.toggle('show');
+	}
+  
+	// Example: Adding a click event listener to a mobile menu button
+	const mobileMenuButton = document.querySelector('.mobile-menu-button');
+	if (mobileMenuButton) {
+	  mobileMenuButton.addEventListener('click', toggleMobileMenu);
 	}
   
 	// Example: Function to fetch data from a server using the Fetch API
@@ -31,8 +43,6 @@ document.addEventListener('DOMContentLoaded', function () {
   
 	// Call the fetchDataFromServer function
 	fetchDataFromServer();
-  
-	// Your other JavaScript functions and event listeners can be added here
   
   });
   

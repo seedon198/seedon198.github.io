@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hardware Hacking 101</title>
+  <!-- Link to your main.css file -->
+  <link rel="stylesheet" href="/res/css/main.css">
+  <!-- Favicon link -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <!-- Header section -->
+  <header>
+    <div class="container">
+      <!-- Replace the logo image URL with the path to your primary logo -->
+      <img src="/res/img/logos/primary-logo.svg" alt="Hardware Hacking 101 Logo" class="logo">
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#learn">Learn</a></li>
+          <li><a href="#village">Village</a></li>
+        </ul>
+      </nav>
+      <button class="mobile-menu-button">&#9776;</button>
+    </div>
+  </header>
+
+  <!-- Main content section -->
+  <main>
+    <section id="home">
+      <div class="container">
+        <h1>Welcome to Hardware Hacking 101</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Phasellus a metus ullamcorper, vehicula ex quis, scelerisque elit.
+          Proin gravida turpis eu nulla bibendum bibendum.
+        </p>
+        <a href="#learn" class="button">Get Started</a>
+      </div>
+    </section>
+
+    <!-- Add more sections and content as needed -->
+
+  </main>
+
+  <!-- Footer section -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Hardware Hacking 101. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Link to your main.js file -->
+  <script src="/res/js/main.js"></script>
+</body>
+</html>

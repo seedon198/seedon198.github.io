@@ -1,54 +1,35 @@
-// Wait for the DOM to be fully loaded before executing the JavaScript
-document.addEventListener('DOMContentLoaded', function () {
+// ... (previous JavaScript content remains the same) ...
 
-	// Example: Function to handle a button click event
-	function handleButtonClick() {
-	  alert('Button clicked!');
-	  // Add your code here to handle the button click event
-	}
+// Example: Function to display user data and progress on the dashboard
+function displayUserDataAndProgress() {
+	// Simulated data - replace with actual user data fetched from the server
+	const completedLessons = 8;
+	const totalLessons = 15;
+	const completedQuizzes = 3;
+	const totalQuizzes = 5;
   
-	// Example: Adding a click event listener to a button with the class "button"
-	const buttonElement = document.querySelector('.button');
-	if (buttonElement) {
-	  buttonElement.addEventListener('click', handleButtonClick);
-	}
+	// Select the progress section element
+	const progressSection = document.getElementById('dashboard');
   
-	// Your other JavaScript functions and event listeners can be added here
+	// Create and update the progress content
+	const progressHTML = `
+	  <div class="container">
+		<h2>User Dashboard</h2>
+		<div class="graph">
+		  <!-- Add your graphs or charts here using libraries like Chart.js -->
+		</div>
+		<div class="progress">
+		  <h3>Your Progress</h3>
+		  <p>Completed Lessons: ${completedLessons}/${totalLessons}</p>
+		  <p>Completed Quizzes: ${completedQuizzes}/${totalQuizzes}</p>
+		</div>
+	  </div>
+	`;
   
-	// Example: Function to toggle a mobile navigation menu
-	function toggleMobileMenu() {
-	  const nav = document.querySelector('nav');
-	  nav.classList.toggle('show');
-	}
+	// Set the HTML content for the progress section
+	progressSection.innerHTML = progressHTML;
+  }
   
-	// Example: Adding a click event listener to a button with the class "button"
-	const buttonElement = document.querySelector('.button');
-	if (buttonElement) {
-	  buttonElement.addEventListener('click', handleButtonClick);
-	}
-
-  	// Example: Function to toggle a mobile navigation menu
-	function toggleMobileMenu() {
-		const nav = document.querySelector('nav');
-		nav.classList.toggle('show');
-	  }
-
-	// Example: Function to fetch data from a server using the Fetch API
-	async function fetchDataFromServer() {
-	  try {
-		const response = await fetch('https://api.example.com/data');
-		if (!response.ok) {
-		  throw new Error('Network response was not ok');
-		}
-		const data = await response.json();
-		// Add your code here to handle the fetched data
-	  } catch (error) {
-		console.error('Error fetching data:', error);
-	  }
-	}
-  
-	// Call the fetchDataFromServer function
-	fetchDataFromServer();
-  
-  });
+  // Call the displayUserDataAndProgress function
+  displayUserDataAndProgress();
   

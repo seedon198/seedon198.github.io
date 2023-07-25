@@ -157,6 +157,6 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
   
   /* Set the logo size to 128x128 pixels */
 .logo {
-	width: 128px;
-	height: 128px;
+	width: 32px;
+	height: 32px;
   }

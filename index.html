@@ -17,9 +17,9 @@
       <img src="/res/img/logos/primary-logo.svg" alt="Hardware Hacking 101 Logo" class="logo">
       <nav>
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#learn">Learn</a></li>
-          <li><a href="#village">Village</a></li>
+          <li><a href="#" onclick="showPage('home')">Home</a></li>
+          <li><a href="#" onclick="showPage('learn')">Learn</a></li>
+          <li><a href="#" onclick="showPage('village')">Village</a></li>
         </ul>
       </nav>
       <button class="mobile-menu-button">&#9776;</button>
@@ -28,89 +28,9 @@
 
   <!-- Main content section -->
   <main>
-    <!-- Home section -->
-    <section id="home">
-      <div class="container">
-        <h1>Welcome to Hardware Hacking 101</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Phasellus a metus ullamcorper, vehicula ex quis, scelerisque elit.
-          Proin gravida turpis eu nulla bibendum bibendum.
-        </p>
-        <a href="#learn" class="button">Get Started</a>
-      </div>
-    </section>
-
-    <!-- Dashboard section -->
-    <section id="dashboard">
-      <div class="container">
-        <h2>User Dashboard</h2>
-
-        <!-- Graphs, charts, and other user data display here -->
-        <div class="graph">
-          <!-- Add your graphs or charts here using libraries like Chart.js -->
-        </div>
-
-        <!-- User progress display -->
-        <div class="progress">
-          <h3>Your Progress</h3>
-          <p>Completed Lessons: 8/15</p>
-          <p>Completed Quizzes: 3/5</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Learn section -->
-    <section id="learn">
-      <div class="container">
-        <h2>Learn</h2>
-
-        <!-- Sample Subject 1 -->
-        <div class="subject">
-          <h3>Subject 1: IoT Hacking</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Nulla quis mauris quis sem posuere tristique a eu tellus.
-            Sed aliquet, nisi id rhoncus tristique, odio tortor finibus eros,
-            non vehicula ipsum justo quis metus.
-          </p>
-          <h4>Chapters:</h4>
-          <ul>
-            <li><a href="#">Chapter 1: Introduction to IoT Hacking</a></li>
-            <li><a href="#">Chapter 2: Exploiting Vulnerabilities</a></li>
-            <li><a href="#">Chapter 3: Securing IoT Devices</a></li>
-          </ul>
-        </div>
-
-        <!-- Sample Subject 2 -->
-        <div class="subject">
-          <h3>Subject 2: Wireless Hacking</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Nulla quis mauris quis sem posuere tristique a eu tellus.
-            Sed aliquet, nisi id rhoncus tristique, odio tortor finibus eros,
-            non vehicula ipsum justo quis metus.
-          </p>
-          <h4>Chapters:</h4>
-          <ul>
-            <li><a href="#">Chapter 1: Introduction to Wireless Hacking</a></li>
-            <li><a href="#">Chapter 2: WiFi Hacking Techniques</a></li>
-            <li><a href="#">Chapter 3: Bluetooth Exploits</a></li>
-          </ul>
-        </div>
-
-        <!-- Add more sample subjects as needed -->
-
-      </div>
-    </section>
-
-    <!-- Village section -->
-    <section id="village">
-      <div class="container">
-        <!-- ... (village content remains the same) ... -->
-      </div>
-    </section>
-
+    <div id="content">
+      <!-- Content will be dynamically loaded here -->
+    </div>
   </main>
 
   <!-- Footer section -->

@@ -13,7 +13,7 @@ function toggleMobileMenu() {
 	const totalQuizzes = 5;
   
 	// Select the progress section element
-	const progressSection = document.getElementById('dashboard');
+	const progressSection = document.getElementById('content');
   
 	// Create and update the progress content
 	const progressHTML = `
@@ -34,10 +34,50 @@ function toggleMobileMenu() {
 	progressSection.innerHTML = progressHTML;
   }
   
+  // Function to display different pages based on the menu item clicked
+  function showPage(pageName) {
+	const content = document.getElementById('content');
+  
+	// Load the corresponding page based on the pageName
+	if (pageName === 'home') {
+	  // You can add your home page content here
+	  content.innerHTML = `
+		<div class="container">
+		  <h1>Welcome to Hardware Hacking 101</h1>
+		  <p>
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+			Phasellus a metus ullamcorper, vehicula ex quis, scelerisque elit.
+			Proin gravida turpis eu nulla bibendum bibendum.
+		  </p>
+		  <a href="#" class="button">Get Started</a>
+		</div>
+	  `;
+	} else if (pageName === 'learn') {
+	  // You can add your Learn page content here
+	  content.innerHTML = `
+		<div class="container">
+		  <h2>Learn</h2>
+		  <!-- Add your Learn page content here -->
+		</div>
+	  `;
+	} else if (pageName === 'village') {
+	  // You can add your Village page content here
+	  content.innerHTML = `
+		<div class="container">
+		  <h2>Village</h2>
+		  <!-- Add your Village page content here -->
+		</div>
+	  `;
+	}
+  }
+  
   // Call the displayUserDataAndProgress function when the page loads
   document.addEventListener('DOMContentLoaded', displayUserDataAndProgress);
   
   // Call the toggleMobileMenu function when the mobile menu button is clicked
   const mobileMenuButton = document.querySelector('.mobile-menu-button');
   mobileMenuButton.addEventListener('click', toggleMobileMenu);
+  
+  // Show the home page content by default when the page loads
+  showPage('home');
   

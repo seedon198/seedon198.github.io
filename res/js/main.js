@@ -41,7 +41,7 @@ function toggleMobileMenu() {
   }
   
   // Call the displayUserDataAndProgress function when the page loads
-  document.addEventListener('DOMContentLoaded', displayUserDataAndProgress);
+  // document.addEventListener('DOMContentLoaded', displayUserDataAndProgress);
   
   // Call the toggleMobileMenu function when the mobile menu button is clicked
   const mobileMenuButton = document.querySelector('.mobile-menu-button');

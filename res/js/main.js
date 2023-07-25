@@ -1,7 +1,11 @@
-// ... (previous JavaScript content remains the same) ...
-
-// Example: Function to display user data and progress on the dashboard
-function displayUserDataAndProgress() {
+// Example: Function to toggle the mobile menu
+function toggleMobileMenu() {
+	const nav = document.querySelector('nav');
+	nav.classList.toggle('show');
+  }
+  
+  // Example: Function to display user data and progress on the dashboard
+  function displayUserDataAndProgress() {
 	// Simulated data - replace with actual user data fetched from the server
 	const completedLessons = 8;
 	const totalLessons = 15;
@@ -30,6 +34,10 @@ function displayUserDataAndProgress() {
 	progressSection.innerHTML = progressHTML;
   }
   
-  // Call the displayUserDataAndProgress function
-  displayUserDataAndProgress();
+  // Call the displayUserDataAndProgress function when the page loads
+  document.addEventListener('DOMContentLoaded', displayUserDataAndProgress);
+  
+  // Call the toggleMobileMenu function when the mobile menu button is clicked
+  const mobileMenuButton = document.querySelector('.mobile-menu-button');
+  mobileMenuButton.addEventListener('click', toggleMobileMenu);
   

@@ -77,7 +77,7 @@ nav {
 }
 
 .logo {
-  font-size: 32px;
+  font-size: 24px; /* Adjusted the logo font size */
   font-weight: bold;
   color: #ffffff; /* Use white color for the HW text */
   line-height: 40px; /* Match the height of the navigation bar */
@@ -199,4 +199,6 @@ footer {
 
   .show li {
     margin-left: 0;
-    margin
+    margin-bottom: 10px;
+  }
+}

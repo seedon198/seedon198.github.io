@@ -1,0 +1,73 @@
+/* Reset some default browser styles */
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+  }
+  
+  /* Set a base font family and font size */
+  body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	line-height: 1.6;
+	color: #333333; /* Use the text color from your color palette */
+	background-color: #ffffff; /* Set a default background color */
+  }
+  
+  /* Set default link styles */
+  a {
+	color: #08C7D6; /* Use the primary gradient start color for links */
+	text-decoration: none;
+  }
+  
+  a:hover {
+	text-decoration: underline;
+  }
+  
+  /* Header styles */
+  header {
+	background: linear-gradient(to right, #08C7D6, #02023E); /* Use the primary gradient as the header background */
+	color: #ffffff; /* Use white color for header text */
+	padding: 20px;
+  }
+  
+  /* Navigation styles */
+  nav {
+	/* Add your navigation styles here */
+  }
+  
+  nav ul {
+	/* Add your navigation list styles here */
+  }
+  
+  nav li {
+	/* Add your navigation item styles here */
+  }
+  
+  /* Main content container */
+  .container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 20px;
+  }
+  
+  /* Buttons */
+  .button {
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: #08C7D6; /* Use the primary gradient start color for buttons */
+	color: #ffffff; /* Use white color for button text */
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+  }
+  
+  .button:hover {
+	background-color: #02023E; /* Use the primary gradient end color on hover */
+  }
+  
+  /* Footer styles */
+  footer {
+	/* Add your footer styles here */
+  }
+  

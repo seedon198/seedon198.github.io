@@ -92,3 +92,37 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
 	padding: 20px 0;
   }
   
+  /* Mobile menu styles */
+  .mobile-menu-button {
+	display: none;
+	background-color: transparent;
+	border: none;
+	font-size: 24px;
+	cursor: pointer;
+  }
+  
+  /* Media query for mobile devices */
+  @media only screen and (max-width: 768px) {
+	.logo {
+	  max-width: 80px; /* Adjust the logo size for mobile devices */
+	}
+  
+	nav {
+	  flex-direction: column;
+	  display: none;
+	}
+  
+	nav.show {
+	  display: flex;
+	}
+  
+	nav li {
+	  margin-left: 0;
+	  margin-bottom: 10px;
+	}
+  
+	.mobile-menu-button {
+	  display: block;
+	}
+  }
+  

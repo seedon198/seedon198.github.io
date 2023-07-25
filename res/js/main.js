@@ -21,12 +21,18 @@ document.addEventListener('DOMContentLoaded', function () {
 	  nav.classList.toggle('show');
 	}
   
-	// Example: Adding a click event listener to a mobile menu button
-	const mobileMenuButton = document.querySelector('.mobile-menu-button');
-	if (mobileMenuButton) {
-	  mobileMenuButton.addEventListener('click', toggleMobileMenu);
+	// Example: Adding a click event listener to a button with the class "button"
+	const buttonElement = document.querySelector('.button');
+	if (buttonElement) {
+	  buttonElement.addEventListener('click', handleButtonClick);
 	}
-  
+
+  	// Example: Function to toggle a mobile navigation menu
+	function toggleMobileMenu() {
+		const nav = document.querySelector('nav');
+		nav.classList.toggle('show');
+	  }
+
 	// Example: Function to fetch data from a server using the Fetch API
 	async function fetchDataFromServer() {
 	  try {

@@ -33,15 +33,32 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
   
   /* Navigation styles */
   nav {
-	/* Add your navigation styles here */
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+	background-color: #02023E; /* Use the primary gradient end color for navigation background */
   }
   
   nav ul {
-	/* Add your navigation list styles here */
+	list-style: none;
+	display: flex;
+	align-items: center;
   }
   
   nav li {
-	/* Add your navigation item styles here */
+	margin-left: 20px;
+  }
+  
+  nav a {
+	color: #ffffff;
+	font-weight: bold;
+	text-transform: uppercase;
+	transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+	color: #08C7D6; /* Use the primary gradient start color for navigation links on hover */
   }
   
   /* Main content container */
@@ -60,6 +77,7 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
 	border: none;
 	border-radius: 5px;
 	cursor: pointer;
+	transition: background-color 0.3s ease;
   }
   
   .button:hover {
@@ -68,6 +86,9 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul {
   
   /* Footer styles */
   footer {
-	/* Add your footer styles here */
+	background-color: #02023E; /* Use the primary gradient end color for the footer background */
+	color: #ffffff;
+	text-align: center;
+	padding: 20px 0;
   }
   

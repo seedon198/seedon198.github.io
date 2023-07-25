@@ -21,8 +21,12 @@ time, mark, audio, video {
 }
 
 /* Make sure to define border-box box-sizing to avoid sizing issues */
-*, *::before, *::after {
+html {
   box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
 }
 
 /* Set a base font and font size */
@@ -59,6 +63,7 @@ header {
 
 nav {
   display: flex;
+  justify-content: space-between; /* To create space between logo and navigation links */
   align-items: center;
   padding: 10px;
   background-color: #02023E; /* Use the primary gradient end color for navigation background */
@@ -72,7 +77,7 @@ nav {
 }
 
 .logo {
-  font-size: 32pc;
+  font-size: 32px;
   font-weight: bold;
   color: #ffffff; /* Use white color for the HW text */
   line-height: 40px; /* Match the height of the navigation bar */
@@ -82,7 +87,6 @@ nav ul {
   list-style: none;
   display: flex;
   align-items: center;
-  z-index: 2;
 }
 
 nav li {
@@ -132,7 +136,54 @@ footer {
 }
 
 /* Media queries for responsiveness */
-@media screen and (max-width: 768px) {
+/* Wide screens (e.g., wide-screen laptops) */
+@media screen and (min-width: 1200px) {
+  body {
+    font-size: 18px;
+  }
+
+  .container {
+    padding: 40px;
+  }
+
+  .logo {
+    font-size: 36px;
+  }
+
+  nav ul {
+    display: flex;
+  }
+
+  .mobile-menu-button {
+    display: none;
+  }
+}
+
+/* Medium screens (e.g., tablets) */
+@media screen and (max-width: 1199px) {
+  body {
+    font-size: 16px;
+  }
+
+  .container {
+    padding: 30px;
+  }
+}
+
+/* Small screens (e.g., mobile devices) */
+@media screen and (max-width: 767px) {
+  body {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 20px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
   nav ul {
     display: none;
   }
@@ -148,47 +199,4 @@ footer {
 
   .show li {
     margin-left: 0;
-    margin-bottom: 10px;
-  }
-}
-
-/* Medium screens */
-@media screen and (max-width: 1200px) {
-	body {
-	  font-size: 16px;
-	}
-  
-	.container {
-	  padding: 10px;
-	}
-  }
-  
-  /* Small screens */
-  @media screen and (max-width: 768px) {
-	.container {
-	  padding: 5px;
-	}
-  
-	.logo {
-	  font-size: 24px;
-	}
-  
-	nav ul {
-	  display: none;
-	}
-  
-	.mobile-menu-button {
-	  display: block;
-	}
-  
-	.show {
-	  display: flex;
-	  flex-direction: column;
-	}
-  
-	.show li {
-	  margin-left: 0;
-	  margin-bottom: 10px;
-	}
-  }
-  
+    margin

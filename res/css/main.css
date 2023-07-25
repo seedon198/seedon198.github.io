@@ -72,7 +72,7 @@ nav {
 
 /* HW text as the logo */
 .logo-container {
-  flex: 1;
+  flex: 0;
   position: relative;
 }
 

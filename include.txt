@@ -4,6 +4,6 @@
 "<span id="k">If you can't explain it simply, you don't understand it well enough.</span>". <!-- sjkfhskjf -->
 <!-- bitlagbitlagbitlagbitlagbitlagbitlag -->
 <p>Scroll through my github for code & resources</p> <!-- bitlagbitlagbitlagbitlagbitlagbitlag -->
-<p><a href="https://github.com/seedon198">Github</a>.<!-- delaydelaydelaydelaydelaydelaydelay --><a href="https://instagram.com/seed0n">Instagram</a>.<!-- delaydelaydelaydelaydelaydelaydelay --><a href="https://youtube.com/h4xk3r5">Youtube</a>.<!-- delaydelaydelaydelaydelaydelaydelay --><a href="https://iseedon.com">Blog</a></p><!-- delaydelaydelaydelaydelaydelaydelay -->
-<!-- slightdelayhere-->feel free to send me an email at<!-- longlonglongcomment --><a href="mailto:iseedon@icloud.com"> iseedon@icloud.com</a>.
+<p><a href="https://github.com/seedon198">Github</a>.<!-- delaydelaydelaydelaydelaydelaydelay --><a href="https://instagram.com/s33d0n">Instagram</a>.<!-- delaydelaydelaydelaydelaydelaydelay --><a href="https://youtube.com/h4xk3r5">Youtube</a>.<!-- delaydelaydelaydelaydelaydelaydelay --><a href="https://hw101.me">Blog</a></p><!-- delaydelaydelaydelaydelaydelaydelay -->
+<!-- slightdelayhere-->feel free to send me an email at<!-- longlonglongcomment --><a href="mailto:seedon06@gmail.com"> seedon06@gmail.com</a>.
 <p>Cheers!</p>

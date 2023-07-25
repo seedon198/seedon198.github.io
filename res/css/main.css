@@ -72,10 +72,17 @@ nav {
 }
 
 .logo {
-  font-size: 32pc;
+  font-size: 24px;
   font-weight: bold;
   color: #ffffff; /* Use white color for the HW text */
   line-height: 40px; /* Match the height of the navigation bar */
+}
+
+/* Favicon styles */
+.favicon {
+  width: 16px;
+  height: 16px;
+  margin-right: 10px; /* Add a small margin between the favicon and the logo */
 }
 
 nav ul {
@@ -131,8 +138,44 @@ footer {
   text-align: center;
 }
 
-/* Media queries for responsiveness */
+/* Responsive styles */
+/* Large screens */
+@media screen and (min-width: 1200px) {
+  body {
+    font-size: 18px;
+  }
+  
+  .container {
+    max-width: 1200px;
+  }
+
+  /* Adjust logo font size for larger screens */
+  .logo {
+    font-size: 28px;
+  }
+}
+
+/* Medium screens */
+@media screen and (max-width: 1200px) {
+  body {
+    font-size: 16px;
+  }
+
+  .container {
+    padding: 10px;
+  }
+}
+
+/* Small screens */
 @media screen and (max-width: 768px) {
+  .container {
+    padding: 5px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
   nav ul {
     display: none;
   }
@@ -151,3 +194,5 @@ footer {
     margin-bottom: 10px;
   }
 }
+
+/* ... (remaining CSS content remains the same) ... */

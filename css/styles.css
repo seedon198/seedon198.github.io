@@ -1,4 +1,23 @@
-/* Add this CSS to styles.css */
+/* styles.css */
+body {
+  font-family: var(--font-family-sans-serif);
+  margin: 0;
+  padding: 0;
+  background-color: #11111d;
+  color: #dbebfb;
+}
+
+
+/* Main content styles */
+.container {
+  color: #dbebfb;
+}
+
+.jumbotron {
+  background-color: transparent;
+}
+
+/* Timeline styles */
 #timeline {
   display: flex;
   flex-direction: column;
@@ -6,19 +25,19 @@
 }
 
 .timeline-card {
-  background-color: #f5f5f5;
-  border: 1px solid #ddd;
+  background-color: #1d1e2f;
+  border: 1px solid #32334a;
   border-radius: 5px;
   padding: 10px;
   margin: 10px;
-  max-width: 400px;
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
 
 .timeline-date {
   font-weight: bold;
-  color: #333;
+  color: #dbebfb;
 }
 
 .timeline-content {
@@ -27,11 +46,11 @@
 
 .timeline-title {
   font-weight: bold;
-  color: #555;
+  color: #714cdf;
 }
 
 .timeline-description {
-  color: #777;
+  color: #dbebfb;
 }
 
 .timeline-image {
@@ -39,3 +58,5 @@
   height: auto;
   margin-top: 10px;
 }
+
+

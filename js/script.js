@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
       title: "Seasides Information Security Conference",
       description:
         "Presented Wi-Fi deauther, USB rubber ducky & soldering village",
-      image: "",
+      image: "mar2020.jpg",
     },
     // Add more activities here in the same format
   ];

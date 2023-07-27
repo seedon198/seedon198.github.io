@@ -397,14 +397,15 @@ mark,
 
 .img-fluid {
   max-width: 100%;
-  height: auto; }
+  height: auto;
+}
 
 .img-thumbnail {
   padding: 0.25rem;
   background-color: #0c0d16;
   border: 1px solid #151623;
   border-radius: 6px;
-  max-width: 100%;
+  max-width: 50%;
   height: auto; }
 
 .figure {

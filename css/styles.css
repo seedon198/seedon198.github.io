@@ -1,0 +1,13 @@
+    .codebox {
+        /* Below are styles for the codebox */
+        border:1px solid deeppink;
+        background-color: black;
+        width:auto;
+        overflow:auto;
+        padding:20px;
+    }
+    .codebox code {
+        /* Styles in here affect the text of the codebox */
+        font-size:0.9em;
+        color:lightgreen;
+    }

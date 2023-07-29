@@ -48,4 +48,4 @@ def git_commit_and_push():
 if __name__ == "__main__":
     while True:
         git_commit_and_push()
-        time.sleep(60)  # Wait for 1 minute before checking again
+        time.sleep(2)  # Wait for 1 minute before checking again

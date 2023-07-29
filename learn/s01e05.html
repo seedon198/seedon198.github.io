@@ -1,76 +1,4 @@
-import sys
-import markdown
-import re
 
-
-def generate_html(input_file):
-    with open(input_file, 'r') as md_file:
-        md_content = md_file.readlines()
-    html_content = ""
-    bold_pattern = re.compile(r'\*\*(.+?)\*\*(?!\*)', re.DOTALL)
-    image_pattern = re.compile(r'!\[(.*?)\]\((.*?)\)', re.DOTALL)
-    code_snippet = None
-    ul_started = False
-    ol_started = False
-    for line in md_content:
-        line = line.strip()
-        if line.startswith('#'):
-            header_level = line.count('#')
-            header_text = line.strip('#').strip()
-            if header_level == 1:
-                html_content += f'<br><br><h2 class="text-danger btn-hover-text-light">{header_text}</h1><br><br>'
-            elif header_level == 2:
-                html_content += f'<br><h3 class="text-warning">{header_text}</h2><br>'
-            elif header_level == 3:
-                html_content += f'<br><h4 class="text-warning">{header_text}</h3><br>'
-        elif line.startswith('* '):
-            if not ul_started:
-                html_content += '<ul class="btn-hover-text-light text-secondary">'
-                ul_started = True
-            list_item_text = line[2:].strip()
-            list_item_text = bold_pattern.sub(r'<strong class="text-danger">\1</strong>', list_item_text)
-            html_content += f'<li>{list_item_text}</li>'
-        elif line.startswith('1. '):
-            if not ol_started:
-                html_content += '<ol class="btn-hover-text-light text-secondary">'
-                ol_started = True
-                list_item_text = line[3:].strip()
-            list_item_text = bold_pattern.sub(r'<strong class="text-danger">\1</strong>', list_item_text)
-            html_content += f'<li>{list_item_text}</li>'
-        elif line.startswith('!['):
-            alt_text = image_pattern.match(line).group(1)
-            image_url = image_pattern.match(line).group(2)
-            html_content += f'<img class="figure-img" alt="{alt_text}" src="{image_url}"><br>'
-        elif line.startswith('```'):
-            if code_snippet:
-                html_content += f'<div class="codebox"><code class="{code_snippet["language"]}">'
-                html_content += code_snippet["content"]
-                html_content += '</code></div>'
-                code_snippet = ""  # Reset code_snippet
-            else:
-                code_snippet = {"language": line.strip('`'), "content": ""}
-                continue
-        elif code_snippet:
-            code_snippet["content"] += line + '\n'
-            continue
-        else:
-            if ul_started:
-                html_content += '</ul>'
-                ul_started = False
-            elif ol_started:
-                html_content += '</ol>'
-                ol_started = False
-            html_content += f'<p class="btn-hover-text-light text-secondary">{line}</p>'
-    if ul_started:
-        html_content += '</ul>'
-    elif ol_started:
-        html_content += '</ol>'
-    html_content = markdown.markdown(html_content)
-    episode_number = int(input_file.split('e')[1].replace('.md', ''))
-    back_link = f"/learn/s01e{episode_number - 1}.html"
-    next_link = f"/learn/s01e{episode_number + 1}.html"
-
-    template = f'''
     <!DOCTYPE html>
     <html lang="en">
       <head>
@@ -78,7 +6,7 @@ def generate_html(input_file):
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-YC8JWDXN1J"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
-            function gtag(){{dataLayer.push(arguments);}}
+            function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-YC8JWDXN1J');
         </script>
@@ -119,16 +47,28 @@ def generate_html(input_file):
                 <div class="lead mb-3 text-mono text-justify">
                     <br>
                         <div class="text-mono">
-                            <a href="{back_link}"
+                            <a href="/learn/s01e4.html"
                             title="Back"
                             class="btn btn-outline-primary btn-shadow px-3 my-2 ml-0 text-left">
                             Back</a>
-                            <a href="{next_link}"
+                            <a href="/learn/s01e6.html"
                             class="btn btn-outline-primary btn-shadow px-3 my-2 ml-0 ml-sm-1 text-left">
                             Next
                             </a>
                         </div>
-                    {html_content}
+                    <p><br><br><h2 class="text-danger btn-hover-text-light">A first-level heading</h1><br><br><br><h3 class="text-warning">A Second-level heading</h2><br><p class="btn-hover-text-light text-secondary">This site was built using <a href="https://pages.github.com/">GitHub Pages</a>.</p><p class="btn-hover-text-light text-secondary">This is some sample text to fill in the body of the page. more text here.</p><br><h4 class="text-warning">A Third-level heading</h3><br><p class="btn-hover-text-light text-secondary">- George Washington</p><p class="btn-hover-text-light text-secondary">- John Adams</p><p class="btn-hover-text-light text-secondary">- Thomas Jefferson</p><br><h4 class="text-warning">A Third-level heading</h3><br><ol class="btn-hover-text-light text-secondary"><li>James Madison</li><li>James Madison</li><li>James Madison</li></ol><p class="btn-hover-text-light text-secondary">some more text here.</p><ol class="btn-hover-text-light text-secondary"><li>First list item</li></ol><p class="btn-hover-text-light text-secondary">- First nested list item</p><p class="btn-hover-text-light text-secondary">- Second nested list item</p><p class="btn-hover-text-light text-secondary">Here is a Python code snippet that calculates the factorial of a number:</p><p class="btn-hover-text-light text-secondary"></p><pre><code class="python">def factorial(n):
+if n == 0:
+return 1
+else:
+return n * factorial(n-1)
+</code></pre><p class="btn-hover-text-light text-secondary">Here is a JavaScript code snippet that calculates the factorial of a number:</p><p class="btn-hover-text-light text-secondary"></p><div class="codebox"> <code class="javascript">function factorial(n) {
+if (n == 0) {
+return 1;
+} else {
+return n * factorial(n-1);
+}
+}
+                </code></div><p class="btn-hover-text-light text-secondary"></p><img class="figure-img" alt="Example Image" src="res/img/000.png"><br><p class="btn-hover-text-light text-secondary"></p><p class="btn-hover-text-light text-secondary"></p><br><h4 class="text-warning">A Third-level heading</h3><br><p class="btn-hover-text-light text-secondary">- <a href="https://pages.github.com/">Link1</a></p><p class="btn-hover-text-light text-secondary">- <a href="https://pages.github.com/">Link2</a></p><p class="btn-hover-text-light text-secondary">- <a href="https://pages.github.com/">Link3</a></p></p>
                 </div>
               </div>
             </div>
@@ -150,12 +90,4 @@ def generate_html(input_file):
         </div>
       </body>
     </html>
-    '''
-    with open(output_file, 'w') as html_file:
-        html_file.write(template)
-
-
-if __name__ == '__main__':
-    input_file = sys.argv[1]
-    output_file = input_file.replace('.md', '.html').replace('md/', '')
-    generate_html(input_file)
+    

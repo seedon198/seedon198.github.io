@@ -24,4 +24,5 @@
 
     .slide img {
         width: auto;
+        align-self: center;
     }

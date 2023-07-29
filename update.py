@@ -16,12 +16,14 @@ def get_changes(repo):
 
 
 def git_commit_and_push():
-    
+    timestamp = time.strftime('%Y-%m-%d %H:%M:%S')
+    print(f'Automatic checkin at {timestamp}')
     # Change to the current directory
     repo_path = '.'  # Replace with the actual path to your Git repository
     repo = git.Repo(repo_path)
     # Check if there are any changes
     if repo.is_dirty():
+        print("Changes detected")
         # Get the changes
         added_files, modified_files, deleted_files = get_changes(repo)
         # Add all changes to the staging area
@@ -45,4 +47,4 @@ def git_commit_and_push():
 if __name__ == "__main__":
     while True:
         git_commit_and_push()
-        time.sleep(2)  # Wait for 1 minute before checking again
+        time.sleep(60)  # Wait for 1 minute before checking again

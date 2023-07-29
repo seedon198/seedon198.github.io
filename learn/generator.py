@@ -12,8 +12,6 @@ def generate_html(input_file):
     code_snippet = None
     ul_started = False
     ol_started = False
-    ul_items = []
-    ol_items = []
     for line in md_content:
         line = line.strip()
         if line.startswith('#'):
@@ -32,10 +30,6 @@ def generate_html(input_file):
             list_item_text = line[2:].strip()
             list_item_text = bold_pattern.sub(r'<strong class="text-danger">\1</strong>', list_item_text)
             html_content += f'<li>{list_item_text}</li>'
-            if ol_items:
-                html_content += '</ol>'  # Close the previous ol section if present
-                ol_items = []
-            ul_items.append(line[2:].strip())
         elif line.startswith('1. '):
             if not ol_started:
                 html_content += '<ol class="btn-hover-text-light text-secondary">'
@@ -43,10 +37,6 @@ def generate_html(input_file):
                 list_item_text = line[3:].strip()
             list_item_text = bold_pattern.sub(r'<strong class="text-danger">\1</strong>', list_item_text)
             html_content += f'<li>{list_item_text}</li>'
-            if ul_items:
-                html_content += '</ul>'  # Close the previous ul section if present
-                ul_items = []
-            ol_items.append(line[3:].strip())
         elif line.startswith('!['):
             alt_text = image_pattern.match(line).group(1)
             image_url = image_pattern.match(line).group(2)
@@ -63,10 +53,6 @@ def generate_html(input_file):
         elif code_snippet:
             code_snippet["content"] += line + '\n'
             continue
-        elif ul_items:
-            ul_items[-1] += ' ' + line  # Append the current line to the last ul item
-        elif ol_items:
-            ol_items[-1] += ' ' + line  # Append the current line to the last ol item
         else:
             if ul_started:
                 html_content += '</ul>'
@@ -78,10 +64,6 @@ def generate_html(input_file):
     if ul_started:
         html_content += '</ul>'
     elif ol_started:
-        html_content += '</ol>'
-    if ul_items:
-        html_content += '</ul>'
-    if ol_items:
         html_content += '</ol>'
     html_content = markdown.markdown(html_content)
     episode_number = int(input_file.split('e')[1].replace('.md', ''))

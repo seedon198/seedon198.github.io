@@ -29,7 +29,7 @@ def git_commit_and_push():
         # Add all changes to the staging area
         repo.index.add('*')
         # Generate the commit message with changes
-        commit_message = "Automatic commit at {}\n\n".format(time.strftime('%Y-%m-%d %H:%M:%S'))
+        commit_message = "Automatic commit at {}\n".format(time.strftime('%Y-%m-%d %H:%M:%S'))
         if added_files:
             commit_message += "Added files:\n{}\n\n".format('\n'.join(added_files))
         if modified_files:

@@ -13,7 +13,7 @@
     }
 
     .slideshow-container {
-    max-width: 300px;
+    max-width: 800px;
     margin: auto;
     overflow: hidden;
     }
@@ -23,5 +23,5 @@
     }
 
     .slide img {
-        width: 300px;
+        width: 100%;
     }

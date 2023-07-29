@@ -20,9 +20,9 @@
 
     .slide {
         display: none;
+        width: 100%;
     }
 
     .slide img {
         width: auto;
-        align-self: stretch;
     }

@@ -130,11 +130,24 @@ def generate_html(input_file):
                             </a>
                         </div>
                     {html_content}
+                    <br><br>
+              <div class="text-mono">
+            <a href="/learn/s01e02.html"
+               title="Back"
+               class="btn btn-outline-primary btn-shadow px-3 my-2 ml-0 text-left">
+              Back
+            </a>
+            <a href="/learn/s01e04.html"
+               class="btn btn-outline-primary btn-shadow px-3 my-2 ml-0 ml-sm-1 text-left">
+              Next
+            </a>
+          </div>
                 </div>
               </div>
             </div>
           </div>
     <br><br><br><br><br><br><br>
+    
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
      <footer>

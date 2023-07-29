@@ -11,3 +11,17 @@
         font-size:0.9em;
         color:lightgreen;
     }
+
+    .slideshow-container {
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+    }
+
+    .slide {
+        display: none;
+    }
+
+    .slide img {
+        width: 100%;
+    }

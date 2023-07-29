@@ -7,11 +7,9 @@ def generate_html(input_file):
     with open(input_file, 'r') as md_file:
         md_content = md_file.readlines()
 
-    # Initialize empty html_content
     html_content = ""
-    # Initialize bold_pattern
     bold_pattern = re.compile(r'\*\*(.+?)\*\*(?!\*)', re.DOTALL)
-    # Iterate through the lines in the .md file
+    image_pattern = re.compile(r'!\[(.*?)\]\((.*?)\)', re.DOTALL)
     ul_started = False
     ol_started = False
     for line in md_content:
@@ -39,6 +37,10 @@ def generate_html(input_file):
                 list_item_text = line[3:].strip()
             list_item_text = bold_pattern.sub(r'<strong class="text-danger">\1</strong>', list_item_text)
             html_content += f'<li>{list_item_text}</li>'
+        elif line.startswith('!['):
+            alt_text = image_pattern.match(line).group(1)
+            image_url = image_pattern.match(line).group(2)
+            html_content += f'<img class="figure-img" alt="{alt_text}" src="{image_url}"><br>'
         else:
             if ul_started:
                 html_content += '</ul>'
@@ -51,7 +53,6 @@ def generate_html(input_file):
         html_content += '</ul>'
     elif ol_started:
         html_content += '</ol>'
-
     html_content = markdown.markdown(html_content)
     episode_number = int(input_file.split('e')[1].replace('.md', ''))
     back_link = f"/learn/s01e{episode_number - 1}.html"

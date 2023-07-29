@@ -6,10 +6,10 @@ import re
 def generate_html(input_file):
     with open(input_file, 'r') as md_file:
         md_content = md_file.readlines()
-
     html_content = ""
     bold_pattern = re.compile(r'\*\*(.+?)\*\*(?!\*)', re.DOTALL)
     image_pattern = re.compile(r'!\[(.*?)\]\((.*?)\)', re.DOTALL)
+    code_snippet = None
     ul_started = False
     ol_started = False
     for line in md_content:
@@ -41,6 +41,18 @@ def generate_html(input_file):
             alt_text = image_pattern.match(line).group(1)
             image_url = image_pattern.match(line).group(2)
             html_content += f'<img class="figure-img" alt="{alt_text}" src="{image_url}"><br>'
+        elif line.startswith('```'):
+            if code_snippet:
+                html_content += f'<pre><code class="{code_snippet["language"]}">'
+                html_content += code_snippet["content"]
+                html_content += '</code></pre>'
+                code_snippet = None
+            else:
+                code_snippet = {"language": line.strip('`')}
+                continue
+        elif code_snippet:
+            code_snippet["content"] += line + '\n'
+            continue
         else:
             if ul_started:
                 html_content += '</ul>'

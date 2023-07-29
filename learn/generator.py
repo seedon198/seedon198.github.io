@@ -10,7 +10,7 @@ def generate_html(input_file):
     # Initialize empty html_content
     html_content = ""
     # Initialize bold_pattern
-    bold_pattern = re.compile(r'\*\*(.*?)\*\*', re.DOTALL)
+    bold_pattern = re.compile(r'\*\*(.+?)\*\*(?!\*)', re.DOTALL)
     # Iterate through the lines in the .md file
     ul_started = False
     ol_started = False
@@ -20,11 +20,11 @@ def generate_html(input_file):
             header_level = line.count('#')
             header_text = line.strip('#').strip()
             if header_level == 1:
-                html_content += f'<h2 class="text-danger btn-hover-text-light">{header_text}</h1><br>'
+                html_content += f'<br><br><h2 class="text-danger btn-hover-text-light">{header_text}</h1><br><br>'
             elif header_level == 2:
-                html_content += f'<h3 class="text-warning">{header_text}</h2><br>'
+                html_content += f'<br><h3 class="text-warning">{header_text}</h2><br>'
             elif header_level == 3:
-                html_content += f'<h4 class="text-warning">{header_text}</h3><br>'
+                html_content += f'<br><h4 class="text-warning">{header_text}</h3><br>'
         elif line.startswith('* '):
             if not ul_started:
                 html_content += '<ul class="btn-hover-text-light text-secondary">'
@@ -46,7 +46,7 @@ def generate_html(input_file):
             elif ol_started:
                 html_content += '</ol>'
                 ol_started = False
-            html_content += f'<p class="btn-hover-text-light text-secondary">{line}</p><br>'
+            html_content += f'<p class="btn-hover-text-light text-secondary">{line}</p>'
     if ul_started:
         html_content += '</ul>'
     elif ol_started:

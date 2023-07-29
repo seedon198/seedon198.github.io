@@ -20,9 +20,8 @@
 
     .slide {
         display: none;
-        align-self: center;
     }
 
     .slide img {
-        width: auto;
+        width: 100%;
     }

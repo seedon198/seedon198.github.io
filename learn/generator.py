@@ -22,7 +22,7 @@ def generate_html(input_file):
             elif header_level == 2:
                 html_content += f'<h3 class="text-warning">{header_text}</h2><br>'
             elif header_level == 3:
-                html_content += f'<h4 class="text-warning">{header_text}</h3><br>'
+                html_content += f'<h4 class="text-warning">{header_text}</h3>'
         elif line.startswith('* '):
             if not ul_started:
                 html_content += '<ul class="btn-hover-text-light text-secondary">'

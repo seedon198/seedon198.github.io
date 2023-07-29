@@ -46,9 +46,9 @@ def generate_html(input_file):
                 html_content += f'<pre><code class="{code_snippet["language"]}">'
                 html_content += code_snippet["content"]
                 html_content += '</code></pre>'
-                code_snippet = None
+                code_snippet = ""  # Reset code_snippet
             else:
-                code_snippet = {"language": line.strip('`')}
+                code_snippet = {"language": line.strip('`'), "content": ""}
                 continue
         elif code_snippet:
             code_snippet["content"] += line + '\n'

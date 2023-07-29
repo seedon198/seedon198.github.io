@@ -18,11 +18,11 @@ def generate_html(input_file):
             header_level = line.count('#')
             header_text = line.strip('#').strip()
             if header_level == 1:
-                html_content += f'<h2 class="text-danger btn-hover-text-light">{header_text}</h1><br>'
+                html_content += f'<h2 class="text-danger btn-hover-text-light">{header_text}</h2><br>'
             elif header_level == 2:
-                html_content += f'<h3 class="text-warning">{header_text}</h2><br>'
+                html_content += f'<h3 class="text-warning">{header_text}</h3><br>'
             elif header_level == 3:
-                html_content += f'<h4 class="text-warning">{header_text}</h3>'
+                html_content += f'<h4 class="text-warning">{header_text}</h4><br>'
         elif line.startswith('* '):
             if not ul_started:
                 html_content += '<ul class="btn-hover-text-light text-secondary">'
@@ -53,19 +53,28 @@ def generate_html(input_file):
         elif code_snippet:
             code_snippet["content"] += line + '\n'
             continue
-        else:
+        elif line == '\n':
             if ul_started:
-                html_content += '</ul>'
+                html_content += '</ul><br>'
                 ul_started = False
             elif ol_started:
-                html_content += '</ol>'
+                html_content += '</ol><br>'
+                ol_started = False
+            else:
+                html_content += '<br>'
+        else:
+            if ul_started:
+                html_content += '</ul><br>'
+                ul_started = False
+            elif ol_started:
+                html_content += '</ol><br>'
                 ol_started = False
             list_text = bold_pattern.sub(r'<strong class="text-danger">\1</strong>', line)
             html_content += f'<p class="btn-hover-text-light text-secondary">{list_text}</p>'
     if ul_started:
-        html_content += '</ul>'
+        html_content += '</ul><br>'
     elif ol_started:
-        html_content += '</ol>'
+        html_content += '</ol><br>'
     html_content = markdown.markdown(html_content).replace("Good", "Great")
     episode_number = int(input_file.split('e')[1].replace('.md', ''))
     back_link = f"../learn/s01e{episode_number - 1:02}.html"

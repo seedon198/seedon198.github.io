@@ -60,7 +60,8 @@ def generate_html(input_file):
             elif ol_started:
                 html_content += '</ol>'
                 ol_started = False
-            html_content += f'<p class="btn-hover-text-light text-secondary">{line}</p>'
+            list_text = bold_pattern.sub(r'<strong class="text-danger">\1</strong>', line)
+            html_content += f'<p class="btn-hover-text-light text-secondary">{list_text}</p>'
     if ul_started:
         html_content += '</ul>'
     elif ol_started:

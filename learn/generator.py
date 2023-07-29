@@ -11,74 +11,48 @@ def generate_html(input_file):
     html_content = ""
     # Initialize bold_pattern
     bold_pattern = re.compile(r'\*\*(.+?)\*\*(?!\*)', re.DOTALL)
-    link_pattern = re.compile(r'\[(.*?)\]\((.*?)\)', re.DOTALL)
-    # Initialize variables to keep track of nested lists
+    # Iterate through the lines in the .md file
     ul_started = False
     ol_started = False
-    ul_indentation = 0
-    ol_indentation = 0
-
     for line in md_content:
         line = line.strip()
         if line.startswith('#'):
             header_level = line.count('#')
             header_text = line.strip('#').strip()
             if header_level == 1:
-                html_content += f'<br><br><h2 class="text-danger btn-hover-text-light">{header_text}</h2><br><br>'
+                html_content += f'<br><br><h2 class="text-danger btn-hover-text-light">{header_text}</h1><br><br>'
             elif header_level == 2:
-                html_content += f'<br><h3 class="text-warning">{header_text}</h3><br>'
+                html_content += f'<br><h3 class="text-warning">{header_text}</h2><br>'
             elif header_level == 3:
-                html_content += f'<br><h4 class="text-warning">{header_text}</h4><br>'
+                html_content += f'<br><h4 class="text-warning">{header_text}</h3><br>'
         elif line.startswith('* '):
-            list_item_text = line[2:].strip()
-            list_item_text = bold_pattern.sub(r'<strong class="text-danger">\1</strong>', list_item_text)
-            list_item_text = link_pattern.sub(r'<a href="\2" title="\1" class="btn btn-outline-primary btn-shadow px-3 my-2 ml-0 text-left">\1</a>', list_item_text)
-
             if not ul_started:
                 html_content += '<ul class="btn-hover-text-light text-secondary">'
                 ul_started = True
-                ul_indentation = line.index('*')
-            elif line.index('*') > ul_indentation:
-                html_content += '<ul>'
-            elif line.index('*') < ul_indentation:
-                while line.index('*') < ul_indentation:
-                    html_content += '</ul>'
-                    ul_indentation -= 2
-
+            list_item_text = line[2:].strip()
+            list_item_text = bold_pattern.sub(r'<strong class="text-danger">\1</strong>', list_item_text)
             html_content += f'<li>{list_item_text}</li>'
         elif line.startswith('1. '):
-            list_item_text = line[3:].strip()
-            list_item_text = bold_pattern.sub(r'<strong class="text-danger">\1</strong>', list_item_text)
-            list_item_text = link_pattern.sub(r'<a href="\2" title="\1" class="btn btn-outline-primary btn-shadow px-3 my-2 ml-0 text-left">\1</a>', list_item_text)
-
             if not ol_started:
                 html_content += '<ol class="btn-hover-text-light text-secondary">'
                 ol_started = True
-                ol_indentation = line.index('1.')
-            elif line.index('1.') > ol_indentation:
-                html_content += '<ol>'
-            elif line.index('1.') < ol_indentation:
-                while line.index('1.') < ol_indentation:
-                    html_content += '</ol>'
-                    ol_indentation -= 3
-
+                list_item_text = line[3:].strip()
+            list_item_text = bold_pattern.sub(r'<strong class="text-danger">\1</strong>', list_item_text)
             html_content += f'<li>{list_item_text}</li>'
         else:
             if ul_started:
-                while ul_started:
-                    html_content += '</ul>'
-                    ul_started = False
+                html_content += '</ul>'
+                ul_started = False
             elif ol_started:
-                while ol_started:
-                    html_content += '</ol>'
-                    ol_started = False
+                html_content += '</ol>'
+                ol_started = False
             html_content += f'<p class="btn-hover-text-light text-secondary">{line}</p>'
-
     if ul_started:
         html_content += '</ul>'
     elif ol_started:
         html_content += '</ol>'
 
+    html_content = markdown.markdown(html_content)
     episode_number = int(input_file.split('e')[1].replace('.md', ''))
     back_link = f"/learn/s01e{episode_number - 1}.html"
     next_link = f"/learn/s01e{episode_number + 1}.html"

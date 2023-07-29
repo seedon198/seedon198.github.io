@@ -65,7 +65,7 @@ def generate_html(input_file):
         html_content += '</ul>'
     elif ol_started:
         html_content += '</ol>'
-    html_content = markdown.markdown(html_content)
+    html_content = markdown.markdown(html_content).replace("Good", "Great")
     episode_number = int(input_file.split('e')[1].replace('.md', ''))
     back_link = f"../learn/s01e{episode_number - 1:02}.html"
     next_link = f"../learn/s01e{episode_number + 1:02}.html"

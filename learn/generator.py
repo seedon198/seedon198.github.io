@@ -136,7 +136,7 @@ def generate_html(input_file):
                             title="Back"
                             class="btn btn-outline-primary btn-shadow px-3 my-2 ml-0 text-left">
                             Back</a>
-                            <a href="{next_link}.html"
+                            <a href="{next_link}"
                             class="btn btn-outline-primary btn-shadow px-3 my-2 ml-0 ml-sm-1 text-left">
                             Next
                             </a>

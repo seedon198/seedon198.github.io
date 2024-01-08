@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YC8JWDXN1J"></script>
+    <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-YC8JWDXN1J');
+</script>
+    <favicon href="favicon.ico"></favicon>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>&#21316;&#21314;&#23610;&#5610;&#23665;&#21314;&#23610;&#20039; &#65297;&#65296;&#65297;</title>
+    <link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet" href="../css/bootstrap4-neon-glow.min.css">
+    <link rel="stylesheet" href="../css/google-fonts.css">
+    <link rel='stylesheet' href='../css/hack.min.css'>
+  </head>
+      <body>
+      <div class="navbar-dark text-white">
+        <div class="container">
+          <nav class="navbar px-0 navbar-expand-lg navbar-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <div class="btn-block d-flex justify-content-between align-items-center">
+                  <a href="../index.html" class="btn btn-outline-primary btn-shadow px-3 my-2 ml-0 ml-sm-1 btn-hover-text-dark">Home</a>
+                  <a href="../village.html" class="btn btn-outline-primary btn-shadow px-3 my-2 ml-0 ml-sm-4 btn-hover-text-dark">Village</a>
+                  <a href="https://discord.gg/wQFkzrCQK5" class="btn btn-outline-primary btn-shadow px-3 my-2 ml-0 ml-sm-4 btn-hover-text-dark">Contact</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <div class="jumbotron bg-transparent mb-0 radius-0">
+        <div class="container">
+          <div class="row">
+            <div class="col-xl">
+              <h1 class="display-1 text-primary btn-hover-text-danger">Learning<span class="text-danger btn-hover-text-primary vim-caret">Hub</span><span class="card-img"><img class="figure-img" src="res/img/001.png"></span></h1>
+                <div class="lead mb-3 text-mono text-justify">
+                    <br>
+                        <div class="text-mono">
+                            <a href="../learn/s01e11.html"
+                            title="Back"
+                            class="btn btn-outline-primary btn-shadow px-3 my-2 ml-0 text-left">
+                            Back</a>
+                            <a href="s01e13.html"
+                            class="btn btn-outline-primary btn-shadow px-3 my-2 ml-0 ml-sm-1 text-left">
+                            Next
+                            </a>
+                        </div>
+                    <p>
+                    <h2 class="text-danger btn-hover-text-light">Chapter 4: Microcontrollers and Arduino</h1>
+                        <br>
+                        <h3 class="text-warning">Topic 3: Simple hardware projects using Arduino</h2>
+                    <br>
+                    <p class="btn-hover-text-light text-secondary"></p>
+                    <h4 class="text-warning">Arduino Temperature Display Tutorial</h4>
+                    <p class="btn-hover-text-light text-secondary"></p>
+                    <br>
+                    <h4 class="text-warning">Project Overview</h3><p class="btn-hover-text-light text-secondary"></p>
+                        <p class="btn-hover-text-light text-secondary">In this tutorial, we will build a temperature display using an Arduino board, a DS18B20 temperature sensor, and a 16x2 LCD display. The Arduino will read the temperature from the sensor and display it on the LCD screen.</p>
+                        <p class="btn-hover-text-light text-secondary"></p>
+                        <ul class="btn-hover-text-light text-secondary">
+                            <li><strong class="text-danger">Arduino board (e.g., Arduino Uno or Arduino Nano)</strong><br>
+                                <img src="/learn/res/img/arduino.png" alt="Arduino Board" width="300" height="250">
+                            </li>
+                            <br>
+                            <li><strong class="text-danger">DS18B20 temperature sensor</strong><br>
+                                <img src="/learn/res/img/DS18B20.png" alt="DS18B20 Sensor" width="300" height="250">
+                            </li>
+                            <br>
+                            <li><strong class="text-danger">16x2 LCD display (compatible with the Hitachi HD44780 controller)</strong><br>
+                                <img src="/learn/res/img/lcddisplay.png" alt="LCD Display" width="300" height="250">
+                            </li>
+                            <br>
+                            <li><strong class="text-danger">4.7kΩ resistor (for the DS18B20 sensor)</strong><br>
+                                <img src="/learn/res/img/resistor.png" alt="4.7kΩ Resistor" width="300" height="250">
+                            </li>
+                            <br>
+                            <li><strong class="text-danger">Breadboard and jumper wires</strong><br>
+                                <img src="/learn/res/img/bread.png" alt="Breadboard" width="300" height="250">  <img src="/learn/res/img/jumper.png" alt="Jumper Wires" width="300" height="250">
+                            </li>
+                        </ul>
+                        <p class="btn-hover-text-light text-secondary"></p>
+                        <h4 class="text-warning">Connections</h3><p class="btn-hover-text-light text-secondary"></p>
+                            <strong class="text-danger">DS18B20 Temperature Sensor</strong>
+                            <p class="btn-hover-text-light text-secondary"></p>
+                            <ul class="btn-hover-text-light text-secondary">
+                                <li>DS18B20 VCC to Arduino 5V</li>
+                                <li>DS18B20 GND to Arduino GND</li>
+                                <li>DS18B20 Data to Arduino digital pin 2</li>
+                                <li>Add a 4.7kΩ resistor between the DS18B20 Data and VCC to act as a pull-up resistor.</li>
+                            </ul>
+                            <p class="btn-hover-text-light text-secondary"></p>
+                            <strong class="text-danger">DS18B20 Temperature Sensor</strong>
+                            <p class="btn-hover-text-light text-secondary"></p>
+                            <ul class="btn-hover-text-light text-secondary">
+                                <li>LCD VCC to Arduino 5V</li>
+                                <li>LCD GND to Arduino GND</li>
+                                <li>LCD SDA (data) to Arduino analog pin 4</li>
+                                <li>LCD SCL (clock) to Arduino analog pin 5</li>
+                            </ul>
+                            <h4 class="text-warning">Code</h3><p class="btn-hover-text-light text-secondary"></p>
+                                <pre>
+                                    <code class="btn-hover-text-light text-secondary">
+                                    #include &lt;OneWire.h&gt;
+                                    #include &lt;DallasTemperature.h&gt;
+                                    #include &lt;LiquidCrystal_I2C.h&gt;
+                                    
+                                    // Data wire for DS18B20 temperature sensor
+                                    #define ONE_WIRE_BUS 2
+                                    
+                                    OneWire oneWire(ONE_WIRE_BUS);
+                                    DallasTemperature sensors(&oneWire);
+                                    
+                                    // Set the LCD address and dimensions
+                                    LiquidCrystal_I2C lcd(0x27, 16, 2);
+                                    
+                                    void setup() {
+                                      // Initialize DS18B20 temperature sensor
+                                      sensors.begin();
+                                    
+                                      // Initialize LCD
+                                      lcd.init();
+                                      lcd.backlight();
+                                    
+                                      // Print a welcome message on the LCD
+                                      lcd.setCursor(0, 0);
+                                      lcd.print("Temperature:");
+                                    }
+                                    
+                                    void loop() {
+                                      // Request temperature from DS18B20
+                                      sensors.requestTemperatures();
+                                    
+                                      // Read temperature in Celsius
+                                      float tempC = sensors.getTempCByIndex(0);
+                                    
+                                      // Display temperature on LCD
+                                      lcd.setCursor(0, 1);
+                                      lcd.print("Temp: " + String(tempC, 1) + "C");
+                                    
+                                      delay(1000); // Update every 1 second
+                                    }
+                                    </code>
+                                 </pre>
+                            <h4 class="text-warning">Libraries</h3><p class="btn-hover-text-light text-secondary"></p>
+                                <p class="btn-hover-text-light text-secondary">You'll need to install the required libraries to compile and upload the code to your Arduino board. You can install these libraries using the Arduino Library Manager:</p>
+                                <p class="btn-hover-text-light text-secondary"></p>
+                                <ul class="btn-hover-text-light text-secondary">
+                                    <li><b>OneWire</b></li>
+                                    <li><b>DallasTemperature</b></li>
+                                    <li><b>LiquidCrystal_I2C</b></li>
+                                </ul>
+                                <p class="btn-hover-text-light text-secondary"></p>
+                            <h4 class="text-warning">Step-by-Step Instructions</h3><p class="btn-hover-text-light text-secondary"></p>
+                                <ol class="btn-hover-text-light text-secondary">
+                                    <li>Connect the DS18B20 temperature sensor and the LCD display to the Arduino as described in the "Connections" section above.</li>
+                                    <li>Upload the provided Arduino code to your Arduino board.</li>
+                                    <li>Adjust the I2C address (0x27) in the code if your LCD has a different address.</li>
+                                    <li>Power up your Arduino, and you should see the temperature displayed on the LCD screen in Celsius.</li>
+                                </ol>
+                                            </p>
+                                            <br><br>
+                        <div class="text-mono">
+                            <a href="../learn/s01e11.html"
+                            title="Back"
+                            class="btn btn-outline-primary btn-shadow px-3 my-2 ml-0 text-left">
+                            Back</a>
+                            <a href="../learn/s01e13.html"
+                            class="btn btn-outline-primary btn-shadow px-3 my-2 ml-0 ml-sm-1 text-left">
+                            Next
+                            </a>
+                        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    <br><br><br><br><br><br><br>
+    
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+     <footer>
+        <div class="container-fluid text-center text-reduced-opacity text-primary p-5">
+          <p>hw101.me &#174;. This work is open-source, empowering collaboration and unrestricted exploration.</p>
+        </div>
+      </footer>
+      <script src="../js/script.js"></script>
+  <script src="../js/jquery-3.3.1.slim.min.js"></script>
+  <script src="../js/popper.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
+        </div>
+      </body>
+    </html>
+    

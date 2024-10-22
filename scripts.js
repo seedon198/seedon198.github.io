@@ -7,43 +7,162 @@ function debug(message) {
     }
 }
 
-// Village details data
+// Village details data with formatted descriptions and key takeaways
 const villageDetails = {
     flipper: {
         title: "Flipper Zero Village",
-        description: "Dive deep into the world of Flipper Zero. Learn about radio frequency analysis, NFC cloning, infrared communication, and much more. Our experts will guide you through hands-on exercises and real-world applications.",
+        description: `
+            <p>Dive deep into the world of Flipper Zero. Our experts will guide you through:</p>
+            <ul>
+                <li>Radio Frequency (RF) analysis</li>
+                <li>NFC cloning</li>
+                <li>Infrared communication</li>
+                <li>GPIO, UART, SPI interfaces exploration</li>
+                <li>Practical demonstrations with Flipper Zero</li>
+            </ul>
+            <strong>Key Takeaways:</strong>
+            <ul>
+                <li>Understanding Flipper Zero hardware capabilities</li>
+                <li>Practical knowledge of RF, NFC, and IR operations</li>
+                <li>Hands-on experience with Flipper Zero in real-world scenarios</li>
+            </ul>
+        `,
     },
     badge: {
         title: "Badge Village",
-        description: "Explore the art of electronic badge hacking. Learn to modify and program conference badges, understand embedded systems, and create your own badge modifications.",
+        description: `
+            <p>Explore the world of electronic badge hacking. Sessions will cover:</p>
+            <ul>
+                <li>Modifying and programming conference badges</li>
+                <li>Understanding embedded systems in badges</li>
+                <li>Creating custom badge modifications</li>
+            </ul>
+            <strong>Key Takeaways:</strong>
+            <ul>
+                <li>Hands-on experience with badge hardware and software</li>
+                <li>Customizing badges with embedded systems knowledge</li>
+                <li>Insights into programming and modifying badges for personal use</li>
+            </ul>
+        `,
     },
     ham: {
         title: "HAM Village",
-        description: "Get hands-on experience with amateur radio operations. Learn about SDR, radio protocols, signal analysis, and the intersection of radio communications with cybersecurity.",
+        description: `
+            <p>Get hands-on experience with amateur radio operations. Learn about:</p>
+            <ul>
+                <li>Software-Defined Radio (SDR)</li>
+                <li>Radio protocols and signal analysis</li>
+                <li>How radio communications intersect with cybersecurity</li>
+            </ul>
+            <strong>Key Takeaways:</strong>
+            <ul>
+                <li>Basic understanding of HAM radio operations</li>
+                <li>Using SDR for radio signal analysis</li>
+                <li>Applying radio protocols in cybersecurity contexts</li>
+            </ul>
+        `,
     },
     forensics: {
         title: "Digital Forensics",
-        description: "Master the tools and techniques of digital forensics. Learn about data recovery, evidence handling, and investigation methodologies used by professionals.",
+        description: `
+            <p>Master the tools and techniques of digital forensics, focusing on:</p>
+            <ul>
+                <li>Data recovery and evidence handling</li>
+                <li>Investigation methodologies used by professionals</li>
+                <li>Real-world digital forensic case studies</li>
+            </ul>
+            <strong>Key Takeaways:</strong>
+            <ul>
+                <li>Deep understanding of data recovery tools</li>
+                <li>Best practices for evidence handling</li>
+                <li>Real-world experience through case studies</li>
+            </ul>
+        `,
     },
     wifi: {
         title: "WiFi Village",
-        description: "Explore wireless network security, packet analysis, and network penetration testing. Learn about the latest WiFi security protocols and how to assess wireless network security.",
+        description: `
+            <p>Explore wireless network security, focusing on:</p>
+            <ul>
+                <li>Packet analysis and network penetration testing</li>
+                <li>The latest WiFi security protocols</li>
+                <li>Assessing wireless network vulnerabilities</li>
+            </ul>
+            <strong>Key Takeaways:</strong>
+            <ul>
+                <li>Understanding WiFi vulnerabilities and security protocols</li>
+                <li>Using packet analysis for penetration testing</li>
+                <li>Best practices for wireless security assessments</li>
+            </ul>
+        `,
     },
     ics: {
         title: "ICS Village",
-        description: "Understanding industrial control systems security. Learn about SCADA systems, PLCs, and how to secure critical infrastructure from cyber threats.",
+        description: `
+            <p>Understanding Industrial Control Systems (ICS) security, with a focus on:</p>
+            <ul>
+                <li>SCADA systems and PLC security</li>
+                <li>Securing critical infrastructure from cyber threats</li>
+                <li>Real-world ICS security breach scenarios</li>
+            </ul>
+            <strong>Key Takeaways:</strong>
+            <ul>
+                <li>Comprehensive knowledge of ICS and SCADA systems</li>
+                <li>Strategies to secure critical infrastructure</li>
+                <li>Insights into real-world ICS security challenges</li>
+            </ul>
+        `,
     },
     drone: {
         title: "Drone Village",
-        description: "Explore drone security, control systems, and wireless communications. Learn about drone hacking, signal analysis, and counter-drone technologies.",
+        description: `
+            <p>Learn about drone security, focusing on:</p>
+            <ul>
+                <li>Drone control systems and wireless communications</li>
+                <li>Drone hacking techniques and counter-drone technologies</li>
+                <li>Signal analysis for drones</li>
+            </ul>
+            <strong>Key Takeaways:</strong>
+            <ul>
+                <li>Understanding drone control systems and vulnerabilities</li>
+                <li>Hacking drones and implementing counter-drone measures</li>
+                <li>Applying signal analysis techniques in drone security</li>
+            </ul>
+        `,
     },
     lockpicking: {
         title: "Lock Picking Village",
-        description: "Learn the art of lock picking, physical security assessment, and understanding mechanical security systems. Hands-on experience with various types of locks and security mechanisms.",
+        description: `
+            <p>Hands-on experience in lock picking and physical security assessment:</p>
+            <ul>
+                <li>Understanding various lock mechanisms</li>
+                <li>Practicing lock picking techniques</li>
+                <li>Assessing physical security systems</li>
+            </ul>
+            <strong>Key Takeaways:</strong>
+            <ul>
+                <li>Hands-on knowledge of lock mechanics</li>
+                <li>Best practices in lock picking and security assessments</li>
+                <li>Understanding physical security vulnerabilities</li>
+            </ul>
+        `,
     },
     soldering: {
         title: "Soldering Village",
-        description: "Master electronic assembly techniques. Learn component identification, proper soldering techniques, and board repair. Build your own electronic projects with expert guidance.",
+        description: `
+            <p>Master electronic assembly techniques, focusing on:</p>
+            <ul>
+                <li>Component identification and soldering techniques</li>
+                <li>PCB board repair and troubleshooting</li>
+                <li>Building electronic projects from scratch</li>
+            </ul>
+            <strong>Key Takeaways:</strong>
+            <ul>
+                <li>Hands-on experience with soldering and repair techniques</li>
+                <li>Component identification skills</li>
+                <li>Guided project building with expert supervision</li>
+            </ul>
+        `,
     }
 };
 
@@ -77,7 +196,7 @@ function initializeModal() {
             
             if (details) {
                 modalTitle.textContent = details.title;
-                modalDescription.textContent = details.description;
+                modalDescription.innerHTML = details.description;  // Use innerHTML for proper formatting
                 modal.classList.add('active');
                 debug(`Opened modal for ${villageId}`);
             }
@@ -139,11 +258,9 @@ function initializeParticles() {
         update() {
             this.x += this.speedX;
             this.y += this.speedY;
-            this.life -= 0.005;
+            this.life -= 0.01;
 
-            if (this.life <= 0 || 
-                this.x < 0 || this.x > canvas.width || 
-                this.y < 0 || this.y > canvas.height) {
+            if (this.life <= 0) {
                 this.reset();
             }
         }
@@ -151,41 +268,30 @@ function initializeParticles() {
         draw() {
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-            // Change this line - increase the final multiplier from 0.5 to 0.8
-            ctx.fillStyle = `rgba(0, 243, 255, ${this.life * this.opacity * 0.8})`; // Previously was: * 0.5
+            ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity})`;
             ctx.fill();
         }
     }
 
-    setCanvasSize();
-    window.addEventListener('resize', setCanvasSize);
+    const particlesArray = Array.from({ length: 200 }, () => new Particle());
 
-    const particles = Array(50).fill().map(() => new Particle());
-    debug(`Created ${particles.length} particles`);
-
-    function animate() {
+    function animateParticles() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        particles.forEach(particle => {
+        particlesArray.forEach(particle => {
             particle.update();
             particle.draw();
         });
-        requestAnimationFrame(animate);
+        requestAnimationFrame(animateParticles);
     }
 
-    animate();
-    debug('Particle animation started');
+    window.addEventListener('resize', setCanvasSize);
+    setCanvasSize();
+    animateParticles();
+
+    debug('Particles initialization complete');
 }
 
-// Initialize everything when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
-    debug('DOM Content Loaded');
     initializeModal();
     initializeParticles();
 });
-
-// Backup initialization for cases where DOMContentLoaded might have already fired
-if (document.readyState === 'complete') {
-    debug('DOM already loaded, initializing directly');
-    initializeModal();
-    initializeParticles();
-}

@@ -133,7 +133,7 @@ function initializeParticles() {
             this.speedX = Math.random() * 1 - 0.5;
             this.speedY = Math.random() * 1 - 0.5;
             this.life = Math.random() * 0.5 + 0.5;
-            this.opacity = Math.random() * 0.5 + 0.2;
+            this.opacity = Math.random() * 0.5 + 0.4;
         }
 
         update() {
@@ -151,9 +151,9 @@ function initializeParticles() {
         draw() {
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-            ctx.fillStyle = `rgba(0, 243, 255, ${this.life * this.opacity * 0.5})`;
+            // Change this line - increase the final multiplier from 0.5 to 0.8
+            ctx.fillStyle = `rgba(0, 243, 255, ${this.life * this.opacity * 0.8})`; // Previously was: * 0.5
             ctx.fill();
-        }
     }
 
     setCanvasSize();

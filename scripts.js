@@ -10,7 +10,7 @@ function debug(message) {
 const audio = document.getElementById('background-audio');
         
 // Set the initial volume to 50%
-audio.volume = 0.2;
+audio.volume = 0.1;
 
 // Play audio after user interaction (click anywhere in the document)
 document.addEventListener('click', () => {

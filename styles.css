@@ -246,7 +246,7 @@ nav {
     display: inline-block;
     padding: 0.75rem 1.5rem;  /* Reduced from 1rem 2rem */
     background: linear-gradient(45deg, var(--neon-blue), var(--accent-color));
-    color: white;
+    color: black;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;

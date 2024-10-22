@@ -7,6 +7,34 @@ function debug(message) {
     }
 }
 
+// Get the audio element
+const audio = document.getElementById('background-audio');
+
+// Set the initial volume to 50%
+audio.volume = 0.5;
+
+// Function to play audio
+function playAudio() {
+    audio.play().catch(error => {
+        console.error('Playback failed:', error);
+    });
+}
+
+// Simulate a user click after a short delay
+window.onload = () => {
+    // Simulate a click event on the audio element
+    const event = new MouseEvent('click', {
+        view: window,
+        bubbles: true,
+        cancelable: true
+    });
+
+    // Dispatch the click event
+    audio.dispatchEvent(event);
+    
+    // Play the audio (you can also call this from a user action)
+    playAudio();
+};
 
 
 // Village details data with formatted descriptions and key takeaways

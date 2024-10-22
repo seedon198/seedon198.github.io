@@ -11,7 +11,7 @@ function debug(message) {
 const audio = document.getElementById('background-audio');
 
 // Set the initial volume to 50%
-audio.volume = 0.5;
+audio.volume = 0.1;
 
 // Function to play audio
 function playAudio() {

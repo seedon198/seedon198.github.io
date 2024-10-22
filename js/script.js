@@ -1,4 +1,3 @@
-
 // Village details data
 const villageDetails = {
     flipper: {
@@ -39,100 +38,131 @@ const villageDetails = {
     }
 };
 
+// Wait for DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize Modal functionality
+    initializeModal();
+    
+    // Initialize Particle system
+    initializeParticles();
+    
+    // Initialize Google Analytics
+    initializeGA();
+});
+
 // Modal functionality
-const modal = document.getElementById('villageModal');
-const modalClose = document.querySelector('.modal-close');
-const villageCards = document.querySelectorAll('.village-card');
+function initializeModal() {
+    const modal = document.getElementById('villageModal');
+    const modalClose = document.querySelector('.modal-close');
+    const villageCards = document.querySelectorAll('.village-card');
 
-villageCards.forEach(card => {
-    card.addEventListener('click', () => {
-        const villageId = card.dataset.village;
-        const details = villageDetails[villageId];
-        
-        document.querySelector('.modal-title').textContent = details.title;
-        document.querySelector('.modal-description').textContent = details.description;
-        modal.classList.add('active');
+    if (!modal || !modalClose) {
+        console.error('Modal elements not found');
+        return;
+    }
+
+    villageCards.forEach(card => {
+        card.addEventListener('click', () => {
+            const villageId = card.dataset.village;
+            const details = villageDetails[villageId];
+            
+            if (details) {
+                document.querySelector('.modal-title').textContent = details.title;
+                document.querySelector('.modal-description').textContent = details.description;
+                modal.classList.add('active');
+            }
+        });
     });
-});
 
-modalClose.addEventListener('click', () => {
-    modal.classList.remove('active');
-});
-
-window.addEventListener('click', (e) => {
-    if (e.target === modal) {
+    modalClose.addEventListener('click', () => {
         modal.classList.remove('active');
-    }
-});
+    });
 
-// Particle animation
-// Particle animation
-const canvas = document.getElementById('particles');
-const ctx = canvas.getContext('2d');
-
-function setCanvasSize() {
-    canvas.width = window.innerWidth;
-    canvas.height = document.documentElement.scrollHeight;
+    window.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.classList.remove('active');
+        }
+    });
 }
-setCanvasSize();
-window.addEventListener('resize', setCanvasSize);
 
-// Particle class
-class Particle {
-    constructor() {
-        this.reset();
+// Particle animation
+function initializeParticles() {
+    const canvas = document.getElementById('particles');
+    if (!canvas) {
+        console.error('Particles canvas not found');
+        return;
     }
 
-    reset() {
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
-        this.size = Math.random() * 1.5 + 0.5; // Smaller particles for subtler effect
-        this.speedX = Math.random() * 1 - 0.5; // Slower movement
-        this.speedY = Math.random() * 1 - 0.5;
-        this.life = Math.random() * 0.5 + 0.5;
-        this.opacity = Math.random() * 0.5 + 0.2; // Varied opacity
+    const ctx = canvas.getContext('2d');
+
+    function setCanvasSize() {
+        canvas.width = window.innerWidth;
+        canvas.height = document.documentElement.scrollHeight;
     }
 
-    update() {
-        this.x += this.speedX;
-        this.y += this.speedY;
-        this.life -= 0.005; // Slower fade
-
-        if (this.life <= 0 || 
-            this.x < 0 || this.x > canvas.width || 
-            this.y < 0 || this.y > canvas.height) {
+    // Particle class
+    class Particle {
+        constructor() {
             this.reset();
+        }
+
+        reset() {
+            this.x = Math.random() * canvas.width;
+            this.y = Math.random() * canvas.height;
+            this.size = Math.random() * 1.5 + 0.5;
+            this.speedX = Math.random() * 1 - 0.5;
+            this.speedY = Math.random() * 1 - 0.5;
+            this.life = Math.random() * 0.5 + 0.5;
+            this.opacity = Math.random() * 0.5 + 0.2;
+        }
+
+        update() {
+            this.x += this.speedX;
+            this.y += this.speedY;
+            this.life -= 0.005;
+
+            if (this.life <= 0 || 
+                this.x < 0 || this.x > canvas.width || 
+                this.y < 0 || this.y > canvas.height) {
+                this.reset();
+            }
+        }
+
+        draw() {
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(0, 243, 255, ${this.life * this.opacity * 0.5})`;
+            ctx.fill();
         }
     }
 
-    draw() {
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(0, 243, 255, ${this.life * this.opacity * 0.5})`; // More subtle particles
-        ctx.fill();
+    // Initialize the canvas
+    setCanvasSize();
+    window.addEventListener('resize', setCanvasSize);
+
+    // Create particles
+    const particles = Array(50).fill().map(() => new Particle());
+
+    // Animation loop
+    function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
+        particles.forEach(particle => {
+            particle.update();
+            particle.draw();
+        });
+
+        requestAnimationFrame(animate);
     }
+
+    // Start animation
+    animate();
 }
 
-// Create particle array - fewer particles for better performance
-const particles = Array(50).fill().map(() => new Particle());
-
-// Animation loop
-function animate() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    
-    particles.forEach(particle => {
-        particle.update();
-        particle.draw();
-    });
-
-    requestAnimationFrame(animate);
+// Google Analytics initialization
+function initializeGA() {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YC8JWDXN1J');
 }
-
-// Initialize animation
-animate();
-
-// Google Analytics
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-YC8JWDXN1J');

@@ -244,7 +244,7 @@ nav {
 
 .cta-button {
     display: inline-block;
-    padding: 1rem 2rem;
+    padding: 0.75rem 1.5rem;  /* Reduced from 1rem 2rem */
     background: linear-gradient(45deg, var(--neon-blue), var(--accent-color));
     color: white;
     text-decoration: none;
@@ -252,6 +252,7 @@ nav {
     font-weight: bold;
     text-transform: uppercase;
     margin-top: 2rem;
+    margin-right: 1rem;  /* Add spacing between buttons */
     transition: transform 0.3s;
 }
 

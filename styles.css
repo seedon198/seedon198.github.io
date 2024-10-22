@@ -294,7 +294,7 @@ nav {
   content: attr(data-text);
   position: absolute;
   left: 2px;
-  text-shadow: -5px 0 lightgreen;
+  text-shadow: -5px 0 #00f3ff;
   background: black;
   overflow: hidden;
   top: 0;

@@ -237,7 +237,7 @@ function initializeParticles() {
             document.documentElement.scrollHeight,
             document.documentElement.clientHeight
         );
-        debug(`Canvas resized to ${canvas.width}x${canvas.height}`);
+        debug(Canvas resized to ${canvas.width}x${canvas.height});
     }
 
     class Particle {
@@ -258,9 +258,11 @@ function initializeParticles() {
         update() {
             this.x += this.speedX;
             this.y += this.speedY;
-            this.life -= 0.01;
+            this.life -= 0.005;
 
-            if (this.life <= 0) {
+            if (this.life <= 0 || 
+                this.x < 0 || this.x > canvas.width || 
+                this.y < 0 || this.y > canvas.height) {
                 this.reset();
             }
         }
@@ -268,30 +270,41 @@ function initializeParticles() {
         draw() {
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-            ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity})`;
+            // Change this line - increase the final multiplier from 0.5 to 0.8
+            ctx.fillStyle = rgba(0, 243, 255, ${this.life * this.opacity * 0.8}); // Previously was: * 0.5
             ctx.fill();
         }
     }
 
-    const particlesArray = Array.from({ length: 200 }, () => new Particle());
+    setCanvasSize();
+    window.addEventListener('resize', setCanvasSize);
 
-    function animateParticles() {
+    const particles = Array(50).fill().map(() => new Particle());
+    debug(Created ${particles.length} particles);
+
+    function animate() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        particlesArray.forEach(particle => {
+        particles.forEach(particle => {
             particle.update();
             particle.draw();
         });
-        requestAnimationFrame(animateParticles);
+        requestAnimationFrame(animate);
     }
 
-    window.addEventListener('resize', setCanvasSize);
-    setCanvasSize();
-    animateParticles();
-
-    debug('Particles initialization complete');
+    animate();
+    debug('Particle animation started');
 }
 
+// Initialize everything when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
+    debug('DOM Content Loaded');
     initializeModal();
     initializeParticles();
 });
+
+// Backup initialization for cases where DOMContentLoaded might have already fired
+if (document.readyState === 'complete') {
+    debug('DOM already loaded, initializing directly');
+    initializeModal();
+    initializeParticles();
+}

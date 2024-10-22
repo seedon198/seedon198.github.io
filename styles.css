@@ -163,8 +163,8 @@ nav {
     opacity: 1;
 }
 
-.village-card:p {
-    color: grey;
+.village-card p {
+    color: #808080; /* Light grey color */
 }
 
 .village-icon {

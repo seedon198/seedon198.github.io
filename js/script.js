@@ -1,3 +1,12 @@
+// Debug flag
+const DEBUG = true;
+
+function debug(message) {
+    if (DEBUG) {
+        console.log(`[Debug]: ${message}`);
+    }
+}
+
 // Village details data
 const villageDetails = {
     flipper: {
@@ -38,55 +47,62 @@ const villageDetails = {
     }
 };
 
-// Wait for DOM to be fully loaded
-document.addEventListener('DOMContentLoaded', function() {
-    // Initialize Modal functionality
-    initializeModal();
-    
-    // Initialize Particle system
-    initializeParticles();
-    
-    // Initialize Google Analytics
-    initializeGA();
-});
-
 // Modal functionality
 function initializeModal() {
+    debug('Initializing modal...');
+    
     const modal = document.getElementById('villageModal');
-    const modalClose = document.querySelector('.modal-close');
+    const modalClose = modal ? modal.querySelector('.modal-close') : null;
     const villageCards = document.querySelectorAll('.village-card');
+    const modalTitle = modal ? modal.querySelector('.modal-title') : null;
+    const modalDescription = modal ? modal.querySelector('.modal-description') : null;
 
-    if (!modal || !modalClose) {
-        console.error('Modal elements not found');
+    if (!modal || !modalClose || !modalTitle || !modalDescription) {
+        console.error('Required modal elements not found:', {
+            modal: !!modal,
+            modalClose: !!modalClose,
+            modalTitle: !!modalTitle,
+            modalDescription: !!modalDescription
+        });
         return;
     }
 
+    debug(`Found ${villageCards.length} village cards`);
+
     villageCards.forEach(card => {
-        card.addEventListener('click', () => {
+        card.addEventListener('click', (e) => {
+            debug('Village card clicked');
             const villageId = card.dataset.village;
             const details = villageDetails[villageId];
             
             if (details) {
-                document.querySelector('.modal-title').textContent = details.title;
-                document.querySelector('.modal-description').textContent = details.description;
+                modalTitle.textContent = details.title;
+                modalDescription.textContent = details.description;
                 modal.classList.add('active');
+                debug(`Opened modal for ${villageId}`);
             }
         });
     });
 
     modalClose.addEventListener('click', () => {
         modal.classList.remove('active');
+        debug('Modal closed via close button');
     });
 
     window.addEventListener('click', (e) => {
         if (e.target === modal) {
             modal.classList.remove('active');
+            debug('Modal closed via outside click');
         }
     });
+
+    debug('Modal initialization complete');
 }
 
 // Particle animation
 function initializeParticles() {
+    debug('Initializing particles...');
+    
     const canvas = document.getElementById('particles');
     if (!canvas) {
         console.error('Particles canvas not found');
@@ -94,13 +110,17 @@ function initializeParticles() {
     }
 
     const ctx = canvas.getContext('2d');
+    debug('Canvas context acquired');
 
     function setCanvasSize() {
         canvas.width = window.innerWidth;
-        canvas.height = document.documentElement.scrollHeight;
+        canvas.height = Math.max(
+            document.documentElement.scrollHeight,
+            document.documentElement.clientHeight
+        );
+        debug(`Canvas resized to ${canvas.width}x${canvas.height}`);
     }
 
-    // Particle class
     class Particle {
         constructor() {
             this.reset();
@@ -136,33 +156,35 @@ function initializeParticles() {
         }
     }
 
-    // Initialize the canvas
     setCanvasSize();
     window.addEventListener('resize', setCanvasSize);
 
-    // Create particles
     const particles = Array(50).fill().map(() => new Particle());
+    debug(`Created ${particles.length} particles`);
 
-    // Animation loop
     function animate() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        
         particles.forEach(particle => {
             particle.update();
             particle.draw();
         });
-
         requestAnimationFrame(animate);
     }
 
-    // Start animation
     animate();
+    debug('Particle animation started');
 }
 
-// Google Analytics initialization
-function initializeGA() {
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-YC8JWDXN1J');
+// Initialize everything when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+    debug('DOM Content Loaded');
+    initializeModal();
+    initializeParticles();
+});
+
+// Backup initialization for cases where DOMContentLoaded might have already fired
+if (document.readyState === 'complete') {
+    debug('DOM already loaded, initializing directly');
+    initializeModal();
+    initializeParticles();
 }

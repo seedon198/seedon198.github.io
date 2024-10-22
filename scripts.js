@@ -155,6 +155,7 @@ function initializeParticles() {
             ctx.fillStyle = `rgba(0, 243, 255, ${this.life * this.opacity * 0.8})`; // Previously was: * 0.5
             ctx.fill();
     }
+    }
 
     setCanvasSize();
     window.addEventListener('resize', setCanvasSize);

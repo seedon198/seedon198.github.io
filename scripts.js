@@ -7,15 +7,18 @@ function debug(message) {
     }
 }
 
-// audio
 const audio = document.getElementById('background-audio');
         
 // Set the initial volume to 50%
 audio.volume = 0.5;
 
-// Optional: Play audio after a short delay to ensure user interaction policy compliance
-audio.addEventListener('canplaythrough', () => {
-    audio.play();
+// Play audio after user interaction (click anywhere in the document)
+document.addEventListener('click', () => {
+    if (audio.paused) {
+        audio.play().catch(error => {
+            console.error('Playback failed:', error);
+        });
+    }
 });
 
 // Village details data with formatted descriptions and key takeaways

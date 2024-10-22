@@ -13,6 +13,7 @@ const villageDetails = {
         title: "Flipper Zero Village",
         description: `
             <p>Dive deep into the world of Flipper Zero. Our experts will guide you through:</p>
+             <div class="spacer"></div>
             <div class="bulleted-section">
                 <ul>
                     <li>Radio Frequency (RF) analysis</li>
@@ -26,7 +27,7 @@ const villageDetails = {
             <div class="spacer"></div>
             
             <strong>Key Takeaways:</strong>
-            
+             <div class="spacer"></div>
             <div class="bulleted-section">
                 <ul>
                     <li>Understanding Flipper Zero hardware capabilities</li>
@@ -41,7 +42,7 @@ const villageDetails = {
         title: "Badge Village",
         description: `
             <p>Explore the world of electronic badge hacking. Sessions will cover:</p>
-            
+             <div class="spacer"></div>
             <div class="bulleted-section">
                 <ul>
                     <li>Modifying and programming conference badges</li>
@@ -53,7 +54,7 @@ const villageDetails = {
             <div class="spacer"></div>
             
             <strong>Key Takeaways:</strong>
-            
+             <div class="spacer"></div>
             <div class="bulleted-section">
                 <ul>
                     <li>Hands-on experience with badge hardware and software</li>
@@ -67,7 +68,7 @@ const villageDetails = {
         title: "HAM Village",
         description: `
             <p>Get hands-on experience with amateur radio operations. Learn about:</p>
-            
+             <div class="spacer"></div>
             <div class="bulleted-section">
                 <ul>
                     <li>Software-Defined Radio (SDR)</li>
@@ -79,7 +80,7 @@ const villageDetails = {
             <div class="spacer"></div>
             
             <strong>Key Takeaways:</strong>
-            
+             <div class="spacer"></div>
             <div class="bulleted-section">
                 <ul>
                     <li>Basic understanding of HAM radio operations</li>
@@ -93,7 +94,7 @@ const villageDetails = {
         title: "Digital Forensics",
         description: `
             <p>Master the tools and techniques of digital forensics, focusing on:</p>
-            
+             <div class="spacer"></div>
             <div class="bulleted-section">
                 <ul>
                     <li>Data recovery and evidence handling</li>
@@ -105,7 +106,7 @@ const villageDetails = {
             <div class="spacer"></div>
             
             <strong>Key Takeaways:</strong>
-            
+             <div class="spacer"></div>
             <div class="bulleted-section">
                 <ul>
                     <li>Deep understanding of data recovery tools</li>
@@ -119,7 +120,7 @@ const villageDetails = {
         title: "WiFi Village",
         description: `
             <p>Explore wireless network security, focusing on:</p>
-            
+             <div class="spacer"></div>
             <div class="bulleted-section">
                 <ul>
                     <li>Packet analysis and network penetration testing</li>
@@ -131,7 +132,7 @@ const villageDetails = {
             <div class="spacer"></div>
             
             <strong>Key Takeaways:</strong>
-            
+             <div class="spacer"></div>
             <div class="bulleted-section">
                 <ul>
                     <li>Understanding WiFi vulnerabilities and security protocols</li>
@@ -145,7 +146,7 @@ const villageDetails = {
         title: "ICS Village",
         description: `
             <p>Understanding Industrial Control Systems (ICS) security, with a focus on:</p>
-            
+             <div class="spacer"></div>
             <div class="bulleted-section">
                 <ul>
                     <li>SCADA systems and PLC security</li>
@@ -157,7 +158,7 @@ const villageDetails = {
             <div class="spacer"></div>
             
             <strong>Key Takeaways:</strong>
-            
+             <div class="spacer"></div>
             <div class="bulleted-section">
                 <ul>
                     <li>Comprehensive knowledge of ICS and SCADA systems</li>
@@ -171,7 +172,7 @@ const villageDetails = {
         title: "Drone Village",
         description: `
             <p>Learn about drone security, focusing on:</p>
-            
+             <div class="spacer"></div>
             <div class="bulleted-section">
                 <ul>
                     <li>Drone control systems and wireless communications</li>
@@ -183,7 +184,7 @@ const villageDetails = {
             <div class="spacer"></div>
             
             <strong>Key Takeaways:</strong>
-            
+             <div class="spacer"></div>
             <div class="bulleted-section">
                 <ul>
                     <li>Understanding drone control systems and vulnerabilities</li>
@@ -197,7 +198,7 @@ const villageDetails = {
         title: "Lock Picking Village",
         description: `
               <p>Hands-on experience in lock picking and physical security assessment:</p>
-            
+             <div class="spacer"></div>
             <div class="bulleted-section">
                 <ul>
                     <li>Understanding various lock mechanisms</li>
@@ -209,7 +210,7 @@ const villageDetails = {
             <div class="spacer"></div>
             
             <strong>Key Takeaways:</strong>
-            
+             <div class="spacer"></div>
             <div class="bulleted-section">
                 <ul>
                     <li>Hands-on knowledge of lock mechanics</li>
@@ -223,7 +224,7 @@ const villageDetails = {
         title: "Soldering Village",
         description: `
             <p>Master electronic assembly techniques, focusing on:</p>
-            
+             <div class="spacer"></div>
             <div class="bulleted-section">
                 <ul>
                     <li>Component identification and soldering techniques</li>
@@ -235,7 +236,7 @@ const villageDetails = {
             <div class="spacer"></div>
             
             <strong>Key Takeaways:</strong>
-            
+             <div class="spacer"></div>
             <div class="bulleted-section">
                 <ul>
                     <li>Hands-on experience with soldering and repair techniques</li>

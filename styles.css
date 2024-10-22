@@ -549,4 +549,11 @@ animation: noise-2 3s linear infinite alternate-reverse, glitch 5s 5s infinite;
   }
 }
 
+.bulleted-section {
+    margin-left: 20px; /* Indentation for the bullet points */
+}
+
+.spacer {
+    height: 20px; /* Space between sections */
+}
 

@@ -7,19 +7,47 @@ function debug(message) {
     }
 }
 
-const audio = document.getElementById('background-audio');
-        
-// Set the initial volume to 50%
-audio.volume = 0.1;
 
-// Play audio after user interaction (click anywhere in the document)
-document.addEventListener('click', () => {
-    if (audio.paused) {
-        audio.play().catch(error => {
-            console.error('Playback failed:', error);
-        });
+// Load the IFrame API code asynchronously
+let player;
+
+// Create an iframe player
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+        height: '0', // Set height to 0 to hide the video
+        width: '0', // Set width to 0 to hide the video
+        videoId: 'o_hvTGcbbpM', // Replace with your YouTube video ID
+        playerVars: {
+            'autoplay': 1, // Auto-play the video
+            'controls': 0, // Hide controls
+            'mute': 1, // Mute the video to start audio playback
+            'loop': 1, // Loop the video
+            'playlist': 'o_hvTGcbbpM' // For looping
+        },
+        events: {
+            'onReady': function(event) {
+                // Play the audio when ready
+                event.target.playVideo();
+            },
+            'onStateChange': function(event) {
+                if (event.data === YT.PlayerState.ENDED) {
+                    // Restart when the audio ends
+                    event.target.playVideo();
+                }
+            }
+        }
+    });
+}
+
+// Optional: Play audio after user interaction (click anywhere in the document)
+document.addEventListener('click', function playAudioOnce() {
+    if (player && player.getPlayerState() === YT.PlayerState.PAUSED) {
+        player.playVideo();
+        // Remove the event listener after the first click
+        document.removeEventListener('click', playAudioOnce);
     }
 });
+
 
 // Village details data with formatted descriptions and key takeaways
 const villageDetails = {

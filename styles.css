@@ -274,7 +274,7 @@ nav {
 }
 
 .glitch, .glow {
-  color: #dfbfbf;
+  color: #00f3ff;
   position: relative;
   animation: glitch 5s 5s infinite;
 }

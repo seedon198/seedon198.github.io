@@ -163,6 +163,10 @@ nav {
     opacity: 1;
 }
 
+.village-card:p {
+    color: grey;
+}
+
 .village-icon {
     font-size: 2rem;
     color: var(--neon-blue);

@@ -13,155 +13,236 @@ const villageDetails = {
         title: "Flipper Zero Village",
         description: `
             <p>Dive deep into the world of Flipper Zero. Our experts will guide you through:</p>
-            <ul>
-                <li>Radio Frequency (RF) analysis</li>
-                <li>NFC cloning</li>
-                <li>Infrared communication</li>
-                <li>GPIO, UART, SPI interfaces exploration</li>
-                <li>Practical demonstrations with Flipper Zero</li>
-            </ul>
+            <div class="bulleted-section">
+                <ul>
+                    <li>Radio Frequency (RF) analysis</li>
+                    <li>NFC cloning</li>
+                    <li>Infrared communication</li>
+                    <li>GPIO, UART, SPI interfaces exploration</li>
+                    <li>Practical demonstrations with Flipper Zero</li>
+                </ul>
+            </div>
+            
+            <div class="spacer"></div>
+            
             <strong>Key Takeaways:</strong>
-            <ul>
-                <li>Understanding Flipper Zero hardware capabilities</li>
-                <li>Practical knowledge of RF, NFC, and IR operations</li>
-                <li>Hands-on experience with Flipper Zero in real-world scenarios</li>
-            </ul>
+            
+            <div class="bulleted-section">
+                <ul>
+                    <li>Understanding Flipper Zero hardware capabilities</li>
+                    <li>Practical knowledge of RF, NFC, and IR operations</li>
+                    <li>Hands-on experience with Flipper Zero in real-world scenarios</li>
+                </ul>
+            </div>
+
         `,
     },
     badge: {
         title: "Badge Village",
         description: `
             <p>Explore the world of electronic badge hacking. Sessions will cover:</p>
-            <ul>
-                <li>Modifying and programming conference badges</li>
-                <li>Understanding embedded systems in badges</li>
-                <li>Creating custom badge modifications</li>
-            </ul>
+            
+            <div class="bulleted-section">
+                <ul>
+                    <li>Modifying and programming conference badges</li>
+                    <li>Understanding embedded systems in badges</li>
+                    <li>Creating custom badge modifications</li>
+                </ul>
+            </div>
+            
+            <div class="spacer"></div>
+            
             <strong>Key Takeaways:</strong>
-            <ul>
-                <li>Hands-on experience with badge hardware and software</li>
-                <li>Customizing badges with embedded systems knowledge</li>
-                <li>Insights into programming and modifying badges for personal use</li>
-            </ul>
+            
+            <div class="bulleted-section">
+                <ul>
+                    <li>Hands-on experience with badge hardware and software</li>
+                    <li>Customizing badges with embedded systems knowledge</li>
+                    <li>Insights into programming and modifying badges for personal use</li>
+                </ul>
+            </div>
         `,
     },
     ham: {
         title: "HAM Village",
         description: `
             <p>Get hands-on experience with amateur radio operations. Learn about:</p>
-            <ul>
-                <li>Software-Defined Radio (SDR)</li>
-                <li>Radio protocols and signal analysis</li>
-                <li>How radio communications intersect with cybersecurity</li>
-            </ul>
+            
+            <div class="bulleted-section">
+                <ul>
+                    <li>Software-Defined Radio (SDR)</li>
+                    <li>Radio protocols and signal analysis</li>
+                    <li>How radio communications intersect with cybersecurity</li>
+                </ul>
+            </div>
+            
+            <div class="spacer"></div>
+            
             <strong>Key Takeaways:</strong>
-            <ul>
-                <li>Basic understanding of HAM radio operations</li>
-                <li>Using SDR for radio signal analysis</li>
-                <li>Applying radio protocols in cybersecurity contexts</li>
-            </ul>
+            
+            <div class="bulleted-section">
+                <ul>
+                    <li>Basic understanding of HAM radio operations</li>
+                    <li>Using SDR for radio signal analysis</li>
+                    <li>Applying radio protocols in cybersecurity contexts</li>
+                </ul>
+            </div>
         `,
     },
     forensics: {
         title: "Digital Forensics",
         description: `
             <p>Master the tools and techniques of digital forensics, focusing on:</p>
-            <ul>
-                <li>Data recovery and evidence handling</li>
-                <li>Investigation methodologies used by professionals</li>
-                <li>Real-world digital forensic case studies</li>
-            </ul>
+            
+            <div class="bulleted-section">
+                <ul>
+                    <li>Data recovery and evidence handling</li>
+                    <li>Investigation methodologies used by professionals</li>
+                    <li>Real-world digital forensic case studies</li>
+                </ul>
+            </div>
+            
+            <div class="spacer"></div>
+            
             <strong>Key Takeaways:</strong>
-            <ul>
-                <li>Deep understanding of data recovery tools</li>
-                <li>Best practices for evidence handling</li>
-                <li>Real-world experience through case studies</li>
-            </ul>
+            
+            <div class="bulleted-section">
+                <ul>
+                    <li>Deep understanding of data recovery tools</li>
+                    <li>Best practices for evidence handling</li>
+                    <li>Real-world experience through case studies</li>
+                </ul>
+            </div>
         `,
     },
     wifi: {
         title: "WiFi Village",
         description: `
             <p>Explore wireless network security, focusing on:</p>
-            <ul>
-                <li>Packet analysis and network penetration testing</li>
-                <li>The latest WiFi security protocols</li>
-                <li>Assessing wireless network vulnerabilities</li>
-            </ul>
+            
+            <div class="bulleted-section">
+                <ul>
+                    <li>Packet analysis and network penetration testing</li>
+                    <li>The latest WiFi security protocols</li>
+                    <li>Assessing wireless network vulnerabilities</li>
+                </ul>
+            </div>
+            
+            <div class="spacer"></div>
+            
             <strong>Key Takeaways:</strong>
-            <ul>
-                <li>Understanding WiFi vulnerabilities and security protocols</li>
-                <li>Using packet analysis for penetration testing</li>
-                <li>Best practices for wireless security assessments</li>
-            </ul>
+            
+            <div class="bulleted-section">
+                <ul>
+                    <li>Understanding WiFi vulnerabilities and security protocols</li>
+                    <li>Using packet analysis for penetration testing</li>
+                    <li>Best practices for wireless security assessments</li>
+                </ul>
+            </div>
         `,
     },
     ics: {
         title: "ICS Village",
         description: `
             <p>Understanding Industrial Control Systems (ICS) security, with a focus on:</p>
-            <ul>
-                <li>SCADA systems and PLC security</li>
-                <li>Securing critical infrastructure from cyber threats</li>
-                <li>Real-world ICS security breach scenarios</li>
-            </ul>
+            
+            <div class="bulleted-section">
+                <ul>
+                    <li>SCADA systems and PLC security</li>
+                    <li>Securing critical infrastructure from cyber threats</li>
+                    <li>Real-world ICS security breach scenarios</li>
+                </ul>
+            </div>
+            
+            <div class="spacer"></div>
+            
             <strong>Key Takeaways:</strong>
-            <ul>
-                <li>Comprehensive knowledge of ICS and SCADA systems</li>
-                <li>Strategies to secure critical infrastructure</li>
-                <li>Insights into real-world ICS security challenges</li>
-            </ul>
+            
+            <div class="bulleted-section">
+                <ul>
+                    <li>Comprehensive knowledge of ICS and SCADA systems</li>
+                    <li>Strategies to secure critical infrastructure</li>
+                    <li>Insights into real-world ICS security challenges</li>
+                </ul>
+            </div>
         `,
     },
     drone: {
         title: "Drone Village",
         description: `
             <p>Learn about drone security, focusing on:</p>
-            <ul>
-                <li>Drone control systems and wireless communications</li>
-                <li>Drone hacking techniques and counter-drone technologies</li>
-                <li>Signal analysis for drones</li>
-            </ul>
+            
+            <div class="bulleted-section">
+                <ul>
+                    <li>Drone control systems and wireless communications</li>
+                    <li>Drone hacking techniques and counter-drone technologies</li>
+                    <li>Signal analysis for drones</li>
+                </ul>
+            </div>
+            
+            <div class="spacer"></div>
+            
             <strong>Key Takeaways:</strong>
-            <ul>
-                <li>Understanding drone control systems and vulnerabilities</li>
-                <li>Hacking drones and implementing counter-drone measures</li>
-                <li>Applying signal analysis techniques in drone security</li>
-            </ul>
+            
+            <div class="bulleted-section">
+                <ul>
+                    <li>Understanding drone control systems and vulnerabilities</li>
+                    <li>Hacking drones and implementing counter-drone measures</li>
+                    <li>Applying signal analysis techniques in drone security</li>
+                </ul>
+            </div>
         `,
     },
     lockpicking: {
         title: "Lock Picking Village",
         description: `
-            <p>Hands-on experience in lock picking and physical security assessment:</p>
-            <ul>
-                <li>Understanding various lock mechanisms</li>
-                <li>Practicing lock picking techniques</li>
-                <li>Assessing physical security systems</li>
-            </ul>
+              <p>Hands-on experience in lock picking and physical security assessment:</p>
+            
+            <div class="bulleted-section">
+                <ul>
+                    <li>Understanding various lock mechanisms</li>
+                    <li>Practicing lock picking techniques</li>
+                    <li>Assessing physical security systems</li>
+                </ul>
+            </div>
+            
+            <div class="spacer"></div>
+            
             <strong>Key Takeaways:</strong>
-            <ul>
-                <li>Hands-on knowledge of lock mechanics</li>
-                <li>Best practices in lock picking and security assessments</li>
-                <li>Understanding physical security vulnerabilities</li>
-            </ul>
+            
+            <div class="bulleted-section">
+                <ul>
+                    <li>Hands-on knowledge of lock mechanics</li>
+                    <li>Best practices in lock picking and security assessments</li>
+                    <li>Understanding physical security vulnerabilities</li>
+                </ul>
+            </div>
         `,
     },
     soldering: {
         title: "Soldering Village",
         description: `
             <p>Master electronic assembly techniques, focusing on:</p>
-            <ul>
-                <li>Component identification and soldering techniques</li>
-                <li>PCB board repair and troubleshooting</li>
-                <li>Building electronic projects from scratch</li>
-            </ul>
+            
+            <div class="bulleted-section">
+                <ul>
+                    <li>Component identification and soldering techniques</li>
+                    <li>PCB board repair and troubleshooting</li>
+                    <li>Building electronic projects from scratch</li>
+                </ul>
+            </div>
+            
+            <div class="spacer"></div>
+            
             <strong>Key Takeaways:</strong>
-            <ul>
-                <li>Hands-on experience with soldering and repair techniques</li>
-                <li>Component identification skills</li>
-                <li>Guided project building with expert supervision</li>
-            </ul>
+            
+            <div class="bulleted-section">
+                <ul>
+                    <li>Hands-on experience with soldering and repair techniques</li>
+                    <li>Component identification skills</li>
+                    <li>Guided project building with expert supervision</li>
+                </ul>
+            </div>
         `,
     }
 };

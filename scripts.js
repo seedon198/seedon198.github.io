@@ -169,7 +169,7 @@ const villageDetails = {
 // Modal functionality
 function initializeModal() {
     debug('Initializing modal...');
-    
+
     const modal = document.getElementById('villageModal');
     const modalClose = modal ? modal.querySelector('.modal-close') : null;
     const villageCards = document.querySelectorAll('.village-card');
@@ -193,7 +193,7 @@ function initializeModal() {
             debug('Village card clicked');
             const villageId = card.dataset.village;
             const details = villageDetails[villageId];
-            
+
             if (details) {
                 modalTitle.textContent = details.title;
                 modalDescription.innerHTML = details.description;  // Use innerHTML for proper formatting
@@ -221,7 +221,7 @@ function initializeModal() {
 // Particle animation
 function initializeParticles() {
     debug('Initializing particles...');
-    
+
     const canvas = document.getElementById('particles');
     if (!canvas) {
         console.error('Particles canvas not found');
@@ -237,7 +237,7 @@ function initializeParticles() {
             document.documentElement.scrollHeight,
             document.documentElement.clientHeight
         );
-        debug(Canvas resized to ${canvas.width}x${canvas.height});
+        debug(`Canvas resized to ${canvas.width}x${canvas.height}`);
     }
 
     class Particle {
@@ -270,8 +270,7 @@ function initializeParticles() {
         draw() {
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-            // Change this line - increase the final multiplier from 0.5 to 0.8
-            ctx.fillStyle = rgba(0, 243, 255, ${this.life * this.opacity * 0.8}); // Previously was: * 0.5
+            ctx.fillStyle = `rgba(0, 243, 255, ${this.life * this.opacity * 0.8})`; // Fixed: wrap in backticks
             ctx.fill();
         }
     }
@@ -280,7 +279,7 @@ function initializeParticles() {
     window.addEventListener('resize', setCanvasSize);
 
     const particles = Array(50).fill().map(() => new Particle());
-    debug(Created ${particles.length} particles);
+    debug(`Created ${particles.length} particles`);
 
     function animate() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);

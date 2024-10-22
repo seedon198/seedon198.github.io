@@ -551,23 +551,3 @@ nav {
 }
 
 
-.hero-title {
-    font-weight: 800;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-    margin-top: 5rem;
-    background: linear-gradient(45deg, var(--neon-blue), var(--accent-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: glow 2s ease-in-out infinite alternate;
-    text-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--accent-color); /* Add a shadow effect */
-}
-
-@keyframes glow {
-    from {
-        text-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--accent-color);
-    }
-    to {
-        text-shadow: 0 0 20px var(--neon-blue), 0 0 30px var(--accent-color);
-    }
-}

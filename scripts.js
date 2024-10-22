@@ -20,22 +20,6 @@ function playAudio() {
     });
 }
 
-// Simulate a user click after a short delay
-window.onload = () => {
-    // Simulate a click event on the audio element
-    const event = new MouseEvent('click', {
-        view: window,
-        bubbles: true,
-        cancelable: true
-    });
-
-    // Dispatch the click event
-    audio.dispatchEvent(event);
-    
-    // Play the audio (you can also call this from a user action)
-    playAudio();
-};
-
 
 // Village details data with formatted descriptions and key takeaways
 const villageDetails = {
@@ -310,6 +294,7 @@ function initializeModal() {
                 modalTitle.textContent = details.title;
                 modalDescription.innerHTML = details.description;  // Use innerHTML for proper formatting
                 modal.classList.add('active');
+                playAudio(); // Play audio when the modal opens
                 debug(`Opened modal for ${villageId}`);
             }
         });
@@ -329,6 +314,7 @@ function initializeModal() {
 
     debug('Modal initialization complete');
 }
+
 
 // Particle animation
 function initializeParticles() {

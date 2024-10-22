@@ -187,6 +187,8 @@ nav {
     align-items: center;
     z-index: 1000;
     backdrop-filter: blur(5px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .modal-content {
@@ -204,6 +206,7 @@ nav {
 
 .modal.active {
     display: flex;
+    opacity: 1;
 }
 
 .modal.active .modal-content {
@@ -254,4 +257,13 @@ nav {
 
 .cta-button:hover {
     transform: scale(1.05);
+}
+
+.particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
 }

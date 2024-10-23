@@ -6,7 +6,7 @@ const teamData = [
         bio: "Fazalu Rahman, our dedicated lead village coordinator, is a true jack of all trades. With a wealth of skills and a hands-on approach, he ensures smooth operations across various activities. Whether managing logistics, guiding teams, or troubleshooting on the go, Fazalu's resourcefulness and leadership shine through. His versatility and commitment to excellence make him an invaluable part of our village, driving progress and fostering a collaborative spirit."
     },
     {
-        name: "Mohd. Arif",
+        name: "Mohammed Arif",
         role: "Core Team",
         image: "static/media/arif.svg",
         bio: "Mohd. Arif, one of our core team members, is the ultimate workhorse of the group. From navigating the chaos of SP Road to hunt down the tiniest electronic components to literally hauling a 3D printer on his back like it’s no big deal, Arif does it all with a smile. His dedication is unmatched, and if something needs to be done, you can bet Arif’s already halfway there—probably carrying half the workshop with him!"
@@ -17,7 +17,43 @@ const teamData = [
         image: "static/media/kartheek.svg",
         bio: "Kartheek Laade, a vital part of our core team, is our resident automotive security expert. When it comes to keeping vehicles safe from cyber threats, Kartheek is the mastermind. From securing complex onboard systems to safeguarding modern cars from digital vulnerabilities, his expertise is unmatched. Whether it's hacking into a car to find weaknesses or locking it down to ensure it's impenetrable, Kartheek’s got it covered—he’s the guy you want in your corner if your car ever decides to get tech-savvy!"
     },
-    
+    {
+        name: "Muhsin Bin Irshad",
+        role: "Core Team",
+        image: "static/media/muhsin.svg",
+        bio: "Muhsin, our talented graphics designer, is the creative genius behind all things visual. Whether it’s crafting stunning logos, designing eye-catching banners, or adding that perfect touch of flair to every project, Muhsin brings ideas to life with style and precision. With an eye for detail and a knack for turning concepts into captivating visuals, he’s the one who makes everything look as awesome as it works. If it’s visually appealing, you can bet Muhsin had a hand in it!"
+    },
+    {
+        name: "Sreehari",
+        role: "Trainer",
+        image: "static/media/sreehari.svg",
+        bio: "Sreehari, our lock-picking and physical security trainer, is the master of all things that click, clank, and unlock. With expert hands and a sharp mind, he can bypass the trickiest locks while teaching others how to secure them better. Whether he's cracking open a stubborn padlock or sharing the art of physical security with the team, Sreehari brings a unique mix of skill and knowledge to the table. If you ever find yourself locked out—or want to make sure no one else can get in—Sreehari’s your guy!"
+    },
+    {
+        name: "Rageeth",
+        role: "Web Designer",
+        image: "static/media/rageeth.svg",
+        bio: "Rageeth, our brilliant web designer and village trainer, is the creative force behind our digital presence. From designing sleek, user-friendly websites to guiding the next generation of tech enthusiasts, he brings a blend of artistic vision and technical know-how to everything he does. Whether he's crafting beautiful web layouts or sharing his skills with the village, Rageeth’s work is always polished and professional. If it looks good and works flawlessly, you can bet Rageeth had a hand in it!"
+    },
+    {
+        name: "Kiran Gupta",
+        role: "Core Team",
+        image: "static/media/woman.svg",
+        bio: "Kiran Gupta is the powerhouse behind everything that happens in the village. The one who works tirelessly, often behind the scenes, she’s the glue that holds it all together. From coordinating tasks to ensuring everything runs smoothly, Kiran is always there, selflessly putting in the hard work to get things done on time. Her dedication and energy keep the village on track, and she does it all with a smile. If something’s running smoothly, it’s because Kiran’s got it covered!"
+    },
+    {
+        name: "Devendra Sinha",
+        role: "Core Team",
+        image: "static/media/man.svg",
+        bio: "From handling logistics to making sure our stickers are designed and printed on time, Devendra is truly the heart and soul of the village. He’s the guy who gets things done, but catching him during the event is like trying to pin down a whirlwind—he’s always on the move, making sure every detail is perfect. If it’s happening, chances are Devendra had a hand in it, even if you can’t spot him standing still!"
+    },
+    {
+        name: "Ujwal Patel",
+        role: "Core Team",
+        image: "static/media/man.svg",
+        bio: "Ujwal is the mastermind behind last year’s CTF and badge design, and his dedication knows no bounds. Hardworking and versatile, he seamlessly juggles multiple roles—from managing the soldering village to quickly spinning up CTF challenges, all at the same time. His ability to balance so much with precision and energy is truly impressive. We all recognize and deeply value Ujwal's immense contribution to the success of the 2023 Hardware Village. Simply put, the village wouldn't have been the same without him!"
+    },
+
 ];
 
 function populateTeam() {

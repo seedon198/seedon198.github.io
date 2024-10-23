@@ -42,17 +42,18 @@ const teamData = [
         bio: "Kiran Gupta is the powerhouse behind everything that happens in the village. The one who works tirelessly, often behind the scenes, she’s the glue that holds it all together. From coordinating tasks to ensuring everything runs smoothly, Kiran is always there, selflessly putting in the hard work to get things done on time. Her dedication and energy keep the village on track, and she does it all with a smile. If something’s running smoothly, it’s because Kiran’s got it covered!"
     },
     {
-        name: "Devendra Sinha",
-        role: "Core Team",
-        image: "static/media/man.svg",
-        bio: "From handling logistics to making sure our stickers are designed and printed on time, Devendra is truly the heart and soul of the village. He’s the guy who gets things done, but catching him during the event is like trying to pin down a whirlwind—he’s always on the move, making sure every detail is perfect. If it’s happening, chances are Devendra had a hand in it, even if you can’t spot him standing still!"
+        name: "Seedon D'Souza",
+        role: "Village Coordinator",
+        image: "static/media/seedon.svg",
+        bio: "His role involves orchestrating a range of activities, ensuring everything is set up efficiently, and making sure participants have a rewarding experience. With a focus on collaboration and innovation."
     },
     {
         name: "Ujwal Patel",
-        role: "Core Team",
+        role: "Electronics Mastermind",
         image: "static/media/man.svg",
         bio: "Ujwal is the mastermind behind last year’s CTF and badge design, and his dedication knows no bounds. Hardworking and versatile, he seamlessly juggles multiple roles—from managing the soldering village to quickly spinning up CTF challenges, all at the same time. His ability to balance so much with precision and energy is truly impressive. We all recognize and deeply value Ujwal's immense contribution to the success of the 2023 Hardware Village. Simply put, the village wouldn't have been the same without him!"
     },
+    
 
 ];
 

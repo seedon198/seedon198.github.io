@@ -1,18 +1,24 @@
 const scheduleData = {
     day1: [
-        { time: "09:00 - 10:00", title: "Opening Ceremony" },
-        { time: "10:30 - 12:00", title: "Intro to Hardware Hacking" },
+        { time: "08:00 - 09:00", title: "Registration" },
+        { time: "09:00 - 10:30", title: "Opening Ceromony & Keynote" },
+        { time: "11:00 - 13:30", title: "Hardware Village"},
+        { time: "13:30 - 14:30", title: "Lunch"},
+        { time: "14:30 - 16:00", title: "Hardware Village"},
         // Add more events...
     ],
     day2: [
-        { time: "09:00 - 11:00", title: "Advanced RF Techniques" },
-        { time: "11:30 - 13:00", title: "IoT Security Workshop" },
+        { time: "10:00 - 13:30", title: "Hardware Village"},
+        { time: "13:30 - 14:30", title: "Lunch"},
+        { time: "14:30 - 16:00", title: "Badge Quest"},
+        { time: "14:30 - 16:00", title: "TBD"},
         // Add more events...
     ],
     day3: [
-        { time: "09:00 - 10:30", title: "Closing Keynote" },
-        { time: "11:00 - 12:00", title: "Awards Ceremony" },
-        // Add more events...
+        { time: "09:00 - 13:00", title: "Hardware CTF" },
+        { time: "13:30 - 14:30", title: "Lunch"},
+        { time: "14:30 - 16:00", title: "TBD"},
+        { time: "19:30 - 23:00", title: "Networking Party"},
     ]
 };
 

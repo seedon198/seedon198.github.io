@@ -1,9 +1,9 @@
 const teamData = [
     {
-        name: "John Doe",
-        role: "Lead Hardware Hacker",
-        image: "path/to/john.jpg",
-        bio: "John is an expert in RF hacking and IoT security..."
+        name: "f4z41u",
+        role: "Village Lead",
+        image: "static/media/fazalu.svg",
+        bio: "Fazalu Rahman, our dedicated lead village coordinator, is a true jack of all trades. With a wealth of skills and a hands-on approach, he ensures smooth operations across various activities. Whether managing logistics, guiding teams, or troubleshooting on the go, Fazalu's resourcefulness and leadership shine through. His versatility and commitment to excellence make him an invaluable part of our village, driving progress and fostering a collaborative spirit."
     },
     {
         name: "Jane Smith",

@@ -25,7 +25,7 @@ class MusicPlayer {
             },
             {
                 filename: 'Dual Core - 0x0A Hack Commandments.mp3',
-                title: '0x0A Hack Commandment',
+                title: '0x0A Hack Commandments',
                 artist: 'Dual Core',
                 genre: 'Hip-Hop/Rap'
             }

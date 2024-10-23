@@ -730,5 +730,3 @@ animation: noise-2 3s linear infinite alternate-reverse, glitch 5s 5s infinite;
 .music-player:not(.minimized) .minimized-title {
   display: none;
 }
-
-/* ... rest of your existing CSS ... */

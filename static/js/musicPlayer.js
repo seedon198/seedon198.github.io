@@ -20,15 +20,18 @@ class MusicPlayer {
             // Add more tracks as needed
         ];
 
+        this.playerElement = document.getElementById('music-player');
         this.playPauseBtn = document.getElementById('play-pause');
         this.nextBtn = document.getElementById('next-song');
         this.progressBar = document.getElementById('progress-bar');
         this.titleElement = document.getElementById('song-title');
         this.artistElement = document.getElementById('song-artist');
         this.genreElement = document.getElementById('song-genre');
+        this.minimizedTitle = document.querySelector('.minimized-title');
 
         this.initEventListeners();
         this.loadStateFromStorage();
+        this.initMinimizeFeature();
     }
 
     initEventListeners() {
@@ -39,13 +42,23 @@ class MusicPlayer {
 
         // Add click event listener to the document
         document.addEventListener('click', () => {
-            if (this.audioContext.state === 'suspended') {
-                this.audioContext.resume();
-            }
             if (!this.isPlaying) {
                 this.togglePlayPause();
             }
         }, { once: true }); // This ensures it only fires once
+    }
+
+    initMinimizeFeature() {
+        this.playerElement.addEventListener('mouseenter', () => {
+            this.playerElement.classList.remove('minimized');
+        });
+
+        this.playerElement.addEventListener('mouseleave', () => {
+            this.playerElement.classList.add('minimized');
+        });
+
+        // Update minimized title when track changes
+        this.updateMinimizedTitle();
     }
 
     loadStateFromStorage() {
@@ -80,6 +93,7 @@ class MusicPlayer {
             this.artistElement.textContent = track.artist;
             this.genreElement.textContent = track.genre;
             this.currentTrackIndex = index;
+            this.updateMinimizedTitle();
             this.saveStateToStorage();
         }
     }
@@ -108,6 +122,11 @@ class MusicPlayer {
         const progress = (this.audioElement.currentTime / this.audioElement.duration) * 100;
         this.progressBar.style.width = `${progress}%`;
         this.saveStateToStorage();
+    }
+
+    updateMinimizedTitle() {
+        const currentTrack = this.playlist[this.currentTrackIndex];
+        this.minimizedTitle.textContent = currentTrack.title;
     }
 }
 

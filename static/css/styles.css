@@ -588,7 +588,7 @@ animation: noise-2 3s linear infinite alternate-reverse, glitch 5s 5s infinite;
 
 .music-player {
   position: fixed;
-  bottom: 20px;
+  bottom: 60px;
   right: 20px;
   width: 300px;
   background: rgba(0, 0, 0, 0.3);
@@ -601,6 +601,8 @@ animation: noise-2 3s linear infinite alternate-reverse, glitch 5s 5s infinite;
   border: 1px solid rgba(0, 255, 255, 0.1);
   opacity: 0.7;
 }
+
+
 
 .music-player:hover {
   background: rgba(0, 0, 0, 0.8);
@@ -694,3 +696,39 @@ animation: noise-2 3s linear infinite alternate-reverse, glitch 5s 5s infinite;
   }
 }
 
+
+
+.music-player.minimized {
+  width: fit-content;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.player-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.minimized-title {
+  margin: 0;
+  color: var(--neon-aqua);
+  font-size: 1em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.full-player {
+  display: none;
+}
+
+.music-player:not(.minimized) .full-player {
+  display: block;
+}
+
+.music-player:not(.minimized) .minimized-title {
+  display: none;
+}
+
+/* ... rest of your existing CSS ... */

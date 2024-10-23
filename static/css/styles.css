@@ -580,3 +580,117 @@ animation: noise-2 3s linear infinite alternate-reverse, glitch 5s 5s infinite;
   font-size: 0.9rem;
   margin: 0;
 }
+
+:root {
+  --neon-aqua: #00FFFF;
+  --neon-pink: #FF69B4;
+}
+
+.music-player {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 300px;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(5px);
+  border-radius: 15px;
+  padding: 15px;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+  border: 1px solid rgba(0, 255, 255, 0.1);
+  opacity: 0.7;
+}
+
+.music-player:hover {
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(0);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  opacity: 1;
+}
+
+.player-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.song-info {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.song-info p {
+  margin: 5px 0;
+  color: white;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+#song-title {
+  font-weight: bold;
+  color: var(--neon-aqua);
+  font-size: 1.1em;
+}
+
+#song-artist {
+  color: var(--neon-pink);
+  font-size: 0.9em;
+}
+
+#song-genre {
+  color: #BBB;
+  font-size: 0.8em;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px 0;
+}
+
+.control-btn {
+  background: none;
+  border: 2px solid var(--neon-aqua);
+  color: var(--neon-aqua);
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+.control-btn:hover {
+  background: var(--neon-aqua);
+  color: black;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.7);
+}
+
+.progress-container {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  height: 6px;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 0 5px rgba(0, 255, 255, 0.2);
+}
+
+.progress-bar {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(to right, var(--neon-aqua), var(--neon-pink));
+  transition: width 0.1s linear;
+  box-shadow: 0 0 10px rgba(255, 105, 180, 0.7);
+}
+
+@media (max-width: 768px) {
+  .music-player {
+      width: 250px;
+      bottom: 10px;
+      right: 10px;
+  }
+}
+

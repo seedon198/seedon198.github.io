@@ -7,19 +7,6 @@ function debug(message) {
     }
 }
 
-// Get the audio element
-const audio = document.getElementById('background-audio');
-
-// Set the initial volume to 50%
-audio.volume = 0.1;
-
-// Function to play audio
-function playAudio() {
-    audio.play().catch(error => {
-        console.error('Playback failed:', error);
-    });
-}
-
 
 // Village details data with formatted descriptions and key takeaways
 const villageDetails = {
@@ -294,7 +281,6 @@ function initializeModal() {
                 modalTitle.textContent = details.title;
                 modalDescription.innerHTML = details.description;  // Use innerHTML for proper formatting
                 modal.classList.add('active');
-                playAudio(); // Play audio when the modal opens
                 debug(`Opened modal for ${villageId}`);
             }
         });

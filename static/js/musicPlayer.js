@@ -22,6 +22,12 @@ class MusicPlayer {
                 title: 'Antisec',
                 artist: 'Deadmau5 ft YTCracker',
                 genre: 'Electronic'
+            },
+            {
+                filename: 'Dual Core - 0x0A Hack Commandments.mp3',
+                title: '0x0A Hack Commandment',
+                artist: 'Dual Core',
+                genre: 'Hip-Hop/Rap'
             }
             // Add more tracks as needed
         ];

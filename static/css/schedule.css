@@ -1,0 +1,40 @@
+.schedule-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.day-column {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--neon-blue);
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.day-column h2 {
+    color: var(--neon-blue);
+    margin-bottom: 1rem;
+}
+
+.event-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.event-item {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(0, 243, 255, 0.2);
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.event-time {
+    font-weight: bold;
+    color: var(--neon-blue);
+}
+
+.event-title {
+    margin-top: 0.5rem;
+}

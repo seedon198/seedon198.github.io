@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team - Hardware Hacking Village</title>
+    <link href="static/css/styles.css" rel="stylesheet">
+    <link href="static/css/team.css" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <div class="logo">HW101</div>
+            <div class="nav-links">
+                <a href="team.html">Team</a>
+                <a href="schedule.html">Schedule</a>
+                <a href="swag.html">Swag</a>
+                <a href="https://discord.gg/DrXCVWqDSq" target="_blank">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div class="grid-overlay"></div>
+        <canvas class="particles" id="particles"></canvas>
+        <div class="content">
+            <h1 class="hero-title glitch" data-text="Our Team">The Team</h1>
+            <div class="team-grid" id="team-grid"></div>
+        </div>
+    </div>
+
+    <!-- Modal for team member details -->
+    <div class="modal" id="teamModal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <img class="modal-image" src="" alt="Team Member">
+            <h2 class="modal-title"></h2>
+            <div class="modal-description"></div>
+        </div>
+    </div>
+
+    <script src="static/js/team.js"></script>
+</body>
+</html>

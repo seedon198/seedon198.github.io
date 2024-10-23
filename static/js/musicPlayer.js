@@ -16,6 +16,12 @@ class MusicPlayer {
                 title: 'All The Things',
                 artist: 'Dual Core',
                 genre: 'Hip-Hop/Rap'
+            },
+            {
+                filename: 'deadmau5 - Antisec.mp3',
+                title: 'Antisec',
+                artist: 'Deadmau5 ft YTCracker',
+                genre: 'Electronic'
             }
             // Add more tracks as needed
         ];

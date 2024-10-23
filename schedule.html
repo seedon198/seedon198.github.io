@@ -7,6 +7,8 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YC8JWDXN1J"></script>
     <link href="static/css/styles.css" rel="stylesheet">
     <link href="static/css/schedule.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
 </head>
 <body>
     <nav>
@@ -50,25 +52,30 @@
             </div>
         </div>
     </div>
-    <div id="music-player" class="music-player">
-        <div class="player-handle">
-            <i class="fas fa-music"></i>
-        </div>
+    <div id="music-player" class="music-player minimized">
         <div class="player-content">
-            <div class="song-info">
+            <div class="player-handle">
+                <i class="fas fa-music"></i>
+            </div>
+            <div class="minimized-view">
+                <p class="minimized-title">Song Title</p>
+            </div>
+            <div class="full-player">
                 <p id="song-title">Song Title</p>
                 <p id="song-artist">Artist</p>
                 <p id="song-genre">Genre</p>
-            </div>
-            <div class="controls">
-                <button id="play-pause" class="control-btn">Play</button>
-                <button id="next-song" class="control-btn">Next</button>
-            </div>
-            <div class="progress-container">
-                <div id="progress-bar" class="progress-bar"></div>
+                <div class="controls">
+                    <button id="play-pause" class="control-btn">Play</button>
+                    <button id="next-song" class="control-btn">Next</button>
+                </div>
+                <div class="progress-container">
+                    <div id="progress-bar" class="progress-bar"></div>
+                </div>
             </div>
         </div>
     </div>
+    
+    
       
     <footer class="site-footer">
         <div class="footer-content">

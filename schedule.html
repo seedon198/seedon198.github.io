@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule - Hardware Hacking Village</title>
+    <link href="static/css/styles.css" rel="stylesheet">
+    <link href="static/css/schedule.css" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <div class="logo">HW101</div>
+            <div class="nav-links">
+                <a href="team.html">Team</a>
+                <a href="schedule.html">Schedule</a>
+                <a href="swag.html">Swag</a>
+                <a href="https://discord.gg/DrXCVWqDSq" target="_blank">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div class="grid-overlay"></div>
+        <canvas class="particles" id="particles"></canvas>
+        <div class="content">
+            <h1 class="hero-title glitch" data-text="Schedule">Schedule</h1>
+            <div class="schedule-container">
+                <div class="day-column">
+                    <h2>Day 1 - 20 Feb 2025</h2>
+                    <div class="event-list" id="day1-events"></div>
+                </div>
+                <div class="day-column">
+                    <h2>Day 2 - 21 Feb 2025</h2>
+                    <div class="event-list" id="day2-events"></div>
+                </div>
+                <div class="day-column">
+                    <h2>Day 3 - 22 Feb 2025</h2>
+                    <div class="event-list" id="day3-events"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="static/js/schedule.js"></script>
+</body>
+</html>

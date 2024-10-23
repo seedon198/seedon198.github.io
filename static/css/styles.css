@@ -557,3 +557,26 @@ animation: noise-2 3s linear infinite alternate-reverse, glitch 5s 5s infinite;
     height: 20px; /* Space between sections */
 }
 
+.site-footer {
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(10px);
+  border-bottom: 0px solid var(--neon-blue);
+  padding: 1rem 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.site-footer p {
+  color: #808080;
+  font-size: 0.9rem;
+  margin: 0;
+}

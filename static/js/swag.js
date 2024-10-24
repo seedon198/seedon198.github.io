@@ -6,7 +6,7 @@ const swagData = [
     },
     {
         name: "Flipper Zero Adventure Pack",
-        image: "static/media/sticker.svg",
+        image: "static/media/flipper_zero_village.png",
         description: "Unlock the secrets of Flipper Zero with this exclusive pack. Win this swag by completing the Flipper Zero challenge!"
     },
     {

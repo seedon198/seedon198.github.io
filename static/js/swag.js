@@ -1,12 +1,12 @@
 const swagData = [
     {
-        name: "Hardware Hacking Village Pack",
-        image: "static/media/sticker.svg",
-        description: "A set of 10 unique stickers. Every Attendee of HHV will get these stickers and they will be disbursed during the village."
+        name: "Hardware Hacker Hulk",
+        image: "static/media/stickers/HHV_Hulk.png",
+        description: "Check out this amazing Hulk sticker designed by Ajmal, This sticker is a part of HHV sticker pack."
     },
     {
         name: "Iron Man - Flipper Zero Sticker",
-        image: "static/media/flipper_zero_village.png",
+        image: "static/media/stickers/flipper_zero_village.png",
         description: "Check out this excusive sitcker created by Sagnik Haldar @SagnikHaldar1. Win this swag by completing the Flipper Zero challenge!"
     },
     {

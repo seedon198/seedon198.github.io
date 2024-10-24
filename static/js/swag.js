@@ -56,8 +56,43 @@ const swagData = [
     },
 ];
 
+function createSVGFilter() {
+    const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svg.setAttribute("style", "position: absolute; width: 0; height: 0");
+    svg.innerHTML = `
+        <defs>
+            <filter id="pixelate">
+                <feFlood x="4" y="4" height="2" width="2"/>
+                <feComposite width="10" height="10"/>
+                <feTile result="a"/>
+                <feComposite in="SourceGraphic" in2="a" operator="in"/>
+                <feMorphology operator="dilate" radius="2"/>
+            </filter>
+        </defs>
+    `;
+    document.body.appendChild(svg);
+}
+
+function createModal() {
+    const modal = document.createElement('div');
+    modal.className = 'modal-overlay';
+    modal.innerHTML = `
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-inner"></div>
+        </div>
+    `;
+    document.body.appendChild(modal);
+    return modal;
+}
+
 function populateSwag() {
+    createSVGFilter();
     const swagGrid = document.getElementById('swag-grid');
+    const modal = createModal();
+    const modalContent = modal.querySelector('.modal-content');
+    const modalInner = modal.querySelector('.modal-inner');
+    
     swagData.forEach(item => {
         const swagCard = document.createElement('div');
         swagCard.classList.add('swag-card');
@@ -66,7 +101,30 @@ function populateSwag() {
             <img src="${item.image}" alt="${item.name}">
             <p>${item.description}</p>
         `;
+
+        swagCard.addEventListener('click', () => {
+            modalInner.innerHTML = swagCard.innerHTML;
+            modal.classList.add('active');
+            setTimeout(() => modalContent.classList.add('active'), 10);
+        });
+
         swagGrid.appendChild(swagCard);
+    });
+
+    // Close modal when clicking outside or on close button
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal || e.target.classList.contains('modal-close')) {
+            modalContent.classList.remove('active');
+            setTimeout(() => modal.classList.remove('active'), 300);
+        }
+    });
+
+    // Close modal with escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('active')) {
+            modalContent.classList.remove('active');
+            setTimeout(() => modal.classList.remove('active'), 300);
+        }
     });
 }
 

@@ -2,12 +2,12 @@ const swagData = [
     {
         name: "Hardware Hacker Hulk",
         image: "static/media/stickers/HHV_Hulk.png",
-        description: "Check out this amazing Hulk sticker designed by Ajmal, This sticker is a part of HHV sticker pack."
+        description: "Check out this amazing Hulk sticker designed by Ajmal Instagram :- @ajmalmehroof_, This sticker is a part of HHV sticker pack."
     },
     {
         name: "Iron Man - Flipper Zero Sticker",
         image: "static/media/stickers/flipper_zero_village.png",
-        description: "Check out this excusive sitcker created by Sagnik Haldar @SagnikHaldar1. Win this swag by completing the Flipper Zero challenge!"
+        description: "Check out this excusive sitcker created by Sagnik Haldar Twitter :- @SagnikHaldar1. Win this swag by completing the Flipper Zero challenge!"
     },
     {
         name: "Lock Picking Mastery Sticker",

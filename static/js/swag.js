@@ -7,7 +7,7 @@ const swagData = [
     {
         name: "Iron Man - Flipper Zero Sticker",
         image: "static/media/flipper_zero_village.png",
-        description: "Check out this excusive sitcker created by Sagnik Haldar [https://www.linkedin.com/in/hsagnik/]. Win this swag by completing the Flipper Zero challenge!"
+        description: "Check out this excusive sitcker created by <a href="https://www.linkedin.com/in/hsagnik/">Sagnik Haldar</a>. Win this swag by completing the Flipper Zero challenge!"
     },
     {
         name: "Lock Picking Mastery Sticker",

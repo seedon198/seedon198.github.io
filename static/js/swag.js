@@ -1,6 +1,6 @@
 const swagData = [
     {
-        name: "HHV Sticker Pack",
+        name: "Hardware Hacking Village Pack",
         image: "static/media/sticker.svg",
         description: "A set of 10 unique stickers. Every Attendee of HHV will get these stickers and they will be disbursed during the village."
     },

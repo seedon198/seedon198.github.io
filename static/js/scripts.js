@@ -92,7 +92,7 @@ const villageDetails = {
         `,
     },
     forensics: {
-        title: "Digital Forensics",
+        title: "Digital Forensics Village",
         description: `
             <p>Master the tools and techniques of digital forensics, focusing on:</p>
              <div class="spacer"></div>

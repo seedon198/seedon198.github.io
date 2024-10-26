@@ -60,14 +60,12 @@
 
 .map-container {
     width: 100%;
-    max-width: 1000px;
     height: 600px;
     margin: 0 auto;
     position: relative;
     overflow: hidden;
     border: 2px solid var(--neon-blue);
     border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .map {
@@ -88,16 +86,15 @@
     align-items: center;
     text-align: center;
     font-size: 14px;
-    color: var(--neon-blue);
+    color: var(--neon-pink);
     background-color: rgba(0, 243, 255, 0.1);
     transition: all 0.3s ease;
     cursor: pointer;
-    transform: translate(-50%, -50%);
 }
 
 .booth:hover {
-    transform: translate(-50%, -50%) scale(1.1);
-    background-color: rgba(255, 105, 180, 0.3);
+    transform: scale(1.1);
+    background-color: rgba(255, 105, 180, 0.127);
     color: var(--neon-pink);
     border-color: var(--neon-pink);
     z-index: 10;

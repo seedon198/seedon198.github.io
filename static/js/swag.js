@@ -1,6 +1,6 @@
 const swagData = [
     {
-        name: "Hardware Hacker Hulk",
+        name: "Hardware Hacker Hulk Sticker",
         image: "static/media/stickers/HHV_Hulk.png",
         description: "Check out this amazing Hulk sticker designed by Ajmal Insta :- @ajmalmehroof_, This sticker is a part of HHV sticker pack."
     },
@@ -30,14 +30,14 @@ const swagData = [
         description: "Celebrate your mastery of SMD soldering with this cool sticker. Win this swag by completing the SMD challenge!"
     },
     {
-        name: "Digital Forensics Investigator Badge",
+        name: "Forensics Investigator Sticker",
         image: "static/media/sticker.png",
         description: "Prove your digital sleuthing skills with this exclusive badge. Win this swag by completing the Digital Forensics challenge!"
     },
     {
-        name: "HAM Radio Enthusiast Sticker",
+        name: "HAM Radio Mjölnir Sticker",
         image: "static/media/stickers/ham_village.png",
-        description: "Celebrate your passion for HAM radio with this Thor inspired HAM sticker made by Sagnik Haldar X :- @SagnikHaldar1. Win this swag by completing the HAM Village challenge!"
+        description: "Celebrate your passion for HAM radio with this Mjölnir inspired HAM sticker made by Sagnik Haldar X :- @SagnikHaldar1. Win this swag by completing the HAM Village challenge!"
     },
     {
         name: "ICS Security Guardian Sticker",
@@ -45,7 +45,7 @@ const swagData = [
         description: "Show your commitment to ICS security with this unique sticker. Win this swag by completing the ICS Village challenge!"
     },
     {
-        name: "WiFi Warriors Badge",
+        name: "WiFi Warriors Sticker",
         image: "static/media/sticker.png",
         description: "Join the ranks of WiFi Warriors with this exclusive badge. Win this swag by completing the WiFi Village challenge!"
     },
@@ -55,7 +55,7 @@ const swagData = [
         description: "Take to the skies with this cool Drone Navigator sticker. Win this swag by completing the Drone Village challenge!"
     },
     {
-        name: "Lock Picking Flipbook",
+        name: "Lock Picking 101 Flipbook",
         image: "static/media/stickers/lockpicking_flipbook.png",
         description: "Earn this Pirate themed lockpicking flipbook designed by Minhaj X :- @0xblick by breaking our mock doors at the lockpicking village!"
     },

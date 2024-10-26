@@ -1,5 +1,5 @@
 const villageData = [
-    { name: "Entrance", x: 5, y: 95, isEntrance: true },
+    { name: "Entrance", x: 0, y: 90 , isEntrance: true },
     { name: "Badge Village", x: 20, y: 85 },
     { name: "Soldering Station", x: 20, y: 50 },
     { name: "SMD Soldering Station", x: 20, y: 15 },
@@ -9,7 +9,7 @@ const villageData = [
     { name: "Flipper Zero Village", x: 85, y: 50 },
     { name: "Drone Village", x: 85, y: 85 },
     { name: "Lockpicking Village", x: 70, y: 95 },
-    { name: "Exit", x: 40, y: 95, isExit: true }
+    { name: "Exit", x: 0, y: 0, isExit: true }
 ];
 
 

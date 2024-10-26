@@ -1,17 +1,16 @@
 const villageData = [
     { name: "Entrance", x: 0, y: 90 , isEntrance: true },
-    { name: "Badge Village", x: 20, y: 85 },
-    { name: "Soldering Station", x: 20, y: 50 },
-    { name: "SMD Soldering Station", x: 20, y: 15 },
-    { name: "ICS Village", x: 40, y: 5 },
-    { name: "WiFi Village", x: 70, y: 5 },
-    { name: "HAM Village", x: 85, y: 15 },
-    { name: "Flipper Zero Village", x: 85, y: 50 },
-    { name: "Drone Village", x: 85, y: 85 },
-    { name: "Lockpicking Village", x: 70, y: 95 },
+    { name: "Badge Village", x: 25, y: 87 },
+    { name: "Soldering Station", x: 0, y: 35 },
+    { name: "Reflow Station", x: 0, y: 48 },
+    { name: "ICS Village", x: 45, y: 0 },
+    { name: "WiFi Village", x: 65, y: 0 },
+    { name: "HAM Village", x: 25, y: 0 },
+    { name: "Flipper Zero Village", x: 89.5, y: 40 },
+    { name: "Drone Village", x: 45, y: 87 },
+    { name: "Lockpick Booth", x: 65, y: 87 },
     { name: "Exit", x: 0, y: 0, isExit: true }
 ];
-
 
 function createMap() {
     const map = document.querySelector('.map');
@@ -32,7 +31,7 @@ function createMap() {
             booth.classList.add('exit');
             booth.innerHTML = `
                 <span class="label">Exit</span>
-                <span class="arrow">→</span>
+                <span class="arrow">←</span>
             `;
         } else {
             booth.innerHTML = village.name;
@@ -76,6 +75,5 @@ function createPath() {
     path.appendChild(pathElement);
     map.appendChild(path);
 }
-
 
 document.addEventListener('DOMContentLoaded', createMap);

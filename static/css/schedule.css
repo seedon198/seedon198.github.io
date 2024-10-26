@@ -39,8 +39,6 @@
     margin-top: 0.5rem;
 }
 
-
-
 .map-section {
     margin-top: 2rem;
 }
@@ -66,6 +64,8 @@
     overflow: hidden;
     border: 2px solid var(--neon-blue);
     border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+
 }
 
 .map {
@@ -147,3 +147,31 @@
     from { transform: scale(1); }
     to { transform: scale(1.05); }
 }
+
+
+.compass {
+    margin-top: 1%;
+    margin-right: 1%;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    display: grid;
+    grid-template-areas:
+        ". north ."
+        "west . east"
+        ". south .";
+    color: var(--neon-pink);
+    font-size: 1.2em;
+    text-align: center;
+}
+.compass span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.compass .north { grid-area: north; }
+.compass .south { grid-area: south; }
+.compass .east { grid-area: east; }
+.compass .west { grid-area: west; }

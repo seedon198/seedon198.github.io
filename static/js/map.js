@@ -1,16 +1,17 @@
 const villageData = [
     { name: "Entrance", x: 0, y: 90 , isEntrance: true },
     { name: "Badge Village", x: 25, y: 87 },
-    { name: "Soldering Station", x: 0, y: 35 },
-    { name: "Reflow Station", x: 0, y: 48 },
+    { name: "Soldering Station", x: 0, y: 32 },
+    { name: "Reflow Station", x: 0, y: 50 },
     { name: "ICS Village", x: 45, y: 0 },
     { name: "WiFi Village", x: 65, y: 0 },
     { name: "HAM Village", x: 25, y: 0 },
-    { name: "Flipper Zero Village", x: 89.5, y: 35 },
-    { name: "Forensics Village", x: 89.5, y: 48 },
+    { name: "Flipper Zero Village", x: 89.5, y: 32 },
+    { name: "Forensics Village", x: 89.5, y: 50 },
     { name: "Drone Village", x: 45, y: 87 },
     { name: "Lockpick Booth", x: 65, y: 87 },
-    { name: "Exit", x: 0, y: 0, isExit: true }
+    { name: "Exit", x: 0, y: 0, isExit: true },
+    { name: "Washroom", x: 91, y: 89.5, isRestroom: true }
 ];
 
 function createMap() {
@@ -34,7 +35,14 @@ function createMap() {
                 <span class="label">Exit</span>
                 <span class="arrow">←</span>
             `;
-        } else {
+        } else if (village.isRestroom) {
+            booth.classList.add('exit');
+            booth.innerHTML = `
+                <span class="label">Restroom</span>
+                <span class="arrow">→</span>
+            `;
+        } 
+        else {
             booth.innerHTML = village.name;
         }
         

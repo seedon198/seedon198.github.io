@@ -11,7 +11,7 @@ const swagData = [
     },
     {
         name: "Lock Picking Mastery Sticker",
-        image: "static/media/sticker.svg",
+        image: "static/media/sticker.png",
         description: "Show your skills with this sleek Lock Picking Mastery sticker. Win this swag by completing the Lock Picking challenge!"
     },
     {
@@ -26,12 +26,12 @@ const swagData = [
     },
     {
         name: "SMD Challenge Sticker",
-        image: "static/media/sticker.svg",
+        image: "static/media/sticker.png",
         description: "Celebrate your mastery of SMD soldering with this cool sticker. Win this swag by completing the SMD challenge!"
     },
     {
         name: "Digital Forensics Investigator Badge",
-        image: "static/media/sticker.svg",
+        image: "static/media/sticker.png",
         description: "Prove your digital sleuthing skills with this exclusive badge. Win this swag by completing the Digital Forensics challenge!"
     },
     {
@@ -41,17 +41,17 @@ const swagData = [
     },
     {
         name: "ICS Security Guardian Sticker",
-        image: "static/media/sticker.svg",
+        image: "static/media/sticker.png",
         description: "Show your commitment to ICS security with this unique sticker. Win this swag by completing the ICS Village challenge!"
     },
     {
         name: "WiFi Warriors Badge",
-        image: "static/media/sticker.svg",
+        image: "static/media/sticker.png",
         description: "Join the ranks of WiFi Warriors with this exclusive badge. Win this swag by completing the WiFi Village challenge!"
     },
     {
         name: "Drone Navigator Sticker",
-        image: "static/media/sticker.svg",
+        image: "static/media/sticker.png",
         description: "Take to the skies with this cool Drone Navigator sticker. Win this swag by completing the Drone Village challenge!"
     },
 ];

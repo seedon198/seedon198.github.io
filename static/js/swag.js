@@ -16,8 +16,8 @@ const swagData = [
     },
     {
         name: "Badge Builders Club Sticker",
-        image: "static/media/sticker.svg",
-        description: "Join the elite with this stylish Badge Builders Club sticker. Win this swag by completing the Badge Village challenge!"
+        image: "static/media/stickers/cap_shield_village.png",
+        description: "Join the elite with this stylish Badge Builders Club sticker. Get this Captian America Shied sticker Sagnik Haldar X :- @SagnikHaldar1 upon completing the badge challenge!"
     },
     {
         name: "Soldering Challenge Sticker",
@@ -36,8 +36,8 @@ const swagData = [
     },
     {
         name: "HAM Radio Enthusiast Sticker",
-        image: "static/media/sticker.svg",
-        description: "Celebrate your passion for HAM radio with this vibrant sticker. Win this swag by completing the HAM Village challenge!"
+        image: "static/media/stickers/ham_village.png",
+        description: "Celebrate your passion for HAM radio with this Thor inspired HAM sticker made by Sagnik Haldar X :- @SagnikHaldar1. Win this swag by completing the HAM Village challenge!"
     },
     {
         name: "ICS Security Guardian Sticker",

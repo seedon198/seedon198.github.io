@@ -54,6 +54,11 @@ const swagData = [
         image: "static/media/sticker.png",
         description: "Take to the skies with this cool Drone Navigator sticker. Win this swag by completing the Drone Village challenge!"
     },
+    {
+        name: "Lock Picking Flipbook",
+        image: "static/media/stickers/lockpicking_flipbook.png",
+        description: "Earn this Pirate themed lockpicking flipbook by breaking our mock doors at the lockpicking village!"
+    },
 ];
 
 function createSVGFilter() {

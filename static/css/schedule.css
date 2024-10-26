@@ -38,3 +38,115 @@
 .event-title {
     margin-top: 0.5rem;
 }
+
+
+
+.map-section {
+    margin-top: 2rem;
+}
+
+.section-title {
+    color: var(--neon-blue);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.map-description {
+    color: #808080;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+.map-container {
+    width: 100%;
+    max-width: 1000px;
+    height: 600px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--neon-blue);
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.map {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.booth {
+    position: absolute;
+    width: 120px;
+    height: 80px;
+    border: 2px solid var(--neon-blue);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 14px;
+    color: var(--neon-blue);
+    background-color: rgba(0, 243, 255, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+}
+
+.booth:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+    background-color: rgba(255, 105, 180, 0.3);
+    color: var(--neon-pink);
+    border-color: var(--neon-pink);
+    z-index: 10;
+}
+
+.entrance, .exit {
+    width: 100px;
+    height: 60px;
+    border-color: var(--neon-pink);
+    color: var(--neon-pink);
+}
+
+.entrance .arrow, .exit .arrow {
+    font-size: 24px;
+}
+
+.entrance .label, .exit .label {
+    font-size: 12px;
+}
+
+.path {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.path-line {
+    fill: none;
+    stroke: var(--neon-pink);
+    stroke-width: 2;
+    stroke-dasharray: 10, 5;
+    animation: dashAnimation 30s linear infinite;
+}
+
+@keyframes dashAnimation {
+    to {
+        stroke-dashoffset: -100;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+    from { transform: scale(1); }
+    to { transform: scale(1.05); }
+}

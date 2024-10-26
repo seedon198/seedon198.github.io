@@ -3,26 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team - Hardware Hacking Village</title>
+    <title>About Us - Hardware Hacking Village</title>
     <link href="static/css/styles.css" rel="stylesheet">
+    <link href="static/css/about.css" rel="stylesheet">
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YC8JWDXN1J"></script>
-    <link href="static/css/team.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="static/js/scripts.js" defer></script>
 </head>
 <body>
+    <audio id="background-audio" src="static/media/background.mp3" preload="auto"></audio>
     <nav>
         <div class="nav-content">
             <a href="/" style="text-decoration: none;">
                 <div class="logo">HW101</div>
-              </a>
+            </a>
             <div class="nav-links">
                 <a href="team.html">Team</a>
                 <a href="schedule.html">Schedule</a>
                 <a href="swag.html">Swag</a>
                 <a href="about.html">About us</a>
                 <a href="https://discord.gg/DrXCVWqDSq" target="_blank">
-                    <img style="filter: invert(99%) sepia(67%) saturate(3123%) hue-rotate(181deg) brightness(251%) contrast(89%);"  src="static/media/discord.svg" alt="Discord" width="24" height="24">
+                    <img style="filter: invert(99%) sepia(67%) saturate(3123%) hue-rotate(181deg) brightness(251%) contrast(89%);" src="static/media/discord.svg" alt="Discord" width="24" height="24">
                 </a>
             </div>
         </div>
@@ -32,25 +33,35 @@
         <div class="grid-overlay"></div>
         <canvas class="particles" id="particles"></canvas>
         <div class="content">
-            <h1 class="hero-title glitch" data-text="The Team">7H3 73AM</h1>
+            <h1 class="hero-title glitch" data-text="About Us">4B0UT U5</h1>
             <div class="spacer"></div>
-            <p style="color: #808080; text-align: justify;">Meet the dedicated team behind the Hardware Hacking Village! Each member brings unique skills and expertise, working tirelessly to create an engaging and educational experience for all participants. From logistics to hands-on training, our team is committed to fostering a collaborative environment where innovation thrives. Get to know the passionate individuals who make it all happen!</p>
+            <p style="color: #808080; text-align: justify;">Welcome to the Hardware Hacking Village! Our mission is to create a vibrant community where enthusiasts of all skill levels can come together to learn, share, and innovate. From hands-on workshops to engaging talks, we offer a variety of activities designed to spark curiosity and foster collaboration. Join us on this exciting journey as we explore the fascinating world of hardware hacking!</p>
             <div class="spacer"></div>
             <div class="spacer"></div>
-            <div class="team-grid" id="team-grid"></div>
+            <div class="about-grid">
+                <div class="about-card">
+                    <i class="fas fa-heart about-icon"></i>
+                    <h3 class="about-title">Our Mission</h3>
+                    <p>To inspire and educate individuals in the field of hardware hacking through hands-on experiences and collaborative learning.</p>
+                </div>
+                <div class="about-card">
+                    <i class="fas fa-users about-icon"></i>
+                    <h3 class="about-title">Our Community</h3>
+                    <p>A diverse group of passionate individuals, from beginners to experts, all united by a love for hardware and innovation.</p>
+                </div>
+                <div class="about-card">
+                    <i class="fas fa-lightbulb about-icon"></i>
+                    <h3 class="about-title">Our Vision</h3>
+                    <p>To be a leading platform for hardware enthusiasts, fostering a culture of creativity, knowledge-sharing, and technological advancement.</p>
+                </div>
+            </div>
+            <div class="spacer"></div>
+            <div class="button-group">
+                <a href="https://forms.gle/7QDkqR1qxPsorxKr9" class="cta-button" target="_blank">Join Us</a>
+            </div>
         </div>
     </div>
 
-    <!-- Modal for team member details -->
-    <div class="modal" id="teamModal">
-        <div class="modal-content">
-            <span class="modal-close">&times;</span>
-            <img class="modal-image" src="" alt="Team Member">
-            <div class="spacer"></div>
-            <h2 class="modal-title"></h2>
-            <div class="modal-description"></div>
-        </div>
-    </div>
     <div id="music-player" class="music-player minimized">
         <div class="player-content">
             <div class="player-handle">
@@ -73,7 +84,6 @@
             </div>
         </div>
     </div>
-    
 
     <footer class="site-footer">
         <div class="footer-content">
@@ -81,8 +91,6 @@
         </div>
     </footer>
 
-    <script src="static/js/team.js"></script>
     <script src="/static/js/musicPlayer.js"></script>
-
 </body>
 </html>

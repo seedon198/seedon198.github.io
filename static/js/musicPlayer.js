@@ -51,13 +51,6 @@ class MusicPlayer {
         this.nextBtn.addEventListener('click', () => this.nextSong());
         this.audioElement.addEventListener('timeupdate', () => this.updateProgress());
         this.audioElement.addEventListener('ended', () => this.nextSong());
-
-        // Add click event listener to the document
-        document.addEventListener('click', () => {
-            if (!this.isPlaying) {
-                this.togglePlayPause();
-            }
-        }, { once: true }); // This ensures it only fires once
     }
 
     initMinimizeFeature() {
@@ -78,14 +71,11 @@ class MusicPlayer {
         if (savedState) {
             const state = JSON.parse(savedState);
             this.currentTrackIndex = state.currentTrackIndex;
-            this.isPlaying = state.isPlaying;
+            this.isPlaying = false; // Always start paused
             this.audioElement.currentTime = state.currentTime || 0;
         }
         this.loadTrack(this.currentTrackIndex);
-        if (this.isPlaying) {
-            this.audioElement.play();
-            this.playPauseBtn.textContent = 'Pause';
-        }
+        this.playPauseBtn.textContent = 'Play'; // Ensure button shows 'Play'
     }
 
     saveStateToStorage() {
@@ -115,7 +105,10 @@ class MusicPlayer {
             this.audioElement.pause();
             this.playPauseBtn.textContent = 'Play';
         } else {
-            this.audioElement.play();
+            this.audioElement.play().catch(error => {
+                console.error("Playback failed:", error);
+                // Handle the error (e.g., show a message to the user)
+            });
             this.playPauseBtn.textContent = 'Pause';
         }
         this.isPlaying = !this.isPlaying;

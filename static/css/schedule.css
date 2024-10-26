@@ -10,6 +10,12 @@
     border: 1px solid var(--neon-blue);
     border-radius: 10px;
     padding: 1rem;
+    border: 1px solid rgba(0, 243, 255, 0.2);
+}
+
+.day-column:hover {
+    border: 1px solid var(--neon-blue);
+
 }
 
 .day-column h2 {
@@ -28,6 +34,10 @@
     border: 1px solid rgba(0, 243, 255, 0.2);
     padding: 1rem;
     border-radius: 5px;
+}
+
+.event-item:hover {
+    border: 1px solid var(--neon-pink);
 }
 
 .event-time {
@@ -62,10 +72,14 @@
     margin: 0 auto;
     position: relative;
     overflow: hidden;
-    border: 2px solid var(--neon-blue);
+    border: 1px solid rgba(0, 243, 255, 0.2);
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.05);
     padding: 20px;
+}
+
+.map-container:hover {
+    border: 2px solid var(--neon-blue);
 }
 
 .map {

@@ -17,6 +17,10 @@
     transform-origin: center;
 }
 
+.swag-card:hover {
+    border: 1px solid var(--neon-blue);
+}
+
 .swag-card img {
     width: 100%;
     height: 200px;

@@ -21,7 +21,7 @@ const swagData = [
     },
     {
         name: "Soldering Challenge Sticker",
-        image: "static/media/sticker.svg",
+        image: "static/media/sticker.png",
         description: "Earn this exclusive sticker by showcasing your soldering skills. Win this swag by completing the Soldering challenge!"
     },
     {

@@ -25,49 +25,14 @@ const swagData = [
         description: "Check out this excusive Mark VII inspired sitcker created by Sagnik Haldar X :- @SagnikHaldar1. Win this swag by completing the Flipper Zero challenge!"
     },
     {
-        name: "Lock Picking Mastery Sticker",
-        image: "static/media/sticker.png",
-        description: "Show your skills with this sleek Lock Picking Mastery sticker. Win this swag by completing the Lock Picking challenge!"
-    },
-    {
         name: "Badge Builders Club Sticker",
         image: "static/media/stickers/cap_shield_village.png",
         description: "Join the elite with this stylish Badge Builders Club sticker. Get this Captian America Shied sticker Sagnik Haldar X :- @SagnikHaldar1 upon completing the badge challenge!"
     },
     {
-        name: "Soldering Challenge Sticker",
-        image: "static/media/sticker.png",
-        description: "Earn this exclusive sticker by showcasing your soldering skills. Win this swag by completing the Soldering challenge!"
-    },
-    {
-        name: "SMD Challenge Sticker",
-        image: "static/media/sticker.png",
-        description: "Celebrate your mastery of SMD soldering with this cool sticker. Win this swag by completing the SMD challenge!"
-    },
-    {
-        name: "Forensics Investigator Sticker",
-        image: "static/media/sticker.png",
-        description: "Prove your digital sleuthing skills with this exclusive badge. Win this swag by completing the Digital Forensics challenge!"
-    },
-    {
         name: "HAM Radio Mjölnir Sticker",
         image: "static/media/stickers/ham_village.png",
         description: "Celebrate your passion for HAM radio with this Mjölnir inspired HAM sticker made by Sagnik Haldar X :- @SagnikHaldar1. Win this swag by completing the HAM Village challenge!"
-    },
-    {
-        name: "ICS Security Guardian Sticker",
-        image: "static/media/sticker.png",
-        description: "Show your commitment to ICS security with this unique sticker. Win this swag by completing the ICS Village challenge!"
-    },
-    {
-        name: "WiFi Warriors Sticker",
-        image: "static/media/sticker.png",
-        description: "Join the ranks of WiFi Warriors with this exclusive badge. Win this swag by completing the WiFi Village challenge!"
-    },
-    {
-        name: "Drone Navigator Sticker",
-        image: "static/media/sticker.png",
-        description: "Take to the skies with this cool Drone Navigator sticker. Win this swag by completing the Drone Village challenge!"
     },
     {
         name: "Lock Picking 101 Flipbook",

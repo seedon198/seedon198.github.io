@@ -5,6 +5,21 @@ const swagData = [
         description: "Check out this amazing Hulk sticker designed by Ajmal Insta :- @ajmalmehroof_, This sticker is a part of HHV sticker pack."
     },
     {
+        name: "Hardware Hacker Deadpool Sticker",
+        image: "static/media/stickers/HHV_Deadpool.png",
+        description: "Check out this amazing Deadpool sticker designed by Ajmal Insta :- @ajmalmehroof_, This sticker is a part of HHV sticker pack."
+    },
+    {
+        name: "Hardware Hacker Iron Man Sticker",
+        image: "static/media/stickers/HHV_Ironman.png",
+        description: "Check out this amazing Iron Man sticker designed by Ajmal Insta :- @ajmalmehroof_, This sticker is a part of HHV sticker pack."
+    },
+    {
+        name: "Hardware Hacker Captain Sticker",
+        image: "static/media/stickers/HHV_Captain.png",
+        description: "Check out this amazing Captain America sticker designed by Ajmal Insta :- @ajmalmehroof_, This sticker is a part of HHV sticker pack."
+    },
+    {
         name: "Mark VII - Flipper Zero Sticker",
         image: "static/media/stickers/flipper_zero_village.png",
         description: "Check out this excusive Mark VII inspired sitcker created by Sagnik Haldar X :- @SagnikHaldar1. Win this swag by completing the Flipper Zero challenge!"

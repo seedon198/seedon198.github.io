@@ -37,7 +37,7 @@ const swagData = [
     {
         name: "Lock Picking 101 Flipbook",
         image: "static/media/stickers/lockpicking_flipbook.png",
-        description: "Earn this Pirate themed lockpicking flipbook designed by Minhaj X :- @0xblick by breaking our mock doors at the lockpicking village!"
+        description: 'Earn this Pirate themed lockpicking flipbook designed by Minhaj X :- @0xblick by breaking our mock doors at the lockpicking village!, <a href="static/media/pdf/Lockpicking_Flipbook.pdf">Download the digital copy!</a>'
     },
 ];
 

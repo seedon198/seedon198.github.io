@@ -96,3 +96,16 @@
     color: #808080;
     text-align: left;
 }
+
+
+a:link {
+    color: var(--neon-pink);
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:visited {
+    color: var(--neon-blue);
+    background-color: transparent;
+    text-decoration: none;
+  }

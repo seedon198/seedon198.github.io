@@ -397,3 +397,64 @@ window.dataLayer = window.dataLayer || [];
   gtag('js', new Date());
 
   gtag('config', 'G-YC8JWDXN1J');
+
+
+// Countdown Timer
+const eventDate = new Date("February 20, 2025 09:30:00").getTime();
+
+function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = eventDate - now;
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    function updateTimerElement(id, value) {
+        const element = document.getElementById(id);
+        if (element) {
+            const currentValue = element.textContent;
+            const newValue = String(value).padStart(2, '0');
+            
+            if (currentValue !== newValue) {
+                element.classList.add('flip');
+                setTimeout(() => {
+                    element.textContent = newValue;
+                    element.classList.remove('flip');
+                }, 500);
+            }
+        }
+    }
+
+    updateTimerElement('days', days);
+    updateTimerElement('hours', hours);
+    updateTimerElement('minutes', minutes);
+    updateTimerElement('seconds', seconds);
+
+    if (distance < 0) {
+        clearInterval(countdownInterval);
+        document.getElementById('countdown-timer').innerHTML = "Event has started!";
+    }
+}
+
+const countdownInterval = setInterval(updateCountdown, 1000);
+
+// Call updateCountdown immediately to avoid initial delay
+updateCountdown();
+
+// Add this to your existing DOMContentLoaded event listener
+document.addEventListener('DOMContentLoaded', () => {
+    debug('DOM Content Loaded');
+    initializeModal();
+    initializeParticles();
+    updateCountdown(); // Initialize countdown
+});
+
+// Also add this to your existing readyState check
+if (document.readyState === 'complete') {
+    debug('DOM already loaded, initializing directly');
+    initializeModal();
+    initializeParticles();
+    updateCountdown(); // Initialize countdown
+}

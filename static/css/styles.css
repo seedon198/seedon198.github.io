@@ -1,7 +1,7 @@
 :root {
     --neon-blue: #00f3ff;
     --dark-bg: #050505;
-    --accent-color: #F4C2C2;
+    --accent-color: var(--neon-pink);
     --modal-bg: rgba(5, 5, 5, 0.95);
 }
 
@@ -283,7 +283,7 @@ nav {
   content: attr(data-text);
   position: absolute;
   left: -2px;
-  text-shadow: -5px 0 #ff0055;
+  text-shadow: -5px 0 var(--neon-pink);
   background: black;
   overflow: hidden;
   top: 0;
@@ -730,3 +730,59 @@ animation: noise-2 3s linear infinite alternate-reverse, glitch 5s 5s infinite;
 .music-player:not(.minimized) .minimized-title {
   display: none;
 }
+
+.countdown-timer {
+  display: flex;
+  justify-content: left;
+  align-items: flex-start; /* Changed from center to flex-start */
+  color: var(--neon-blue);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.timer-item {
+  margin-right: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timer-value {
+  padding: 10px; /* Changed from percentage to fixed value */
+  font-size: 2rem;
+  font-weight: bold;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  height: 60px; /* Fixed height */
+  width: 60px; /* Fixed width */
+  background-color: rgba(0, 208, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 0 10px var(--neon-pink);
+  transition: transform 0.5s cubic-bezier(0.37, 0, 0.63, 1);
+}
+
+.timer-label {
+  font-size: 1rem;
+  color: var(--neon-blue);
+  text-align: center; /* Changed from left to center */
+  margin-top: 0.5rem;
+}
+
+/* Flip animation */
+.flip {
+  transform: rotateX(90deg);
+}
+
+.timer-value-inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backface-visibility: hidden;
+}
+

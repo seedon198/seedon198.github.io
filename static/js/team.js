@@ -74,7 +74,7 @@ const teamData = [
      {
         name: "Nishal",
         role: "Trainer",
-        image: "static/media/mugshots/man.png",
+        image: "static/media/mugshots/nishal1.png",
         bio: "Nishal, our energetic and resourceful booth co-pilot, keeps the lockpicking action flowing. Always ready with a helping hand and a keen eye for detail, he ensures that everything runs smoothly and efficiently. From setting up challenges to assisting participants, Nishal's dedication and enthusiasm make the booth a vibrant and exciting place to be"
     },
     

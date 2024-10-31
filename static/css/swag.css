@@ -97,15 +97,14 @@
     text-align: left;
 }
 
-
-a:link {
+p a:link {
     color: var(--neon-pink);
     background-color: transparent;
     text-decoration: none;
   }
   
-  a:visited {
-    color: var(--neon-blue);
+p a:visited {
+    color: var(--neon-pink);
     background-color: transparent;
     text-decoration: none;
   }

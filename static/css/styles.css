@@ -103,7 +103,7 @@ nav {
 }
 
 .hero-title {
-    font-size: 4rem;
+    font-size: clamp(2rem, calc(7vw + 3.5vh), 5rem);
     font-weight: 800;
     text-transform: uppercase;
     margin-bottom: 1rem;

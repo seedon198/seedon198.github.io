@@ -7,6 +7,11 @@ function debug(message) {
     }
 }
 
+// JavaScript for toggling the nav menu
+document.querySelector('.menu-toggle').addEventListener('click', function () {
+    document.querySelector('.nav-links').classList.toggle('show');
+});
+
 
 // Village details data with formatted descriptions and key takeaways
 const villageDetails = {

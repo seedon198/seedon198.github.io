@@ -59,7 +59,7 @@ body {
     flex-direction: column;
 }
 
-nav {
+.navbar {
     position: fixed;
     top: 0;
     width: 100%;
@@ -75,6 +75,16 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 1rem;
+}
+
+.menu-toggle {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: none;
 }
 
 .logo {
@@ -689,14 +699,32 @@ animation: noise-2 3s linear infinite alternate-reverse, glitch 5s 5s infinite;
 }
 
 @media (max-width: 768px) {
-  .music-player {
-      width: 250px;
-      bottom: 10px;
-      right: 10px;
-  }
+    .music-player {
+        width: 250px;
+        bottom: 10px;
+        right: 10px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
 }
-
-
 
 .music-player.minimized {
   width: fit-content;

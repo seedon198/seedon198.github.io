@@ -49,9 +49,9 @@ const teamData = [
     },
     {
         name: "Ujwal Patel",
-        role: "Electronics Mastermind",
+        role: "Core Team",
         image: "static/media/mugshots/ujwal.png",
-        bio: "Ujwal is the mastermind behind last year’s CTF and badge design, and his dedication knows no bounds. Hardworking and versatile, he seamlessly juggles multiple roles—from managing the soldering village to quickly spinning up CTF challenges, all at the same time. His ability to balance so much with precision and energy is truly impressive. We all recognize and deeply value Ujwal's immense contribution to the success of the 2023 Hardware Village. Simply put, the village wouldn't have been the same without him!"
+        bio: "Ujval Patel is a cybersecurity researcher and consultant specializing in hardware security, with a particular focus on hardware vulnerabilities and Radio Frequency (RF) security. As a HAM-certified operator with the call sign VU3RXF, he actively explores RF technologies. Ujval works at a leading multinational corporation and collaborates with the Indian Space Research Organization (ISRO) to enhance the security of critical space technologies. He is dedicated to sharing insights and practical techniques in hardware hacking to advance the understanding of safeguarding vital technologies."
     },
     {
         name: "Minhaj",

@@ -50,7 +50,7 @@ const teamData = [
     {
         name: "Ujwal Patel",
         role: "Electronics Mastermind",
-        image: "static/media/mugshots/man.png",
+        image: "static/media/mugshots/ujwal.png",
         bio: "Ujwal is the mastermind behind last year’s CTF and badge design, and his dedication knows no bounds. Hardworking and versatile, he seamlessly juggles multiple roles—from managing the soldering village to quickly spinning up CTF challenges, all at the same time. His ability to balance so much with precision and energy is truly impressive. We all recognize and deeply value Ujwal's immense contribution to the success of the 2023 Hardware Village. Simply put, the village wouldn't have been the same without him!"
     },
     {
@@ -76,6 +76,24 @@ const teamData = [
         role: "Trainer",
         image: "static/media/mugshots/nishal1.png",
         bio: "Nishal, our energetic and resourceful booth co-pilot, keeps the lockpicking action flowing. Always ready with a helping hand and a keen eye for detail, he ensures that everything runs smoothly and efficiently. From setting up challenges to assisting participants, Nishal's dedication and enthusiasm make the booth a vibrant and exciting place to be"
+    },
+    {
+        name: "Keta Desai",
+        role: "Trainer",
+        image: "static/media/mugshots/keta.png",
+        bio: "Keta Desai is a Consultant at a Big 4 firm with over four years of experience in threat and vulnerability management (TVM) and Infrastructure security assessments. She specializes in vulnerability assessment and penetration testing (VAPT) of web applications, mobile applications, networks, and APIs across various sectors, including Energy and Resources Industry. As an active public speaker, Keta has presented sessions on hardware hacking at the Null community."
+    },
+    {
+        name: "Graham Gohil",
+        role: "Trainer",
+        image: "static/media/mugshots/graham.png",
+        bio: "Graham Gohil is a Consultant at a Big 4 firm with over three years of experience in penetration testing and application security assessments. He specializes in the security evaluation of web applications, Android apps, thick-client environments, networks, and APIs across sectors like E-commerce and Healthcare. As a public speaker, Graham has presented on topics such as Broken Access Control, SQL Injection, and Web App Security 101 at events like The Hackers Meetup SGCCI and Others. He has also volunteered at the Seasides Conference for the past two years."
+    },
+    {
+        name: "Rajan Kumbhani",
+        role: "Trainer",
+        image: "static/media/mugshots/rajan.png",
+        bio: "Rajan Kumbhani is a Professional Services Manager and Penetration Tester specializing in web, mobile, and network vulnerability assessments (VAPT), with a strong commitment to identifying and mitigating security vulnerabilities. He is experienced in leading high-performing teams to deliver top-tier solutions while fostering transparent and effective communication with clients. Currently, Rajan is exploring hardware hacking, further expanding his expertise in cybersecurity. He is dedicated to staying current with industry trends to provide actionable insights that enhance organizational security."
     },
     
 

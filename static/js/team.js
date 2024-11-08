@@ -81,7 +81,7 @@ const teamData = [
         name: "Keta Desai",
         role: "Trainer",
         image: "static/media/mugshots/keta.png",
-        bio: "Keta Desai is a Consultant at a Big 4 firm with over four years of experience in threat and vulnerability management (TVM) and Infrastructure security assessments. She specializes in vulnerability assessment and penetration testing (VAPT) of web applications, mobile applications, networks, and APIs across various sectors, including Energy and Resources Industry. As an active public speaker, Keta has presented sessions on hardware hacking at the Null community."
+        bio: "Keta is a skilled Risk and Financial Advisor at Big 4, specializing in Infrastructure Security with deep expertise in Threat and Vulnerability Management. With over four years of experience, she is proficient in Vulnerability Assessment and Penetration Testing (VAPT) initiatives, focusing on securing web, mobile, network, and API applications. Keta has strengthened security frameworks and safeguarded critical assets across strategic projects.Her expertise is also recognized industry-wide she recently presented at Null Community, sharing insights on Hardware hacking. Keta’s commitment to advancing cybersecurity practices is evident in her impactful cybersecurity awareness training, which has helped foster a culture of security within her teams.Keta combines advanced technical skills with a strategic approach, driving resilient infrastructure protection and enhancing organizational security posture through her work."
     },
     {
         name: "Graham Gohil",

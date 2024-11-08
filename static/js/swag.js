@@ -9,6 +9,11 @@ const swagData = [
         image: "static/media/stickers/HHV_Deadpool.png",
         description: "Check out this amazing Deadpool sticker designed by Ajmal Insta :- @ajmalmehroof_, This sticker is a part of HHV sticker pack."
     },
+     {
+        name: "ICS/SCADA Security Village Sticker",
+        image: "static/media/stickers/ics_village.png",
+        description: "Check out this amazing sticker designed by Muhsin Bin Irshad :- @muhsinbinirshad, This sticker is a part of HHV sticker pack."
+    },
     {
         name: "Hardware Hacker Iron Man Sticker",
         image: "static/media/stickers/HHV_Ironman.png",

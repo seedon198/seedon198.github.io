@@ -3,46 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hardware Hacking Village Blog - Latest insights in cybersecurity and technology">
     <title>Blog - Hardware Hacking Village</title>
     <link href="static/css/styles.css" rel="stylesheet">
-	  <link href="static/css/blog.css" rel="stylesheet">
+    <link href="static/css/blog.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prismjs/1.24.1/prism.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prismjs/1.24.1/themes/prism-tomorrow.min.css" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-content">
-            <a href="/" style="text-decoration: none;">
+            <a href="/" class="logo-link" aria-label="Home">
                 <div class="logo">HW101</div>
             </a>
             <button class="menu-toggle" aria-label="Toggle Navigation">
-                ☰
+                <span class="hamburger-icon">☰</span>
             </button>
             <div class="nav-links">
                 <a href="team.html">Team</a>
                 <a href="schedule.html">Schedule</a>
                 <a href="swag.html">Swag</a>
-                <a href="https://discord.gg/DrXCVWqDSq" target="_blank">
-                    <img style="filter: invert(99%) sepia(67%) saturate(3123%) hue-rotate(181deg) brightness(251%) contrast(89%);" src="static/media/discord.svg" alt="Discord" width="24" height="24">
+                <a href="blog.html">Blog</a>
+                <a href="https://discord.gg/DrXCVWqDSq" target="_blank" rel="noopener noreferrer" aria-label="Join our Discord">
+                    <img class="discord-icon" src="static/media/discord.svg" alt="Discord" width="24" height="24">
                 </a>
             </div>
         </div>
     </nav>
 
-    <div class="hero">
+    <main class="hero">
         <div class="grid-overlay"></div>
         <canvas class="particles" id="particles"></canvas>
         <div class="content">
-            <h1 class="hero-title glitch" data-text="B10G">BLOG</h1>
-            <div class="spacer"></div>
-            <p style="color: #808080;">Explore our collection of insightful blog posts covering the latest in cybersecurity, technology, and more. Dive into a wealth of knowledge, tips, and personal experiences that you can refer to anytime. Whether you're looking for in-depth analysis or casual reads, our blog has something for everyone. Get ready to learn, engage, and stay updated with fresh content regularly!</p>
-            <div id="blog-container"></div>
-            <div class="spacer"></div>
+            <header class="blog-header">
+                <h1 class="hero-title glitch" data-text="B10G">BLOG</h1>
+                <p class="blog-description">Explore our collection of insightful blog posts covering the latest in cybersecurity, technology, and more. Dive into a wealth of knowledge, tips, and personal experiences that you can refer to anytime.</p>
+            </header>
+            
+            <section class="blog-filters">
+                <div class="search-container">
+                    <input type="search" id="blog-search" placeholder="Search posts..." aria-label="Search blog posts">
+                </div>
+                <div class="categories" id="blog-categories">
+                    <!-- Categories will be dynamically populated -->
+                </div>
+            </section>
+
+            <section id="blog-container" class="blog-grid">
+                <!-- Blog posts will be dynamically populated -->
+            </section>
+
+            <div id="pagination" class="pagination">
+                <!-- Pagination will be dynamically populated -->
+            </div>
         </div>
-    </div>
+    </main>
 
     <footer class="site-footer">
         <div class="footer-content">
             <p>&copy; 2024 Hardware Hacking Village. All rights reserved. [Except The Music]</p>
+            <nav class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Use</a>
+                <a href="contact.html">Contact</a>
+            </nav>
         </div>
     </footer>
 

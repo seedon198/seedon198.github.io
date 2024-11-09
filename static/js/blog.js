@@ -1,64 +1,175 @@
-async function loadBlogPosts() {
-    const blogContainer = document.getElementById('blog-container');
-    
-    
-    const blogPosts = [
-        { 
-            title: 'Introduction to Thick Client Pentesting', 
-            filename: 'thickclient.md',
-            image: 'static/media/blog/thickclient.png' 
-        },
-    ];
+// Blog post configuration
+const POSTS_PER_PAGE = 6;
 
-    for (const post of blogPosts) {
-        try {
-            const response = await fetch(`blog_posts/${post.filename}?t=${new Date().getTime()}`);
-            if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+class BlogManager {
+    constructor() {
+        this.blogPosts = [];
+        this.currentPage = 1;
+        this.currentCategory = 'all';
+        this.searchTerm = '';
+        
+        this.init();
+    }
 
-            const markdown = await response.text();
-            const htmlContent = marked.parse(markdown);
+    async init() {
+        await this.loadBlogPosts();
+        this.setupEventListeners();
+        this.renderCategories();
+        this.renderPosts();
+    }
 
-            const postElement = document.createElement('div');
-            postElement.classList.add('blog-box');
+    async loadBlogPosts() {
+        const blogPosts = [
+            { 
+                title: 'Introduction to Thick Client Pentesting',
+                filename: 'thickclient.md',
+                image: 'static/media/blog/thickclient.png',
+                category: 'Thick Client',
+                date: '2024-11-10',
+                author: 'Fazalu R.',
+                readTime: '8 min read'
+            },
+            // Add more blog posts here
+        ];
 
-           
-            const titleElement = document.createElement('div');
-            titleElement.classList.add('blog-title');
-            titleElement.innerText = post.title;
+        for (const post of blogPosts) {
+            try {
+                const response = await fetch(`static/md/${post.filename}?t=${new Date().getTime()}`);
+                if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                
+                const markdown = await response.text();
+                post.content = marked.parse(markdown);
+                this.blogPosts.push(post);
+            } catch (error) {
+                console.error(`Error loading ${post.filename}:`, error);
+            }
+        }
+    }
 
-            const imgElement = document.createElement('img');
-            imgElement.src = post.image; 
-            imgElement.alt = 'Thumbnail'; 
-            imgElement.classList.add('blog-thumbnail'); 
+    setupEventListeners() {
+        // Search functionality
+        const searchInput = document.getElementById('blog-search');
+        searchInput.addEventListener('input', (e) => {
+            this.searchTerm = e.target.value.toLowerCase();
+            this.currentPage = 1;
+            this.renderPosts();
+        });
 
-            
-            imgElement.style.width = '50px !important'; 
-            imgElement.style.height = '50px !important'; 
-            imgElement.style.objectFit = 'contain';  
+        // Category filtering
+        document.getElementById('blog-categories').addEventListener('click', (e) => {
+            if (e.target.classList.contains('category-tag')) {
+                this.currentCategory = e.target.dataset.category;
+                this.currentPage = 1;
+                this.updateActiveCategory();
+                this.renderPosts();
+            }
+        });
+    }
 
-            
-            postElement.appendChild(titleElement);
-            postElement.appendChild(imgElement);
+    renderCategories() {
+        const categories = ['all', ...new Set(this.blogPosts.map(post => post.category))];
+        const categoriesContainer = document.getElementById('blog-categories');
+        
+        categories.forEach(category => {
+            const categoryElement = document.createElement('button');
+            categoryElement.classList.add('category-tag');
+            categoryElement.dataset.category = category;
+            categoryElement.textContent = category.charAt(0).toUpperCase() + category.slice(1);
+            if (category === 'all') categoryElement.classList.add('active');
+            categoriesContainer.appendChild(categoryElement);
+        });
+    }
 
-            
-            const contentElement = document.createElement('div');
-            contentElement.classList.add('blog-content');
-            contentElement.innerHTML = htmlContent;
+    updateActiveCategory() {
+        const categories = document.querySelectorAll('.category-tag');
+        categories.forEach(cat => {
+            cat.classList.toggle('active', cat.dataset.category === this.currentCategory);
+        });
+    }
 
-            
-            postElement.appendChild(contentElement);
+    getFilteredPosts() {
+        return this.blogPosts.filter(post => {
+            const matchesSearch = post.title.toLowerCase().includes(this.searchTerm) ||
+                                post.content.toLowerCase().includes(this.searchTerm);
+            const matchesCategory = this.currentCategory === 'all' || post.category === this.currentCategory;
+            return matchesSearch && matchesCategory;
+        });
+    }
 
-            
-            postElement.onclick = () => {
-                const isVisible = contentElement.style.display === 'block';
-                contentElement.style.display = isVisible ? 'none' : 'block';
-            };
+    renderPosts() {
+        const blogContainer = document.getElementById('blog-container');
+        blogContainer.innerHTML = '';
 
+        const filteredPosts = this.getFilteredPosts();
+        const startIndex = (this.currentPage - 1) * POSTS_PER_PAGE;
+        const endIndex = startIndex + POSTS_PER_PAGE;
+        const postsToShow = filteredPosts.slice(startIndex, endIndex);
+
+        postsToShow.forEach(post => {
+            const postElement = this.createPostElement(post);
             blogContainer.appendChild(postElement);
-        } catch (error) {
-            console.error(`Error loading ${post.filename}:`, error);
+        });
+
+        this.renderPagination(filteredPosts.length);
+    }
+
+    createPostElement(post) {
+        const postElement = document.createElement('article');
+        postElement.classList.add('blog-box');
+        
+        postElement.innerHTML = `
+            <img class="blog-thumbnail" src="${post.image}" alt="${post.title}">
+            <div class="blog-preview">
+                <h2 class="blog-title">${post.title}</h2>
+                <div class="blog-metadata">
+                    <span class="author">${post.author}</span>
+                    <span class="date">${new Date(post.date).toLocaleDateString()}</span>
+                    <span class="read-time">${post.readTime}</span>
+                </div>
+                <div class="blog-content">${this.truncateContent(post.content)}</div>
+            </div>
+        `;
+
+        postElement.addEventListener('click', () => {
+            // Implement blog post expansion or navigation
+            const contentElement = postElement.querySelector('.blog-content');
+            const isExpanded = contentElement.style.maxHeight;
+            contentElement.style.maxHeight = isExpanded ? null : `${contentElement.scrollHeight}px`;
+        });
+
+        return postElement;
+    }
+
+    truncateContent(content) {
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = content;
+        const text = tempDiv.textContent;
+        return text.length > 200 ? text.slice(0, 200) + '...' : text;
+    }
+
+    renderPagination(totalPosts) {
+        const totalPages = Math.ceil(totalPosts / POSTS_PER_PAGE);
+        const paginationContainer = document.getElementById('pagination');
+        paginationContainer.innerHTML = '';
+
+        if (totalPages <= 1) return;
+
+        for (let i = 1; i <= totalPages; i++) {
+            const button = document.createElement('button');
+            button.classList.add('page-button');
+            if (i === this.currentPage) button.classList.add('active');
+            button.textContent = i;
+            button.addEventListener('click', () => {
+                this.currentPage = i;
+                this.renderPosts();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+            paginationContainer.appendChild(button);
         }
     }
 }
 
-window.onload = loadBlogPosts;
+// Initialize blog
+window.addEventListener('DOMContentLoaded', () => {
+    new BlogManager();
+});

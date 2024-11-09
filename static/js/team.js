@@ -1,5 +1,11 @@
 const teamData = [
     {
+        name: "Seedon D'Souza",
+        role: "Village Coordinator",
+        image: "static/media/mugshots/seedon.png",
+        bio: "His role involves orchestrating a range of activities, ensuring everything is set up efficiently, and making sure participants have a rewarding experience. With a focus on collaboration and innovation."
+    },
+    {
         name: "Fazalu Rahman",
         role: "Core Team",
         image: "static/media/mugshots/fazalu.png",
@@ -18,10 +24,22 @@ const teamData = [
         bio: "Kartheek Laade, a vital part of our core team, is our resident automotive security expert. When it comes to keeping vehicles safe from cyber threats, Kartheek is the mastermind. From securing complex onboard systems to safeguarding modern cars from digital vulnerabilities, his expertise is unmatched. Whether it's hacking into a car to find weaknesses or locking it down to ensure it's impenetrable, Kartheek’s got it covered—he’s the guy you want in your corner if your car ever decides to get tech-savvy!"
     },
     {
+        name: "Ujwal Patel",
+        role: "Core Team",
+        image: "static/media/mugshots/ujwal.png",
+        bio: "Ujval Patel is a cybersecurity researcher and consultant specializing in hardware security, with a particular focus on hardware vulnerabilities and Radio Frequency (RF) security. As a HAM-certified operator with the call sign VU3RXF, he actively explores RF technologies. Ujval works at a leading multinational corporation and collaborates with the Indian Space Research Organization (ISRO) to enhance the security of critical space technologies. He is dedicated to sharing insights and practical techniques in hardware hacking to advance the understanding of safeguarding vital technologies."
+    },
+    {
         name: "Muhsin Bin Irshad",
         role: "Core Team",
         image: "static/media/mugshots/muhsin.png",
         bio: "Muhsin, our talented graphics designer, is the creative genius behind all things visual. Whether it’s crafting stunning logos, designing eye-catching banners, or adding that perfect touch of flair to every project, Muhsin brings ideas to life with style and precision. With an eye for detail and a knack for turning concepts into captivating visuals, he’s the one who makes everything look as awesome as it works. If it’s visually appealing, you can bet Muhsin had a hand in it!"
+    },
+    {
+        name: "Kiran Gupta",
+        role: "Core Team",
+        image: "static/media/mugshots/woman.png",
+        bio: "Kiran Gupta is the powerhouse behind everything that happens in the village. The one who works tirelessly, often behind the scenes, she’s the glue that holds it all together. From coordinating tasks to ensuring everything runs smoothly, Kiran is always there, selflessly putting in the hard work to get things done on time. Her dedication and energy keep the village on track, and she does it all with a smile. If something’s running smoothly, it’s because Kiran’s got it covered!"
     },
     {
         name: "Sreehari",
@@ -35,24 +53,9 @@ const teamData = [
         image: "static/media/mugshots/rageeth.png",
         bio: "Rageeth, our brilliant web designer and village trainer, is the creative force behind our digital presence. From designing sleek, user-friendly websites to guiding the next generation of tech enthusiasts, he brings a blend of artistic vision and technical know-how to everything he does. Whether he's crafting beautiful web layouts or sharing his skills with the village, Rageeth’s work is always polished and professional. If it looks good and works flawlessly, you can bet Rageeth had a hand in it!"
     },
-    {
-        name: "Kiran Gupta",
-        role: "Core Team",
-        image: "static/media/mugshots/woman.png",
-        bio: "Kiran Gupta is the powerhouse behind everything that happens in the village. The one who works tirelessly, often behind the scenes, she’s the glue that holds it all together. From coordinating tasks to ensuring everything runs smoothly, Kiran is always there, selflessly putting in the hard work to get things done on time. Her dedication and energy keep the village on track, and she does it all with a smile. If something’s running smoothly, it’s because Kiran’s got it covered!"
-    },
-    {
-        name: "Seedon D'Souza",
-        role: "Village Coordinator",
-        image: "static/media/mugshots/seedon.png",
-        bio: "His role involves orchestrating a range of activities, ensuring everything is set up efficiently, and making sure participants have a rewarding experience. With a focus on collaboration and innovation."
-    },
-    {
-        name: "Ujwal Patel",
-        role: "Core Team",
-        image: "static/media/mugshots/ujwal.png",
-        bio: "Ujval Patel is a cybersecurity researcher and consultant specializing in hardware security, with a particular focus on hardware vulnerabilities and Radio Frequency (RF) security. As a HAM-certified operator with the call sign VU3RXF, he actively explores RF technologies. Ujval works at a leading multinational corporation and collaborates with the Indian Space Research Organization (ISRO) to enhance the security of critical space technologies. He is dedicated to sharing insights and practical techniques in hardware hacking to advance the understanding of safeguarding vital technologies."
-    },
+    
+    
+    
     {
         name: "Minhaj",
         role: "Trainer",

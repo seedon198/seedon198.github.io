@@ -1,7 +1,3 @@
-# Thick Client Pentesting: Breaking Down the Big Boned Apps
-
-**Blog By:** Fazalu Rahman
-
 ## What the Heck is a Thick Client?
 
 Alright, “Thick Client” (or, if you prefer, “Fat Client”) is just a fancy term for a chubby app that does most of the work right there on your computer. It’s the kind of app that takes matters into its own hands with minimal reliance on remote servers.

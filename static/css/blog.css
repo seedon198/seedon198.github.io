@@ -186,6 +186,8 @@
     display: none;
     padding: 0 2rem 2rem;
     animation: fadeIn 0.3s ease forwards;
+    line-height: 1.6;
+    text-align: justify;
 }
 
 .blog-box.expanded .blog-content {
@@ -196,39 +198,81 @@
     display: none;
 }
 
-/* Content styling */
 .blog-content h1,
 .blog-content h2,
-.blog-content h3 {
+.blog-content h3,
+.blog-content h4,
+.blog-content h5,
+.blog-content h6 {
     margin-top: 1.5em;
     margin-bottom: 0.5em;
-    color: #00F3FF;
+    color: #00f2ffd3;
 }
 
 .blog-content p {
     margin-bottom: 1em;
-    line-height: 1.6;
+    color: #b0b0b0;
+}
+
+.blog-content ul,
+.blog-content ol {
+    margin-bottom: 1em;
+    padding-left: 2em;
+    color: #b0b0b0;
+}
+
+.blog-content li {
+    margin-bottom: 0.5em;
+    color: #b0b0b0;
+}
+
+.blog-content blockquote {
+    border-left: 4px solid #ff69b47b;
+    padding-left: 1em;
+    margin-left: 0;
+    font-style: italic;
+    color: #b0b0b0;
+}
+
+.blog-content code {
+    background-color: #2a2a2a;
+    color: #ff69b47b;
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.blog-content pre {
+    background-color: #2a2a2a;
+    padding: 1em;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+.blog-content pre code {
+    background-color: transparent;
+    padding: 0;
 }
 
 .blog-content img {
     max-width: 100%;
     height: auto;
-    margin: 1em 0;
-    border-radius: 5px;
 }
 
-.blog-content pre {
-    margin: 1em 0;
-    padding: 1em;
-    background-color: #2a2a2a;
-    border-radius: 5px;
-    overflow-x: auto;
+.blog-content table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 1em;
 }
 
-.blog-content code {
-    font-family: 'Fira Code', monospace;
-    font-size: 0.9em;
-    color: var(--accent-color);
+.blog-content th,
+.blog-content td {
+    border: 1px solid #ff69b47b;
+    padding: 0.5em;
+}
+
+.blog-content th {
+    background-color: #00d8e6;
 }
 
 .blog-content a {
@@ -241,7 +285,7 @@
     display: inline-block;
     margin-top: 1rem;
     padding: 0.5rem 1rem;
-    background-color: #00F3FF;
+    background-color: var(--accent-color);
     color: #1e1e1e;
     border: none;
     border-radius: 5px;

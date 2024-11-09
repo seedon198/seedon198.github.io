@@ -7,9 +7,13 @@ class BlogManager {
         this.currentPage = 1;
         this.currentCategory = 'all';
         this.searchTerm = '';
-        this.expandedPost = null;
-        
+        this.expandedPost = null; 
         this.init();
+        this.md = window.markdownit({
+            html: true,
+            linkify: true,
+            typographer: true
+        });
     }
 
     async init() {
@@ -24,7 +28,7 @@ class BlogManager {
             { 
                 title: 'Thick Client Pentesting: Breaking Down the Big Boned Apps',
                 filename: 'thickclient.md',
-                image: 'static/media/blog/thickclient.png',
+                image: 'static/media/img/thick-client.png',
                 category: 'Thick Client',
                 date: '2024-11-10',
                 author: 'Fazalu R.',
@@ -39,7 +43,7 @@ class BlogManager {
                 if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
                 
                 const markdown = await response.text();
-                post.content = marked.parse(markdown);
+                post.content = DOMPurify.sanitize(this.md.render(markdown));
                 this.blogPosts.push(post);
             } catch (error) {
                 console.error(`Error loading ${post.filename}:`, error);

@@ -1,26 +1,26 @@
 const swagData = [
     {
-        name: "Hardware Hacker Hulk",
+        name: "HHV - Hulk",
         image: "static/media/stickers/HHV_Hulk.png",
-        description: "Check out this amazing Hulk sticker designed by Ajmal Insta :- @ajmalmehroof_, This sticker is a part of HHV sticker pack."
+        description: "Check out this Incredible Hulk sticker designed by Ajmal Insta :- @ajmalmehroof_, This sticker is a part of HHV sticker pack."
     },
     {
-        name: "Hardware Hacker Deadpool",
+        name: "HHV - Deadpool",
         image: "static/media/stickers/HHV_Deadpool.png",
         description: "Check out this amazing Deadpool sticker designed by Ajmal Insta :- @ajmalmehroof_, This sticker is a part of HHV sticker pack."
     },
     {
-        name: "Hardware Hacker Captain",
+        name: "HHV - Captain",
         image: "static/media/stickers/HHV_Captain.png",
         description: "Check out this amazing Captain America sticker designed by Ajmal Insta :- @ajmalmehroof_, This sticker is a part of HHV sticker pack."
     },
     {
-        name: "Hardware Hacker Iron Man",
+        name: "HHV - Iron Man",
         image: "static/media/stickers/HHV_Ironman.png",
         description: "Check out this amazing Iron Man sticker designed by Ajmal Insta :- @ajmalmehroof_, This sticker is a part of HHV sticker pack."
     },
     {
-        name: "ICS/SCADA Security Village",
+        name: "ICS/SCADA Village",
         image: "static/media/stickers/ics_village.png",
         description: "Check out this amazing sticker designed by Muhsin Bin Irshad :- @muhsinbinirshad, Earn this sticker by hacking into & blowing up a virtual factory at the ICS Village."
     },
@@ -40,7 +40,7 @@ const swagData = [
         description: "Celebrate your passion for HAM radio with this Mjölnir inspired HAM sticker made by Sagnik Haldar X :- @SagnikHaldar1. Win this swag by making a successful QSO at the HAM booth!"
     },
     {
-        name: "Digital Forensics Village",
+        name: "Forensics Village",
         image: "static/media/stickers/digi_forensic_village.png",
         description: "Dive into the world of investigation with this Digital Forensics sticker made by Sagnik Haldar X :- @SagnikHaldar1. Win this unique swag by completing the Forensics challenge!"
     },
@@ -50,7 +50,7 @@ const swagData = [
         description: "Soar into the skies with this phoenix-inspired Drone sticker made by Sagnik Haldar X :- @SagnikHaldar1. Earn this exclusive swag by completing the Drone Quiz!"
     },
     {
-        name: "Mark VII - Flipper Zero",
+        name: "Mark VII - Flipper",
         image: "static/media/stickers/flipper_zero_village.png",
         description: "Check out this excusive Mark VII inspired sitcker created by Sagnik Haldar X :- @SagnikHaldar1. Win this swag by completing the Flipper Zero challenge!"
     },

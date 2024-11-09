@@ -445,21 +445,58 @@ function updateCountdown() {
 
 const countdownInterval = setInterval(updateCountdown, 1000);
 
-// Call updateCountdown immediately to avoid initial delay
 updateCountdown();
 
-// Add this to your existing DOMContentLoaded event listener
 document.addEventListener('DOMContentLoaded', () => {
     debug('DOM Content Loaded');
     initializeModal();
     initializeParticles();
-    updateCountdown(); // Initialize countdown
+    updateCountdown();
 });
 
-// Also add this to your existing readyState check
 if (document.readyState === 'complete') {
     debug('DOM already loaded, initializing directly');
     initializeModal();
     initializeParticles();
-    updateCountdown(); // Initialize countdown
+    updateCountdown();
+}
+
+const shareContent = {
+    title: "Hardware Hacking Village at Seasides Conference",
+    description: "Join us for an exciting Hardware Hacking Village at Seasides Conference, featuring Flipper Zero, Badge Making, HAM Radio, and more! February 20-22, 2025 at International Center Goa.",
+    url: window.location.href
+};
+
+function shareToTwitter() {
+    const text = encodeURIComponent(`${shareContent.title}\n${shareContent.description}`);
+    const url = encodeURIComponent(shareContent.url);
+    window.open(`https://x.com/intent/tweet?text=${text}&url=${url}`, '_blank');
+}
+
+function shareToLinkedIn() {
+    const url = encodeURIComponent(shareContent.url);
+    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank');
+}
+
+function shareToWhatsApp() {
+    const text = encodeURIComponent(`${shareContent.title}\n${shareContent.description}\n${shareContent.url}`);
+    window.open(`https://wa.me/?text=${text}`, '_blank');
+}
+
+if (navigator.share) {
+    const nativeShareBtn = document.createElement('button');
+    nativeShareBtn.className = 'cta-button share-button';
+    nativeShareBtn.innerHTML = '<i class="fas fa-share-alt"></i>';
+    nativeShareBtn.onclick = async () => {
+        try {
+            await navigator.share({
+                title: shareContent.title,
+                text: shareContent.description,
+                url: shareContent.url
+            });
+        } catch (err) {
+            console.error('Error sharing:', err);
+        }
+    };
+    document.querySelector('.button-group').appendChild(nativeShareBtn);
 }

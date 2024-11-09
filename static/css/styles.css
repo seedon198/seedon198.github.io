@@ -795,11 +795,10 @@ animation: noise-2 3s linear infinite alternate-reverse, glitch 5s 5s infinite;
 .timer-label {
   font-size: 1rem;
   color: var(--neon-blue);
-  text-align: center; /* Changed from left to center */
+  text-align: center;
   margin-top: 0.5rem;
 }
 
-/* Flip animation */
 .flip {
   transform: rotateX(90deg);
 }
@@ -814,3 +813,24 @@ animation: noise-2 3s linear infinite alternate-reverse, glitch 5s 5s infinite;
   backface-visibility: hidden;
 }
 
+
+
+.share-button {
+  width: auto;
+  padding: 0.5rem 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.share-button i {
+  font-size: 1.2rem;
+}
+
+.cta-button {
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}

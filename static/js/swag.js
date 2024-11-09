@@ -9,10 +9,10 @@ const swagData = [
         image: "static/media/stickers/HHV_Deadpool.png",
         description: "Check out this amazing Deadpool sticker designed by Ajmal Insta :- @ajmalmehroof_, This sticker is a part of HHV sticker pack."
     },
-     {
-        name: "ICS/SCADA Security Village",
-        image: "static/media/stickers/ics_village.png",
-        description: "Check out this amazing sticker designed by Muhsin Bin Irshad :- @muhsinbinirshad, Earn this sticker by hacking into & blowing up a virtual factory at the ICS Village."
+    {
+        name: "Hardware Hacker Captain",
+        image: "static/media/stickers/HHV_Captain.png",
+        description: "Check out this amazing Captain America sticker designed by Ajmal Insta :- @ajmalmehroof_, This sticker is a part of HHV sticker pack."
     },
     {
         name: "Hardware Hacker Iron Man",
@@ -20,14 +20,14 @@ const swagData = [
         description: "Check out this amazing Iron Man sticker designed by Ajmal Insta :- @ajmalmehroof_, This sticker is a part of HHV sticker pack."
     },
     {
-        name: "Hardware Hacker Captain",
-        image: "static/media/stickers/HHV_Captain.png",
-        description: "Check out this amazing Captain America sticker designed by Ajmal Insta :- @ajmalmehroof_, This sticker is a part of HHV sticker pack."
+        name: "ICS/SCADA Security Village",
+        image: "static/media/stickers/ics_village.png",
+        description: "Check out this amazing sticker designed by Muhsin Bin Irshad :- @muhsinbinirshad, Earn this sticker by hacking into & blowing up a virtual factory at the ICS Village."
     },
     {
-        name: "Mark VII - Flipper Zero",
-        image: "static/media/stickers/flipper_zero_village.png",
-        description: "Check out this excusive Mark VII inspired sitcker created by Sagnik Haldar X :- @SagnikHaldar1. Win this swag by completing the Flipper Zero challenge!"
+        name: "Lock Picking Village",
+        image: "static/media/stickers/lock_p_village.png",
+        description: "Unlock new skills with this Lock Picking Village sticker made by Sagnik Haldar X :- @SagnikHaldar1. Claim this exclusive swag by mastering the Lock Picking  challenge!"
     },
     {
         name: "Badge Builders Club",
@@ -50,9 +50,9 @@ const swagData = [
         description: "Soar into the skies with this phoenix-inspired Drone sticker made by Sagnik Haldar X :- @SagnikHaldar1. Earn this exclusive swag by completing the Drone Quiz!"
     },
     {
-        name: "Lock Picking Village",
-        image: "static/media/stickers/lock_p_village.png",
-        description: "Unlock new skills with this Lock Picking Village sticker made by Sagnik Haldar X :- @SagnikHaldar1. Claim this exclusive swag by mastering the Lock Picking  challenge!"
+        name: "Mark VII - Flipper Zero",
+        image: "static/media/stickers/flipper_zero_village.png",
+        description: "Check out this excusive Mark VII inspired sitcker created by Sagnik Haldar X :- @SagnikHaldar1. Win this swag by completing the Flipper Zero challenge!"
     },
     {
         name: "Soldering Village",

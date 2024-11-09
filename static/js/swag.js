@@ -1,43 +1,63 @@
 const swagData = [
     {
-        name: "Hardware Hacker Hulk Sticker",
+        name: "Hardware Hacker Hulk",
         image: "static/media/stickers/HHV_Hulk.png",
         description: "Check out this amazing Hulk sticker designed by Ajmal Insta :- @ajmalmehroof_, This sticker is a part of HHV sticker pack."
     },
     {
-        name: "Hardware Hacker Deadpool Sticker",
+        name: "Hardware Hacker Deadpool",
         image: "static/media/stickers/HHV_Deadpool.png",
         description: "Check out this amazing Deadpool sticker designed by Ajmal Insta :- @ajmalmehroof_, This sticker is a part of HHV sticker pack."
     },
      {
-        name: "ICS/SCADA Security Village Sticker",
+        name: "ICS/SCADA Security Village",
         image: "static/media/stickers/ics_village.png",
         description: "Check out this amazing sticker designed by Muhsin Bin Irshad :- @muhsinbinirshad, This sticker is a part of HHV sticker pack."
     },
     {
-        name: "Hardware Hacker Iron Man Sticker",
+        name: "Hardware Hacker Iron Man",
         image: "static/media/stickers/HHV_Ironman.png",
         description: "Check out this amazing Iron Man sticker designed by Ajmal Insta :- @ajmalmehroof_, This sticker is a part of HHV sticker pack."
     },
     {
-        name: "Hardware Hacker Captain Sticker",
+        name: "Hardware Hacker Captain",
         image: "static/media/stickers/HHV_Captain.png",
         description: "Check out this amazing Captain America sticker designed by Ajmal Insta :- @ajmalmehroof_, This sticker is a part of HHV sticker pack."
     },
     {
-        name: "Mark VII - Flipper Zero Sticker",
+        name: "Mark VII - Flipper Zero",
         image: "static/media/stickers/flipper_zero_village.png",
         description: "Check out this excusive Mark VII inspired sitcker created by Sagnik Haldar X :- @SagnikHaldar1. Win this swag by completing the Flipper Zero challenge!"
     },
     {
-        name: "Badge Builders Club Sticker",
+        name: "Badge Builders Club",
         image: "static/media/stickers/cap_shield_village.png",
-        description: "Join the elite with this stylish Badge Builders Club sticker. Get this Captian America Shied sticker Sagnik Haldar X :- @SagnikHaldar1 upon completing the badge challenge!"
+        description: "Join the elite with this stylish Badge Builders Club sticker. Get this Captian America Shied sticker Sagnik Haldar X :- @SagnikHaldar1 upon completing the badge quest!"
     },
     {
-        name: "HAM Radio Mjölnir Sticker",
+        name: "HAM Radio Mjölnir",
         image: "static/media/stickers/ham_village.png",
-        description: "Celebrate your passion for HAM radio with this Mjölnir inspired HAM sticker made by Sagnik Haldar X :- @SagnikHaldar1. Win this swag by completing the HAM Village challenge!"
+        description: "Celebrate your passion for HAM radio with this Mjölnir inspired HAM sticker made by Sagnik Haldar X :- @SagnikHaldar1. Win this swag by making a successful QSO at the HAM booth!"
+    },
+    {
+        name: "Digital Forensics Village",
+        image: "static/media/stickers/digi_forensic_village.png",
+        description: "Dive into the world of investigation with this Digital Forensics sticker made by Sagnik Haldar X :- @SagnikHaldar1. Win this unique swag by completing the Forensics challenge!"
+    },
+    {
+        name: "Drone Hacking Village",
+        image: "static/media/stickers/drone_village.png",
+        description: "Soar into the skies with this phoenix-inspired Drone sticker made by Sagnik Haldar X :- @SagnikHaldar1. Earn this exclusive swag by completing the Drone Quiz!"
+    },
+    {
+        name: "Lock Picking Village",
+        image: "static/media/stickers/lock_p_village.png",
+        description: "Unlock new skills with this Lock Picking Village sticker made by Sagnik Haldar X :- @SagnikHaldar1. Claim this exclusive swag by mastering the Lock Picking  challenge!"
+    },
+    {
+        name: "Soldering Village",
+        image: "static/media/stickers/soldering_village.png",
+        description: "Spark your creativity with this Soldering Village sticker made by Sagnik Haldar X :- @SagnikHaldar1. Earn this exclusive swag by completing the Soldering challenge!"
     },
     {
         name: "Lock Picking 101 Flipbook",

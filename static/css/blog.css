@@ -152,7 +152,7 @@
 }
 /* Blog Post Expansion Styles */
 .blog-box {
-    background-color: #1e1e1e;
+    background-color: #00000068;
     border: 2px solid #00F3FF;
     border-radius: 15px;
     transition: all 0.3s ease;
@@ -163,6 +163,7 @@
 .blog-box:hover {
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(0, 243, 255, 0.2);
+    border: 2px solid var(--accent-color);
 }
 
 .blog-box.expanded {
@@ -170,6 +171,7 @@
     grid-column: 1 / -1; /* Make expanded post take full width */
     max-width: 100%;
     transition: all 0.3s ease;
+    
 }
 
 .blog-content {
@@ -218,7 +220,14 @@
 .blog-content code {
     font-family: 'Fira Code', monospace;
     font-size: 0.9em;
+    color: var(--accent-color);
 }
+
+.blog-content a {
+    text-decoration: none;
+    color: var(--accent-color);
+}
+
 
 .close-button {
     display: inline-block;

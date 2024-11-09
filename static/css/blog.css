@@ -8,12 +8,12 @@
 /* Search and Filters */
 .blog-filters {
     margin: 0.5rem 0;
+    justify-items: left;
 }
 
 .search-container {
     max-width: 600px;
     margin: 0 auto 0.5rem;
-    justify-content: left;
 }
 
 #blog-search {

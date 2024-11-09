@@ -7,6 +7,7 @@ class BlogManager {
         this.currentPage = 1;
         this.currentCategory = 'all';
         this.searchTerm = '';
+        this.expandedPost = null;
         
         this.init();
     }
@@ -21,7 +22,7 @@ class BlogManager {
     async loadBlogPosts() {
         const blogPosts = [
             { 
-                title: 'Introduction to Thick Client Pentesting',
+                title: 'Thick Client Pentesting: Breaking Down the Big Boned Apps',
                 filename: 'thickclient.md',
                 image: 'static/media/blog/thickclient.png',
                 category: 'Thick Client',
@@ -62,6 +63,13 @@ class BlogManager {
                 this.currentPage = 1;
                 this.updateActiveCategory();
                 this.renderPosts();
+            }
+        });
+
+        // Close expanded post when clicking outside
+        document.addEventListener('click', (e) => {
+            if (this.expandedPost && !e.target.closest('.blog-box')) {
+                this.collapsePost(this.expandedPost);
             }
         });
     }
@@ -126,18 +134,75 @@ class BlogManager {
                     <span class="date">${new Date(post.date).toLocaleDateString()}</span>
                     <span class="read-time">${post.readTime}</span>
                 </div>
-                <div class="blog-content">${this.truncateContent(post.content)}</div>
+                <div class="blog-excerpt">${this.truncateContent(post.content)}</div>
+                <div class="blog-content" style="display: none;">
+                    ${post.content}
+                    <button class="close-button">Close</button>
+                </div>
             </div>
         `;
 
-        postElement.addEventListener('click', () => {
-            // Implement blog post expansion or navigation
-            const contentElement = postElement.querySelector('.blog-content');
-            const isExpanded = contentElement.style.maxHeight;
-            contentElement.style.maxHeight = isExpanded ? null : `${contentElement.scrollHeight}px`;
+        // Handle post expansion
+        postElement.addEventListener('click', (e) => {
+            // Don't trigger if clicking the close button
+            if (e.target.classList.contains('close-button')) {
+                this.collapsePost(postElement);
+                return;
+            }
+
+            // If another post is expanded, collapse it
+            if (this.expandedPost && this.expandedPost !== postElement) {
+                this.collapsePost(this.expandedPost);
+            }
+
+            const isExpanded = postElement.classList.contains('expanded');
+            if (isExpanded) {
+                this.collapsePost(postElement);
+            } else {
+                this.expandPost(postElement);
+            }
         });
 
         return postElement;
+    }
+
+    expandPost(postElement) {
+        const content = postElement.querySelector('.blog-content');
+        const excerpt = postElement.querySelector('.blog-excerpt');
+        
+        // Store current grid position
+        const rect = postElement.getBoundingClientRect();
+        postElement.style.setProperty('--original-top', `${rect.top}px`);
+        postElement.style.setProperty('--original-left', `${rect.left}px`);
+        postElement.style.setProperty('--original-width', `${rect.width}px`);
+        
+        // Expand the post
+        postElement.classList.add('expanded');
+        content.style.display = 'block';
+        excerpt.style.display = 'none';
+        
+        // Apply syntax highlighting to code blocks
+        if (window.Prism) {
+            postElement.querySelectorAll('pre code').forEach((block) => {
+                Prism.highlightElement(block);
+            });
+        }
+
+        this.expandedPost = postElement;
+
+        // Scroll to top of expanded post
+        postElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    collapsePost(postElement) {
+        const content = postElement.querySelector('.blog-content');
+        const excerpt = postElement.querySelector('.blog-excerpt');
+        
+        postElement.classList.remove('expanded');
+        content.style.display = 'none';
+        excerpt.style.display = 'block';
+        
+        this.expandedPost = null;
     }
 
     truncateContent(content) {

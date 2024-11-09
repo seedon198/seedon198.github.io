@@ -157,3 +157,137 @@
 .blog-box {
     animation: fadeIn 0.5s ease forwards;
 }
+
+/* Blog Post Expansion Styles */
+.blog-box {
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.blog-box.expanded {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 900px;
+    height: 90vh;
+    max-height: 90vh;
+    overflow-y: auto;
+    z-index: 1000;
+    background-color: #1e1e1e;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+}
+
+.blog-box.expanded .blog-content {
+    padding: 2rem;
+    animation: fadeIn 0.3s ease forwards;
+}
+
+.blog-box.expanded .blog-thumbnail {
+    height: 300px;
+    object-fit: cover;
+}
+
+.blog-content {
+    position: relative;
+}
+
+.close-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #00F3FF;
+    color: #1e1e1e;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.close-button:hover {
+    background-color: #00d8e6;
+}
+
+/* Overlay when post is expanded */
+.blog-box.expanded::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: -1;
+}
+
+/* Content styling */
+.blog-content h1,
+.blog-content h2,
+.blog-content h3 {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    color: #00F3FF;
+}
+
+.blog-content p {
+    margin-bottom: 1em;
+    line-height: 1.6;
+}
+
+.blog-content img {
+    max-width: 100%;
+    height: auto;
+    margin: 1em 0;
+    border-radius: 5px;
+}
+
+.blog-content pre {
+    margin: 1em 0;
+    padding: 1em;
+    background-color: #2a2a2a;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+.blog-content code {
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9em;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .blog-box.expanded {
+        width: 95%;
+        height: 95vh;
+    }
+
+    .blog-box.expanded .blog-thumbnail {
+        height: 200px;
+    }
+
+    .blog-content {
+        padding: 1rem;
+    }
+}
+
+/* Scrollbar styling */
+.blog-box.expanded::-webkit-scrollbar {
+    width: 8px;
+}
+
+.blog-box.expanded::-webkit-scrollbar-track {
+    background: #1e1e1e;
+}
+
+.blog-box.expanded::-webkit-scrollbar-thumb {
+    background: #00F3FF;
+    border-radius: 4px;
+}
+
+.blog-box.expanded::-webkit-scrollbar-thumb:hover {
+    background: #00d8e6;
+}

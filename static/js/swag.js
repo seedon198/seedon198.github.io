@@ -12,7 +12,7 @@ const swagData = [
      {
         name: "ICS/SCADA Security Village",
         image: "static/media/stickers/ics_village.png",
-        description: "Check out this amazing sticker designed by Muhsin Bin Irshad :- @muhsinbinirshad, This sticker is a part of HHV sticker pack."
+        description: "Check out this amazing sticker designed by Muhsin Bin Irshad :- @muhsinbinirshad, Earn this sticker by hacking into & blowing up a virtual factory at the ICS Village."
     },
     {
         name: "Hardware Hacker Iron Man",

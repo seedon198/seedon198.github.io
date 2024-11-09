@@ -26,11 +26,17 @@
     height: 200px;
     object-fit: contain;
     margin-bottom: 1rem;
+    position: relative;
+    transition: z-index 0s linear 0.3s;
+    z-index: 1;
 }
 
 .swag-card img:hover {
     animation: pixelateScale 0.3s ease-out forwards;
     z-index: 100;
+    z-index: 1000;
+    position: relative;
+    transition: z-index 0s;
 }
 
 @keyframes pixelateScale {
@@ -77,6 +83,7 @@
     100% {
         transform: scale(2.6);
         filter: none;
+        z-index: 1000;
     }
 }
 

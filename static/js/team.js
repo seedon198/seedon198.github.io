@@ -74,7 +74,7 @@ const teamData = [
      {
         name: "Nishal",
         role: "Trainer",
-        image: "static/media/mugshots/nishal1.png",
+        image: "static/media/mugshots/nishal.png",
         bio: "Nishal, our energetic and resourceful booth co-pilot, keeps the lockpicking action flowing. Always ready with a helping hand and a keen eye for detail, he ensures that everything runs smoothly and efficiently. From setting up challenges to assisting participants, Nishal's dedication and enthusiasm make the booth a vibrant and exciting place to be"
     },
     {
@@ -86,7 +86,7 @@ const teamData = [
     {
         name: "Graham Gohil",
         role: "Trainer",
-        image: "static/media/mugshots/graham1.png",
+        image: "static/media/mugshots/graham.png",
         bio: "Graham Gohil is a Consultant at a Big 4 firm with over three years of experience in penetration testing and application security assessments. He specializes in the security evaluation of web applications, Android apps, thick-client environments, networks, and APIs across sectors like E-commerce and Healthcare. As a public speaker, Graham has presented on topics such as Broken Access Control, SQL Injection, and Web App Security 101 at events like The Hackers Meetup SGCCI and Others. He has also volunteered at the Seasides Conference for the past two years."
     },
     {

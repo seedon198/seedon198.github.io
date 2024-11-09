@@ -470,12 +470,12 @@ const shareContent = {
 function shareToTwitter() {
     const text = encodeURIComponent(`${shareContent.title}\n${shareContent.description}`);
     const url = encodeURIComponent(shareContent.url);
-    window.open(`https://x.com/intent/tweet?text=${text}&url=${url}`, '_blank');
+    window.open(`https://x.com/intent/tweet?text=${text}&url=https://hw101.me/`, '_blank');
 }
 
 function shareToLinkedIn() {
     const url = encodeURIComponent(shareContent.url);
-    window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank');
+    window.open(`http://www.linkedin.com/shareArticle?mini=true&url=https://hw101.me/`, '_blank');
 }
 
 function shareToWhatsApp() {

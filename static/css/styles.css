@@ -266,7 +266,7 @@ body {
     font-weight: bold;
     text-transform: uppercase;
     margin-top: 2rem;
-    margin-right: 1rem;  /* Add spacing between buttons */
+    margin-right: 0rem;  /* Add spacing between buttons */
     transition: transform 0.3s;
 }
 
@@ -813,24 +813,48 @@ animation: noise-2 3s linear infinite alternate-reverse, glitch 5s 5s infinite;
   backface-visibility: hidden;
 }
 
-
+.share-buttons {
+  display: inline-flex;
+  gap: 1rem;
+  margin-left: 1rem;
+}
 
 .share-button {
-  width: auto;
-  padding: 0.5rem 1rem;
+  width: 45px;
+  height: 45px;
+  padding: 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-}
-
-.share-button i {
+  background: linear-gradient(45deg, var(--neon-blue), var(--accent-color));
+  border: none;
+  border-radius: 50%;
+  color: black;
   font-size: 1.2rem;
+  transition: transform 0.3s;
+  margin-right: 0;
 }
 
-.cta-button {
-  height: 40px;
-  display: inline-flex;
+.share-button:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .share-container {
+      justify-content: flex-start;
+  }
+}
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  gap: 1rem;
+}
+
+
+.share-button {
+  margin-top: 2rem;
+  margin-right: 0;
 }

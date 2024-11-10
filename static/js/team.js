@@ -32,7 +32,7 @@ const teamData = [
     {
         name: "Kiran Gupta",
         role: "Core Team",
-        image: "static/media/mugshots/woman.png",
+        image: "static/media/mugshots/Michael_Scott.png",
         bio: "Kiran Gupta is the powerhouse behind everything that happens in the village. The one who works tirelessly, often behind the scenes, she’s the glue that holds it all together. From coordinating tasks to ensuring everything runs smoothly, Kiran is always there, selflessly putting in the hard work to get things done on time. Her dedication and energy keep the village on track, and she does it all with a smile. If something’s running smoothly, it’s because Kiran’s got it covered!"
     },
     {
@@ -47,9 +47,6 @@ const teamData = [
         image: "static/media/mugshots/rageeth.png",
         bio: "Rageeth, our brilliant web designer and village trainer, is the creative force behind our digital presence. From designing sleek, user-friendly websites to guiding the next generation of tech enthusiasts, he brings a blend of artistic vision and technical know-how to everything he does. Whether he's crafting beautiful web layouts or sharing his skills with the village, Rageeth’s work is always polished and professional. If it looks good and works flawlessly, you can bet Rageeth had a hand in it!"
     },
-    
-    
-    
     {
         name: "Minhaj",
         role: "Trainer",

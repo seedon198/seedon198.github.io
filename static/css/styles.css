@@ -96,20 +96,92 @@ body {
 }
 
 .nav-links {
-    display: flex;
-    gap: 2rem;
+  display: flex;
+  gap: 2rem;
 }
 
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 500;
-    transition: color 0.3s;
+.nav-links a,
+.submenu-title {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: color 0.3s;
+  cursor: pointer;
 }
 
-.nav-links a:hover {
-    color: var(--neon-blue);
+.nav-links a:hover,
+.submenu-title:hover {
+  color: var(--neon-blue);
+}
+
+.submenu {
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.submenu-items {
+  position: absolute;
+  top: calc(100% - 0.5rem);
+  left: 0;
+  background-color: #00000000;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0s linear 0.2s;
+  /* Add a subtle glow effect */
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
+  min-width: 200px; /* Ensures clickable area is wide enough */
+}
+
+/* Show submenu on hover and keep it shown */
+.submenu:hover > .submenu-items,
+.submenu-items:hover {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
+}
+
+.submenu .submenu-items a {
+  color: white;
+  text-transform: none;
+  padding: 0.75rem 1rem; /* Increased padding for better clickability */
+  display: block;
+  transition: color 0.3s, background-color 0.3s;
+  border-radius: 0.25rem;
+}
+
+.submenu .submenu-items a:hover {
+  color: var(--neon-blue);
+  background-color: rgba(0, 255, 255, 0.1); /* Subtle background highlight */
+}
+
+/* Styling for nested submenus */
+.submenu-items .submenu {
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.submenu-items .submenu > span {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: white;
+  font-weight: 500;
+}
+
+.submenu-items .submenu-items {
+  top: 0;
+  left: 100%;
+  margin-left: 0.5rem;
+  /* Ensure nested menu stays open */
+  pointer-events: none;
+}
+
+/* Enable pointer events when parent is hovered */
+.submenu-items .submenu:hover > .submenu-items {
+  pointer-events: auto;
 }
 
 .hero-title {

@@ -1,11 +1,5 @@
 const teamData = [
     {
-        name: "Seedon D'Souza",
-        role: "Village Coordinator",
-        image: "static/media/mugshots/seedon.png",
-        bio: "His role involves orchestrating a range of activities, ensuring everything is set up efficiently, and making sure participants have a rewarding experience. With a focus on collaboration and innovation."
-    },
-    {
         name: "Fazalu Rahman",
         role: "Core Team",
         image: "static/media/mugshots/fazalu.png",
@@ -98,8 +92,12 @@ const teamData = [
         image: "static/media/mugshots/rajan.png",
         bio: "Rajan Kumbhani is a Professional Services Manager and Penetration Tester specializing in web, mobile, and network vulnerability assessments (VAPT), with a strong commitment to identifying and mitigating security vulnerabilities. He is experienced in leading high-performing teams to deliver top-tier solutions while fostering transparent and effective communication with clients. Currently, Rajan is exploring hardware hacking, further expanding his expertise in cybersecurity. He is dedicated to staying current with industry trends to provide actionable insights that enhance organizational security."
     },
-    
-
+    {
+        name: "Seedon D'Souza",
+        role: "Village Coordinator",
+        image: "static/media/mugshots/seedon.png",
+        bio: "His role involves orchestrating a range of activities, ensuring everything is set up efficiently, and making sure participants have a rewarding experience. With a focus on collaboration and innovation."
+    }
 ];
 
 function populateTeam() {

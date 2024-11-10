@@ -9,7 +9,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="/static/css/styles.css" rel="stylesheet">
     <script src="/static/js/scripts.js" defer></script>
-    <link href="/static/css/serial_terminal.css" rel="stylesheet">
+    <link href="/static/css/baud_fuzz.css" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar">
@@ -54,10 +54,10 @@
         <div class="grid-overlay"></div>
         <canvas class="particles" id="particles"></canvas>
         <div class="content">
-            <h1 class="hero-title glitch" data-text="U4R7 73RM1N4L">UART TERMINAL</h1>
+            <h1 class="hero-title glitch" data-text="B4UD FUZZ3R">BAUD FUZZER</h1>
             <div class="spacer"></div>
             <p style="font-size: 1rem; color: #808080;">
-                A simple web based serial terminal for debugging devices with a UART port. This tool is in its beta stage, so expect bugs. works on 
+                A simple web based buad rate fuzzer tool. This tool is in its beta stage, so expect bugs. works on 
                 <span style="display: inline-flex; align-items: center; gap: 2px;">
                   <img src="/static/media/icons/chrome.png" width="16" height="16" alt="Chrome">
                 </span>
@@ -68,39 +68,29 @@
                 .
               </p>            <p style="font-size: 1rem; margin-bottom: 2rem; color: #808080;">Select the right baudrate and hit connect for the com port selection menu to appear, make sure the device is powered on and connected before hitting connect.</p>
             <div class="spacer"></div>
-            <div class="container">                
+            <div class="container">
+                <br>
                 <div class="controls">
-                    <select id="baudRate">
-                        <option value="9600">9600</option>
-                        <option value="110">110</option>
-                        <option value="300">300</option>
-                        <option value="1200">1200</option>
-                        <option value="2400">2400</option>
-                        <option value="4800">4800</option>
-                        <option value="14400">14400</option>
-                        <option value="19200">19200</option>
-                        <option value="38400">38400</option>
-                        <option value="57600">57600</option>
-                        <option value="115200">115200</option>
-                        <option value="128000">128000</option>
-                        <option value="256000">256000</option>
-                        
-                    </select>
-                    
                     <button id="connectButton">Connect</button>
+                    <button id="startBaudTest" disabled>Fuzz</button>
                 </div>
-        
+    
                 <div id="statusBar" class="status disconnected">Disconnected</div>
                 
-                <div class="terminal" id="terminal"></div>
-                
+                <div class="terminal-container">
+                    <div class="terminal" id="terminal"></div>
+                    <div class="debug-panel" id="debugPanel">
+                        <h3>Output</h3>
+                        <div id="baudTestStatus"></div>
+                    </div>
+                </div>
+    
                 <div class="input-area">
-                    <input type="text" id="messageInput" placeholder="Type your message..." style="flex-grow: 1;">
+                    <input type="text" id="messageInput" placeholder="Type your message..." disabled>
                     <button id="sendButton" disabled>Send</button>
                     <button id="clearButton">Clear</button>
                 </div>
             </div>
-
             <div id="music-player" class="music-player minimized">
                 <div class="player-content">
                     <div class="player-handle">
@@ -131,7 +121,7 @@
         </div>
     </footer>
     <script src="/static/js/musicPlayer.js"></script>
-    <script src="/static/js/serial_terminal.js"></script>
+    <script src="/static/js/baud_fuzz.js"></script>
 
 </body>
 </html>

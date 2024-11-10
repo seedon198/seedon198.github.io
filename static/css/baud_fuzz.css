@@ -1,0 +1,132 @@
+:root {
+    --primary-color: var(--neon-aqua);
+    --bg-color: #1a1a1a;
+    --text-color: #ffffff;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.hero {
+    min-height: 100vh;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.terminal-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+    width: 100%; /* Ensure it takes up full width */
+}
+
+.terminal {
+    background: #000;
+    padding: 1rem;
+    border-radius: 4px;
+    height: 600px;
+    width: 100%; /* Ensure terminal takes full width */
+    overflow-y: auto;
+    font-family: monospace;
+    white-space: pre-wrap;
+    border: 1px solid var(--neon-pink);
+}
+.debug-panel {
+    background: #111;
+    padding: 1rem;
+    border-radius: 4px;
+    height: 600px;
+    width: 100%;
+    overflow-y: auto;
+    border: 1px solid var(--neon-pink);
+}
+
+.controls {
+    margin-bottom: 1rem;
+    display: inline-flex;
+    gap: 1rem;
+}
+
+button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(45deg, var(--neon-blue), var(--accent-color));
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-right: auto;
+    transition: transform 0.3s;
+    cursor: pointer;
+    max-width: 300px;
+    border: none;
+}
+button:hover {
+    transform: scale(1.05);
+}
+button:disabled {
+    background: #cccccc;
+}
+
+.status {
+    padding: 8px;
+    border-radius: 4px;
+    text-align: center;
+}
+.status.connected {
+    background: #1a383dc0;
+    color: var(--neon-aqua);
+    border: 1px solid var(--neon-aqua);
+}
+.status.disconnected {
+    background: #1f1313c0;
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+}
+.status.testing {
+    background: #1f1313c0;
+    color: salmon;
+    border: 1px solid salmon;
+}
+
+.input-area {
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #333;
+    background: #111;
+    color: var(--text-color);
+}
+
+.baud-test-status {
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    background: #222;
+    border-radius: 4px;
+}
+
+.success {
+    color: var(--primary-color);
+}
+
+.error {
+    color: #ff4444;
+}

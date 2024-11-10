@@ -54,13 +54,13 @@ const teamData = [
         bio: "Minhaj, our resident lockpicking maestro and meme-master, is the mastermind behind our captivating booth. With nimble fingers and a mischievous grin, he'll unlock not only your curiosity but also the secrets of the lockpicking world. When he's not expertly picking locks, he's crafting hilarious memes that will leave you laughing out loud. Minhaj brings a unique blend of skill and humor to everything he does, making our booth a must-visit for anyone seeking a challenge and a chuckle."
     },
      {
-        name: "Aswin",
+        name: "Aswin Krishna",
         role: "Trainer",
         image: "static/media/mugshots/aswin.png",
         bio: "Aswin, our patient and skilled lockpicking trainer, will guide you on your journey to becoming a master of the lock. With a wealth of knowledge and a knack for explaining complex techniques, Aswin makes learning fun and accessible. Whether you're a complete beginner or looking to refine your skills, Aswin's guidance will unlock your potential and leave you feeling confident and empowered."
     },
      {
-        name: "vishnu",
+        name: "vishnu T.",
         role: "Trainer",
         image: "static/media/mugshots/vishnu.png",
         bio: "Vishnu, our ever-helpful and enthusiastic booth assistant, is always ready to lend a hand (or a lockpick). With a smile and a can-do attitude, he ensures that everything runs smoothly, from setting up challenges to answering questions. Whether you need a friendly face to guide you through the booth or just someone to share your lockpicking triumphs with, Vishnu is there to make your experience enjoyable and memorable"

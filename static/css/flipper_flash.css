@@ -35,7 +35,7 @@ body {
     border-radius: 5px;
     font-weight: bold;
     text-transform: uppercase;
-    margin-right: auto;
+    margin-right: 20px;
     transition: transform 0.3s;
     cursor: pointer;
     max-width: 300px;

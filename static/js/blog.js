@@ -34,6 +34,15 @@ class BlogManager {
                 author: 'Fazalu R.',
                 readTime: '8 min read'
             },
+            { 
+                title: 'Advanced Lock Picking Techniques',
+                filename: 'advanced_lockpicking.md',
+                image: 'static/media/img/advanced-lockpicking.png',
+                category: 'Physical Security',
+                date: '2024-11-11',
+                author: 'Minhaj',
+                readTime: '15 min read'
+            },
             // Add more blog posts here
         ];
 

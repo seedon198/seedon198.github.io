@@ -57,24 +57,11 @@
         <div class="content">
             <h1 class="hero-title glitch" data-text="C5P VI074T10N 3XP7OR3R">CSP Violation Explorer</h1>
             <div class="spacer"></div>
-            <p style="font-size: 1rem; color: #808080;"> A simple content security policy violation explorer.
+            <p style="font-size: 1rem; color: #808080;"> A simple content security policy violation explorer. please use browser plugin like casper to enforce CFP policy on this tab.
             <div class="spacer"></div>
-            <div class="spacer"></div>      
-            <div class="window" id="csp-input">
-                <h2>CSP Header Input</h2>
-                <textarea id="csp-meta-input" placeholder="Enter CSP meta tags here..."></textarea>
-                <div class="controls">
-                    <button onclick="applyCSPMetaTags()">Apply CSP</button>
-                    <label class="switch">
-                        <input type="checkbox" id="mode-toggle" onchange="toggleMode()">
-                        <span class="slider round"></span>
-                    </label>
-                    <span id="mode-label">Enforce Mode</span>
-                </div>
-            </div>
+            <div class="spacer"></div>    
             <div class="row">
                 <div class="window" id="csp-buttons">
-                    <h2>CSP Policies</h2>
                     <button onclick="triggerCSPPolicy('default-src')">Default Content Sources</button>
                     <button onclick="triggerCSPPolicy('script-src')">Inline Script Execution</button>
                     <button onclick="triggerCSPPolicy('script-src-remote')">Remote Script Loading</button>
@@ -107,7 +94,6 @@
                     <pre><code id="policy-examples" class="language-html"></code></pre>
                 </div>
                 <div class="window" style="width: 100%;" id="content-display">
-                    <h2>Content Display</h2>
                     <div id="content-area"></div>
                 </div>
             </div>

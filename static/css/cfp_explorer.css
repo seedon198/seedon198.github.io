@@ -186,3 +186,16 @@ input:checked + .slider:before {
 #description {
     width: 50%;
 }
+
+#csp-buttons {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping of items into multiple rows */
+    gap: 10px; /* Optional: Add spacing between buttons */
+}
+
+#csp-buttons button {
+    width: calc(50% - 20px); /* Make each button occupy 50% width, minus the gap */
+    padding: 10px; /* Adjust padding for button size */
+    font-size: 16px; /* Adjust font size if necessary */
+    box-sizing: border-box; /* Ensure padding doesn't affect the width */
+}

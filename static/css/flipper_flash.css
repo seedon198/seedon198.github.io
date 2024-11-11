@@ -79,3 +79,8 @@ body {
     border-radius: 5px;
     color: var(--neon-pink);
 }
+
+a {
+    text-decoration: none;
+    color: var(--neon-pink);
+}

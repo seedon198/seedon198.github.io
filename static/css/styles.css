@@ -124,19 +124,17 @@ body {
   position: absolute;
   top: calc(100% - 0.5rem);
   left: 0;
-  background-color: #00000000;
+  background-color: #000000;
   padding: 1rem;
   border-radius: 0.5rem;
   white-space: nowrap;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.2s ease, visibility 0s linear 0.2s;
-  /* Add a subtle glow effect */
   box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
-  min-width: 200px; /* Ensures clickable area is wide enough */
+  min-width: 200px;
 }
 
-/* Show submenu on hover and keep it shown */
 .submenu:hover > .submenu-items,
 .submenu-items:hover {
   opacity: 1;
@@ -147,7 +145,7 @@ body {
 .submenu .submenu-items a {
   color: white;
   text-transform: none;
-  padding: 0.75rem 1rem; /* Increased padding for better clickability */
+  padding: 0.75rem 1rem;
   display: block;
   transition: color 0.3s, background-color 0.3s;
   border-radius: 0.25rem;
@@ -155,10 +153,9 @@ body {
 
 .submenu .submenu-items a:hover {
   color: var(--neon-blue);
-  background-color: rgba(0, 255, 255, 0.1); /* Subtle background highlight */
+  background-color: rgba(0, 255, 255, 0.1);
 }
 
-/* Styling for nested submenus */
 .submenu-items .submenu {
   position: relative;
   padding: 0.5rem 0;
@@ -172,14 +169,15 @@ body {
 }
 
 .submenu-items .submenu-items {
+  position: absolute;
   top: 0;
   left: 100%;
   margin-left: 0.5rem;
-  /* Ensure nested menu stays open */
   pointer-events: none;
+  max-height: 80vh; /* Limit the maximum height of nested submenus */
+  overflow-y: auto; /* Add vertical scrolling if needed */
 }
 
-/* Enable pointer events when parent is hovered */
 .submenu-items .submenu:hover > .submenu-items {
   pointer-events: auto;
 }

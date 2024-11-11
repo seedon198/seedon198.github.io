@@ -1,7 +1,7 @@
 # Advanced Lockpicking
 
 ## Introduction to Advanced Techniques
-In this section, we will explore advanced lockpicking techniques that go beyond basic pin tumbler locks, including **RFID locks**, **car locks**, **safes**, **hand cuffs**, **disc detainer locks** and more, which are essential for any serious lockpicking enthusiast. If you are new to lockpicking, we recommend taking a look at the basics [here](https://github.com/KEAGTORB/seasides2025/blob/main/lockpicking-101.md). We will also discuss **copying keys** using  **Flipper Zero** and  **Key Decoder**. Additionally, we will cover tools beyond the basic hook pick and tension wrench, including **Lishi tools** and more.
+In this section, we will explore advanced lockpicking techniques that go beyond basic pin tumbler locks, including **RFID locks**, **car locks**, **safes**, **hand cuffs**, **disc detainer locks** and more, which are essential for any serious lockpicking enthusiast. If you are new to lockpicking, we recommend taking a look at the basics [here](https://keagtorb.github.io/seasides2025/lockpicking-101). We will also discuss **copying keys** using  **Flipper Zero** and  **Key Decoder**. Additionally, we will cover tools beyond the basic hook pick and tension wrench, including **Lishi tools** and more.
 
 ## Types of Locks Beyond Pin Tumblers
 

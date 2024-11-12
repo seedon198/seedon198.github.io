@@ -22,12 +22,12 @@ const swagData = [
     {
         name: "HHV - Zero Day",
         image: "static/media/stickers/0day.png",
-        description: "Check out this Incredible Hulk sticker designed by Sandeep Insta :- @h1_sandeep , This sticker is a part of HHV sticker pack."
+        description: "Check out this Incredible Rocket Raccoon sticker designed by Sandeep Insta :- @h1_sandeep , This sticker is a part of HHV sticker pack."
     },
     {
         name: "HHV - Groot",
         image: "static/media/stickers/groot.png",
-        description: "Check out this Incredible Hulk sticker designed by Minhaj Insta :- @4minhaj, This sticker is a part of HHV sticker pack."
+        description: "Check out this Incredible Groot sticker designed by Minhaj Insta :- @4minhaj, This sticker is a part of HHV sticker pack."
     },
     {
         name: "ICS/SCADA Village",
@@ -72,7 +72,7 @@ const swagData = [
     {
         name: "Lock Picking 101 Flipbook",
         image: "static/media/stickers/lockpicking_flipbook.png",
-        description: 'Earn this Pirate themed lockpicking flipbook designed by Minhaj X :- @0xblick by breaking our mock doors at the lockpicking village!</p><br><p><a href="static/media/pdf/Lockpicking_Flipbook.pdf">Download the digital copy!</a>'
+        description: 'Earn this Pirate themed lockpicking flipbook designed by Minhaj insta :- @4minhaj by breaking our mock doors at the lockpicking village!</p><br><p><a href="static/media/pdf/Lockpicking_Flipbook.pdf">Download the digital copy!</a>'
     },
 ];
 

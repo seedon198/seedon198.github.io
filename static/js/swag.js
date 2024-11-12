@@ -24,7 +24,6 @@ const swagData = [
         image: "static/media/stickers/0day.png",
         description: "Check out this Incredible Hulk sticker designed by Sandeep Insta :- @h1_sandeep , This sticker is a part of HHV sticker pack."
     },
-
     {
         name: "HHV - Groot",
         image: "static/media/stickers/groot.png",

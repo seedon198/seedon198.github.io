@@ -22,7 +22,7 @@ const swagData = [
     {
         name: "HHV - Zero Day",
         image: "static/media/stickers/0day.png",
-        description: "Check out this Incredible Hulk sticker designed by Sandeep Insta :- , This sticker is a part of HHV sticker pack."
+        description: "Check out this Incredible Hulk sticker designed by Sandeep Insta :- @h1_sandeep , This sticker is a part of HHV sticker pack."
     },
 
     {

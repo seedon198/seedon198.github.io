@@ -20,6 +20,17 @@ const swagData = [
         description: "Check out this amazing Iron Man sticker designed by Ajmal Insta :- @ajmalmehroof_, This sticker is a part of HHV sticker pack."
     },
     {
+        name: "HHV - Zero Day",
+        image: "static/media/stickers/0day.png",
+        description: "Check out this Incredible Hulk sticker designed by Sandeep Insta :- , This sticker is a part of HHV sticker pack."
+    },
+
+    {
+        name: "HHV - Groot",
+        image: "static/media/stickers/groot.png",
+        description: "Check out this Incredible Hulk sticker designed by Minhaj Insta :- @4minhaj, This sticker is a part of HHV sticker pack."
+    },
+    {
         name: "ICS/SCADA Village",
         image: "static/media/stickers/ics_village.png",
         description: "Check out this amazing sticker designed by Muhsin Bin Irshad :- @muhsinbinirshad, Earn this sticker by hacking into & blowing up a virtual factory at the ICS Village."

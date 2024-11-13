@@ -20,9 +20,9 @@ const swagData = [
         description: "Check out this amazing Iron Man sticker designed by Ajmal Insta :- @ajmalmehroof_, This sticker is a part of HHV sticker pack."
     },
     {
-        name: "HHV - Zero Day",
-        image: "static/media/stickers/0day.png",
-        description: "Check out this Incredible Rocket Raccoon sticker designed by Sandeep Insta :- @h1_sandeep , This sticker is a part of HHV sticker pack."
+        name: "HHV - Captian America",
+        image: "static/media/stickers/captianamerica.png",
+        description: "Check out this Incredible Captian America sticker designed by Minhaj Insta :- @4minhaj, This sticker is a part of HHV sticker pack."
     },
     {
         name: "HHV - Groot",
@@ -38,6 +38,11 @@ const swagData = [
         name: "HHV - Doctor Strange",
         image: "static/media/stickers/doctor.png",
         description: "Check out this Incredible Doctor strange sticker designed by Minhaj Insta :- @4minhaj, This sticker is a part of HHV sticker pack."
+    },
+    {
+        name: "HHV - Zero Day",
+        image: "static/media/stickers/0day.png",
+        description: "Check out this Incredible Rocket Raccoon sticker designed by Sandeep Insta :- @h1_sandeep , This sticker is a part of HHV sticker pack."
     },
     {
         name: "ICS/SCADA Village",

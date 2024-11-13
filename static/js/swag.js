@@ -20,7 +20,7 @@ const swagData = [
         description: "Check out this amazing Iron Man sticker designed by Ajmal Insta :- @ajmalmehroof_, This sticker is a part of HHV sticker pack."
     },
     {
-        name: "HHV - Captian America",
+        name: "HHV - Seasides Assemble",
         image: "static/media/stickers/captianamerica.png",
         description: "Check out this Incredible Captian America sticker designed by Minhaj Insta :- @4minhaj, This sticker is a part of HHV sticker pack."
     },

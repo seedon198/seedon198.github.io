@@ -40,6 +40,11 @@ const swagData = [
         description: "Check out this Incredible Doctor strange sticker designed by Minhaj Insta :- @4minhaj, This sticker is a part of HHV sticker pack."
     },
     {
+        name: "HHV - Black Panther",
+        image: "static/media/stickers/blackpanther.png",
+        description: "Check out this Incredible Black Panther sticker designed by Minhaj Insta :- @4minhaj, This sticker is a part of HHV sticker pack."
+    },
+    {
         name: "HHV - Zero Day",
         image: "static/media/stickers/0day.png",
         description: "Check out this Incredible Rocket Raccoon sticker designed by Sandeep Insta :- @h1_sandeep , This sticker is a part of HHV sticker pack."

@@ -7,8 +7,6 @@
 
 body {
     margin: 0;
-    padding: 20px;
-    background-color: var(--space-blue);
     color: #fff;
     font-family: 'Arial', sans-serif;
     min-height: 100vh;

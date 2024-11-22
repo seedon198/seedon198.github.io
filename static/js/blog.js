@@ -46,20 +46,20 @@ class BlogManager {
             { 
                 title: 'Flipper Zero',
                 filename: 'flipper-zero.md',
-                image: 'static/media/img/flipper-zero.png',
-                category: 'Flipper Zero',
+                image: 'static/media/img/flipper.jpeg',
+                category: 'Physical Security',
                 date: '2024-11-22',
                 author: 'Seedon',
-                readTime: '15 min read'
+                readTime: '8 min read'
             },
             { 
                 title: 'Momentum Firmware',
                 filename: 'Momentum-Firmware.md',
-                image: 'static/media/img/Momentum-Firmware.png',
+                image: 'static/media/img/flipper.jpeg',
                 category: 'Flipper Zero',
                 date: '2024-11-22',
                 author: 'Seedon',
-                readTime: '15 min read'
+                readTime: '6 min read'
             },
             // Add more blog posts here
         ];

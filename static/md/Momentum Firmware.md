@@ -17,11 +17,11 @@ Directly by the website. <https://momentum-fw.dev/>
 
 1. Go to **Install -> Connect -> Select the name of your flipper**
 
-![](screenshot1.jpeg)
+![](https://raw.githubusercontent.com/seedon198/seedon198.github.io/refs/heads/master/static/media/blogs/Momentum%20Firmware/screenshot1.jpeg)
 
-![](screenshot2.jpeg)
+![](https://raw.githubusercontent.com/seedon198/seedon198.github.io/refs/heads/master/static/media/blogs/Momentum%20Firmware/screenshot2.jpeg)
 
-![](screenshot3.jpeg)
+![](https://raw.githubusercontent.com/seedon198/seedon198.github.io/refs/heads/master/static/media/blogs/Momentum%20Firmware/screenshot3.jpeg)
 
 2. Now the firmware will get installed in your Flipper Zero. Installation has been done.
 
@@ -45,7 +45,7 @@ It is an application, providing you the GUI, CLI or interactive way of managing 
 
 1. Install the qFlipper. Install and connect the Flipper Zero via data cable to your PC. The application will identify it and dump the details about it.
 
-![](screenshot4.jpeg)
+![](https://raw.githubusercontent.com/seedon198/seedon198.github.io/refs/heads/master/static/media/blogs/Momentum%20Firmware/screenshot4.jpeg)
 
 Like, right now, I have the momentum firmware of version *MNTM-007* and the latest version is of *MNTM-008* (while writing this blog).
 
@@ -57,11 +57,11 @@ Like, right now, I have the momentum firmware of version *MNTM-007* and the late
 1. First download the version you want from: <https://github.com/Next-Flip> and download the version. Here I’m downloading the latest version MNTM-008.
 1. Go to the **“Install from file”** option. Select the .tgz file you have downloaded.
 
-![](screenshot5.jpeg)
+![](https://raw.githubusercontent.com/seedon198/seedon198.github.io/refs/heads/master/static/media/blogs/Momentum%20Firmware/screenshot5.jpeg)
 
 3. Wait for sometimes, it will install the firmware to your flipper zero.
 
-   ![](screenshot6.jpeg)
+   ![](https://raw.githubusercontent.com/seedon198/seedon198.github.io/refs/heads/master/static/media/blogs/Momentum%20Firmware/screenshot6.jpeg)
 
 Via Mobile App
 
@@ -69,18 +69,18 @@ Via Mobile App
 1. Turn On the bluetooth of both Mobile and Flipper Zero. For FlipperZero go to the **Settings -> Bluetooth -> On.**
 3. Let the Device search for the FlipperZero. Once found, connect with the FlipperZero, “
 
-![](screenshot7.jpeg)
+![](https://raw.githubusercontent.com/seedon198/seedon198.github.io/refs/heads/master/static/media/blogs/Momentum%20Firmware/screenshot7.jpeg)
 
 **Pair and Connect”** option will come. Keep going and allow the required permissions. The code will appear on the Flipper in order to connect to the app.
 3. If unable to connect, you can try again, or in the same section of FlipperZero of bluetooth, look for **“Unpair All Devices”.** Then try to reconnect via bluetooth. Otherwise, there’s also an option to connect via the cable via Mobile and Flipper.
 3. After pairing, the control can be seen on the app itself. It will have the main home page. Showing the details of current firmware, version, updates available and hence the option to download and install. Same like this other pages are also available.
 
-![](screenshot8.jpeg) ![](screenshot9.jpeg) ![](screenshot10.jpeg) ![](screenshot11.jpeg)
+![](https://raw.githubusercontent.com/seedon198/seedon198.github.io/refs/heads/master/static/media/blogs/Momentum%20Firmware/screenshot8.jpeg) ![](https://raw.githubusercontent.com/seedon198/seedon198.github.io/refs/heads/master/static/media/blogs/Momentum%20Firmware/screenshot9.jpeg) ![](https://raw.githubusercontent.com/seedon198/seedon198.github.io/refs/heads/master/static/media/blogs/Momentum%20Firmware/screenshot10.jpeg) ![](https://raw.githubusercontent.com/seedon198/seedon198.github.io/refs/heads/master/static/media/blogs/Momentum%20Firmware/screenshot11.jpeg)
 
 6. In the home page, as we can see, there’s an option of updating the firmware as well along with the device info. On the dropdown of “**Update Channel”** we may find out the desired update options including the Released, Candidate, Development and Custom firmware version. Select the required one.
 6. Go for the **“Install”**. The installation will begin on the flipper zero.
 
-![](screenshot12.jpeg)
+![](https://raw.githubusercontent.com/seedon198/seedon198.github.io/refs/heads/master/static/media/blogs/Momentum%20Firmware/screenshot12.jpeg)
 
 Using CLI options:
 
@@ -105,7 +105,7 @@ qflipper-cli update-firmware <path\_to\_firmware\_file>
 1. Replace <path\_to\_firmware\_file> with the path to your firmware file.
 1. Let the process finish. The device should reboot once updated.
 
-![](screenshot13.jpeg)
+![](https://raw.githubusercontent.com/seedon198/seedon198.github.io/refs/heads/master/static/media/blogs/Momentum%20Firmware/screenshot13.jpeg)
 
 DFU (Device Firmware Update) Mode via Command Line Env Variable issue.
 

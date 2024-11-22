@@ -47,7 +47,7 @@ class BlogManager {
                 title: 'Flipper Zero',
                 filename: 'flipper-zero.md',
                 image: 'static/media/img/flipper.jpeg',
-                category: 'Physical Security',
+                category: 'Flipper Zero',
                 date: '2024-11-22',
                 author: 'Seedon',
                 readTime: '8 min read'

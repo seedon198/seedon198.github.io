@@ -49,7 +49,7 @@ class BlogManager {
                 image: 'static/media/img/flipper.jpeg',
                 category: 'Flipper Zero',
                 date: '2024-11-22',
-                author: 'Seedon',
+                author: 'Monica',
                 readTime: '8 min read'
             },
             { 
@@ -58,8 +58,17 @@ class BlogManager {
                 image: 'static/media/img/flipper.jpeg',
                 category: 'Flipper Zero',
                 date: '2024-11-22',
-                author: 'Seedon',
+                author: 'Monica',
                 readTime: '6 min read'
+            },
+            { 
+                title: 'Introduction To WiFi Hacking',
+                filename: 'wifi.md',
+                image: 'static/media/img/wifi.png',
+                category: 'Wifi Hacking',
+                date: '2024-11-23',
+                author: 'Vishnu Narayanan',
+                readTime: '5 min read'
             },
             // Add more blog posts here
         ];

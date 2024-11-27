@@ -33,7 +33,7 @@ The project follows this directory structure:
 ## Setup and Development
 
 1. Clone the repository:
-git clone https://github.com/your-username/security-conference-village.git cd security-conference-village
+git clone https://github.com/seedon198/seedon198.github.io.git cd security-conference-village
 
 2. Install Visual Studio Code (VSCode) if you haven't already.
 

@@ -17,7 +17,17 @@ This repository contains the source code for a security conference village websi
 
 The project follows this directory structure:
 
-. ├── CNAME ├── _config.yml ├── *.html (Various HTML pages) ├── static/ │ ├── css/ │ ├── js/ │ ├── md/ │ └── media/ └── tools/ ├── hw/ └── web/
+. ├── CNAME 
+  ├── _config.yml 
+  ├── *.html (Various HTML pages) 
+  ├── static/ 
+  │ ├── css/ 
+  │ ├── js/ 
+  │ ├── md/ 
+  │ └── media/ 
+  └── tools/ 
+    ├── hw/ 
+    └── web/
 
 
 - Root directory contains main HTML pages and configuration files.

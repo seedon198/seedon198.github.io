@@ -16,20 +16,6 @@ This repository contains the source code for a security conference village websi
 ## Project Structure
 
 The project follows this directory structure:
-
-. ├── CNAME 
-  ├── _config.yml 
-  ├── *.html (Various HTML pages) 
-  ├── static/ 
-  │ ├── css/ 
-  │ ├── js/ 
-  │ ├── md/ 
-  │ └── media/ 
-  └── tools/ 
-    ├── hw/ 
-    └── web/
-
-
 - Root directory contains main HTML pages and configuration files.
 - `static/` directory holds all static assets:
   - `css/`: Stylesheets

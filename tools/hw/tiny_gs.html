@@ -25,12 +25,17 @@
                     <span>TOOLS</span>
                     <div class="submenu-items">
                         <div class="submenu">
-                            <span>HARDWARE</span>
+                            <span>EMBEDDED</span>
                             <div class="submenu-items">
                                 <a href="/tools/hw/serial_terminal.html">Serial Terminal</a>
                                 <a href="/tools/hw/baud_fuzz.html">Baud Rate Fuzzer</a>
                                 <a href="/tools/hw/flipper_flash.html">Flipper Flasher</a>
-                                <a href="/tools/hw/tiny_gs.html">Tiny GS</a>
+                            </div>
+                        </div>
+                        <div class="submenu">
+                            <span>SATELLITE</span>
+                            <div class="submenu-items">
+                                <a href="/tools/hw/tiny_gs.html">TINY GS - GNXGS Console</a>
                             </div>
                         </div>
                         <div class="submenu">
@@ -56,51 +61,12 @@
         <div class="grid-overlay"></div>
         <canvas class="particles" id="particles"></canvas>
         <div class="content">
-            <h1 class="hero-title glitch" data-text="71NY G5">TINY GS</h1>
+            <h1 class="hero-title glitch" data-text="71NY G5 - GNXG5 C0n50l3">TINY GS - GNXGS Console</h1>
             <div class="spacer"></div>
-            <p style="font-size: 1rem; color: #808080;">
-                A simple web based serial terminal for debugging devices with a UART port. This tool is in beta, so expect bugs. works on 
-                <span style="display: inline-flex; align-items: center; gap: 2px;">
-                  <img src="/static/media/icons/chrome.png" width="16" height="16" alt="Chrome">
-                </span>
-                and 
-                <span style="display: inline-flex; align-items: center; gap: 2px;">
-                  <img src="/static/media/icons/firefox.png" width="16" height="16" alt="Firefox">
-                </span>
-                .
-              </p>            <p style="font-size: 1rem; margin-bottom: 2rem; color: #808080;">Select the right baudrate and hit connect for the com port selection menu to appear, make sure the device is powered on and connected before hitting connect.</p>
+            <p style="font-size: 1rem; color: #808080;"></p>
             <div class="spacer"></div>
-            <div class="container">                
-                <div class="controls">
-                    <select id="baudRate">
-                        <option value="9600">9600</option>
-                        <option value="110">110</option>
-                        <option value="300">300</option>
-                        <option value="1200">1200</option>
-                        <option value="2400">2400</option>
-                        <option value="4800">4800</option>
-                        <option value="14400">14400</option>
-                        <option value="19200">19200</option>
-                        <option value="38400">38400</option>
-                        <option value="57600">57600</option>
-                        <option value="115200">115200</option>
-                        <option value="128000">128000</option>
-                        <option value="256000">256000</option>
-                        
-                    </select>
-                    
-                    <button id="connectButton">Connect</button>
-                </div>
-        
-                <div id="statusBar" class="status disconnected">Disconnected</div>
-                
-                <div class="terminal"><pre id="terminal"></pre></div>
-                
-                <div class="input-area">
-                    <input type="text" id="messageInput" placeholder="Type your message..." style="flex-grow: 1;">
-                    <button id="sendButton" disabled>Send</button>
-                    <button id="clearButton">Clear</button>
-                </div>
+            <div class="container">               
+                <!-- Add monitor for Bangalore Tiny_GS Station -->
             </div>
 
             <div id="music-player" class="music-player minimized">

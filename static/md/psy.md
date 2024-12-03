@@ -1,8 +1,8 @@
 
 # The Psychology of Entry: Why Your Security System Can't Beat Human Nature 🧠
 
-![](https://raw.githubusercontent.com/seedon198/seedon198.github.io/refs/heads/master/static/media/blogs/psychology/call.png)
-       *Your state-of-the-art security system vs. one friendly boi*
+![](https://raw.githubusercontent.com/seedon198/seedon198.github.io/refs/heads/master/static/media/blogs/psychology/call.png)  
+*Your state-of-the-art security system vs. one friendly boi*
 
 Hey there, security nerds and curious minds! 👋 Ever wonder why people will ignore a "Keep Out" sign but respect a velvet rope? It might sound funny, but it’s true: human nature is the Achilles’ heel of even the most sophisticated security systems. Our instincts, social behaviors, and subconscious biases make us easy targets for those who know how to exploit them. Today we're diving deep into the fascinating world of physical security psychology, where your brain's shortcuts become a hacker's best friend. Buckle up – it's going to be a wild ride through the human psyche and its quirks!
 
@@ -34,7 +34,7 @@ One of the most devastating cyber-physical attacks in history began not with ext
 Even companies specializing in security aren’t immune to the pitfalls of social engineering. In 2011, RSA, a leading provider of encryption and cybersecurity solutions, fell victim to a phishing attack. The bait? A simple email titled “2011 Recruitment Plan” that exploited human curiosity. When an employee opened the attachment, malware infiltrated the network, resulting in $66 million in damages. This breach serves as a cautionary tale: no matter how advanced your technological defenses, one moment of human error can unravel it all.
 
 #### The Target Data Breach (2013)
-![](https://raw.githubusercontent.com/seedon198/seedon198.github.io/refs/heads/master/static/media/blogs/psychology/hvac.png)
+![](https://raw.githubusercontent.com/seedon198/seedon198.github.io/refs/heads/master/static/media/blogs/psychology/hvac.png)  
 *When your AC guy becomes your biggest security threat*
 
 The infamous 2013 Target breach began in a seemingly innocuous way: with stolen credentials from an HVAC contractor. Through this indirect entry point, hackers gained access to Target’s network, stealing data on 40 million credit cards. The total cost of the breach was a staggering $202 million. This incident highlights a critical security lesson: even third-party vendors with legitimate access can be exploited to devastating effect.
@@ -64,7 +64,7 @@ Imagine someone in a high-vis vest at your secure entrance. They’re carrying:
 
 Congratulations! Your brain just rolled out the red carpet. Why? We’re hardwired to respect authority symbols, even fake ones.
 
-![](https://raw.githubusercontent.com/seedon198/seedon198.github.io/refs/heads/master/static/media/blogs/psychology/bow.png) 
+![](https://raw.githubusercontent.com/seedon198/seedon198.github.io/refs/heads/master/static/media/blogs/psychology/bow.png)  
 *Your brain when it sees a reflective vest: "We’re not worthy!"*
 
 ### 2. Social Proof: The "Everyone Else is Doing It" Trap 🐑
@@ -88,7 +88,7 @@ Here’s a fun social experiment:
 2. Watch them feel obligated to hold it for the next person
 3. Repeat until unauthorized access achieved
 
-![](https://raw.githubusercontent.com/seedon198/seedon198.github.io/refs/heads/master/static/media/blogs/psychology/domino.png) 
+![](https://raw.githubusercontent.com/seedon198/seedon198.github.io/refs/heads/master/static/media/blogs/psychology/domino.png)  
 *How one held door turns into a security breach*
 
 ---
@@ -170,7 +170,7 @@ Traditional security training says, "Don’t let strangers in." Better security 
 
 ### The Reality Check ⚠️  
 
-![](https://raw.githubusercontent.com/seedon198/seedon198.github.io/refs/heads/master/static/media/blogs/psychology/security.png) 
+![](https://raw.githubusercontent.com/seedon198/seedon198.github.io/refs/heads/master/static/media/blogs/psychology/security.png)  
 *Security plans vs. actual human behavior*
 
 Let’s face it: even the best-laid security plans can fall apart in the face of human behavior. People hold doors for strangers, trust familiar-looking faces, and avoid confrontation. While technology like AI cameras and biometric locks can help, they’re not foolproof. The human factor will always remain a critical vulnerability. Recognizing this reality is essential to creating security protocols that account for both human strengths and weaknesses.

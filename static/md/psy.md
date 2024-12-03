@@ -2,7 +2,7 @@
 # The Psychology of Entry: Why Your Security System Can't Beat Human Nature 🧠
 
 ![](https://raw.githubusercontent.com/seedon198/seedon198.github.io/refs/heads/master/static/media/blogs/psychology/call.png)
-*Your state-of-the-art security system vs. one friendly boi*
+       *Your state-of-the-art security system vs. one friendly boi*
 
 Hey there, security nerds and curious minds! 👋 Ever wonder why people will ignore a "Keep Out" sign but respect a velvet rope? It might sound funny, but it’s true: human nature is the Achilles’ heel of even the most sophisticated security systems. Our instincts, social behaviors, and subconscious biases make us easy targets for those who know how to exploit them. Today we're diving deep into the fascinating world of physical security psychology, where your brain's shortcuts become a hacker's best friend. Buckle up – it's going to be a wild ride through the human psyche and its quirks!
 

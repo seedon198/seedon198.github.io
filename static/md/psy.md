@@ -9,7 +9,7 @@ Hey there, security nerds and curious minds! 👋 Ever wonder why people will ig
 ## The Art of Walking Right In 🚶‍♂️
 
 ![](https://raw.githubusercontent.com/seedon198/seedon198.github.io/refs/heads/master/static/media/blogs/psychology/buss.png)  
-*Caption: Confidence: The keycard you never knew you had*
+*Confidence: The keycard you never knew you had*
 
 Here’s a mind-blowing fact: 76% of successful physical security breaches don’t involve breaking anything except trust. That’s right—while you're busy worrying about lock picks, glass cutters, or sophisticated hacking tools, the real threats are casually strolling through your front door, armed with nothing but confidence and a well-practiced smile. It turns out, gaining unauthorized access isn’t about brute force; it’s about finesse. Hackers and intruders leverage psychological tricks to bypass the barriers we think are impenetrable, proving time and again that the human element is the weakest link in any security system.
 
@@ -17,37 +17,37 @@ Here’s a mind-blowing fact: 76% of successful physical security breaches don�
 
 #### The Facebook Physical Breach (2019)
 ![](https://raw.githubusercontent.com/seedon198/seedon198.github.io/refs/heads/master/static/media/blogs/psychology/fb.png)
-*Caption: When a smile works better than a hack*
+*When a smile works better than a hack*
 
 In 2019, Facebook's state-of-the-art security measures fell victim to an unconventional breach. A contractor named Stacy Stubblefield, part of a security research documentary, managed to gain unauthorized access to multiple Facebook offices. How? Not through hacking passwords or disabling cameras but by using psychology. With a convincing story, a friendly demeanor, and some improvisation, Stacy accessed restricted areas and even planted fake network devices. Out of 20 attempts, she succeeded 17 times. This case highlighted that even tech giants are vulnerable to simple social engineering, a stark reminder that trust is often the easiest barrier to breach.
 
 #### The Saudi Aramco Insider Job (2012)
 ![](https://raw.githubusercontent.com/seedon198/seedon198.github.io/refs/heads/master/static/media/blogs/psychology/aramco.png)  
-*Caption: Trust: The ultimate security vulnerability*
+*Trust: The ultimate security vulnerability*
 
 One of the most devastating cyber-physical attacks in history began not with external hacking tools but with psychological manipulation. An insider at Saudi Aramco, one of the world's largest oil companies, used their relationships within the organization to introduce malware into the network. This attack infected over 35,000 computers, causing massive disruptions and financial losses estimated in the hundreds of millions. The incident underscored the importance of scrutinizing not just external threats but also the behaviors and access levels of trusted employees.
 
 #### The RSA Security Breach (2011)
 ![](https://raw.githubusercontent.com/seedon198/seedon198.github.io/refs/heads/master/static/media/blogs/psychology/email.png)  
-*Caption: When your security company gets socially engineered*
+*When your security company gets socially engineered*
 
 Even companies specializing in security aren’t immune to the pitfalls of social engineering. In 2011, RSA, a leading provider of encryption and cybersecurity solutions, fell victim to a phishing attack. The bait? A simple email titled “2011 Recruitment Plan” that exploited human curiosity. When an employee opened the attachment, malware infiltrated the network, resulting in $66 million in damages. This breach serves as a cautionary tale: no matter how advanced your technological defenses, one moment of human error can unravel it all.
 
 #### The Target Data Breach (2013)
 ![](https://raw.githubusercontent.com/seedon198/seedon198.github.io/refs/heads/master/static/media/blogs/psychology/hvac.png)
-*Caption: When your AC guy becomes your biggest security threat*
+*When your AC guy becomes your biggest security threat*
 
 The infamous 2013 Target breach began in a seemingly innocuous way: with stolen credentials from an HVAC contractor. Through this indirect entry point, hackers gained access to Target’s network, stealing data on 40 million credit cards. The total cost of the breach was a staggering $202 million. This incident highlights a critical security lesson: even third-party vendors with legitimate access can be exploited to devastating effect.
 
 #### The Polish Bank Heist (2017)
 ![](https://raw.githubusercontent.com/seedon198/seedon198.github.io/refs/heads/master/static/media/blogs/psychology/it.png)  
-*Caption: Dress for the job you want to hack*
+*Dress for the job you want to hack*
 
 In 2017, several Polish banks fell prey to a cunning physical infiltration tactic. Individuals posing as IT workers entered bank premises under the guise of addressing technical issues. Once inside, they installed malicious devices to compromise the network. The attackers capitalized on employees’ natural trust in authority figures and tech experts, ultimately causing over $4 million in damages. This breach underscores the danger of unverified trust in perceived expertise.
 
 #### Modern Classic: The Twitter HQ Infiltration (2023)
 ![](https://raw.githubusercontent.com/seedon198/seedon198.github.io/refs/heads/master/static/media/blogs/psychology/fake.png)  
-*Caption: When looking normal is your best disguise*
+*When looking normal is your best disguise*
 
 In 2023, a security researcher proved how vulnerable even high-profile companies remain to psychological manipulation. By employing tailgating techniques, carrying "office supplies," and adopting the slightly stressed demeanor of an overworked employee, the researcher gained access to multiple floors of Twitter's headquarters. They successfully planted fake devices and documented the process, all while appearing unremarkably ordinary. This modern case reinforces that blending in can often be the most effective disguise.
 
@@ -65,7 +65,7 @@ Imagine someone in a high-vis vest at your secure entrance. They’re carrying:
 Congratulations! Your brain just rolled out the red carpet. Why? We’re hardwired to respect authority symbols, even fake ones.
 
 ![](https://raw.githubusercontent.com/seedon198/seedon198.github.io/refs/heads/master/static/media/blogs/psychology/bow.png) 
-*Caption: Your brain when it sees a reflective vest: "We’re not worthy!"*
+*Your brain when it sees a reflective vest: "We’re not worthy!"*
 
 ### 2. Social Proof: The "Everyone Else is Doing It" Trap 🐑
 
@@ -89,7 +89,7 @@ Here’s a fun social experiment:
 3. Repeat until unauthorized access achieved
 
 ![](https://raw.githubusercontent.com/seedon198/seedon198.github.io/refs/heads/master/static/media/blogs/psychology/domino.png) 
-*Caption: How one held door turns into a security breach*
+*How one held door turns into a security breach*
 
 ---
 
@@ -171,7 +171,7 @@ Traditional security training says, "Don’t let strangers in." Better security 
 ### The Reality Check ⚠️  
 
 ![](https://raw.githubusercontent.com/seedon198/seedon198.github.io/refs/heads/master/static/media/blogs/psychology/security.png) 
-*Caption: Security plans vs. actual human behavior*
+*Security plans vs. actual human behavior*
 
 Let’s face it: even the best-laid security plans can fall apart in the face of human behavior. People hold doors for strangers, trust familiar-looking faces, and avoid confrontation. While technology like AI cameras and biometric locks can help, they’re not foolproof. The human factor will always remain a critical vulnerability. Recognizing this reality is essential to creating security protocols that account for both human strengths and weaknesses.
 

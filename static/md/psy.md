@@ -17,7 +17,6 @@ Hereâ€™s a mind-blowing fact: 76% of successful physical security breaches donâ€
 
 #### The Facebook Physical Breach (2019)
 ![](https://raw.githubusercontent.com/seedon198/seedon198.github.io/refs/heads/master/static/media/blogs/psychology/fb.png)
-
 *When a smile works better than a hack*
 
 In 2019, Facebook's state-of-the-art security measures fell victim to an unconventional breach. A contractor named Stacy Stubblefield, part of a security research documentary, managed to gain unauthorized access to multiple Facebook offices. How? Not through hacking passwords or disabling cameras but by using psychology. With a convincing story, a friendly demeanor, and some improvisation, Stacy accessed restricted areas and even planted fake network devices. Out of 20 attempts, she succeeded 17 times. This case highlighted that even tech giants are vulnerable to simple social engineering, a stark reminder that trust is often the easiest barrier to breach.

@@ -70,6 +70,15 @@ class BlogManager {
                 author: 'Vishnu Narayanan',
                 readTime: '5 min read'
             },
+            { 
+                title: 'The Psychology of Entry',
+                filename: 'psy.md',
+                image: 'static/media/img/psy.png',
+                category: 'Physical Security',
+                date: '2024-12-03',
+                author: 'Rageeth',
+                readTime: '8 min read'
+            },
             // Add more blog posts here
         ];
 

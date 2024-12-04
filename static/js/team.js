@@ -104,13 +104,13 @@ const teamData = [
     {
         name: "Sagnik Haldar",
         role: "Trainer",
-        image: "static/media/mugshots/sagnik.png",
+        image: "static/media/mugshots/Sagnik.png",
         bio: "RedTeaming "
     },
     {
         name: "Abhinav Salgunan",
         role: "Trainer",
-        image: "static/media/mugshots/abhinav.png",
+        image: "static/media/mugshots/Abhinav.png",
         bio: "Lockpicking "
     },
     {

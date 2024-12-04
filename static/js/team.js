@@ -180,7 +180,7 @@ const teamData = [
         role: "Trainer",
         image: "static/media/mugshots/rishab.png",
         social: {
-            instagram: "#",
+            instagram: "https://www.instagram.com/azmendus/",
             github: "http://github.com/azmendus",
             twitter: "https://x.com/azmendus",
             linkedin: "https://www.linkedin.com/in/azmendus/"

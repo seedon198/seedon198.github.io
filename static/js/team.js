@@ -96,7 +96,7 @@ const teamData = [
         bio: "Rajan Kumbhani is a Professional Services Manager and Penetration Tester specializing in web, mobile, and network vulnerability assessments (VAPT), with a strong commitment to identifying and mitigating security vulnerabilities. He is experienced in leading high-performing teams to deliver top-tier solutions while fostering transparent and effective communication with clients. Currently, Rajan is exploring hardware hacking, further expanding his expertise in cybersecurity. He is dedicated to staying current with industry trends to provide actionable insights that enhance organizational security."
     },
     {
-        name: "Rishab",
+        name: "Rishabh Soni",
         role: "Trainer",
         image: "static/media/mugshots/rishab.png",
         bio: "RedTeaming "

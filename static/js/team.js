@@ -110,7 +110,7 @@ const teamData = [
     {
         name: "Abhinav Salgunan",
         role: "Trainer",
-        image: "static/media/mugshots/Abhinav.png",
+        image: "static/media/mugshots/abhinav.png",
         bio: "Lockpicking "
     },
     {

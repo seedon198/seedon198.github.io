@@ -50,7 +50,23 @@
 .modal-title {
     text-align: center;
 }
+.team-member-socials {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
 
+.team-member-socials a {
+    color: var(--neon-blue);
+    font-size: 1.5rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.team-member-socials a:hover {
+    transform: scale(1.2);
+    color: white;
+}
 
   .modal-image {
     min-height: 400px;

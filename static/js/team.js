@@ -3,121 +3,232 @@ const teamData = [
         name: "Fazalu Rahman",
         role: "Core Team",
         image: "static/media/mugshots/fazalu.png",
-        bio: "Fazalu Rahman, our dedicated lead village coordinator, is a true jack of all trades. With a wealth of skills and a hands-on approach, he ensures smooth operations across various activities. Whether managing logistics, guiding teams, or troubleshooting on the go, Fazalu's resourcefulness and leadership shine through. His versatility and commitment to excellence make him an invaluable part of our village, driving progress and fostering a collaborative spirit."
+        social: {
+            instagram: "#",
+            github: "#",
+            twitter: "#",
+            linkedin: "#"
+        }
     },
     {
         name: "Seedon D'Souza",
         role: "Village Coordinator",
         image: "static/media/mugshots/seedon.png",
-        bio: "His role involves orchestrating a range of activities, ensuring everything is set up efficiently, and making sure participants have a rewarding experience. With a focus on collaboration and innovation."
+        social: {
+            instagram: "#",
+            github: "#",
+            twitter: "#",
+            linkedin: "#"
+        }
     },
     {
         name: "Mohammed Arif",
         role: "Core Team",
         image: "static/media/mugshots/arif.png",
-        bio: "Mohd. Arif, one of our core team members, is the ultimate workhorse of the group. From navigating the chaos of SP Road to hunt down the tiniest electronic components to literally hauling a 3D printer on his back like it’s no big deal, Arif does it all with a smile. His dedication is unmatched, and if something needs to be done, you can bet Arif’s already halfway there—probably carrying half the workshop with him!"
+        social: {
+            instagram: "#",
+            github: "#",
+            twitter: "#",
+            linkedin: "#"
+        }
     },
     {
         name: "Kartheek Laade",
         role: "Core Team",
         image: "static/media/mugshots/kartheek.png",
-        bio: "Kartheek Laade, a vital part of our core team, is our resident automotive security expert. When it comes to keeping vehicles safe from cyber threats, Kartheek is the mastermind. From securing complex onboard systems to safeguarding modern cars from digital vulnerabilities, his expertise is unmatched. Whether it's hacking into a car to find weaknesses or locking it down to ensure it's impenetrable, Kartheek’s got it covered—he’s the guy you want in your corner if your car ever decides to get tech-savvy!"
+        social: {
+            instagram: "#",
+            github: "#",
+            twitter: "#",
+            linkedin: "#"
+        }
     },
     {
         name: "Ujwal Patel",
         role: "Core Team",
         image: "static/media/mugshots/ujwal.png",
-        bio: "Ujval Patel is a cybersecurity researcher and consultant specializing in hardware security, with a particular focus on hardware vulnerabilities and Radio Frequency (RF) security. As a HAM-certified operator with the call sign VU3RXF, he actively explores RF technologies. Ujval works at a leading multinational corporation and collaborates with the Indian Space Research Organization (ISRO) to enhance the security of critical space technologies. He is dedicated to sharing insights and practical techniques in hardware hacking to advance the understanding of safeguarding vital technologies."
+        social: {
+            instagram: "#",
+            github: "#",
+            twitter: "#",
+            linkedin: "#"
+        }
     },
     {
         name: "Muhsin Bin Irshad",
-        role: "Core Team",
+        role: "Graphics Designer",
         image: "static/media/mugshots/muhsin.png",
-        bio: "Muhsin, our talented graphics designer, is the creative genius behind all things visual. Whether it’s crafting stunning logos, designing eye-catching banners, or adding that perfect touch of flair to every project, Muhsin brings ideas to life with style and precision. With an eye for detail and a knack for turning concepts into captivating visuals, he’s the one who makes everything look as awesome as it works. If it’s visually appealing, you can bet Muhsin had a hand in it!"
+        social: {
+            instagram: "#",
+            github: "#",
+            twitter: "#",
+            linkedin: "#"
+        }
     },
     {
         name: "Kiran Gupta",
         role: "Core Team",
         image: "static/media/mugshots/Michael_Scott.png",
-        bio: "Kiran Gupta is the powerhouse behind everything that happens in the village. The one who works tirelessly, often behind the scenes, she’s the glue that holds it all together. From coordinating tasks to ensuring everything runs smoothly, Kiran is always there, selflessly putting in the hard work to get things done on time. Her dedication and energy keep the village on track, and she does it all with a smile. If something’s running smoothly, it’s because Kiran’s got it covered!"
+        social: {
+            instagram: "#",
+            github: "#",
+            twitter: "#",
+            linkedin: "#"
+        }
     },
     {
         name: "Sreehari",
         role: "Trainer",
         image: "static/media/mugshots/sreehari.png",
-        bio: "Sreehari, our lock-picking and physical security trainer, is the master of all things that click, clank, and unlock. With expert hands and a sharp mind, he can bypass the trickiest locks while teaching others how to secure them better. Whether he's cracking open a stubborn padlock or sharing the art of physical security with the team, Sreehari brings a unique mix of skill and knowledge to the table. If you ever find yourself locked out—or want to make sure no one else can get in—Sreehari’s your guy!"
+        social: {
+            instagram: "#",
+            github: "#",
+            twitter: "#",
+            linkedin: "#"
+        }
     },
     {
         name: "Rageeth",
         role: "Web Designer",
         image: "static/media/mugshots/rageeth.png",
-        bio: "Rageeth, our brilliant web designer and village trainer, is the creative force behind our digital presence. From designing sleek, user-friendly websites to guiding the next generation of tech enthusiasts, he brings a blend of artistic vision and technical know-how to everything he does. Whether he's crafting beautiful web layouts or sharing his skills with the village, Rageeth’s work is always polished and professional. If it looks good and works flawlessly, you can bet Rageeth had a hand in it!"
+        social: {
+            instagram: "#",
+            github: "#",
+            twitter: "#",
+            linkedin: "#"
+        }
     },
     {
         name: "Minhaj",
         role: "Trainer",
         image: "static/media/mugshots/minhaj.png",
-        bio: "Minhaj, our resident lockpicking maestro and meme-master, is the mastermind behind our captivating booth. With nimble fingers and a mischievous grin, he'll unlock not only your curiosity but also the secrets of the lockpicking world. When he's not expertly picking locks, he's crafting hilarious memes that will leave you laughing out loud. Minhaj brings a unique blend of skill and humor to everything he does, making our booth a must-visit for anyone seeking a challenge and a chuckle."
+        social: {
+            instagram: "https://www.instagram.com/4minhaj/",
+            github: "https://github.com/saltX5",
+            twitter: "http://x.com/0xblick",
+            linkedin: "https://www.linkedin.com/in/0xminhaj"
+        }
     },
-     {
+    {
         name: "Aswin Krishna",
         role: "Trainer",
         image: "static/media/mugshots/aswin.png",
-        bio: "Aswin, our patient and skilled lockpicking trainer, will guide you on your journey to becoming a master of the lock. With a wealth of knowledge and a knack for explaining complex techniques, Aswin makes learning fun and accessible. Whether you're a complete beginner or looking to refine your skills, Aswin's guidance will unlock your potential and leave you feeling confident and empowered."
+        social: {
+            instagram: "#",
+            github: "#",
+            twitter: "#",
+            linkedin: "#"
+        }
     },
-     {
+    {
         name: "vishnu T.",
         role: "Trainer",
         image: "static/media/mugshots/vishnu.png",
-        bio: "Vishnu, our ever-helpful and enthusiastic booth assistant, is always ready to lend a hand (or a lockpick). With a smile and a can-do attitude, he ensures that everything runs smoothly, from setting up challenges to answering questions. Whether you need a friendly face to guide you through the booth or just someone to share your lockpicking triumphs with, Vishnu is there to make your experience enjoyable and memorable"
+        social: {
+            instagram: "#",
+            github: "#",
+            twitter: "#",
+            linkedin: "#"
+        }
     },
-     {
+    {
         name: "Nishal",
         role: "Trainer",
         image: "static/media/mugshots/nishal.png",
-        bio: "Nishal, our energetic and resourceful booth co-pilot, keeps the lockpicking action flowing. Always ready with a helping hand and a keen eye for detail, he ensures that everything runs smoothly and efficiently. From setting up challenges to assisting participants, Nishal's dedication and enthusiasm make the booth a vibrant and exciting place to be"
+        social: {
+            instagram: "https://www.instagram.com/nishhhaaallll",
+            github: "https://github.com/nishhaaallll",
+            twitter: "#",
+            linkedin: "https://www.linkedin.com/in/"
+        }
     },
     {
         name: "Keta Desai",
         role: "Trainer",
         image: "static/media/mugshots/keta.png",
-        bio: "Keta is a skilled Risk and Financial Advisor at Big 4, specializing in Infrastructure Security with deep expertise in Threat and Vulnerability Management. With over four years of experience, she is proficient in Vulnerability Assessment and Penetration Testing (VAPT) initiatives, focusing on securing web, mobile, network, and API applications. Keta has strengthened security frameworks and safeguarded critical assets across strategic projects.Her expertise is also recognized industry-wide she recently presented at Null Community, sharing insights on Hardware hacking. Keta’s commitment to advancing cybersecurity practices is evident in her impactful cybersecurity awareness training, which has helped foster a culture of security within her teams.Keta combines advanced technical skills with a strategic approach, driving resilient infrastructure protection and enhancing organizational security posture through her work."
+        social: {
+            instagram: "#",
+            github: "#",
+            twitter: "#",
+            linkedin: "#"
+        }
     },
     {
         name: "Graham Gohil",
         role: "Trainer",
         image: "static/media/mugshots/graham.png",
-        bio: "Graham Gohil is a Consultant at a Big 4 firm with over three years of experience in penetration testing and application security assessments. He specializes in the security evaluation of web applications, Android apps, thick-client environments, networks, and APIs across sectors like E-commerce and Healthcare. As a public speaker, Graham has presented on topics such as Broken Access Control, SQL Injection, and Web App Security 101 at events like The Hackers Meetup SGCCI and Others. He has also volunteered at the Seasides Conference for the past two years."
+        social: {
+            instagram: "#",
+            github: "#",
+            twitter: "#",
+            linkedin: "#"
+        }
     },
     {
         name: "Rajan Kumbhani",
         role: "Trainer",
         image: "static/media/mugshots/rajan.png",
-        bio: "Rajan Kumbhani is a Professional Services Manager and Penetration Tester specializing in web, mobile, and network vulnerability assessments (VAPT), with a strong commitment to identifying and mitigating security vulnerabilities. He is experienced in leading high-performing teams to deliver top-tier solutions while fostering transparent and effective communication with clients. Currently, Rajan is exploring hardware hacking, further expanding his expertise in cybersecurity. He is dedicated to staying current with industry trends to provide actionable insights that enhance organizational security."
+        social: {
+            instagram: "#",
+            github: "#",
+            twitter: "#",
+            linkedin: "#"
+        }
     },
     {
         name: "Rishabh Soni",
         role: "Trainer",
         image: "static/media/mugshots/rishab.png",
-        bio: "RedTeaming "
+        social: {
+            instagram: "#",
+            github: "http://github.com/azmendus",
+            twitter: "https://x.com/azmendus",
+            linkedin: "https://www.linkedin.com/in/azmendus/"
+        }
     },
     {
         name: "Sagnik Haldar",
         role: "Trainer",
         image: "static/media/mugshots/Sagnik.png",
-        bio: "RedTeaming "
+        social: {
+            instagram: "#",
+            github: "http://github.com/hsagnik",
+            twitter: "http://x.com/SagnikHaldar1",
+            linkedin: "http://www.linkedin.com/in/hsagnik"
+        }
     },
     {
         name: "Abhinav Salgunan",
         role: "Trainer",
         image: "static/media/mugshots/Abhinav.png",
-        bio: "Lockpicking "
+        social: {
+            instagram: "https://www.instagram.com/abiiinv",
+            github: "http://github.com/abiiinv",
+            twitter: "http://x.com/abiiinv",
+            linkedin: "#"
+        }
+    },
+    {
+        name: "Ajmal Mehroof",
+        role: "Graphic Designer",
+        image: "static/media/mugshots/ajmal.png",
+        social: {
+            instagram: "https://www.instagram.com/",
+            github: "http://github.com/",
+            twitter: "http://x.com/",
+            linkedin: "http://linkedin.com/in/ajmalkp77"
+        }
     },
     {
         name: "Deepu",
         role: "Trainer",
         image: "static/media/mugshots/deepu.png",
-        bio: "Communication Skills, Presentation Skills,Team work "
+        social: {
+            instagram: "#",
+            github: "http://github.com/DEEPU0777",
+            twitter: "http://x.com/deepurs924",
+            linkedin: "#"
+        }
     },
 ];
 
@@ -130,6 +241,12 @@ function populateTeam() {
             <img src="${member.image}" alt="${member.name}">
             <h3>${member.name}</h3>
             <p>${member.role}</p>
+            <div class="team-member-socials">
+                <a href="${member.social.instagram}" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="${member.social.github}" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="${member.social.twitter}" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="${member.social.linkedin}" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
         `;
         memberCard.addEventListener('click', () => showTeamModal(member));
         teamGrid.appendChild(memberCard);
@@ -145,7 +262,7 @@ function showTeamModal(member) {
     modalTitle.textContent = `${member.name} - ${member.role}`;
     modalImage.src = member.image;
     modalImage.alt = member.name;
-    modalDescription.textContent = member.bio;
+    modalDescription.textContent = ''; // No bio text
 
     modal.classList.add('active');
 }
@@ -156,5 +273,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalClose = document.querySelector('.modal-close');
     modalClose.addEventListener('click', () => {
         document.getElementById('teamModal').classList.remove('active');
+    });
+
+    const modal = document.getElementById('teamModal');
+    modal.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            modal.classList.remove('active');
+        }
     });
 });

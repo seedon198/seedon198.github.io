@@ -56,7 +56,7 @@ const teamData = [
     },
     {
         name: "Muhsin Bin Irshad",
-        role: "Graphics Designer",
+        role: "Core Team",
         image: "static/media/mugshots/muhsin.png",
         social: {
             instagram: "#",

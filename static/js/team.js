@@ -6,6 +6,12 @@ const teamData = [
         bio: "Fazalu Rahman, our dedicated lead village coordinator, is a true jack of all trades. With a wealth of skills and a hands-on approach, he ensures smooth operations across various activities. Whether managing logistics, guiding teams, or troubleshooting on the go, Fazalu's resourcefulness and leadership shine through. His versatility and commitment to excellence make him an invaluable part of our village, driving progress and fostering a collaborative spirit."
     },
     {
+        name: "Seedon D'Souza",
+        role: "Village Coordinator",
+        image: "static/media/mugshots/seedon.png",
+        bio: "His role involves orchestrating a range of activities, ensuring everything is set up efficiently, and making sure participants have a rewarding experience. With a focus on collaboration and innovation."
+    },
+    {
         name: "Mohammed Arif",
         role: "Core Team",
         image: "static/media/mugshots/arif.png",
@@ -90,11 +96,23 @@ const teamData = [
         bio: "Rajan Kumbhani is a Professional Services Manager and Penetration Tester specializing in web, mobile, and network vulnerability assessments (VAPT), with a strong commitment to identifying and mitigating security vulnerabilities. He is experienced in leading high-performing teams to deliver top-tier solutions while fostering transparent and effective communication with clients. Currently, Rajan is exploring hardware hacking, further expanding his expertise in cybersecurity. He is dedicated to staying current with industry trends to provide actionable insights that enhance organizational security."
     },
     {
-        name: "Seedon D'Souza",
-        role: "Village Coordinator",
-        image: "static/media/mugshots/seedon.png",
-        bio: "His role involves orchestrating a range of activities, ensuring everything is set up efficiently, and making sure participants have a rewarding experience. With a focus on collaboration and innovation."
-    }
+        name: "Rishab",
+        role: "Trainer",
+        image: "static/media/mugshots/rishab.png",
+        bio: "RedTeaming "
+    },
+    {
+        name: "Abhinav Salgunan",
+        role: "Trainer",
+        image: "static/media/mugshots/abhinav.png",
+        bio: "Lockpicking "
+    },
+    {
+        name: "Deepu",
+        role: "Trainer",
+        image: "static/media/mugshots/deepu.png",
+        bio: "Communication Skills, Presentation Skills,Team work "
+    },
 ];
 
 function populateTeam() {

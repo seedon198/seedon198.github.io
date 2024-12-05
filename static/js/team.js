@@ -121,7 +121,7 @@ const teamData = [
         }
     },
     {
-        name: "vishnu T.",
+        name: "Vishnu T.",
         role: "Trainer",
         image: "static/media/mugshots/vishnu.png",
         social: {
@@ -229,7 +229,7 @@ const teamData = [
             twitter: "http://x.com/deepurs924",
             linkedin: "#"
         }
-    },
+    }
 ];
 
 function populateTeam() {
@@ -248,37 +248,10 @@ function populateTeam() {
                 <a href="${member.social.linkedin}" target="_blank"><i class="fab fa-linkedin"></i></a>
             </div>
         `;
-        memberCard.addEventListener('click', () => showTeamModal(member));
         teamGrid.appendChild(memberCard);
     });
 }
 
-function showTeamModal(member) {
-    const modal = document.getElementById('teamModal');
-    const modalTitle = modal.querySelector('.modal-title');
-    const modalImage = modal.querySelector('.modal-image');
-    const modalDescription = modal.querySelector('.modal-description');
-
-    modalTitle.textContent = `${member.name} - ${member.role}`;
-    modalImage.src = member.image;
-    modalImage.alt = member.name;
-    modalDescription.textContent = ''; // No bio text
-
-    modal.classList.add('active');
-}
-
 document.addEventListener('DOMContentLoaded', () => {
     populateTeam();
-    
-    const modalClose = document.querySelector('.modal-close');
-    modalClose.addEventListener('click', () => {
-        document.getElementById('teamModal').classList.remove('active');
-    });
-
-    const modal = document.getElementById('teamModal');
-    modal.addEventListener('click', (event) => {
-        if (event.target === modal) {
-            modal.classList.remove('active');
-        }
-    });
 });

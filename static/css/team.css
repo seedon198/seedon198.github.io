@@ -44,12 +44,12 @@
 .modal-description {
     text-align: justify;
     color: #808080;
-  }
-
+}
 
 .modal-title {
     text-align: center;
 }
+
 .team-member-socials {
     display: flex;
     justify-content: center;
@@ -68,12 +68,12 @@
     color: white;
 }
 
-  .modal-image {
+.modal-image {
     min-height: 400px;
     min-width: 400px;
-    display: block; /* Ensures that margin auto works */
-    margin: 0 auto; /* Centers the image */
-    max-width: 100%; /* Ensures the image is responsive */
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
 }
 
 .about-grid {
@@ -114,4 +114,3 @@
     font-size: 1.25rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
-}

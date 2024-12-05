@@ -1,141 +1,142 @@
 # Advanced Lockpicking
 
 ## Introduction to Advanced Techniques
-In this section, we will explore advanced lockpicking techniques that go beyond basic pin tumbler locks, including **RFID locks**, **car locks**, **safes**, **hand cuffs**, **disc detainer locks** and more, which are essential for any serious lockpicking enthusiast. If you are new to lockpicking, we recommend taking a look at the basics [here](https://keagtorb.github.io/seasides2025/lockpicking-101). We will also discuss **copying keys** using  **Flipper Zero** and  **Key Decoder**. Additionally, we will cover tools beyond the basic hook pick and tension wrench, including **Lishi tools** and more.
+In this section, we will explore advanced lockpicking techniques that go beyond basic pin tumbler locks, including **RFID locks**, **car locks**, **safes**, **hand cuffs**, **disc detainer locks** and more, which are essential for any serious lockpicking enthusiast. If you are new to lockpicking, we recommend taking a look at the basics [here](https://keagtorb.github.io/seasides2025/lockpicking-101). We will also discuss **copying keys** using **Flipper Zero** and **Key Decoder**. Additionally, we will cover tools beyond the basic hook pick and tension wrench, including **Lishi tools** and more.
 
 ## Types of Locks Beyond Pin Tumblers
 
 ### Disc Detainer Locks
 - **Description**: Disc detainer locks consist of a series of discs that must be rotated to a specific angle to unlock. They are often used in high-security applications.
 
-![Disc Detainer Lock Image](https://raw.githubusercontent.com/KEAGTORB/seasides2025/refs/heads/main/images/lockpicking/disklock.png) 
+<img src="https://raw.githubusercontent.com/KEAGTORB/seasides2025/refs/heads/main/images/lockpicking/disklock.png" width="400" height="300" alt="Disc Detainer Lock">
+
 - **Techniques**: Use a specialized disc detainer pick or a tension tool to hold the discs in place while rotating them. The goal is to set each disc to its correct angle before the lock can be opened.
 
- ![screenshot](https://raw.githubusercontent.com/KEAGTORB/seasides2025/refs/heads/main/images/lockpicking/disk-lock-with-pick.png)
- To use a disc detainer pick, begin by inserting the pick fully into the lock, aligning it with the discs until it reaches the back. Apply gentle rotational tension with the pick’s tensioner to hold the discs in place as you work. Starting from the back, carefully rotate each disc one at a time, setting each to its correct angle. You'll feel a subtle "give" or feedback when each disc is positioned correctly. Gradually move toward the front of the lock, aligning each disc until they are all set. With all discs in place, increase the tension slightly; the core should then rotate, unlocking the lock
- ![screenshot](https://raw.githubusercontent.com/KEAGTORB/seasides2025/refs/heads/main/images/lockpicking/disk-lock-with-pick2.png) 
+<img src="https://raw.githubusercontent.com/KEAGTORB/seasides2025/refs/heads/main/images/lockpicking/disk-lock-with-pick.png"  width="400" height="300" alt="Disc Lock with Pick">
+To use a disc detainer pick, begin by inserting the pick fully into the lock, aligning it with the discs until it reaches the back. Apply gentle rotational tension with the pick’s tensioner to hold the discs in place as you work. Starting from the back, carefully rotate each disc one at a time, setting each to its correct angle. You'll feel a subtle "give" or feedback when each disc is positioned correctly. Gradually move toward the front of the lock, aligning each disc until they are all set. With all discs in place, increase the tension slightly; the core should then rotate, unlocking the lock.
 
-
+<img src="https://raw.githubusercontent.com/KEAGTORB/seasides2025/refs/heads/main/images/lockpicking/disk-lock-with-pick2.png"  width="400" height="300" alt="Disc Lock with Pick - Close-Up">
 
 ### Wafer Locks
 
 - **Description**: Wafer locks are commonly used in items like file cabinets, desk locks, and automotive locks. They contain a series of flat wafers that need to be aligned at the shear line to unlock. Wafer locks are generally less secure than pin tumbler or disc detainer locks but are widely used for their simplicity.
 
-![Wafer Lock Image](https://raw.githubusercontent.com/KEAGTORB/seasides2025/refs/heads/main/images/lockpicking/wafer-lock.png)
+<img src="https://raw.githubusercontent.com/KEAGTORB/seasides2025/refs/heads/main/images/lockpicking/wafer-lock.png" width="400" height="300" alt="Wafer Lock">
 
 - **Techniques**: There are two main tools used to pick wafer locks: a wafer pick and a Lishi tool.
 
     - **Using a Wafer Pick**: Insert the wafer pick into the lock and apply gentle rotational pressure with a tension tool. One by one, lift each wafer until it reaches the shear line. Once all wafers are aligned, the lock should rotate and open.
 
-    ![Wafer Pick Image Placeholder](https://raw.githubusercontent.com/KEAGTORB/seasides2025/refs/heads/main/images/lockpicking/wafer-pick.png)
+    <img src="https://raw.githubusercontent.com/KEAGTORB/seasides2025/refs/heads/main/images/lockpicking/wafer-pick.png" width="400" height="300" alt="Wafer Pick">
 
     - **Using a Lishi Tool**: Insert the Lishi tool into the keyway, which allows for precise control over each wafer. The tool helps in aligning each wafer individually to reach the shear line, making it easier to open the lock.
 
-    ![Lishi Tool Image Placeholder](https://raw.githubusercontent.com/KEAGTORB/seasides2025/refs/heads/main/images/lockpicking/Lishi-3-1.png)
-
+    <img src="https://raw.githubusercontent.com/KEAGTORB/seasides2025/refs/heads/main/images/lockpicking/Lishi-3-1.png" width="400" height="300" alt="Lishi Tool">
 
 ### Car Locks
 
 - **Description**: Many car locks, especially in older models, use wafer locks similar to those found in furniture locks. However, automotive wafer locks tend to be more complex and may include additional security features. These locks are commonly found on car doors, ignition switches, and trunks.
 
-![Car Lock Image](https://raw.githubusercontent.com/KEAGTORB/seasides2025/refs/heads/main/images/lockpicking/car-lock.png)
+<img src="https://raw.githubusercontent.com/KEAGTORB/seasides2025/refs/heads/main/images/lockpicking/car-lock.png" width="400" height="300" alt="Car Lock">
 
 - **Techniques**: There are four main methods to unlock a car wafer lock: using a wafer pick, a specialized automotive Lishi tool, a pump wedge, or a Flipper Zero device.
 
     - **Using a Wafer Pick**: Insert the wafer pick into the car lock keyway and apply light rotational pressure with a tension tool. Carefully lift each wafer individually to align it with the shear line. Once all wafers are set correctly, the lock will turn and open.
 
-
-
     - **Using an Automotive Lishi Tool**: Automotive Lishi tools are specifically designed for car locks, providing precise control over each wafer. Insert the Lishi tool into the keyway and align each wafer to the shear line individually, allowing the lock to turn and open.
 
-    ![Automotive Lishi Tool Image Placeholder](https://raw.githubusercontent.com/KEAGTORB/seasides2025/refs/heads/main/images/lockpicking/lishi-car.webp)
+    <img src="https://raw.githubusercontent.com/KEAGTORB/seasides2025/refs/heads/main/images/lockpicking/lishi-car.webp" width="400" height="300" alt="Automotive Lishi Tool">
 
     - **Using a Pump Wedge**: The pump wedge is a non-invasive technique useful for unlocking car doors without picking the lock. Insert the wedge between the door and the frame, then inflate it slowly to create a small gap. Once there’s enough space, use a long-reach tool to manipulate the door’s unlock mechanism or pull the handle from the inside.
 
-    ![Pump Wedge Image Placeholder](https://raw.githubusercontent.com/KEAGTORB/seasides2025/refs/heads/main/images/lockpicking/pump-wedge.png)
-
-
-
+    <img src="https://raw.githubusercontent.com/KEAGTORB/seasides2025/refs/heads/main/images/lockpicking/pump-wedge.png" width="400" height="300" alt="Pump Wedge">
 
 ### Safe Lock Picking
 
 - **Description**: Safes are designed to provide high security for valuables and often use vulnerable locking mechanisms. This guide focuses on using the Adjustable Tubular Smith Pick tool to pick the backup lock area.
 
-![Safe Lock Image](https://raw.githubusercontent.com/KEAGTORB/seasides2025/refs/heads/main/images/lockpicking/safe-lock.png)
+<img src="https://raw.githubusercontent.com/KEAGTORB/seasides2025/refs/heads/main/images/lockpicking/safe-lock.png" width="400" height="300" alt="Safe Lock">
 
 - **Technique**: 
 
     - **Using the Adjustable Tubular Smith Pick Tool**: The Adjustable Tubular Smith Pick is specifically designed for tubular locks found in many safes. The tool features a series of prongs that can be adjusted to fit the specific configuration of the lock. To use it, insert the pick into the lock and adjust the prongs to make contact with the pins. By applying tension and manipulating the pick, you can align the pins to the shear line, allowing the lock to open. Mastering this tool requires practice and a good understanding of the lock’s mechanism.
 
-    ![Adjustable Tubular Smith Pick Image Placeholder](https://raw.githubusercontent.com/KEAGTORB/seasides2025/refs/heads/main/images/lockpicking/adjustable-tubular-smith-pick.png)
-
-for more methods have a look at [here](https://www.wikihow.com/Pick-a-Sentry-Safe-Lock)
-
-
+    <img src="https://raw.githubusercontent.com/KEAGTORB/seasides2025/refs/heads/main/images/lockpicking/adjustable-tubular-smith-pick.png" width="400" height="300" alt="Adjustable Tubular Smith Pick Tool">
 
 ### Handcuff Picking
 
 - **Description**: Handcuffs are a type of restraint used primarily by law enforcement to secure an individual's wrists. They typically feature a locking mechanism that can be difficult to open without the key. Picking handcuffs requires specialized tools and techniques, but it can be done with some practice.
 
-![Handcuff Image](https://raw.githubusercontent.com/KEAGTORB/seasides2025/refs/heads/main/images/lockpicking/handcuffs.png)
-
-
-
+<img src="https://raw.githubusercontent.com/KEAGTORB/seasides2025/refs/heads/main/images/lockpicking/handcuffs.png" width="400" height="300" alt="Handcuffs">
 
 ### Techniques
-
-
 
 - **Using a Paper Clip**:  
     Unfold the paper clip to create a straight section with a small hook at the end. Insert the hooked end into the keyhole, apply slight tension, and twist to catch the locking pin. Move it up and down until the lock releases.
 
-
-
 - **Using a Bobby Pin**:  
    A bobby pin can also work as an improvised handcuff pick. Straighten the bobby pin, bending one end into a small hook. Insert it into the keyhole, apply gentle pressure, and twist to push the locking pin. Wiggle it slightly to release the ratchet.
-
-
 
 - **Using a Shim**:  
    A shim is a thin metal strip that can bypass the locking mechanism by sliding between the handcuff’s ratchet and pawl. Insert the shim into the side of the cuff to press down the locking bar, allowing the cuff to open without needing a key.
 
-   ![Shim Image Placeholder](https://raw.githubusercontent.com/KEAGTORB/seasides2025/refs/heads/main/images/lockpicking/shim.png)
+   <img src="https://raw.githubusercontent.com/KEAGTORB/seasides2025/refs/heads/main/images/lockpicking/shim.png" width="400" height="300" alt="Shim">
 
+# Cloning RFID Door with Flipper Zero
 
+An RFID door is a type of access control system that uses Radio Frequency Identification (RFID) technology to unlock or secure entry points, like doors. Instead of traditional keys, these doors use RFID-enabled devices such as key fobs or access cards to transmit data and gain entry.
 
+You can clone the RFID signal with Flipper Zero, a multi-tool that can emulate or copy RFID signals. Once you clone the RFID key, you can use the Flipper Zero as the new key.
 
-# Cloning RFID Door  with Flipper Zero
+<img src="https://raw.githubusercontent.com/KEAGTORB/seasides2025/refs/heads/main/images/lockpicking/rfid-door.png" width="400" height="300" alt="RFID Door">
 
-An RFID door is a type of access control system that uses Radio Frequency Identification (RFID) technology to unlock or secure entry points, like doors. Instead of traditional keys, these doors use RFID-enabled devices such as key fobs, cards, or even mobile devices to grant access. The RFID reader on the door scans for an authorized signal from the RFID device. If the signal matches, the door unlocks. This technology is common in offices, hotels, and high-security areas because it’s convenient, secure, and allows for easy access management.
-   ![RFID door](https://raw.githubusercontent.com/KEAGTORB/seasides2025/refs/heads/main/images/lockpicking/rfid-door.png)
+## How to Clone an RFID Signal with Flipper Zero
 
-## Steps
+To clone an RFID signal with Flipper Zero, follow these steps:
 
-1. **Set Up the Flipper Zero**  
-   Power on the Flipper Zero and navigate to the "RFID" section from the main menu.
+1. **Scan the RFID Signal**: 
+   Use the Flipper Zero's built-in RFID reader to scan the signal of the key fob or card. Make sure the device is within range and press the "Read" button on Flipper Zero to capture the signal.
 
-   ![Flipper Zero Setup Image Placeholder](https://raw.githubusercontent.com/KEAGTORB/seasides2025/refs/heads/main/images/lockpicking/flipper-zero-setup.png)
+2. **Save the RFID Signal**: 
+   Once the signal is captured, it will be saved to Flipper Zero's memory. You can view the saved RFID signals in the device's interface.
 
-2. **Read the RFID Card**  
-   Hold the original RFID card near the Flipper Zero’s reader. Select "Read" to scan and capture the card’s unique data.
+3. **Write to a Blank RFID Tag**: 
+   If you have a blank RFID tag or key fob, select the saved RFID signal from the memory of Flipper Zero and write it to the new device. This will clone the signal and allow you to use the new tag as the original key.
 
-   ![Reading RFID Card Image Placeholder](https://raw.githubusercontent.com/KEAGTORB/seasides2025/refs/heads/main/images/lockpicking/flipper-zero-read.png)
+4. **Test the New RFID Tag**: 
+   Once the cloning process is complete, test the new tag by holding it near the RFID reader. If successful, it should grant access just like the original.
 
-3. **Save the Data**  
-   Once the Flipper Zero reads the card, save the data by selecting "Save" and choosing a name for the file. This will allow you to simulate the card later.
+<img src="https://raw.githubusercontent.com/KEAGTORB/seasides2025/refs/heads/main/images/lockpicking/flipper-zero.png" width="400" height="300" alt="Flipper Zero RFID Cloning">
 
-   ![Save RFID Data Image Placeholder](https://raw.githubusercontent.com/KEAGTORB/seasides2025/refs/heads/main/images/lockpicking/flipper-zero-save.png)
+## Limitations of Cloning RFID Signals
 
-4. **Simulate the RFID Card**  
-   Navigate to the saved file and select "Emulate." Hold the Flipper Zero near the RFID door reader, and it will transmit the copied signal as if it were the original card.
+While Flipper Zero is a powerful tool for cloning RFID signals, it does have some limitations:
 
-   ![Emulate RFID Image Placeholder](https://raw.githubusercontent.com/KEAGTORB/seasides2025/refs/heads/main/images/lockpicking/flipper-zero-emulate.png)
+- **Range of the Reader**: Flipper Zero can only read RFID signals within its operational range, which may vary depending on the RFID technology and power of the reader.
+  
+- **Signal Encryption**: Some RFID systems use encryption or other security measures to prevent cloning. In such cases, Flipper Zero may not be able to clone the signal without additional steps or modifications.
 
-5. **Test the Access**  
-   If emulation is successful, the door should unlock. If not, ensure the Flipper Zero is positioned correctly near the reader and try again.
+- **Legal Considerations**: Cloning RFID signals without permission is illegal in many jurisdictions and can lead to criminal charges. Always ensure that you have proper authorization before attempting to clone any RFID signals.
 
-   **Note**: Some RFID systems have additional security features and may require further steps or tools.
+## Security Risks
 
+Cloning RFID signals poses several security risks to systems that rely on this technology:
+
+1. **Unauthorized Access**: If an attacker successfully clones an RFID signal, they could gain unauthorized access to restricted areas. This could be particularly dangerous in high-security environments like offices, data centers, or even residential properties.
+   
+2. **System Vulnerabilities**: Many RFID systems use weak or unencrypted signals, making them vulnerable to cloning. It is important for organizations to use more secure RFID systems that implement encryption and advanced security features to prevent unauthorized access.
+
+3. **Reputation Damage**: If RFID cloning occurs in a corporate or governmental context, it could lead to reputational damage, financial loss, or legal consequences.
+
+## Alternatives to Cloning RFID Signals
+
+If you're looking for more advanced or secure methods of bypassing RFID systems, here are some alternatives:
+
+- **RFID Spoofing**: This involves tricking an RFID reader into thinking it’s receiving a legitimate signal by broadcasting a fake signal. While similar to cloning, it can be more complex and harder to detect.
+  
+- **Keycard Hacking**: Some keycards use proprietary encryption methods. In such cases, specialized equipment or software is required to break the encryption and clone the keycard.
+
+- **Social Engineering**: In some cases, the best way to bypass an RFID system may be through social engineering tactics, such as convincing someone to provide you with access or key information.
 
 # Copying Physical Key Methods
 

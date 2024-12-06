@@ -229,7 +229,18 @@ const teamData = [
             twitter: "http://x.com/deepurs924",
             linkedin: "#"
         }
-    }
+    },
+    {
+        name: "Sourav Sivan",
+        role: "Trainer",
+        image: "static/media/mugshots/sourav.png",
+        social: {
+            instagram: "https://www.instagram.com/s8urav",
+            github: "http://github.com/S8URAV",
+            twitter: "http://x.com/sourav_sivan ",
+            linkedin: "http://www.linkedin.com/in/souravsivan"
+        }
+    },
 ];
 
 function populateTeam() {

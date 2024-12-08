@@ -79,6 +79,15 @@ class BlogManager {
                 author: 'Rageeth',
                 readTime: '8 min read'
             },
+            { 
+                title: 'HAM Radio: When All Other Communication Fails, Hams Save the Day',
+                filename: 'ham.md',
+                image: 'static/media/img/ham.png',
+                category: 'HAM Radio',
+                date: '2024-12-08',
+                author: 'Rageeth',
+                readTime: '8 min read'
+            },
             // Add more blog posts here
         ];
 

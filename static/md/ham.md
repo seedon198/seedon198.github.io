@@ -98,6 +98,8 @@ HAM radio’s reliability in emergencies isn’t magic—it’s rooted in some f
 
 ## Getting Involved: How to Become a HAM Radio Operator  
 
+![](https://raw.githubusercontent.com/seedon198/seedon198.github.io/refs/heads/master/static/media/blogs/hamradio/hammeme.png)  
+
 If HAM radio sounds intriguing, you can join this resilient community in just a few steps:  
 
 ### Licensing and Training  

@@ -135,13 +135,13 @@
         background-color: rgba(0, 243, 255, 0.5); /* Lighter neon blue */
     }
     50% {
-        background-color: rgba(0, 123, 255, 0.8); /* Darker neon blue */
+        background-color: rgba(13, 108, 113); /* Darker neon blue */
     }
     75% {
         background-color: var(--neon-blue); /* Back to original neon blue */
     }
     100% {
-        background-color: rgba(0, 123, 255, 0.8); /* Darker neon blue */
+        background-color: rgb(13, 108, 113); /* Darker neon blue */
     }
 }
 

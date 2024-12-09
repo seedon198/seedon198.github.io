@@ -114,3 +114,42 @@
     font-size: 1.25rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
+}
+
+.skill-box {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin: 0.2rem;
+    border-radius: 15px; /* Rounded corners */
+    font-size: 1rem;
+    color: black; /* Set the text color to black */
+    background-color: var(--neon-blue); /* Set the background to neon blue */
+    animation: color-change 5s infinite ease-in-out;
+}
+
+@keyframes color-change {
+    0% {
+        background-color: var(--neon-blue); /* Neon blue */
+    }
+    25% {
+        background-color: rgba(0, 243, 255, 0.5); /* Lighter neon blue */
+    }
+    50% {
+        background-color: rgba(0, 123, 255, 0.8); /* Darker neon blue */
+    }
+    75% {
+        background-color: var(--neon-blue); /* Back to original neon blue */
+    }
+    100% {
+        background-color: rgba(0, 123, 255, 0.8); /* Darker neon blue */
+    }
+}
+
+.skill-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 10px;
+}
+

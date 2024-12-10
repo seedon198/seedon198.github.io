@@ -205,9 +205,9 @@ const teamData = [
     },
     {
         name: "Sagnik Haldar",
-        role: "Trainer",
+        role: "Graphic Designer",
         image: "static/media/mugshots/Sagnik.png",
-        skills: ["Python", "Web Development", "OSINT"],
+        skills: ["Graphic Design", "UI/UX", "Branding"],
         social: {
             instagram: "#",
             github: "http://github.com/hsagnik",

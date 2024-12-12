@@ -88,6 +88,15 @@ class BlogManager {
                 author: 'Rageeth',
                 readTime: '8 min read'
             },
+            { 
+                title: 'WiFi Security: How to Stop Hackers from Turning Your Network into Their Personal Playground',
+                filename: 'wifi.md',
+                image: 'static/media/img/wifi.png',
+                category: 'Wireless Security',
+                date: '2024-12-12',
+                author: 'Anon',
+                readTime: '5 min read'
+            },
             // Add more blog posts here
         ];
 

@@ -97,6 +97,15 @@ class BlogManager {
                 author: 'Anon',
                 readTime: '5 min read'
             },
+            { 
+                title: 'Top Social Engineering Techniques Used by Cybercriminals: The Human Hacking Playbook',
+                filename: 'social.md',
+                image: 'static/media/img/social.png',
+                category: 'Physical Security',
+                date: '2024-12-12',
+                author: 'Anon',
+                readTime: '5 min read'
+            },
             // Add more blog posts here
         ];
 

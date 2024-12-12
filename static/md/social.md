@@ -10,7 +10,7 @@ Forget complex algorithms and sophisticated hacking tools. The most powerful wea
 
 ### 1. Phishing: The Digital Bait and Switch
 
-![](https://raw.githubusercontent.com/seedon198/seedon198.github.io/refs/heads/master/static/media/blogs/psychology/phish.png)  
+![](https://raw.githubusercontent.com/seedon198/seedon198.github.io/refs/heads/master/static/media/blogs/social/phish.png)  
 
 #### How It Works
 
@@ -28,7 +28,7 @@ Phishing succeeds because it preys on natural human responses. The messages are 
 
 ### 2. Pretexting: The Art of Elaborate Storytelling
 
-![](https://raw.githubusercontent.com/seedon198/seedon198.github.io/refs/heads/master/static/media/blogs/psychology/pre.png)  
+![](https://raw.githubusercontent.com/seedon198/seedon198.github.io/refs/heads/master/static/media/blogs/social/pre.png)  
 
 #### The Technique
 
@@ -47,7 +47,7 @@ Pretexting works because it taps into our natural tendencies to help and be poli
 
 ### 3. Baiting: The Irresistible Digital Trap
 
-![](https://raw.githubusercontent.com/seedon198/seedon198.github.io/refs/heads/master/static/media/blogs/psychology/bait.png)  
+![](https://raw.githubusercontent.com/seedon198/seedon198.github.io/refs/heads/master/static/media/blogs/social/bait.png)  
 
 #### How Criminals Operate
 
@@ -65,7 +65,7 @@ Baiting exploits basic human instincts such as curiosity and the allure of getti
 
 ### 4. Tailgating: The Physical Infiltration Technique
 
-![](https://raw.githubusercontent.com/seedon198/seedon198.github.io/refs/heads/master/static/media/blogs/psychology/tail.png)  
+![](https://raw.githubusercontent.com/seedon198/seedon198.github.io/refs/heads/master/static/media/blogs/social/tail.png)  
 
 #### The Method
 
@@ -105,7 +105,7 @@ Tailgating succeeds because humans naturally avoid confrontation and strive to b
 - Use multi-factor authentication: Adding an extra layer of security reduces the effectiveness of compromised credentials.
 - Regular cybersecurity training: Staying informed about the latest threats and practicing good cyber hygiene is essential for maintaining security.
 
-![](https://raw.githubusercontent.com/seedon198/seedon198.github.io/refs/heads/master/static/media/blogs/psychology/soc.png)  
+![](https://raw.githubusercontent.com/seedon198/seedon198.github.io/refs/heads/master/static/media/blogs/social/soc.png)  
 
 ## Shocking Statistics
 
@@ -113,7 +113,7 @@ Tailgating succeeds because humans naturally avoid confrontation and strive to b
 - Average cost of a social engineering attack: $130,000.
 - 1 in 3 employees will click on a phishing email, highlighting the critical need for awareness and training.
 
-![](https://raw.githubusercontent.com/seedon198/seedon198.github.io/refs/heads/master/static/media/blogs/psychology/awar.png)  
+![](https://raw.githubusercontent.com/seedon198/seedon198.github.io/refs/heads/master/static/media/blogs/social/awar.png)  
 
 ## Conclusion: Knowledge is Your Best Defense
 

@@ -115,6 +115,15 @@ class BlogManager {
                 author: 'Anon',
                 readTime: '5 min read'
             },
+            { 
+                title: 'Flipper Zero: Your Pocket-Sized Cybersecurity Swiss Army Knife 🕵️‍♂️🔓',
+                filename: 'flip.md',
+                image: 'static/media/img/flip.png',
+                category: 'Flipper Zero',
+                date: '2024-12-13',
+                author: 'Secret69',
+                readTime: '5 min read'
+            },
             // Add more blog posts here
         ];
 

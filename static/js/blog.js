@@ -76,7 +76,7 @@ class BlogManager {
                 image: 'static/media/img/psy.png',
                 category: 'Physical Security',
                 date: '2024-12-03',
-                author: 'Rageeth',
+                author: 'Anon',
                 readTime: '8 min read'
             },
             { 
@@ -94,7 +94,7 @@ class BlogManager {
                 image: 'static/media/img/secwifi.png',
                 category: 'Wireless Security',
                 date: '2024-12-12',
-                author: 'Anon',
+                author: 'Rageeth',
                 readTime: '5 min read'
             },
             { 
@@ -103,6 +103,15 @@ class BlogManager {
                 image: 'static/media/img/social.png',
                 category: 'Physical Security',
                 date: '2024-12-12',
+                author: 'Anon',
+                readTime: '5 min read'
+            },
+            { 
+                title: 'Deepfakes and AI in Social Engineering: Welcome to the Matrix of Madness 🤖🕵️',
+                filename: 'ai.md',
+                image: 'static/media/img/ai.png',
+                category: 'Physical Security',
+                date: '2024-12-13',
                 author: 'Anon',
                 readTime: '5 min read'
             },

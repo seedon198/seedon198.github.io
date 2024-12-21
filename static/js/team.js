@@ -195,7 +195,7 @@ const teamData = [
         name: "Rishabh Soni",
         role: "Trainer",
         image: "static/media/mugshots/rishab.png",
-        skills: ["Bug Hunting", "Vulnerability Analysis", "Penetration Testing"],
+        skills: ["ICS/Scada", "Red Teaming", "IOT Security"],
         social: {
             instagram: "https://www.instagram.com/azmendus/",
             github: "http://github.com/azmendus",

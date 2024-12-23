@@ -267,12 +267,12 @@ const teamData = [
         name: "Vishnu Narayanan",
         role: "Trainer",
         image: "static/media/mugshots/vishnu-n.png",
-        skills: [" IOT Hacking", "Wireless pentesting", "Bughunting"],
+        skills: [" IOT Hacking", "Wireless pentesting", "Electronics"],
         social: {
             instagram: "https://www.instagram.com/vnx.py",
             github: "https://github.com/0V-N",
             twitter: "https://x.com/vn_viii ",
-            linkedin: "https://www.linkedin.com/in/vishnu-narayanan",
+            linkedin: "https://www.linkedin.com/in/vishnu-narayanan-756b02224",
         },
     },
 ];

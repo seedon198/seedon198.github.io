@@ -258,9 +258,21 @@ const teamData = [
         skills: ["Exploit Development", "Kernel Debugging", "Programming"],
         social: {
             instagram: "https://www.instagram.com/s8urav",
-            github: "http://github.com/S8URAV",
-            twitter: "http://x.com/sourav_sivan ",
-            linkedin: "http://www.linkedin.com/in/souravsivan",
+            github: "https://github.com/S8URAV",
+            twitter: "https://x.com/sourav_sivan ",
+            linkedin: "https://www.linkedin.com/in/souravsivan",
+        },
+    },
+    {    
+        name: "Vishnu Narayanan",
+        role: "Trainer",
+        image: "static/media/mugshots/vishnu-n.png",
+        skills: [" IOT Hacking", "Wireless pentesting", "Bughunting"],
+        social: {
+            instagram: "https://www.instagram.com/vnx.py",
+            github: "https://github.com/0V-N",
+            twitter: "https://x.com/vn_viii ",
+            linkedin: "https://www.linkedin.com/in/vishnu-narayanan",
         },
     },
 ];

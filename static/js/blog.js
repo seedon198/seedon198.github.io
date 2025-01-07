@@ -22,14 +22,14 @@ class BlogManager {
         this.renderCategories();
         this.renderPosts();
         
-        // Handle direct blog post URLs
-        const urlPath = window.location.pathname;
-        if (urlPath.startsWith('/blog.html/')) {
-            const postTitle = decodeURIComponent(urlPath.replace('/blog.html/', ''));
+        // Handle direct blog post URLs using hash
+        const hash = window.location.hash;
+        if (hash) {
+            const postTitle = decodeURIComponent(hash.slice(1)); // Remove the # character
             const post = this.blogPosts.find(p => p.title.toLowerCase().replace(/\s+/g, '-') === postTitle.toLowerCase());
             if (post) {
                 setTimeout(() => {
-                    const postElement = document.querySelector(`.blog-box:has(h2:contains('${post.title}'))`);
+                    const postElement = document.querySelector(`.blog-box h2[data-title="${post.title}"]`)?.closest('.blog-box');
                     if (postElement) this.expandPost(postElement);
                 }, 100);
             }
@@ -188,6 +188,22 @@ class BlogManager {
                 this.collapsePost(this.expandedPost);
             }
         });
+
+        // Handle browser back/forward buttons
+        window.addEventListener('popstate', () => {
+            const hash = window.location.hash;
+            if (this.expandedPost) {
+                this.collapsePost(this.expandedPost);
+            }
+            if (hash) {
+                const postTitle = decodeURIComponent(hash.slice(1));
+                const post = this.blogPosts.find(p => p.title.toLowerCase().replace(/\s+/g, '-') === postTitle.toLowerCase());
+                if (post) {
+                    const postElement = document.querySelector(`.blog-box h2[data-title="${post.title}"]`)?.closest('.blog-box');
+                    if (postElement) this.expandPost(postElement, true);
+                }
+            }
+        });
     }
 
     renderCategories() {
@@ -244,7 +260,7 @@ class BlogManager {
         postElement.innerHTML = `
             <img class="blog-thumbnail" src="${post.image}" alt="${post.title}">
             <div class="blog-preview">
-                <h2 class="blog-title">${post.title}</h2>
+                <h2 class="blog-title" data-title="${post.title}">${post.title}</h2>
                 <div class="blog-metadata">
                     <span class="author">${post.author}</span>
                     <span class="date">${new Date(post.date).toLocaleDateString()}</span>
@@ -262,6 +278,7 @@ class BlogManager {
         postElement.addEventListener('click', (e) => {
             // Don't trigger if clicking the close button
             if (e.target.classList.contains('close-button')) {
+                e.stopPropagation();
                 this.collapsePost(postElement);
                 return;
             }
@@ -282,10 +299,10 @@ class BlogManager {
         return postElement;
     }
 
-    expandPost(postElement) {
+    expandPost(postElement, skipPushState = false) {
         const content = postElement.querySelector('.blog-content');
         const excerpt = postElement.querySelector('.blog-excerpt');
-        const title = postElement.querySelector('.blog-title').textContent;
+        const title = postElement.querySelector('.blog-title').getAttribute('data-title');
         
         // Store current grid position
         const rect = postElement.getBoundingClientRect();
@@ -293,9 +310,12 @@ class BlogManager {
         postElement.style.setProperty('--original-left', `${rect.left}px`);
         postElement.style.setProperty('--original-width', `${rect.width}px`);
         
-        // Update URL
+        // Update URL using hash
         const urlTitle = title.toLowerCase().replace(/\s+/g, '-');
-        history.pushState({}, '', `/blog.html/${urlTitle}`);
+        if (!skipPushState) {
+            const newUrl = `${window.location.pathname}#${urlTitle}`;
+            history.pushState({ postTitle: urlTitle }, '', newUrl);
+        }
         
         // Expand the post
         postElement.classList.add('expanded');
@@ -319,9 +339,10 @@ class BlogManager {
         const content = postElement.querySelector('.blog-content');
         const excerpt = postElement.querySelector('.blog-excerpt');
         
-        // Restore original URL
-        if (window.location.pathname !== '/blog.html') {
-            history.pushState({}, '', '/blog.html');
+        // Remove hash from URL while preserving the base URL
+        if (window.location.hash) {
+            const newUrl = window.location.href.split('#')[0];
+            history.pushState({}, '', newUrl);
         }
         
         postElement.classList.remove('expanded');

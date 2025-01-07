@@ -25,8 +25,10 @@ class BlogManager {
         // Handle direct blog post URLs using hash
         const hash = window.location.hash;
         if (hash) {
-            const postTitle = decodeURIComponent(hash.slice(1)); // Remove the # character
-            const post = this.blogPosts.find(p => p.title.toLowerCase().replace(/\s+/g, '-') === postTitle.toLowerCase());
+            // Remove any trailing hyphens and properly decode the hash
+            const postTitle = decodeURIComponent(hash.slice(1).replace(/-+$/, ''));
+            // Find post by normalized title
+            const post = this.blogPosts.find(p => this.normalizeTitle(p.title) === this.normalizeTitle(postTitle));
             if (post) {
                 setTimeout(() => {
                     const postElement = document.querySelector(`.blog-box h2[data-title="${post.title}"]`)?.closest('.blog-box');
@@ -197,7 +199,7 @@ class BlogManager {
             }
             if (hash) {
                 const postTitle = decodeURIComponent(hash.slice(1));
-                const post = this.blogPosts.find(p => p.title.toLowerCase().replace(/\s+/g, '-') === postTitle.toLowerCase());
+                const post = this.blogPosts.find(p => this.normalizeTitle(p.title) === this.normalizeTitle(postTitle));
                 if (post) {
                     const postElement = document.querySelector(`.blog-box h2[data-title="${post.title}"]`)?.closest('.blog-box');
                     if (postElement) this.expandPost(postElement, true);
@@ -310,8 +312,8 @@ class BlogManager {
         postElement.style.setProperty('--original-left', `${rect.left}px`);
         postElement.style.setProperty('--original-width', `${rect.width}px`);
         
-        // Update URL using hash
-        const urlTitle = title.toLowerCase().replace(/\s+/g, '-');
+        // Update URL using hash with normalized title
+        const urlTitle = this.normalizeTitle(title);
         if (!skipPushState) {
             const newUrl = `${window.location.pathname}#${urlTitle}`;
             history.pushState({ postTitle: urlTitle }, '', newUrl);
@@ -377,6 +379,12 @@ class BlogManager {
             });
             paginationContainer.appendChild(button);
         }
+    }
+
+    normalizeTitle(title) {
+        return title.toLowerCase()
+            .replace(/[^a-z0-9]+/g, '-') // Replace special chars with hyphens
+            .replace(/^-+|-+$/g, ''); // Remove leading/trailing hyphens
     }
 }
 

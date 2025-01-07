@@ -138,7 +138,7 @@ class BlogManager {
                 readTime: '5 min read'
             },
             { 
-                title: 'SCADA Systems: The Nervous System of Machines ',
+                title: 'SCADA Systems: The Nervous System of Machines',
                 filename: 'scada.md',
                 image: 'static/media/img/scada.png',
                 category: 'ICS',

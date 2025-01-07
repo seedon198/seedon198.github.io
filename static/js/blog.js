@@ -24,8 +24,8 @@ class BlogManager {
         
         // Handle direct blog post URLs
         const urlPath = window.location.pathname;
-        if (urlPath.startsWith('/blog/')) {
-            const postTitle = decodeURIComponent(urlPath.replace('/blog/', ''));
+        if (urlPath.startsWith('/blog.html/')) {
+            const postTitle = decodeURIComponent(urlPath.replace('/blog.html/', ''));
             const post = this.blogPosts.find(p => p.title.toLowerCase().replace(/\s+/g, '-') === postTitle.toLowerCase());
             if (post) {
                 setTimeout(() => {
@@ -295,7 +295,7 @@ class BlogManager {
         
         // Update URL
         const urlTitle = title.toLowerCase().replace(/\s+/g, '-');
-        history.pushState({}, '', `/blog/${urlTitle}`);
+        history.pushState({}, '', `/blog.html/${urlTitle}`);
         
         // Expand the post
         postElement.classList.add('expanded');
@@ -320,8 +320,8 @@ class BlogManager {
         const excerpt = postElement.querySelector('.blog-excerpt');
         
         // Restore original URL
-        if (window.location.pathname !== '/blog') {
-            history.pushState({}, '', '/blog');
+        if (window.location.pathname !== '/blog.html') {
+            history.pushState({}, '', '/blog.html');
         }
         
         postElement.classList.remove('expanded');

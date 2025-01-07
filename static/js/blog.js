@@ -124,6 +124,15 @@ class BlogManager {
                 author: 'Secret69',
                 readTime: '5 min read'
             },
+            { 
+                title: 'SCADA Systems: The Nervous System of Machines ',
+                filename: 'scada.md',
+                image: 'static/media/img/scada.png',
+                category: 'ICS',
+                date: '2024-12-13',
+                author: 'Rishabh Soni',
+                readTime: '8 min read'
+            },
             // Add more blog posts here
         ];
 

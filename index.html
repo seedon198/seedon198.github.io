@@ -88,7 +88,25 @@
                 </div>
             </div>  
             <div class="spacer"></div>                  
-            <div class="spacer"></div>         
+            <div class="spacer"></div>  
+            <div class="event-highlight">
+                <div class="event-banner">
+                    <img src="static/media/img/news.jpeg" alt="Event Banner">
+                </div>
+                <div class="event-details">
+                    <h2 class="event-title">Badge Quest 2025</h2>
+                    <p class="event-info">
+                        <span class="highlight">📅 Date:</span> 2025-02-20 to 2025-02-22<br>
+                        <span class="highlight">⏰ Time:</span> 11:00 IST Daily<br>
+                        <span class="highlight">📍 Location:</span> Hardware Hacking Village<br><br>
+                        A unique hybrid CTF & scavenger hunt experience!<br>
+                        Compete for exclusive badges and prizes!
+                    </p>
+                    <a href="https://hexguard.net/" class="cta-button" target="_blank">Register Now</a>
+                </div>
+            </div>     
+            <div class="spacer"></div>  
+            <div class="spacer"></div>    
             <p style="color: #808080; text-align: justify;">Welcome to the Hardware Hacking Village, where curiosity meets creativity! Immerse yourself in our diverse villages, each a hub of innovation and hands-on exploration. Whether you're picking locks, soldering circuits, or diving into digital forensics, there's a challenge waiting for you. Connect with fellow hackers, share ideas, and unleash your inner maker as you navigate this exciting landscape of hardware adventures. Let’s build, break, and create together!</p>
             <div class="villages-grid">
                 <div class="village-card" data-village="flipper">
@@ -199,5 +217,38 @@
         </div>
     </footer>
     <script src="/static/js/musicPlayer.js"></script>
+        <div id="welcomeModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <img src="static/media/img/news.jpeg" alt="Event Banner" style="width:100%; border-radius:8px;">
+                <div class="modal-text">
+                    <p>Join us at the Hardware Hacking Village on <strong>2025-02-20 at 11:00 IST</strong> for <span class="highlight">Badge Quest</span>, a unique event that blends the excitement of a CTF challenge with a classic scavenger hunt—hosted during Seasides 2025 (2025-02-20 to 2025-02-22).</p>
+                    <a href="https://hexguard.net/" class="cta-button" target="_blank">Register Now</a>
+                </div>
+            </div>
+        </div>
+
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const modal = document.getElementById('welcomeModal');
+            const span = document.getElementsByClassName("close")[0];
+            
+            if(!localStorage.getItem('modalClosed')) {
+                modal.style.display = "block";
+            }
+
+            span.onclick = function() {
+                modal.style.display = "none";
+                localStorage.setItem('modalClosed', 'true');
+            }
+
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                    localStorage.setItem('modalClosed', 'true');
+                }
+            }
+        });
+        </script>
 </body>
 </html>

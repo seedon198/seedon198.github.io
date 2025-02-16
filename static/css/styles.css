@@ -1130,14 +1130,3 @@ animation: noise-2 3s linear infinite alternate-reverse, glitch 5s 5s infinite;
 .spacer-sm {
   height: 15px;
 }
-
-.pulse {
-  animation: pulse 2s infinite;
-  margin-top: 1rem;
-}
-
-@keyframes pulse {
-  0% { transform: scale(1); }
-  0% { transform: scale(1); }
-  0% { transform: scale(1); }
-}

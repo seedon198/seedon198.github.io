@@ -1010,3 +1010,134 @@ animation: noise-2 3s linear infinite alternate-reverse, glitch 5s 5s infinite;
       grid-template-columns: 1fr;
   }
 }
+
+/* Modal Styles */
+#welcomeModal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+
+#welcomeModal .modal-content {
+  background: #0a0a0a;
+  border: 2px solid #00ff9d;
+  border-radius: 10px;
+  max-width: 600px;
+  width: 90%;
+  padding: 20px;
+  position: relative;
+}
+
+.modal-banner {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #00ff9d;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.modal-text {
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Event Highlight Section */
+.event-highlight {
+  background: rgba(10,10,10,0.9);
+  border: 2px solid #00ff9d;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  max-width: 1200px;
+  box-shadow: 0 0 20px rgba(0,255,157,0.2);
+}
+
+.event-banner {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.event-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.event-image:hover {
+  transform: scale(1.03);
+}
+
+.event-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.event-title {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.event-info p {
+  margin: 0.8rem 0;
+  font-size: 1.1rem;
+}
+
+.event-description {
+  color: #00ff9d;
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .event-highlight {
+      grid-template-columns: 1fr;
+      padding: 15px;
+  }
+  
+  .event-title {
+      font-size: 1.5rem;
+  }
+  
+  .event-info p {
+      font-size: 1rem;
+  }
+}
+
+.spacer-sm {
+  height: 15px;
+}
+
+.pulse {
+  animation: pulse 2s infinite;
+  margin-top: 1rem;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}

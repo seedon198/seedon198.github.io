@@ -44,20 +44,36 @@
 .modal-description {
     text-align: justify;
     color: #808080;
-  }
-
+}
 
 .modal-title {
     text-align: center;
 }
 
+.team-member-socials {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
 
-  .modal-image {
+.team-member-socials a {
+    color: var(--neon-blue);
+    font-size: 1.5rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.team-member-socials a:hover {
+    transform: scale(1.2);
+    color: white;
+}
+
+.modal-image {
     min-height: 400px;
     min-width: 400px;
-    display: block; /* Ensures that margin auto works */
-    margin: 0 auto; /* Centers the image */
-    max-width: 100%; /* Ensures the image is responsive */
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
 }
 
 .about-grid {
@@ -99,3 +115,41 @@
     font-weight: bold;
     margin-bottom: 0.5rem;
 }
+
+.skill-box {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin: 0.2rem;
+    border-radius: 15px; /* Rounded corners */
+    font-size: 1rem;
+    color: black; /* Set the text color to black */
+    background-color: var(--neon-blue); /* Set the background to neon blue */
+    animation: color-change 5s infinite ease-in-out;
+}
+
+@keyframes color-change {
+    0% {
+        background-color: var(--neon-blue); /* Neon blue */
+    }
+    25% {
+        background-color: rgba(0, 243, 255, 0.5); /* Lighter neon blue */
+    }
+    50% {
+        background-color: rgba(13, 108, 113); /* Darker neon blue */
+    }
+    75% {
+        background-color: var(--neon-blue); /* Back to original neon blue */
+    }
+    100% {
+        background-color: rgb(13, 108, 113); /* Darker neon blue */
+    }
+}
+
+.skill-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 10px;
+}
+

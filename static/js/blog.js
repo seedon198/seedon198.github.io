@@ -21,6 +21,21 @@ class BlogManager {
         this.setupEventListeners();
         this.renderCategories();
         this.renderPosts();
+        
+        // Handle direct blog post URLs using hash
+        const hash = window.location.hash;
+        if (hash) {
+            // Remove any trailing hyphens and properly decode the hash
+            const postTitle = decodeURIComponent(hash.slice(1).replace(/-+$/, ''));
+            // Find post by normalized title
+            const post = this.blogPosts.find(p => this.normalizeTitle(p.title) === this.normalizeTitle(postTitle));
+            if (post) {
+                setTimeout(() => {
+                    const postElement = document.querySelector(`.blog-box h2[data-title="${post.title}"]`)?.closest('.blog-box');
+                    if (postElement) this.expandPost(postElement);
+                }, 100);
+            }
+        }
     }
 
     async loadBlogPosts() {
@@ -70,6 +85,69 @@ class BlogManager {
                 author: 'Vishnu Narayanan',
                 readTime: '5 min read'
             },
+            { 
+                title: 'The Psychology of Entry',
+                filename: 'psy.md',
+                image: 'static/media/img/psy.png',
+                category: 'Physical Security',
+                date: '2024-12-03',
+                author: 'Anon',
+                readTime: '8 min read'
+            },
+            { 
+                title: 'HAM Radio: When All Other Communication Fails, Hams Save the Day',
+                filename: 'ham.md',
+                image: 'static/media/img/ham.png',
+                category: 'HAM Radio',
+                date: '2024-12-08',
+                author: 'Rageeth',
+                readTime: '8 min read'
+            },
+            { 
+                title: 'WiFi Security: How to Stop Hackers from Turning Your Network into Their Personal Playground',
+                filename: 'secwifi.md',
+                image: 'static/media/img/secwifi.png',
+                category: 'Wireless Security',
+                date: '2024-12-12',
+                author: 'Rageeth',
+                readTime: '5 min read'
+            },
+            { 
+                title: 'Top Social Engineering Techniques Used by Cybercriminals: The Human Hacking Playbook',
+                filename: 'social.md',
+                image: 'static/media/img/social.png',
+                category: 'Physical Security',
+                date: '2024-12-12',
+                author: 'Anon',
+                readTime: '5 min read'
+            },
+            { 
+                title: 'Deepfakes and AI in Social Engineering: Welcome to the Matrix of Madness',
+                filename: 'ai.md',
+                image: 'static/media/img/ai.png',
+                category: 'Physical Security',
+                date: '2024-12-13',
+                author: 'Anon',
+                readTime: '5 min read'
+            },
+            { 
+                title: 'Flipper Zero: Your Pocket-Sized Cybersecurity Swiss Army Knife',
+                filename: 'flip.md',
+                image: 'static/media/img/flip.png',
+                category: 'Flipper Zero',
+                date: '2024-12-13',
+                author: 'Secret69',
+                readTime: '5 min read'
+            },
+            { 
+                title: 'SCADA Systems The Nervous System of Machines',
+                filename: 'scada.md',
+                image: 'static/media/img/scada.png',
+                category: 'ICS',
+                date: '2024-12-13',
+                author: 'Rishabh Soni',
+                readTime: '8 min read'
+            },
             // Add more blog posts here
         ];
 
@@ -110,6 +188,22 @@ class BlogManager {
         document.addEventListener('click', (e) => {
             if (this.expandedPost && !e.target.closest('.blog-box')) {
                 this.collapsePost(this.expandedPost);
+            }
+        });
+
+        // Handle browser back/forward buttons
+        window.addEventListener('popstate', () => {
+            const hash = window.location.hash;
+            if (this.expandedPost) {
+                this.collapsePost(this.expandedPost);
+            }
+            if (hash) {
+                const postTitle = decodeURIComponent(hash.slice(1));
+                const post = this.blogPosts.find(p => this.normalizeTitle(p.title) === this.normalizeTitle(postTitle));
+                if (post) {
+                    const postElement = document.querySelector(`.blog-box h2[data-title="${post.title}"]`)?.closest('.blog-box');
+                    if (postElement) this.expandPost(postElement, true);
+                }
             }
         });
     }
@@ -168,7 +262,7 @@ class BlogManager {
         postElement.innerHTML = `
             <img class="blog-thumbnail" src="${post.image}" alt="${post.title}">
             <div class="blog-preview">
-                <h2 class="blog-title">${post.title}</h2>
+                <h2 class="blog-title" data-title="${post.title}">${post.title}</h2>
                 <div class="blog-metadata">
                     <span class="author">${post.author}</span>
                     <span class="date">${new Date(post.date).toLocaleDateString()}</span>
@@ -186,6 +280,7 @@ class BlogManager {
         postElement.addEventListener('click', (e) => {
             // Don't trigger if clicking the close button
             if (e.target.classList.contains('close-button')) {
+                e.stopPropagation();
                 this.collapsePost(postElement);
                 return;
             }
@@ -206,15 +301,23 @@ class BlogManager {
         return postElement;
     }
 
-    expandPost(postElement) {
+    expandPost(postElement, skipPushState = false) {
         const content = postElement.querySelector('.blog-content');
         const excerpt = postElement.querySelector('.blog-excerpt');
+        const title = postElement.querySelector('.blog-title').getAttribute('data-title');
         
         // Store current grid position
         const rect = postElement.getBoundingClientRect();
         postElement.style.setProperty('--original-top', `${rect.top}px`);
         postElement.style.setProperty('--original-left', `${rect.left}px`);
         postElement.style.setProperty('--original-width', `${rect.width}px`);
+        
+        // Update URL using hash with normalized title
+        const urlTitle = this.normalizeTitle(title);
+        if (!skipPushState) {
+            const newUrl = `${window.location.pathname}#${urlTitle}`;
+            history.pushState({ postTitle: urlTitle }, '', newUrl);
+        }
         
         // Expand the post
         postElement.classList.add('expanded');
@@ -238,10 +341,15 @@ class BlogManager {
         const content = postElement.querySelector('.blog-content');
         const excerpt = postElement.querySelector('.blog-excerpt');
         
+        // Remove hash from URL while preserving the base URL
+        if (window.location.hash) {
+            const newUrl = window.location.href.split('#')[0];
+            history.pushState({}, '', newUrl);
+        }
+        
         postElement.classList.remove('expanded');
         content.style.display = 'none';
         excerpt.style.display = 'block';
-        
         this.expandedPost = null;
     }
 
@@ -271,6 +379,12 @@ class BlogManager {
             });
             paginationContainer.appendChild(button);
         }
+    }
+
+    normalizeTitle(title) {
+        return title.toLowerCase()
+            .replace(/[^a-z0-9]+/g, '-') // Replace special chars with hyphens
+            .replace(/^-+|-+$/g, ''); // Remove leading/trailing hyphens
     }
 }
 

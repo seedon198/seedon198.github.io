@@ -17,21 +17,22 @@ This section emphasizes the importance of practicing ethical hacking:
 
 Ethical hacking should be performed in controlled environments, such as your own network or an authorized training setting. Stay within the boundaries of the law and contribute positively to the cybersecurity community.
    
-![screenshot](https://raw.githubusercontent.com/0V-N/Seasides2025/refs/heads/main/Images/final-warning-warning.gif)
+<img src="https://raw.githubusercontent.com/0V-N/Seasides2025/refs/heads/main/Images/final-warning-warning.gif" width="400" height="300" alt="Screenshot">
+
 
 ### 1.Wifi Jammer (Deauther) With ESP8266
 The NodeMCU 8266 WiFi module have gained recognition for their versatile applications in the Internet of Things (IoT) realm​​. However, it is important to address ethical considerations when discussing their potential use in hacking scenarios. In this article, we explore the pinouts and WiFi range of the ESP8266 module while touching upon the controversial topics of using the NodeMCU/ESP8266 as a WiFi jammer or Deauther
 
 ##### Click Here - > https://wifi-deauther-jammer-nodemcu.netlify.app/
 
-![screenshot](https://raw.githubusercontent.com/0V-N/Seasides2025/refs/heads/main/Images/8930234700_1561108959.jpg)
+<img src="https://raw.githubusercontent.com/0V-N/Seasides2025/refs/heads/main/Images/8930234700_1561108959.jpg" width="400" height="300" alt="Image 1">
 
 ### 2.Wifi Spoofing Device
 Creating a WiFi spoofing device with an ESP32 involves programming the microcontroller to emulate a legitimate access point, enticing unsuspecting devices to connect to a fake network. Additionally, the ESP32 can be programmed to create a fake API, replicating the behavior of legitimate network services. Once connected, the ESP32 can intercept and manipulate network traffic, potentially compromising sensitive information. However, it's essential to note the ethical and legal implications of such actions. Unauthorized use of WiFi spoofing devices for malicious purposes is illegal and punishable by law. Any use of these devices should be limited to educational or research purposes with explicit consent from network owners and in compliance with applicable laws and regulations. Always prioritize ethical considerations and respect the privacy and security of others' networks. 
 
 ##### Click Here - > https://wifi-spoofing-esp32.netlify.app/
 
-![screenshot](https://raw.githubusercontent.com/0V-N/Seasides2025/refs/heads/main/Images/wifi%20spoof.jpg)
+<img src="https://raw.githubusercontent.com/0V-N/Seasides2025/refs/heads/main/Images/wifi%20spoof.jpg" width="400" height="300" alt="Image 2">
 
 ### 3.Deauther Mini
 
@@ -39,7 +40,7 @@ The Deauther Mini is a powerful WiFi deauthentication device powered by the ESP-
 
 ##### Click Here - > https://github.com/0V-N/Seasides2025/blob/main/Deauther%20Mini.md
 
-![screenshot](https://raw.githubusercontent.com/0V-N/Seasides2025/refs/heads/main/Images/Dmini1.jpg)
+<img src="https://raw.githubusercontent.com/0V-N/Seasides2025/refs/heads/main/Images/Dmini1.jpg" width="400" height="300" alt="Image 3">
 
 ### 4.Pwnagotchi
 
@@ -47,7 +48,7 @@ Pwnagotchi is a portable, AI-powered WiFi auditing tool built on a Raspberry Pi.
 
 ##### Click Here - > https://github.com/0V-N/Seasides2025/blob/main/Pwnagotchi.md
 
-![screenshot](https://raw.githubusercontent.com/0V-N/Seasides2025/refs/heads/main/Images/pwnagotchi.jpg)
+<img src="https://raw.githubusercontent.com/0V-N/Seasides2025/refs/heads/main/Images/pwnagotchi.jpg" width="400" height="300" alt="Pwnagotchi">
 
 ### 5.wifi pineapple
 
@@ -55,7 +56,7 @@ The WiFi Pineapple is a powerful wireless penetration testing tool designed to s
 
 ##### Click Here - > https://www.twingate.com/blog/glossary/wifi-pineapple
 
-![screenshot](https://raw.githubusercontent.com/0V-N/Seasides2025/refs/heads/main/Images/Wifi%20pineapple.jpg)
+<img src="https://raw.githubusercontent.com/0V-N/Seasides2025/refs/heads/main/Images/Wifi%20pineapple.jpg" width="400" height="300" alt="Wifi Pineapple">
 
 
 ### 6.WiFi cracking with Aircrack-ng
@@ -64,4 +65,4 @@ WiFi Cracking with Aircrack-ng is a process used to assess the security of WiFi 
 
 ##### Click Here - > https://medium.com/@1200km/wifi-cracking-with-aircrack-ng-d51cf98c789f
 
-![screenshot](https://raw.githubusercontent.com/0V-N/Seasides2025/refs/heads/main/Images/wifihack.png)
+<img src="https://raw.githubusercontent.com/0V-N/Seasides2025/refs/heads/main/Images/wifihack.png" width="400" height="300" alt="Wifi Hack">

@@ -110,7 +110,7 @@ const teamData = [
     {
         name: "Minhaj",
         role: "Trainer",
-        image: "static/media/mugshots/minhaj.png",
+        image: "static/media/mugshots/Michael_Scott.png",
         skills: ["Web Pentesting", "IoT Hacking", "Red Teaming"],
         social: {
             instagram: "https://www.instagram.com/4minhaj/",

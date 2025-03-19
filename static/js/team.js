@@ -146,7 +146,7 @@ const teamData = [
     {
         name: "Nishal",
         role: "Trainer",
-        image: "static/media/mugshots/nishal.png",
+        image: "static/media/mugshots/Michael_Scott.png",
         skills: ["Web Security", "OSINT", "Threat Intelligence"],
         social: {
             instagram: "https://www.instagram.com/nishhhaaallll",
@@ -170,7 +170,7 @@ const teamData = [
     {
         name: "Graham Gohil",
         role: "Trainer",
-        image: "static/media/mugshots/graham.png",
+        image: "static/media/mugshots/Michael_Scott.png",
         skills: ["Firmware Analysis", "Exploit Development", "Reverse Engineering"],
         social: {
             instagram: "#",

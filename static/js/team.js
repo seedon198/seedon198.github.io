@@ -75,7 +75,7 @@ const teamData = [
         name: "Kiran Gupta",
         role: "Core Team",
         image: "static/media/mugshots/Michael_Scott.png",
-        skills: ["ISO 27001", "Project Delivery"],
+        skills: ["GRC", "Project Delivery"],
         social: {
             instagram: "#",
             github: "#",

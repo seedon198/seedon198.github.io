@@ -12,18 +12,6 @@ const teamData = [
         },
     },
     {
-        name: "Seedon D'Souza",
-        role: "Village Coordinator",
-        image: "static/media/mugshots/seedon.png",
-        skills: ["Leadership", "IoT Hacking", "Hardware Debugging"],
-        social: {
-            instagram: "#",
-            github: "#",
-            twitter: "#",
-            linkedin: "#",
-        },
-    },
-    {
         name: "Mohammed Arif",
         role: "Core Team",
         image: "static/media/mugshots/arif.png",
@@ -273,6 +261,18 @@ const teamData = [
             github: "https://github.com/0V-N",
             twitter: "https://x.com/vn_viii ",
             linkedin: "https://www.linkedin.com/in/vishnu-narayanan-756b02224",
+        },
+    },
+        {
+        name: "Seedon D'Souza",
+        role: "Village Coordinator",
+        image: "static/media/mugshots/seedon.png",
+        skills: ["Leadership", "IoT Hacking", "Hardware Debugging"],
+        social: {
+            instagram: "#",
+            github: "#",
+            twitter: "#",
+            linkedin: "#",
         },
     },
 ];

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Seasides 2026</title>
+    <title>Harware Hacking Village 2026</title>
     <link rel="icon" href="/favicon.ico">
     <link rel="stylesheet" href="/static/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SVLtVqv0k4qk6WfL1+g8Yq8qk8JkVg1b5qfF0k8m0b4x3oEo7o9r3n0V1z0w0q6QW9Jr6G6b8eVwZ8q7c7m1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -15,12 +15,24 @@
             <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7"/><path d="M9 22V12h6v10"/></svg>
             <span class="label">Home</span>
         </a>
-        <a class="nav-link" href="#about">
-            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-            <span class="label">About</span>
+        <a class="nav-link" href="#dates">
+            <i class="fa-solid fa-calendar-days nav-icon" aria-hidden="true"></i>
+            <span class="label">Dates</span>
+        </a>
+        <a class="nav-link" href="#tracks">
+            <i class="fa-solid fa-diagram-project nav-icon" aria-hidden="true"></i>
+            <span class="label">Tracks</span>
+        </a>
+        <a class="nav-link" href="#cfp">
+            <i class="fa-solid fa-bullhorn nav-icon" aria-hidden="true"></i>
+            <span class="label">CFP</span>
+        </a>
+        <a class="nav-link" href="#venue">
+            <i class="fa-solid fa-location-dot nav-icon" aria-hidden="true"></i>
+            <span class="label">Venue</span>
         </a>
         <a class="nav-link" href="#contact">
-            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a4 4 0 0 1-4 4H7l-4 4V5a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/></svg>
+            <i class="fa-regular fa-envelope nav-icon" aria-hidden="true"></i>
             <span class="label">Contact</span>
         </a>
     </nav>
@@ -58,7 +70,156 @@
             </div>
         </section>
 
-        <section id="contact"></section>
+        <section id="dates" class="section dates" aria-label="Key Dates">
+            <div class="section-inner">
+                <h2 class="section-title"><i class="fa-solid fa-calendar-days"></i> Conference Dates</h2>
+                <p class="section-sub">International Centre Goa • Feb 19–21, 2026</p>
+                <div class="dates-grid">
+                    <div class="date-card">
+                        <div class="date-day">19</div>
+                        <div class="date-meta">Thu • Workshops</div>
+                    </div>
+                    <div class="date-card">
+                        <div class="date-day">20</div>
+                        <div class="date-meta">Fri • Talks & Demos</div>
+                    </div>
+                    <div class="date-card">
+                        <div class="date-day">21</div>
+                        <div class="date-meta">Sat • Talks & Village</div>
+                    </div>
+                </div>
+                <div class="calendar">
+                    <div class="cal-head">February 2026</div>
+                    <div class="cal-grid">
+                        <span class="cal-cell cal-dow">Sun</span><span class="cal-cell cal-dow">Mon</span><span class="cal-cell cal-dow">Tue</span><span class="cal-cell cal-dow">Wed</span><span class="cal-cell cal-dow">Thu</span><span class="cal-cell cal-dow">Fri</span><span class="cal-cell cal-dow">Sat</span>
+                        <span class="cal-cell dim">1</span><span class="cal-cell dim">2</span><span class="cal-cell dim">3</span><span class="cal-cell dim">4</span><span class="cal-cell dim">5</span><span class="cal-cell dim">6</span><span class="cal-cell dim">7</span>
+                        <span class="cal-cell">8</span><span class="cal-cell">9</span><span class="cal-cell">10</span><span class="cal-cell">11</span><span class="cal-cell">12</span><span class="cal-cell">13</span><span class="cal-cell">14</span>
+                        <span class="cal-cell">15</span><span class="cal-cell">16</span><span class="cal-cell">17</span><span class="cal-cell">18</span>
+                        <span class="cal-cell cal-highlight">19</span>
+                        <span class="cal-cell cal-highlight">20</span>
+                        <span class="cal-cell cal-highlight">21</span>
+                        <span class="cal-cell">22</span><span class="cal-cell">23</span><span class="cal-cell">24</span><span class="cal-cell">25</span><span class="cal-cell">26</span><span class="cal-cell">27</span><span class="cal-cell">28</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tracks" class="section tracks" aria-label="Tracks">
+            <div class="section-inner">
+                <h2 class="section-title"><i class="fa-solid fa-diagram-project"></i> Conference Tracks</h2>
+                <div class="tracks-grid">
+                    <article class="track-card">
+                        <h3 class="track-title">Security & AppSec</h3>
+                        <p class="track-text">Web, mobile, and cloud security talks, tooling, and case studies.</p>
+                    </article>
+                    <article class="track-card">
+                        <h3 class="track-title">Blue Team & DFIR</h3>
+                        <p class="track-text">Defense, detection engineering, forensics, and incident response.</p>
+                    </article>
+                    <article class="track-card highlight">
+                        <h3 class="track-title"><i class="fa-solid fa-microchip"></i> Hardware Track</h3>
+                        <p class="track-text">Electronics, embedded, radio, and hardware security. From firmware reversing to side-channels, bus sniffing, and device exploitation.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="cfp" class="section cfp" aria-label="Call for Papers">
+            <div class="section-inner">
+                <h2 class="section-title"><i class="fa-solid fa-bullhorn"></i> Call for Papers</h2>
+                <p class="section-sub">CFP opens on <strong>October 3, 2025</strong>. Submit hardware and security talks, workshops, and demos.</p>
+                <div class="cfp-actions">
+                    <a class="hero-cta" href="#" aria-disabled="true">Submit Talk (opens Oct 3)</a>
+                    <a class="cfp-link" href="#cfp-panel">Meet the CFP Panel</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="cfp-panel" class="section panel" aria-label="CFP Panel">
+            <div class="section-inner">
+                <h2 class="section-title"><i class="fa-solid fa-users"></i> CFP Review Panel</h2>
+                <div class="panel-grid">
+                    <div class="panel-card">
+                        <div class="panel-avatar"><i class="fa-solid fa-user-secret"></i></div>
+                        <div class="panel-name">TBD</div>
+                        <div class="panel-role">Hardware Security</div>
+                    </div>
+                    <div class="panel-card">
+                        <div class="panel-avatar"><i class="fa-solid fa-user-tie"></i></div>
+                        <div class="panel-name">TBD</div>
+                        <div class="panel-role">AppSec</div>
+                    </div>
+                    <div class="panel-card">
+                        <div class="panel-avatar"><i class="fa-solid fa-user-ninja"></i></div>
+                        <div class="panel-name">TBD</div>
+                        <div class="panel-role">Offensive Security</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="schedule" class="section schedule" aria-label="Schedule">
+            <div class="section-inner">
+                <h2 class="section-title"><i class="fa-regular fa-clock"></i> Schedule (Preview)</h2>
+                <div class="timeline">
+                    <div class="tl-item">
+                        <div class="tl-time">Day 1</div>
+                        <div class="tl-dot"></div>
+                        <div class="tl-text">Workshops, Badge pickup, Villages open</div>
+                    </div>
+                    <div class="tl-item">
+                        <div class="tl-time">Day 2</div>
+                        <div class="tl-dot"></div>
+                        <div class="tl-text">Keynotes, Talks & Demos, Hardware track</div>
+                    </div>
+                    <div class="tl-item">
+                        <div class="tl-time">Day 3</div>
+                        <div class="tl-dot"></div>
+                        <div class="tl-text">Talks, Villages, Closing</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="venue" class="section venue" aria-label="Venue">
+            <div class="section-inner">
+                <h2 class="section-title"><i class="fa-solid fa-location-dot"></i> Venue</h2>
+                <p class="section-sub">International Centre Goa, Dona Paula, Goa, India</p>
+                <div class="venue-map" aria-hidden="true">Map placeholder</div>
+            </div>
+        </section>
+
+        <section id="sponsors" class="section sponsors" aria-label="Sponsors">
+            <div class="section-inner">
+                <h2 class="section-title"><i class="fa-solid fa-hand-holding-dollar"></i> Sponsors</h2>
+                <div class="sponsors-grid">
+                    <div class="sponsor-card tier-gold">Gold Sponsor — Your Logo</div>
+                    <div class="sponsor-card tier-silver">Silver Sponsor — Your Logo</div>
+                    <div class="sponsor-card tier-community">Community Partner — Your Logo</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact" aria-label="Contact">
+            <div class="section-inner">
+                <h2 class="section-title"><i class="fa-regular fa-envelope"></i> Contact</h2>
+                <p class="section-sub">Questions, volunteering, or sponsorships? Reach out.</p>
+                <div class="contact-actions">
+                    <a class="hero-cta" href="mailto:hello@seasides.in">Email Us</a>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-left">© 2026 Hardware Hacking Village • Seasides</div>
+            <div class="footer-right">
+                <a href="#cfp" class="footer-link">CFP</a>
+                <a href="#sponsors" class="footer-link">Sponsors</a>
+                <a href="#venue" class="footer-link">Venue</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

@@ -21,21 +21,22 @@
         /* Floating navbar */
         .floating-nav {
             position: fixed;
-            top: 16px;
+            top: 40px; /* ~ top-10 */
             left: 50%;
-            transform: translate(-50%, -140%);
+            transform: translate(-50%, -100px); /* hidden state similar to y:-100 */
             display: flex;
             align-items: center;
             gap: 12px;
-            padding: 10px 12px 10px 18px;
+            padding: 8px 8px 8px 16px; /* pl-8 pr-2 py-2 */
             background: #fff;
             color: #111;
             border-radius: 999px;
             border: 1px solid rgba(25,28,33,0.12);
-            box-shadow: 0 2px 3px -1px rgba(0,0,0,0.1), 0 1px 0 rgba(25,28,33,0.02), 0 0 0 1px rgba(25,28,33,0.08);
+            box-shadow: 0px 2px 3px -1px rgba(0,0,0,0.1), 0px 1px 0px rgba(25,28,33,0.02), 0px 0px 0px 1px rgba(25,28,33,0.08);
             z-index: 5000;
-            transition: transform 0.22s ease, opacity 0.22s ease;
+            transition: transform 0.2s ease, opacity 0.2s ease;
             opacity: 0;
+            max-width: max-content; /* max-w-fit */
         }
         .floating-nav.visible {
             transform: translate(-50%, 0);
@@ -45,21 +46,27 @@
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            color: #333;
+            color: #4b5563; /* neutral-600 */
             text-decoration: none;
             padding: 6px 8px;
             border-radius: 8px;
+            transition: color .15s ease, background .15s ease;
         }
         .nav-link:hover { color: #111; background: rgba(0,0,0,0.04); }
         .nav-icon { width: 16px; height: 16px; display: inline-block; }
+        .label { display: none; font-size: 14px; }
+        @media (min-width: 640px) { /* sm */
+            .label { display: inline; }
+        }
         .login-btn {
-            border: 1px solid #e5e7eb;
+            border: 1px solid rgba(229,231,235,1); /* neutral-200 */
             color: #111;
             background: #fff;
             padding: 8px 14px;
             border-radius: 999px;
             font-weight: 600;
             position: relative;
+            font-size: 14px;
         }
         .login-btn::after {
             content: "";
@@ -106,14 +113,10 @@
         .grid-overlay {
             position: absolute;
             inset: 0;
-            background-image: linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+            background-image: linear-gradient(rgba(0,0,0,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.08) 1px, transparent 1px);
             background-size: 40px 40px, 40px 40px;
             opacity: .2;
             pointer-events: none;
-        }
-
-        @media (max-width: 480px) {
-            .hide-sm { display: none; }
         }
     </style>
 </head>
@@ -121,15 +124,15 @@
     <nav class="floating-nav" id="floatingNav" aria-label="Floating navigation">
         <a class="nav-link" href="/">
             <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7"/><path d="M9 22V12h6v10"/></svg>
-            <span class="hide-sm">Home</span>
+            <span class="label">Home</span>
         </a>
         <a class="nav-link" href="#about">
             <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-            <span class="hide-sm">About</span>
+            <span class="label">About</span>
         </a>
         <a class="nav-link" href="#contact">
             <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a4 4 0 0 1-4 4H7l-4 4V5a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/></svg>
-            <span class="hide-sm">Contact</span>
+            <span class="label">Contact</span>
         </a>
         <button class="login-btn" type="button">Login</button>
     </nav>
@@ -156,9 +159,18 @@
             let lastY = window.scrollY || 0;
             let ticking = false;
 
+            function getScrollProgress() {
+                const scrollTop = window.scrollY || 0;
+                const docHeight = Math.max(document.body.scrollHeight, document.documentElement.scrollHeight);
+                const winHeight = window.innerHeight;
+                const scrollable = Math.max(docHeight - winHeight, 1);
+                return scrollTop / scrollable; // 0..1
+            }
+
             function onScroll() {
                 const y = window.scrollY || 0;
-                const nearTop = y < 60;
+                const progress = getScrollProgress();
+                const nearTop = progress < 0.05; // mimic < 5%
                 const directionUp = y < lastY;
 
                 if (nearTop) {

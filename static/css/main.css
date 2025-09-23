@@ -1,6 +1,7 @@
 :root {
   --bg: #000000;
   --fg: #e6e6e6;
+  --neon: #00e0ff; /* cyan neon */
 }
 * { box-sizing: border-box; }
 html, body { height: 100%; }
@@ -21,13 +22,20 @@ body {
   align-items: center;
   gap: 12px;
   padding: 8px 8px 8px 16px;
-  background: #fff;
-  color: #111;
+  /* Translucent glass on dark */
+  background: rgba(10, 10, 14, 0.55);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  color: #e5faff;
   border-radius: 999px;
-  border: 1px solid rgba(25,28,33,0.12);
-  box-shadow: 0px 2px 3px -1px rgba(0,0,0,0.1), 0px 1px 0px rgba(25,28,33,0.02), 0px 0px 0px 1px rgba(25,28,33,0.08);
+  /* Neon edge */
+  border: 1px solid rgba(0, 224, 255, 0.5);
+  box-shadow:
+    0 0 0 1px rgba(0, 224, 255, 0.25) inset,
+    0 0 14px rgba(0, 224, 255, 0.35),
+    0 2px 10px rgba(0, 0, 0, 0.6);
   z-index: 5000;
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  transition: transform 0.2s ease, opacity 0.2s ease, box-shadow 0.2s ease;
   opacity: 0;
   max-width: max-content;
 }
@@ -39,25 +47,32 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  color: #4b5563;
+  color: #b3dfe6;
   text-decoration: none;
   padding: 6px 8px;
   border-radius: 8px;
-  transition: color .15s ease, background .15s ease;
+  transition: color .15s ease, background .15s ease, text-shadow .15s ease;
 }
-.nav-link:hover { color: #111; background: rgba(0,0,0,0.04); }
+.nav-link:hover {
+  color: #e8fdff;
+  background: rgba(0, 224, 255, 0.08);
+  text-shadow: 0 0 6px rgba(0, 224, 255, 0.6);
+}
 .nav-icon { width: 16px; height: 16px; display: inline-block; }
 .label { display: none; font-size: 14px; }
 @media (min-width: 640px) { .label { display: inline; } }
 .login-btn {
-  border: 1px solid rgba(229,231,235,1);
-  color: #111;
-  background: #fff;
+  border: 1px solid rgba(0, 224, 255, 0.45);
+  color: #eaffff;
+  background: linear-gradient(180deg, rgba(0,0,0,0.2), rgba(0,0,0,0.35));
   padding: 8px 14px;
   border-radius: 999px;
   font-weight: 600;
   position: relative;
   font-size: 14px;
+  box-shadow:
+    0 0 10px rgba(0, 224, 255, 0.25),
+    inset 0 0 0 1px rgba(0, 224, 255, 0.25);
 }
 .login-btn::after {
   content: "";
@@ -66,5 +81,6 @@ body {
   right: 25%;
   bottom: -1px;
   height: 1px;
-  background: linear-gradient(90deg, transparent, #3b82f6, transparent);
+  background: linear-gradient(90deg, transparent, var(--neon), transparent);
+  filter: drop-shadow(0 0 4px rgba(0, 224, 255, 0.8));
 }

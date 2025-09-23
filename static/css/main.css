@@ -232,10 +232,13 @@ main > section { min-height: 100vh; scroll-snap-align: start; display: flex; ali
 .reveal { opacity: 0; transform: translateY(20px); transition: opacity .5s ease, transform .5s ease; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 
-/* Responsive tweaks */
-@media (max-width: 600px) {
-  .dates-grid { grid-template-columns: 1fr; }
-  .panel-grid { grid-template-columns: repeat(1, minmax(0, 1fr)); }
-  .tracks-grid { grid-template-columns: repeat(1, minmax(0, 1fr)); }
-  .sponsors-grid { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+/* Countdown */
+.countdown { display: inline-grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; margin: 16px 0; }
+.cd-item { background: rgba(10,10,14,0.5); border: 1px solid rgba(0,224,255,0.25); border-radius: 10px; padding: 8px 10px; backdrop-filter: blur(8px); text-align: center; }
+.cd-num { display: block; font-size: 22px; color: #eaffff; text-shadow: 0 0 8px rgba(0,224,255,0.3); }
+.cd-label { display: block; font-size: 11px; color: #b3dfe6; }
+
+/* Snap tweaks for mobile */
+@media (max-width: 700px) {
+  body { scroll-snap-type: y proximity; }
 }

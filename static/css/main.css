@@ -160,6 +160,6 @@ body {
   padding: 16px;
   box-shadow: 0 0 10px rgba(0, 224, 255, 0.12) inset, 0 6px 18px rgba(0,0,0,0.5);
 }
-.about-icon { font-size: 22px; opacity: 0.9; }
+.about-icon { font-size: 22px; opacity: 0.9; color: #b3f5ff; text-shadow: 0 0 10px rgba(0, 224, 255, 0.35); }
 .about-card-title { margin: 8px 0 6px; font-size: 18px; color: #eaffff; }
 .about-card-text { margin: 0; color: #b3dfe6; font-size: 14px; }

@@ -2,6 +2,9 @@
   const nav = document.querySelector('.floating-nav');
   if (!nav) return;
 
+  // Show navbar on load for empty/short pages
+  nav.classList.add('visible');
+
   let lastY = window.scrollY || 0;
   let ticking = false;
 

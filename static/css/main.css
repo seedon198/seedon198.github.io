@@ -84,3 +84,82 @@ body {
   background: linear-gradient(90deg, transparent, var(--neon), transparent);
   filter: drop-shadow(0 0 4px rgba(0, 224, 255, 0.8));
 }
+
+/* Hero */
+.hero {
+  position: relative;
+  min-height: 70vh;
+  display: grid;
+  place-items: center;
+  padding: 64px 24px 48px;
+  overflow: hidden;
+}
+.hero-inner { max-width: 1100px; width: 100%; text-align: center; }
+.hero-title {
+  font-size: clamp(40px, 6vw, 72px);
+  margin: 0 0 12px;
+  line-height: 1.05;
+  color: #eaffff;
+  text-shadow: 0 0 14px rgba(0, 224, 255, 0.35);
+}
+.hero-sub {
+  margin: 0 auto;
+  max-width: 760px;
+  color: #b3dfe6;
+  font-size: 16px;
+}
+.hero-cta {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 12px 18px;
+  border-radius: 999px;
+  color: #001317;
+  background: linear-gradient(90deg, #00e0ff, #7d4cff);
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 8px 24px rgba(0, 224, 255, 0.25);
+}
+/* Ambient glows */
+.hero::before,
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 600px; height: 600px;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.15;
+  pointer-events: none;
+}
+.hero::before { background: #00e0ff; top: -200px; left: -120px; }
+.hero::after { background: #7d4cff; bottom: -220px; right: -120px; }
+
+/* About */
+.about { padding: 40px 24px 64px; }
+.about-inner { max-width: 1100px; margin: 0 auto; }
+.about-title {
+  font-size: clamp(28px, 4vw, 40px);
+  margin: 0 0 6px;
+  color: #eaffff;
+  text-shadow: 0 0 10px rgba(0, 224, 255, 0.25);
+}
+.about-sub { margin: 0 0 20px; color: #b3dfe6; }
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 16px;
+}
+@media (min-width: 700px) {
+  .about-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+.about-card {
+  background: rgba(10, 10, 14, 0.5);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 224, 255, 0.25);
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 0 10px rgba(0, 224, 255, 0.12) inset, 0 6px 18px rgba(0,0,0,0.5);
+}
+.about-icon { font-size: 22px; opacity: 0.9; }
+.about-card-title { margin: 8px 0 6px; font-size: 18px; color: #eaffff; }
+.about-card-text { margin: 0; color: #b3dfe6; font-size: 14px; }

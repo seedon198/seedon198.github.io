@@ -5,8 +5,181 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Seasides 2026</title>
     <link rel="icon" href="/favicon.ico">
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --fg: #e6e6e6;
+            --muted: #a0a0a0;
+            --card: #101014;
+            --border: #222229;
+            --accent: #00e0ff;
+        }
+        * { box-sizing: border-box; }
+        html, body { height: 100%; }
+        body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial; background: var(--bg); color: var(--fg); }
+
+        /* Floating navbar */
+        .floating-nav {
+            position: fixed;
+            top: 16px;
+            left: 50%;
+            transform: translate(-50%, -140%);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 12px 10px 18px;
+            background: #fff;
+            color: #111;
+            border-radius: 999px;
+            border: 1px solid rgba(25,28,33,0.12);
+            box-shadow: 0 2px 3px -1px rgba(0,0,0,0.1), 0 1px 0 rgba(25,28,33,0.02), 0 0 0 1px rgba(25,28,33,0.08);
+            z-index: 5000;
+            transition: transform 0.22s ease, opacity 0.22s ease;
+            opacity: 0;
+        }
+        .floating-nav.visible {
+            transform: translate(-50%, 0);
+            opacity: 1;
+        }
+        .nav-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: #333;
+            text-decoration: none;
+            padding: 6px 8px;
+            border-radius: 8px;
+        }
+        .nav-link:hover { color: #111; background: rgba(0,0,0,0.04); }
+        .nav-icon { width: 16px; height: 16px; display: inline-block; }
+        .login-btn {
+            border: 1px solid #e5e7eb;
+            color: #111;
+            background: #fff;
+            padding: 8px 14px;
+            border-radius: 999px;
+            font-weight: 600;
+            position: relative;
+        }
+        .login-btn::after {
+            content: "";
+            position: absolute;
+            left: 25%;
+            right: 25%;
+            bottom: -1px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #3b82f6, transparent);
+        }
+
+        /* Page scaffold */
+        .wrap { max-width: 1100px; margin: 0 auto; padding: 24px; }
+        header { padding: 64px 0 24px; }
+        h1 { margin: 0 0 8px; font-size: 40px; line-height: 1.1; }
+        .lead { color: var(--muted); max-width: 720px; margin: 0; }
+
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px;
+        }
+        .spacer { height: 24px; }
+
+        .dummy {
+            position: relative;
+            height: 120rem;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            background: #0c0c0f;
+            overflow: hidden;
+        }
+        .dummy p {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+            color: var(--muted);
+            margin: 0;
+            text-align: center;
+        }
+        .grid-overlay {
+            position: absolute;
+            inset: 0;
+            background-image: linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+            background-size: 40px 40px, 40px 40px;
+            opacity: .2;
+            pointer-events: none;
+        }
+
+        @media (max-width: 480px) {
+            .hide-sm { display: none; }
+        }
+    </style>
 </head>
 <body>
-    <h1>Seasides 2026</h1>
+    <nav class="floating-nav" id="floatingNav" aria-label="Floating navigation">
+        <a class="nav-link" href="/">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7"/><path d="M9 22V12h6v10"/></svg>
+            <span class="hide-sm">Home</span>
+        </a>
+        <a class="nav-link" href="#about">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <span class="hide-sm">About</span>
+        </a>
+        <a class="nav-link" href="#contact">
+            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a4 4 0 0 1-4 4H7l-4 4V5a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/></svg>
+            <span class="hide-sm">Contact</span>
+        </a>
+        <button class="login-btn" type="button">Login</button>
+    </nav>
+
+    <div class="wrap">
+        <header>
+            <h1>Seasides 2026</h1>
+            <p class="lead">Scroll down and then back up a little to reveal the floating navbar.</p>
+        </header>
+        <div class="card" id="about">
+            <p class="lead">About section placeholder. Content TBD.</p>
+        </div>
+        <div class="spacer"></div>
+        <div class="dummy">
+            <div class="grid-overlay"></div>
+            <p>Scroll back up to reveal Navbar</p>
+        </div>
+        <div class="spacer" id="contact"></div>
+    </div>
+
+    <script>
+        (function() {
+            const nav = document.getElementById('floatingNav');
+            let lastY = window.scrollY || 0;
+            let ticking = false;
+
+            function onScroll() {
+                const y = window.scrollY || 0;
+                const nearTop = y < 60;
+                const directionUp = y < lastY;
+
+                if (nearTop) {
+                    nav.classList.remove('visible');
+                } else if (directionUp) {
+                    nav.classList.add('visible');
+                } else {
+                    nav.classList.remove('visible');
+                }
+
+                lastY = y;
+                ticking = false;
+            }
+
+            window.addEventListener('scroll', function() {
+                if (!ticking) {
+                    window.requestAnimationFrame(onScroll);
+                    ticking = true;
+                }
+            }, { passive: true });
+        })();
+    </script>
 </body>
 </html>

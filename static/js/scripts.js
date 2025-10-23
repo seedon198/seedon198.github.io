@@ -405,7 +405,7 @@ window.dataLayer = window.dataLayer || [];
 
 
 // Countdown Timer
-const eventDate = new Date("February 20, 2025 09:30:00").getTime();
+const eventDate = new Date("February 19, 2026 09:30:00").getTime();
 
 function updateCountdown() {
     const now = new Date().getTime();
@@ -452,6 +452,12 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeModal();
     initializeParticles();
     updateCountdown();
+    
+    // Set current year in footer
+    const yearElement = document.getElementById('current-year');
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+    }
 });
 
 if (document.readyState === 'complete') {
@@ -459,11 +465,17 @@ if (document.readyState === 'complete') {
     initializeModal();
     initializeParticles();
     updateCountdown();
+    
+    // Set current year in footer
+    const yearElement = document.getElementById('current-year');
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+    }
 }
 
 const shareContent = {
     title: "Hardware Hacking Village at Seasides Conference",
-    description: "Join us for an exciting Hardware Hacking Village at Seasides Conference, featuring Flipper Zero, Badge Making, HAM Radio, and more! February 20-22, 2025 at International Center Goa.",
+    description: "Join us for an exciting Hardware Hacking Village at Seasides Conference, featuring Flipper Zero, Badge Making, HAM Radio, and more! February 19-21, 2026 at International Center Goa.",
     url: window.location.href
 };
 

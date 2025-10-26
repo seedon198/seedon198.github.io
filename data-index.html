@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hardware Hacking Village - Seasides Conference 2026</title>
+    <favicon href="favicon.ico" />
+    <meta name="description" content="Join us at Seasides Conference 2026 for three days of hardware hacking, soldering, OSINT challenges, and exclusive talks. Feb 19-21, 2026.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #00d4ff;
+            --secondary: #ff006e;
+            --dark: #0a0e27;
+            --darker: #050812;
+            --light: #f0f4f8;
+            --accent: #7d4cdb;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: var(--darker);
+            color: var(--light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background: linear-gradient(135deg, var(--darker) 0%, var(--dark) 100%);
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
+            opacity: 0.1;
+            top: -250px;
+            right: -250px;
+            animation: pulse 8s ease-in-out infinite;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, var(--secondary) 0%, transparent 70%);
+            opacity: 0.1;
+            bottom: -200px;
+            left: -200px;
+            animation: pulse 6s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.1; }
+            50% { transform: scale(1.2); opacity: 0.15; }
+        }
+
+        .hero-content {
+            text-align: center;
+            z-index: 1;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .glitch {
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            background: linear-gradient(45deg, var(--primary), var(--secondary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+        }
+
+        .subtitle {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .hero-date {
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 2rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            padding: 15px 35px;
+            font-size: 1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: var(--darker);
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 212, 255, 0.5);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary);
+            color: var(--darker);
+            transform: translateY(-3px);
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-10px); }
+            60% { transform: translateX(-50%) translateY(-5px); }
+        }
+
+        .scroll-indicator svg {
+            width: 30px;
+            height: 30px;
+            fill: var(--primary);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 100px 0;
+            position: relative;
+        }
+
+        section:nth-child(even) {
+            background: var(--dark);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 800;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Activities Grid */
+        .activities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .activity-card {
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.05), rgba(125, 76, 219, 0.05));
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            border-radius: 20px;
+            padding: 40px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .activity-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: 0;
+        }
+
+        .activity-card:hover::before {
+            opacity: 0.1;
+        }
+
+        .activity-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+            box-shadow: 0 20px 60px rgba(0, 212, 255, 0.3);
+        }
+
+        .activity-card > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .activity-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+            color: var(--primary);
+        }
+
+        .activity-title {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .activity-date {
+            display: inline-block;
+            background: rgba(0, 212, 255, 0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .activity-description {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .activity-highlights {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .activity-highlights li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .activity-highlights li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+        }
+
+        /* Schedule Timeline */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--primary), var(--secondary));
+        }
+
+        .timeline-item {
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .timeline-content {
+            background: rgba(0, 212, 255, 0.05);
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            border-radius: 15px;
+            padding: 30px;
+            width: calc(50% - 40px);
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-left: auto;
+        }
+
+        .timeline-date {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .timeline-events {
+            list-style: none;
+        }
+
+        .timeline-events li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .timeline-events li:last-child {
+            border-bottom: none;
+        }
+
+        .timeline-marker {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 20px;
+            background: var(--primary);
+            border-radius: 50%;
+            top: 30px;
+            box-shadow: 0 0 20px var(--primary);
+        }
+
+        /* CFP Section */
+        .cfp-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, rgba(125, 76, 219, 0.1), rgba(255, 0, 110, 0.1));
+            border: 2px solid var(--accent);
+            border-radius: 20px;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .cfp-title {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--accent);
+        }
+
+        .cfp-deadline {
+            font-size: 1.3rem;
+            color: var(--secondary);
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        .cfp-topics {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin: 30px 0;
+        }
+
+        .topic-tag {
+            background: rgba(125, 76, 219, 0.2);
+            padding: 10px 20px;
+            border-radius: 25px;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .cfp-info {
+            color: rgba(255, 255, 255, 0.8);
+            margin: 20px 0;
+            line-height: 1.8;
+        }
+
+        /* Prizes Section */
+        .prizes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .prize-card {
+            background: rgba(255, 0, 110, 0.05);
+            border: 2px solid var(--secondary);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .prize-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(255, 0, 110, 0.3);
+        }
+
+        .prize-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+
+        .prize-title {
+            font-size: 1.3rem;
+            color: var(--secondary);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        /* FAQ Section */
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: rgba(0, 212, 255, 0.05);
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            border-radius: 15px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question {
+            padding: 25px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--primary);
+        }
+
+        .faq-question:hover {
+            background: rgba(0, 212, 255, 0.1);
+        }
+
+        .faq-answer {
+            padding: 0 25px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.8;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 25px;
+            max-height: 500px;
+        }
+
+        .faq-toggle {
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(45deg);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--darker);
+            padding: 60px 0 30px;
+            text-align: center;
+            border-top: 1px solid rgba(0, 212, 255, 0.2);
+        }
+
+        .footer-content {
+            margin-bottom: 30px;
+        }
+
+        .footer-title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin: 30px 0;
+        }
+
+        .social-link {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(0, 212, 255, 0.1);
+            border: 2px solid var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            font-size: 1.5rem;
+        }
+
+        .social-link:hover {
+            background: var(--primary);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 212, 255, 0.4);
+        }
+
+        .copyright {
+            color: rgba(255, 255, 255, 0.5);
+            margin-top: 30px;
+            font-size: 0.9rem;
+        }
+
+        /* Team Section */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .team-member {
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+        }
+
+        .team-avatar {
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.2), rgba(125, 76, 219, 0.2));
+            border: 3px solid var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 212, 255, 0.3);
+            color: var(--primary);
+        }
+
+        .team-avatar::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .team-member:hover .team-avatar::before {
+            opacity: 0.2;
+        }
+
+        .team-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .team-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+
+        .team-role {
+            font-size: 1rem;
+            color: var(--secondary);
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .team-bio {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-content {
+                width: calc(100% - 60px);
+                margin-left: 40px !important;
+            }
+
+            .timeline-marker {
+                left: 20px;
+                transform: translateX(0);
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .cfp-container {
+                padding: 30px 20px;
+            }
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Limited Spots Badge */
+        .limited-badge {
+            display: inline-block;
+            background: var(--secondary);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-left: 10px;
+            animation: blink 2s ease-in-out infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="glitch">Hardware Hacking Village</h1>
+            <p class="subtitle">Seasides Conference 2026</p>
+            <p class="hero-date"><i class="far fa-calendar-alt"></i> February 19-21, 2026</p>
+            <p style="max-width: 700px; margin: 0 auto 2rem; color: rgba(255,255,255,0.8); font-size: 1.1rem;">
+                Three days of soldering, hardware security talks, challenges, and hands-on hacking. Join us for the ultimate hardware security experience.
+            </p>
+            <div class="cta-buttons">
+                <a href="#cfp" class="btn btn-primary">Submit CFP Talk</a>
+                <a href="#schedule" class="btn btn-secondary">View Schedule</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M12 16l-6-6h12z"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Activities Section -->
+    <section id="activities">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">What's Happening</h2>
+                <p class="section-subtitle">Four epic activities across three days</p>
+            </div>
+
+            <div class="activities-grid">
+                <div class="activity-card fade-in">
+                    <i class="fas fa-gift activity-icon"></i>
+                    <h3 class="activity-title">Daily Swag Drop</h3>
+                    <span class="activity-date">Feb 19-21 • All Days</span>
+                    <p class="activity-description">
+                        Score exclusive conference swag every single day! From custom stickers to limited edition t-shirts and other goodies you won't find anywhere else.
+                    </p>
+                    <ul class="activity-highlights">
+                        <li>Unique daily drops</li>
+                        <li>Limited edition designs</li>
+                        <li>First come, first served</li>
+                        <li>Show off your hacker style</li>
+                    </ul>
+                </div>
+
+                <div class="activity-card fade-in">
+                    <i class="fas fa-microchip activity-icon"></i>
+                    <h3 class="activity-title">Soldering Village</h3>
+                    <span class="activity-date">Feb 19-20 • Drop-in Anytime</span>
+                    <p class="activity-description">
+                        Build your own badge and test your hardware skills! Whether you're a soldering pro or complete beginner, grab a badge and join the fun. Hidden challenge included with prizes for those who crack it.
+                    </p>
+                    <ul class="activity-highlights">
+                        <li>Walk-in friendly, no reservation needed</li>
+                        <li>All skill levels welcome</li>
+                        <li>Take home a custom badge</li>
+                        <li>Hidden challenge with prizes</li>
+                        <li>Can't solder? Post on social media and take one home!</li>
+                    </ul>
+                </div>
+
+                <div class="activity-card fade-in">
+                    <i class="fas fa-microphone-alt activity-icon"></i>
+                    <h3 class="activity-title">Hardware Track</h3>
+                    <span class="activity-date">Feb 20 • Day 2 Only</span>
+                    <p class="activity-description">
+                        Curated talks focusing exclusively on hardware security, embedded systems, satellite hacking, OT security, and reverse engineering. Learn from the best in the field.
+                    </p>
+                    <ul class="activity-highlights">
+                        <li>Embedded Systems Security</li>
+                        <li>Satellite & RF Hacking</li>
+                        <li>OT/ICS Security</li>
+                        <li>Hardware Reverse Engineering</li>
+                        <li>IoT Exploitation</li>
+                    </ul>
+                    <a href="#cfp" class="btn btn-primary" style="margin-top: 20px;">Submit Your Talk</a>
+                </div>
+
+                <div class="activity-card fade-in">
+                    <i class="fas fa-globe-americas activity-icon"></i>
+                    <h3 class="activity-title">GeoGuessr Tournament</h3>
+                    <span class="activity-date">Feb 21 • Final Day</span>
+                    <span class="limited-badge">Limited to 100</span>
+                    <p class="activity-description">
+                        Put your Geo OSINT skills to the test! Battle it out in our epic GeoGuessr tournament. Only 100 spots available—register early to secure your place.
+                    </p>
+                    <ul class="activity-highlights">
+                        <li>Only 100 participants allowed</li>
+                        <li>Geo OSINT focused challenges</li>
+                        <li>Prizes for top performers</li>
+                        <li>Bragging rights for life</li>
+                    </ul>
+                    <p style="margin-top: 15px; color: var(--secondary); font-weight: 600;">
+                        <i class="fas fa-fire"></i> Registration opens soon!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="schedule">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Event Schedule</h2>
+                <p class="section-subtitle">Plan your three days of hardware hacking</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item fade-in">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date"><i class="far fa-calendar-check"></i> Day 1 - February 19, 2026</div>
+                        <ul class="timeline-events">
+                            <li><strong><i class="fas fa-gift"></i> Swag Distribution</strong> - Exclusive Day 1 goodies</li>
+                            <li><strong><i class="fas fa-microchip"></i> Soldering Village Opens</strong> - Drop in anytime, solder your badge</li>
+                            <li><strong><i class="fas fa-search"></i> Badge Challenge</strong> - Start hunting for the hidden puzzle</li>
+                            <li><strong><i class="fas fa-users"></i> Networking</strong> - Meet fellow hardware hackers</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date"><i class="far fa-calendar-check"></i> Day 2 - February 20, 2026</div>
+                        <ul class="timeline-events">
+                            <li><strong><i class="fas fa-gift"></i> Swag Distribution</strong> - Exclusive Day 2 goodies</li>
+                            <li><strong><i class="fas fa-microchip"></i> Soldering Village</strong> - Last day to build your badge</li>
+                            <li><strong><i class="fas fa-microphone-alt"></i> Hardware Track Talks</strong> - All day speaker sessions</li>
+                            <li><strong><i class="fas fa-trophy"></i> Badge Challenge Submissions</strong> - Submit your solutions</li>
+                            <li><strong><i class="fas fa-lightbulb"></i> Deep dives into embedded, OT, RE, and satellite security</strong></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date"><i class="far fa-calendar-check"></i> Day 3 - February 21, 2026</div>
+                        <ul class="timeline-events">
+                            <li><strong><i class="fas fa-gift"></i> Swag Distribution</strong> - Final day exclusive goodies</li>
+                            <li><strong><i class="fas fa-globe-americas"></i> GeoGuessr Tournament</strong> - 100 competitors battle it out</li>
+                            <li><strong><i class="fas fa-trophy"></i> Prize Distribution</strong> - Badge challenge & GeoGuessr winners announced</li>
+                            <li><strong><i class="fas fa-glass-cheers"></i> Closing Celebration</strong> - See you next year!</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CFP Section -->
+    <section id="cfp">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Call For Papers</h2>
+                <p class="section-subtitle">Share your hardware security knowledge</p>
+            </div>
+
+            <div class="cfp-container fade-in">
+                <h3 class="cfp-title"><i class="fas fa-bullhorn"></i> Hardware Track - Feb 20, 2026</h3>
+                <p class="cfp-deadline"><i class="far fa-clock"></i> Submissions Open Now • Deadline: December 31, 2025</p>
+                
+                <p class="cfp-info">
+                    We're looking for speakers passionate about hardware security to deliver technical talks on February 20th. Whether you're breaking embedded systems, hacking satellites, or reverse engineering hardware—we want to hear from you!
+                </p>
+
+                <div class="cfp-topics">
+                    <span class="topic-tag">Embedded Systems</span>
+                    <span class="topic-tag">Satellite Security</span>
+                    <span class="topic-tag">OT/ICS Hacking</span>
+                    <span class="topic-tag">Hardware RE</span>
+                    <span class="topic-tag">IoT Security</span>
+                    <span class="topic-tag">Side-Channel Attacks</span>
+                    <span class="topic-tag">Firmware Analysis</span>
+                    <span class="topic-tag">RF Hacking</span>
+                    <span class="topic-tag">JTAG/Debug</span>
+                    <span class="topic-tag">Chip Decapping</span>
+                </div>
+
+                <p class="cfp-info">
+                    <strong>What we're looking for:</strong><br>
+                    • Original research and practical demonstrations<br>
+                    • Real-world case studies and tools<br>
+                    • Technical deep-dives suitable for intermediate to advanced audiences<br>
+                    • 30-45 minute presentation format
+                </p>
+
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdd-7pgL5SQl_pn6hQmDQomam0vzDcnPHQHP0OgkshOk-xSQw/viewform?usp=dialog" class="btn btn-primary" style="margin-top: 30px;">
+                    Submit Your Talk Proposal
+                </a>
+
+                <p style="margin-top: 20px; font-size: 0.9rem; color: rgba(255,255,255,0.6);">
+                    Questions? Email us at hexguardsec@gmail.com
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prizes Section -->
+    <section id="prizes">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Prizes & Rewards</h2>
+                <p class="section-subtitle">Win awesome gear and bragging rights</p>
+            </div>
+
+            <div class="prizes-grid">
+                <div class="prize-card fade-in">
+                    <div class="prize-icon">👕</div>
+                    <h3 class="prize-title">Exclusive Swag</h3>
+                    <p>Limited edition conference swag that money can't buy.</p>
+                </div>
+
+                <div class="prize-card fade-in">
+                    <div class="prize-icon">🎯</div>
+                    <h3 class="prize-title">Mystery Prizes</h3>
+                    <p>Special surprises for outstanding hackers and creative solutions.</p>
+                </div>
+
+                <div class="prize-card fade-in">
+                    <div class="prize-icon">🏅</div>
+                    <h3 class="prize-title">Eternal Glory</h3>
+                    <p>Your name immortalized in hardware hacking history.</p>
+                </div>
+            </div>
+
+            <p class="fade-in" style="text-align: center; margin-top: 40px; font-size: 1.1rem; color: rgba(255,255,255,0.8);">
+                🏆 Prizes awarded for Badge Challenge winners, GeoGuessr Tournament champions, and outstanding participants!
+            </p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Got questions? We've got answers</p>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <span>Do I need to bring my own soldering equipment?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Nope! We provide all the soldering equipment, components, and badges. Just bring yourself and your enthusiasm. We have enough badges for everyone attending the conference.
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <span>I've never soldered before. Can I still participate?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Absolutely! The Soldering Village is beginner-friendly. Our volunteers will be there to guide you through the process. And if you really can't solder, just post about the conference on social media and take a badge home anyway!
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <span>How do I register for the GeoGuessr Tournament?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Registration details will be announced soon! Since we're limited to 100 participants, spots will be first-come-first-served. Follow our social media channels or check back here for registration links.
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <span>What's the badge challenge about?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        The badges contain a hidden hardware/firmware challenge. We won't spoil the fun, but solving it requires some reverse engineering skills. Crack it and win prizes!
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <span>When will CFP decisions be made?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        We'll review submissions on a rolling basis and notify speakers by mid-January 2026. Submit early for the best chance of being selected!
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <span>What topics are you looking for in CFP submissions?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        We want technical, hardware-focused talks on embedded systems, satellite security, OT/ICS hacking, reverse engineering, IoT security, firmware analysis, side-channel attacks, RF hacking, and any other hardware security topics. Original research and practical demos are especially encouraged.
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <span>Can I attend all activities?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Yes! All activities are included with your conference pass. The only exception is the GeoGuessr Tournament which has limited spots, so registration is required.
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <span>Will talks be recorded?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Recording details will be confirmed closer to the event. We typically work with speakers to determine recording preferences on a case-by-case basis.
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <span>Is there a dress code?</span>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        This is a hacker conference—wear whatever makes you comfortable! Most people wear t-shirts, hoodies, and jeans. Just don't forget to wear your badge with pride once you solder it.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" style="background: var(--darker);">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Questions? Ideas? Want to help?</p>
+            </div>
+
+            <div style="text-align: center; max-width: 600px; margin: 0 auto;" class="fade-in">
+                <p style="font-size: 1.2rem; color: rgba(255,255,255,0.8); margin-bottom: 30px;">
+                    We'd love to hear from you! Whether you have questions about the village, want to submit a talk, or just want to chat about hardware hacking.
+                </p>
+                
+                <div style="display: flex; flex-direction: column; gap: 20px; align-items: center;">
+                    <a href="mailto:hexguardsec@gmail.com" class="btn btn-primary">
+                        <i class="fas fa-envelope"></i> Email Us
+                    </a>
+                    <p style="color: rgba(255,255,255,0.6);">
+                        hexguardsec@gmail.com
+                    </p>
+                </div>
+
+                <div style="margin-top: 50px;">
+                    <h3 style="color: var(--primary); margin-bottom: 20px; font-size: 1.5rem;">Join the Community</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link" title="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link" title="Discord"><i class="fab fa-discord"></i></a>
+                        <a href="#" class="social-link" title="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-link" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team">
+        <div class="container">
+            <div class="section-header fade-in">
+                <h2 class="section-title">Meet The Team</h2>
+                <p class="section-subtitle">The masterminds behind the hardware hacking village</p>
+            </div>
+
+            <div class="team-grid">
+                <div class="team-member fade-in">
+                    <div class="team-avatar">
+                        <img src="2025/static/media/mugshots/seedon.png" alt="Adlin Seedon D'Souza">
+                    </div>
+                    <h3 class="team-name">Adlin Seedon D'Souza</h3>
+                    <p class="team-role">Village Lead</p>
+                    <p class="team-bio">Hardware security engineer with a passion for breaking things that work just fine and teaching others.</p>
+                </div>
+
+                <div class="team-member fade-in">
+                    <div class="team-avatar">
+                        <img src="2025/static/media/mugshots/arif.png" alt="Mohd. Arif">
+                    </div>
+                    <h3 class="team-name">Mohd. Arif</h3>
+                    <p class="team-role">Village Lead</p>
+                    <p class="team-bio">Expert in cloud, cooking rice and everything nice; backbone of the conference since 2019.</p>
+                </div>
+
+                <div class="team-member fade-in">
+                  <div class="team-avatar">
+                    <img src="2025/static/media/mugshots/fazalu.png" alt="Fazalu">
+                  </div>
+                  <h3 class="team-name">Fazalu</h3>
+                  <p class="team-role">Technical Lead</p>
+                  <p class="team-bio">Have you heard of Leaksnitch ? No ?, Wait ! What if i tell you, there is an app on the market ... 😂.</p>
+                </div>
+
+                <div class="team-member fade-in">
+                  <div class="team-avatar">
+                    <img src="2025/static/media/mugshots/Abhinav.png" alt="Abhinav">
+                  </div>
+                  <h3 class="team-name">Abhinav</h3>
+                  <p class="team-role">Challenge Designer</p>
+                  <p class="team-bio">This guy ! Creative genius just like Minhaj if you like our tshirts and swags well go congratulate him.</p>
+                </div>
+
+                <div class="team-member fade-in">
+                  <div class="team-avatar">
+                    <img src="2025/static/media/mugshots/Michael_Scott.png" alt="Minhaj">
+                  </div>
+                  <h3 class="team-name">Minhaj</h3>
+                  <p class="team-role">Swags Designer</p>
+                  <p class="team-bio">He takes his privacy very seriously, i did not get permision to use his photograph. he is the one who makes the most relatable sesides sitckers we all love.</p>
+                </div>
+
+                <div class="team-member fade-in">
+                  <div class="team-avatar">
+                    <img src="2025/static/media/mugshots/muhsin.png" alt="Muhsin">
+                  </div>
+                  <h3 class="team-name">Muhsin</h3>
+                  <p class="team-role">Operations Lead</p>
+                  <p class="team-bio">Muhsin is the backbone of Operations during the event, he manages crowd like an artisan.</p>
+                </div>
+
+                <div class="team-member fade-in">
+                  <div class="team-avatar">
+                    <img src="2025/static/media/mugshots/rageeth.png" alt="Rageet">
+                  </div>
+                  <h3 class="team-name">Rageet</h3>
+                  <p class="team-role">Resource Manager</p>
+                  <p class="team-bio">Ah the genius who works tirelessly finding vendors, managing logistics and getting things done on time.</p>
+                </div>
+
+                <div class="team-member fade-in">
+                  <div class="team-avatar">
+                    <img src="2025/static/media/mugshots/Michael_Scott.png" alt="Kiran">
+                  </div>
+                  <h3 class="team-name">Kiran Gupta</h3>
+                    <p class="team-role">Event Coordinator</p>
+                  <p class="team-bio"> Kiran is the go to person for anything event related, she makes sure everything runs smoothly during the event, even though she does all that remotely.</p>
+                  </div>
+
+                <div class="team-member fade-in">
+                  <div class="team-avatar">
+                    <img src="2025/static/media/mugshots/kartheek.png" alt="kartheek">
+                  </div>
+                  <h3 class="team-name">kartheek</h3>
+                  <p class="team-role">Dr. IoT</p>
+                  <p class="team-bio"> Most eligible bacholor, the only true IoT and Automotive expert who has actually spoken at credible conferences like DefCon and Blackhat.</p>
+                </div>
+
+                <div class="team-member fade-in">
+                  <div class="team-avatar">
+                    <img src="2025/static/media/mugshots/Michael_Scott.png" alt="Chanchal Kalnarayan">
+                  </div>
+                  <h3 class="team-name">Chanchal Kalnarayan</h3>
+                  <p class="team-role">Event Coordinator</p>
+                  <p class="team-bio">Humble and hardworking team member who does most of the on ground work during the village, she handles everything with such grace it looks almost effortless.</p>
+                  </div> 
+            </div>
+            <div style="text-align: center; margin-top: 60px;" class="fade-in">
+                <p style="font-size: 1.1rem; color: rgba(255,255,255,0.7);">
+                    Want to join the team? We're always looking for volunteers!<br>
+                    <a href="mailto:hexguardsec@gmail.com" style="color: var(--primary); text-decoration: none; font-weight: 600;">Get in touch →</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <h3 class="footer-title">Hardware Hacking Village</h3>
+                <p style="color: rgba(255,255,255,0.7); max-width: 600px; margin: 0 auto;">
+                    Part of Seasides Conference 2026 • February 19-21, 2026<br>
+                    Building the future of hardware security, one solder joint at a time.
+                </p>
+            </div>
+
+            <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px; margin-top: 30px;">
+                <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-bottom: 20px;">
+                    <a href="#activities" style="color: var(--primary); text-decoration: none;">Activities</a>
+                    <a href="#schedule" style="color: var(--primary); text-decoration: none;">Schedule</a>
+                    <a href="#cfp" style="color: var(--primary); text-decoration: none;">CFP</a>
+                    <a href="#prizes" style="color: var(--primary); text-decoration: none;">Prizes</a>
+                    <a href="#faq" style="color: var(--primary); text-decoration: none;">FAQ</a>
+                    <a href="#team" style="color: var(--primary); text-decoration: none;">Team</a>
+                    <a href="#contact" style="color: var(--primary); text-decoration: none;">Contact</a>
+                </div>
+
+                <p class="copyright">
+                    © 2026 Seasides Conference - Hardware Hacking Village. All rights reserved.<br>
+                    Built with ⚡ by hardware hackers, for hardware hackers.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                const faqItem = this.parentElement;
+                const isActive = faqItem.classList.contains('active');
+                
+                // Close all FAQ items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                }
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Countdown to CFP deadline
+        const countdownDate = new Date('December 31, 2025 23:59:59').getTime();
+        
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
+            
+            if (distance > 0) {
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                
+                const cfpDeadline = document.querySelector('.cfp-deadline');
+                if (cfpDeadline && days > 0) {
+                    cfpDeadline.innerHTML = `<i class="far fa-clock"></i> CFP Closes in ${days} days • Deadline: December 31, 2025`;
+                }
+            }
+        }
+        
+        updateCountdown();
+        setInterval(updateCountdown, 3600000); // Update every hour
+
+        // Add parallax effect to hero
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero-content');
+            if (hero && scrolled < window.innerHeight) {
+                hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+                hero.style.opacity = 1 - (scrolled / window.innerHeight);
+            }
+        });
+    </script>
+</body>
+</html>

@@ -98,13 +98,13 @@ const teamData = [
     {
         name: "Minhaj",
         role: "Trainer",
-        image: "static/media/mugshots/Michael_Scott.png",
+        image: "static/media/mugshots/pfp.png",
         skills: ["Web Pentesting", "IoT Hacking", "Red Teaming"],
         social: {
-            instagram: "https://www.instagram.com/4minhaj/",
-            github: "https://github.com/saltX5",
-            twitter: "http://x.com/0xblick",
-            linkedin: "https://www.linkedin.com/in/0xminhaj",
+            instagram: "",
+            github: "",
+            twitter: "",
+            linkedin: "",
         },
     },
     {

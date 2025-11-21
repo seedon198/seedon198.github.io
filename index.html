@@ -732,6 +732,13 @@
             gap: 30px;
         }
 
+        .nav-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
         .nav-logo {
             font-size: 1.5rem;
             font-weight: 800;
@@ -843,7 +850,16 @@
             }
 
             .nav-container {
-                flex-wrap: wrap;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+            }
+
+            .nav-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
             }
 
             .nav-logo {
@@ -858,7 +874,7 @@
                 display: none;
                 width: 100%;
                 flex-direction: column;
-                gap: 10px;
+                gap: 0;
                 margin-top: 15px;
                 padding-top: 15px;
                 border-top: 1px solid rgba(0, 212, 255, 0.2);
@@ -871,7 +887,18 @@
             .nav-link {
                 width: 100%;
                 text-align: center;
-                padding: 12px 20px;
+                padding: 15px 20px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+                margin: 0;
+                border-radius: 0;
+            }
+
+            .nav-link:hover {
+                background: rgba(0, 212, 255, 0.1);
+            }
+
+            .nav-link:last-child {
+                border-bottom: none;
             }
         }
 
@@ -895,10 +922,12 @@
     <!-- Navbar -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="/" class="nav-logo">HW101</a>
-            <button class="menu-toggle" aria-label="Toggle Navigation">
-                ☰
-            </button>
+            <div class="nav-header">
+                <a href="/" class="nav-logo">HW101</a>
+                <button class="menu-toggle" aria-label="Toggle Navigation">
+                    ☰
+                </button>
+            </div>
             <div class="nav-links" id="navLinks">
                 <a href="/" class="nav-link active">Home</a>
                 <a href="#activities" class="nav-link">About</a>

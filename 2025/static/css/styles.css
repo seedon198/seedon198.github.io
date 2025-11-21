@@ -784,15 +784,30 @@ animation: noise-2 3s linear infinite alternate-reverse, glitch 5s 5s infinite;
         flex-direction: column;
         position: absolute;
         top: 100%;
+        left: 0;
         right: 0;
-        background-color: rgba(0, 0, 0, 0.9);
+        background-color: rgba(0, 0, 0, 0.95);
+        backdrop-filter: blur(10px);
         width: 100%;
         text-align: center;
-        padding: 1rem 0;
+        padding: 1.5rem 0;
+        gap: 0.5rem;
+        border-top: 1px solid rgba(0, 243, 255, 0.2);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
     }
 
     .nav-links.show {
         display: flex;
+    }
+
+    .nav-links a {
+        padding: 1rem 2rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        transition: all 0.3s ease;
+    }
+
+    .nav-links a:hover {
+        background-color: rgba(0, 243, 255, 0.1);
     }
 }
 

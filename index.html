@@ -46,6 +46,7 @@
             position: relative;
             background: linear-gradient(135deg, var(--darker) 0%, var(--dark) 100%);
             overflow: hidden;
+            padding-top: 100px;
         }
 
         .hero::before {
@@ -699,9 +700,217 @@
             0%, 100% { opacity: 1; }
             50% { opacity: 0.6; }
         }
+
+        /* Navbar Styles */
+        .navbar {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(100% - 80px);
+            max-width: 1400px;
+            background: rgba(5, 8, 18, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            border-radius: 50px;
+            padding: 15px 40px;
+            z-index: 1000;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 212, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .navbar:hover {
+            border-color: rgba(0, 212, 255, 0.4);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 30px rgba(0, 212, 255, 0.2);
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary), var(--secondary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+            letter-spacing: 1px;
+            white-space: nowrap;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            justify-content: center;
+            flex: 1;
+        }
+
+        .nav-link {
+            position: relative;
+            padding: 10px 20px;
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+            background: rgba(0, 212, 255, 0.1);
+        }
+
+        .nav-link.active {
+            color: var(--primary);
+            background: rgba(0, 212, 255, 0.15);
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-link.active::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60%;
+            height: 2px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 212, 255, 0.1);
+            border-radius: 25px;
+            z-index: -1;
+        }
+
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            background: rgba(0, 212, 255, 0.1);
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            border-radius: 10px;
+            padding: 8px 12px;
+            color: var(--primary);
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .menu-toggle:hover {
+            background: rgba(0, 212, 255, 0.2);
+        }
+
+        /* Responsive Navbar */
+        @media (max-width: 1024px) {
+            .navbar {
+                width: calc(100% - 40px);
+                padding: 12px 25px;
+            }
+
+            .nav-links {
+                gap: 5px;
+            }
+
+            .nav-link {
+                padding: 8px 15px;
+                font-size: 0.85rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                top: 10px;
+                width: calc(100% - 20px);
+                padding: 12px 20px;
+                border-radius: 30px;
+            }
+
+            .nav-container {
+                flex-wrap: wrap;
+            }
+
+            .nav-logo {
+                font-size: 1.2rem;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                gap: 10px;
+                margin-top: 15px;
+                padding-top: 15px;
+                border-top: 1px solid rgba(0, 212, 255, 0.2);
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+
+            .nav-link {
+                width: 100%;
+                text-align: center;
+                padding: 12px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar {
+                padding: 10px 15px;
+            }
+
+            .nav-logo {
+                font-size: 1rem;
+            }
+
+            .nav-link {
+                font-size: 0.8rem;
+                padding: 10px 15px;
+            }
+        }
     </style>
 </head>
 <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">HW101</a>
+            <button class="menu-toggle" aria-label="Toggle Navigation">
+                ☰
+            </button>
+            <div class="nav-links" id="navLinks">
+                <a href="/" class="nav-link active">Home</a>
+                <a href="#activities" class="nav-link">About</a>
+                <a href="#team" class="nav-link">Team</a>
+                <a href="#cfp" class="nav-link">CFP</a>
+                <a href="#schedule" class="nav-link">Schedule</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#faq" class="nav-link">FAQs</a>
+            </div>
+        </div>
+    </nav>
+
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
@@ -1212,15 +1421,72 @@
     </footer>
 
     <script>
+        // Mobile menu toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.getElementById('navLinks');
+        
+        if (menuToggle) {
+            menuToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('show');
+            });
+        }
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 768) {
+                    navLinks.classList.remove('show');
+                }
+            });
+        });
+
+        // Update active nav link on scroll
+        function updateActiveNavLink() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
+            
+            let current = '';
+            const scrollY = window.pageYOffset;
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.clientHeight;
+                
+                if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                const href = link.getAttribute('href');
+                if (href === '#' + current || (href === '/' && current === '')) {
+                    link.classList.add('active');
+                }
+            });
+
+            // Handle home link
+            const homeLink = document.querySelector('.nav-link[href="/"]');
+            if (homeLink && scrollY < 100) {
+                document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
+                homeLink.classList.add('active');
+            }
+        }
+
+        window.addEventListener('scroll', updateActiveNavLink);
+        updateActiveNavLink();
+
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
+                    const offset = 80; // Account for navbar
+                    const targetPosition = target.offsetTop - offset;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
                     });
                 }
             });
@@ -1282,6 +1548,22 @@
         
         updateCountdown();
         setInterval(updateCountdown, 3600000); // Update every hour
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            const scrolled = window.pageYOffset;
+            
+            if (navbar) {
+                if (scrolled > 50) {
+                    navbar.style.background = 'rgba(5, 8, 18, 0.9)';
+                    navbar.style.borderColor = 'rgba(0, 212, 255, 0.3)';
+                } else {
+                    navbar.style.background = 'rgba(5, 8, 18, 0.7)';
+                    navbar.style.borderColor = 'rgba(0, 212, 255, 0.2)';
+                }
+            }
+        });
 
         // Add parallax effect to hero
         window.addEventListener('scroll', () => {
